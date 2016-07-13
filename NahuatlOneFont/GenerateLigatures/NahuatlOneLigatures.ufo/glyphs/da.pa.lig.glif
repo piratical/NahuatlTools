@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="da.pa.lig" format="1">
+  <advance width="1095"/>
+  <unicode hex="EFE6"/>
+  <outline>
+    <component base="da"/>
+    <component base="pa.sub" xOffset="1134"/>
+  </outline>
+</glyph>

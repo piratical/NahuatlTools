@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ga.oa.wa.lig" format="1">
+  <advance width="1362"/>
+  <unicode hex="FDDB"/>
+  <outline>
+    <component base="oa.vs" xOffset="1033"/>
+    <component base="ga"/>
+    <component base="wa.sub" xOffset="1389"/>
+  </outline>
+</glyph>

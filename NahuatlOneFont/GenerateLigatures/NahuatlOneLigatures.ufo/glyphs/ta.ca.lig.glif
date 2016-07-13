@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ta.ca.lig" format="1">
+  <advance width="1030"/>
+  <unicode hex="EEB4"/>
+  <outline>
+    <component base="ta"/>
+    <component base="ca.sub" xOffset="940"/>
+  </outline>
+</glyph>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="da.oa.ga.lig" format="1">
+  <advance width="1095"/>
+  <unicode hex="FDC8"/>
+  <outline>
+    <component base="oa.vs" xOffset="893"/>
+    <component base="da"/>
+    <component base="ga.sub" xOffset="1166"/>
+  </outline>
+</glyph>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ha.sub" format="1">
+  <advance width="0"/>
+  <unicode hex="EDDB"/>
+  <outline>
+    <contour>
+      <point x="-330" y="-70" type="move" name="_subjoined_consonants"/>
+    </contour>
+    <contour>
+      <point x="-202" y="-523" type="curve" smooth="yes"/>
+      <point x="-202" y="-593"/>
+      <point x="-258" y="-649"/>
+      <point x="-328" y="-649" type="curve" smooth="yes"/>
+      <point x="-398" y="-649"/>
+      <point x="-454" y="-593"/>
+      <point x="-454" y="-523" type="curve" smooth="yes"/>
+      <point x="-454" y="-453"/>
+      <point x="-398" y="-397"/>
+      <point x="-328" y="-397" type="curve" smooth="yes"/>
+      <point x="-258" y="-397"/>
+      <point x="-202" y="-453"/>
+    </contour>
+  </outline>
+</glyph>

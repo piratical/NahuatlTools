@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ga.ei.pa.lig" format="1">
+  <advance width="1362"/>
+  <unicode hex="101C3"/>
+  <outline>
+    <component base="ei.vs" xOffset="1124"/>
+    <component base="ga"/>
+    <component base="pa.sub" xOffset="1274"/>
+  </outline>
+</glyph>

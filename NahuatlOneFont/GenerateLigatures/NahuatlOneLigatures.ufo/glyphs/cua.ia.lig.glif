@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cua.ia.lig" format="1">
+  <advance width="1122"/>
+  <unicode hex="F8AD"/>
+  <outline>
+    <component base="ia.vs" xOffset="957"/>
+    <component base="cua"/>
+  </outline>
+</glyph>

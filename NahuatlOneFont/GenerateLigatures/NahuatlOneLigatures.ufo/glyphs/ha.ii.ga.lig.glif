@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ha.ii.ga.lig" format="1">
+  <advance width="1275"/>
+  <unicode hex="F35C"/>
+  <outline>
+    <component base="ii.vs" xOffset="813"/>
+    <component base="ha"/>
+    <component base="ga.sub" xOffset="1172"/>
+  </outline>
+</glyph>

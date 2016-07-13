@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ta.oa.lig" format="1">
+  <advance width="1030"/>
+  <unicode hex="FC73"/>
+  <outline>
+    <component base="oa.vs" xOffset="879"/>
+    <component base="ta"/>
+  </outline>
+</glyph>

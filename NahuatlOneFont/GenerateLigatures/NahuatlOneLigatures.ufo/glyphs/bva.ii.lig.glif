@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="bva.ii.lig" format="1">
+  <advance width="1097"/>
+  <unicode hex="F3BC"/>
+  <outline>
+    <component base="ii.vs" xOffset="828"/>
+    <component base="bva"/>
+  </outline>
+</glyph>

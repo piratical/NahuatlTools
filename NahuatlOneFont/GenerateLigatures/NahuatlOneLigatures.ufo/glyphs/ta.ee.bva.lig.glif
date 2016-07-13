@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ta.ee.bva.lig" format="1">
+  <advance width="1030"/>
+  <unicode hex="F0A8"/>
+  <outline>
+    <component base="ee.vs" xOffset="903"/>
+    <component base="ta"/>
+    <component base="bva.sub" xOffset="1015"/>
+  </outline>
+</glyph>

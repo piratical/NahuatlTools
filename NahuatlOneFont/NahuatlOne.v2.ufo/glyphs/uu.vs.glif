@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uu.vs" format="1">
+  <advance width="0"/>
+  <unicode hex="EDA4"/>
+  <outline>
+    <contour>
+      <point x="-251" y="1020" type="move" name="_vowel_signs"/>
+    </contour>
+    <contour>
+      <point x="-500" y="1433" type="line"/>
+      <point x="-353" y="1433" type="line"/>
+      <point x="-353" y="1321" type="line" smooth="yes"/>
+      <point x="-353" y="1264"/>
+      <point x="-309" y="1220"/>
+      <point x="-252" y="1220" type="curve" smooth="yes"/>
+      <point x="-195" y="1220"/>
+      <point x="-151" y="1264"/>
+      <point x="-151" y="1321" type="curve" smooth="yes"/>
+      <point x="-151" y="1433" type="line"/>
+      <point x="-4" y="1433" type="line"/>
+      <point x="-4" y="1321" type="line" smooth="yes"/>
+      <point x="-4" y="1185"/>
+      <point x="-116" y="1073"/>
+      <point x="-252" y="1073" type="curve" smooth="yes"/>
+      <point x="-388" y="1073"/>
+      <point x="-500" y="1185"/>
+      <point x="-500" y="1321" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>1073</integer>
+            <key>width</key>
+            <integer>147</integer>
+          </dict>
+          <dict>
+            <key>position</key>
+            <integer>1413</integer>
+            <key>width</key>
+            <integer>20</integer>
+          </dict>
+        </array>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>-500</integer>
+            <key>width</key>
+            <integer>147</integer>
+          </dict>
+          <dict>
+            <key>position</key>
+            <integer>-151</integer>
+            <key>width</key>
+            <integer>147</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ee.nya.lig" format="1">
+  <advance width="1362"/>
+  <unicode hex="EE25"/>
+  <outline>
+    <component base="ee.base"/>
+    <component base="nya.sub" xOffset="1173"/>
+  </outline>
+</glyph>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ca.ia.ta.lig" format="1">
+  <advance width="1039"/>
+  <unicode hex="F89A"/>
+  <outline>
+    <component base="ia.vs" xOffset="967"/>
+    <component base="ca"/>
+    <component base="ta.sub" xOffset="1050"/>
+  </outline>
+</glyph>

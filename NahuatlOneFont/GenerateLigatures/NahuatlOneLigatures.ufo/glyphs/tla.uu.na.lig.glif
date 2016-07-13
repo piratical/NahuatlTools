@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tla.uu.na.lig" format="1">
+  <advance width="1214"/>
+  <unicode hex="F6E3"/>
+  <outline>
+    <component base="uu.vs" xOffset="834"/>
+    <component base="tla"/>
+    <component base="na.sub" xOffset="1131"/>
+  </outline>
+</glyph>

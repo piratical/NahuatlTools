@@ -1,0 +1,175 @@
+StartChar: uni25CC_DOTTED_CIRCLE
+AnchorPoint: "subjoined_consonants" 549 -70 basechar 0
+AnchorPoint: "vowel_signs" 549 1020 basechar 0
+StartChar: aa.base
+AnchorPoint: "subjoined_consonants" 622 -70 basechar 0
+AnchorPoint: "vowel_signs" 622 1020 basechar 0
+StartChar: ee.base
+AnchorPoint: "subjoined_consonants" 680 -70 basechar 0
+AnchorPoint: "vowel_signs" 680 1020 basechar 0
+StartChar: ii.base
+AnchorPoint: "subjoined_consonants" 645 -70 basechar 0
+AnchorPoint: "vowel_signs" 645 1020 basechar 0
+StartChar: oo.base
+AnchorPoint: "subjoined_consonants" 568 -70 basechar 0
+AnchorPoint: "vowel_signs" 568 1020 basechar 0
+StartChar: ee.vs
+AnchorPoint: "vowel_signs" -390 1020 mark 0
+StartChar: ii.vs
+AnchorPoint: "vowel_signs" -280 1020 mark 0
+StartChar: oo.vs
+AnchorPoint: "vowel_signs" -249 1020 mark 0
+StartChar: uu.vs
+AnchorPoint: "vowel_signs" -251 1020 mark 0
+StartChar: ia.vs
+AnchorPoint: "vowel_signs" -414 1020 mark 0
+StartChar: ai.vs
+AnchorPoint: "vowel_signs" -378 1020 mark 0
+StartChar: oa.vs
+AnchorPoint: "vowel_signs" -366 1020 mark 0
+StartChar: eo.vs
+AnchorPoint: "vowel_signs" -358 1020 mark 0
+StartChar: ei.vs
+AnchorPoint: "vowel_signs" -457 1020 mark 0
+StartChar: subjoiner_symbol
+AnchorPoint: "vowel_signs" 546 1020 basechar 0
+StartChar: ma
+AnchorPoint: "subjoined_consonants" 840 -70 basechar 0
+AnchorPoint: "vowel_signs" 823 1020 basechar 0
+StartChar: ma.sub
+AnchorPoint: "subjoined_consonants" -710 -70 mark 0
+StartChar: na
+AnchorPoint: "subjoined_consonants" 630 -70 basechar 0
+AnchorPoint: "vowel_signs" 613 1020 basechar 0
+StartChar: pa
+AnchorPoint: "subjoined_consonants" 680 -70 basechar 0
+AnchorPoint: "vowel_signs" 663 1020 basechar 0
+StartChar: ta
+AnchorPoint: "subjoined_consonants" 530 -70 basechar 0
+AnchorPoint: "vowel_signs" 513 1020 basechar 0
+StartChar: ca
+AnchorPoint: "subjoined_consonants" 570 -70 basechar 0
+AnchorPoint: "vowel_signs" 553 1020 basechar 0
+StartChar: cua
+AnchorPoint: "subjoined_consonants" 560 -70 basechar 0
+AnchorPoint: "vowel_signs" 543 1020 basechar 0
+StartChar: tza
+AnchorPoint: "subjoined_consonants" 600 -70 basechar 0
+AnchorPoint: "vowel_signs" 583 1020 basechar 0
+StartChar: tla
+AnchorPoint: "subjoined_consonants" 600 -70 basechar 0
+AnchorPoint: "vowel_signs" 583 1020 basechar 0
+StartChar: na.sub
+AnchorPoint: "subjoined_consonants" -531 -70 mark 0
+StartChar: pa.sub
+AnchorPoint: "subjoined_consonants" -590 -70 mark 0
+StartChar: ta.sub
+AnchorPoint: "subjoined_consonants" -480 -70 mark 0
+StartChar: ca.sub
+AnchorPoint: "subjoined_consonants" -410 -70 mark 0
+StartChar: cua.sub
+AnchorPoint: "subjoined_consonants" -470 -70 mark 0
+StartChar: tza.sub
+AnchorPoint: "subjoined_consonants" -540 -70 mark 0
+StartChar: tla.sub
+AnchorPoint: "subjoined_consonants" -580 -70 mark 0
+StartChar: cha
+AnchorPoint: "subjoined_consonants" 539 -70 basechar 0
+AnchorPoint: "vowel_signs" 522 1020 basechar 0
+StartChar: sa
+AnchorPoint: "subjoined_consonants" 760 -70 basechar 0
+AnchorPoint: "vowel_signs" 743 1020 basechar 0
+StartChar: xa
+AnchorPoint: "subjoined_consonants" 742 -70 basechar 0
+AnchorPoint: "vowel_signs" 753 1020 basechar 0
+StartChar: ha
+AnchorPoint: "subjoined_consonants" 550 -70 basechar 0
+AnchorPoint: "vowel_signs" 533 1020 basechar 0
+StartChar: la
+AnchorPoint: "subjoined_consonants" 450 -70 basechar 0
+AnchorPoint: "vowel_signs" 433 1020 basechar 0
+StartChar: ya
+AnchorPoint: "subjoined_consonants" 615 -70 basechar 0
+AnchorPoint: "vowel_signs" 598 1020 basechar 0
+StartChar: wa
+AnchorPoint: "subjoined_consonants" 825 -70 basechar 0
+AnchorPoint: "vowel_signs" 808 1020 basechar 0
+StartChar: cha.sub
+AnchorPoint: "subjoined_consonants" -461 -70 mark 0
+StartChar: sa.sub
+AnchorPoint: "subjoined_consonants" -710 -70 mark 0
+StartChar: xa.sub
+AnchorPoint: "subjoined_consonants" -636 -70 mark 0
+StartChar: ha.sub
+AnchorPoint: "subjoined_consonants" -330 -70 mark 0
+StartChar: la.sub
+AnchorPoint: "subjoined_consonants" -400 -70 mark 0
+StartChar: ya.sub
+AnchorPoint: "subjoined_consonants" -535 -70 mark 0
+StartChar: wa.sub
+AnchorPoint: "subjoined_consonants" -705 -70 mark 0
+StartChar: nya
+AnchorPoint: "subjoined_consonants" 547 -70 basechar 0
+AnchorPoint: "vowel_signs" 530 1020 basechar 0
+StartChar: bva
+AnchorPoint: "subjoined_consonants" 565 -70 basechar 0
+AnchorPoint: "vowel_signs" 548 1020 basechar 0
+StartChar: da
+AnchorPoint: "subjoined_consonants" 544 -70 basechar 0
+AnchorPoint: "vowel_signs" 527 1020 basechar 0
+StartChar: ga
+AnchorPoint: "subjoined_consonants" 684 -70 basechar 0
+AnchorPoint: "vowel_signs" 667 1020 basechar 0
+StartChar: fa
+AnchorPoint: "subjoined_consonants" 515 -70 basechar 0
+AnchorPoint: "vowel_signs" 498 1020 basechar 0
+StartChar: ra
+AnchorPoint: "subjoined_consonants" 495 -70 basechar 0
+AnchorPoint: "vowel_signs" 478 1020 basechar 0
+StartChar: rra
+AnchorPoint: "subjoined_consonants" 615 -70 basechar 0
+AnchorPoint: "vowel_signs" 598 1020 basechar 0
+StartChar: nya.sub
+AnchorPoint: "subjoined_consonants" -493 -70 mark 0
+StartChar: bva.sub
+AnchorPoint: "subjoined_consonants" -485 -70 mark 0
+StartChar: da.sub
+AnchorPoint: "subjoined_consonants" -525 -70 mark 0
+StartChar: ga.sub
+AnchorPoint: "subjoined_consonants" -622 -70 mark 0
+StartChar: fa.sub
+AnchorPoint: "subjoined_consonants" -465 -70 mark 0
+StartChar: ra.sub
+AnchorPoint: "subjoined_consonants" -455 -70 mark 0
+StartChar: rra.sub
+AnchorPoint: "subjoined_consonants" -545 -70 mark 0
+StartChar: x
+AnchorPoint: "subjoined_consonants" 475 -70 basechar 0
+AnchorPoint: "vowel_signs" 458 1020 basechar 0
+StartChar: period
+StartChar: space
+StartChar: uu.base
+AnchorPoint: "subjoined_consonants" 602 -70 basechar 0
+AnchorPoint: "vowel_signs" 602 1020 basechar 0
+StartChar: aa.vs
+AnchorPoint: "vowel_signs" -284 1020 mark 0
+StartChar: long_vowel_dot
+AnchorPoint: "vowel_signs" -143 1020 mark 0
+StartChar: aa.vs.long
+AnchorPoint: "vowel_signs" -434 1020 mark 0
+StartChar: ee.vs.long
+AnchorPoint: "vowel_signs" -571 1020 mark 0
+StartChar: ii.vs.long
+AnchorPoint: "vowel_signs" -276 1020 mark 0
+StartChar: oo.vs.long
+AnchorPoint: "vowel_signs" -444 1020 mark 0
+StartChar: uu.vs.long
+AnchorPoint: "vowel_signs" -444 1020 mark 0
+StartChar: ma.ma.lig
+StartChar: ma.na.lig
+StartChar: na.ma.lig
+StartChar: na.na.lig
+StartChar: ma.ee.ma.lig
+StartChar: ma.ia.na.lig
+StartChar: na.oo.ma.lig
+StartChar: na.ii.na.lig

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="fa.eo.cha.lig" format="1">
+  <advance width="1004"/>
+  <unicode hex="FFE6"/>
+  <outline>
+    <component base="eo.vs" xOffset="856"/>
+    <component base="fa"/>
+    <component base="cha.sub" xOffset="976"/>
+  </outline>
+</glyph>

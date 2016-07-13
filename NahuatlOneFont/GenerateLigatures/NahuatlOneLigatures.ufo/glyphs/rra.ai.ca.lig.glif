@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="rra.ai.ca.lig" format="1">
+  <advance width="1303"/>
+  <unicode hex="FC1C"/>
+  <outline>
+    <component base="ai.vs" xOffset="976"/>
+    <component base="rra"/>
+    <component base="ca.sub" xOffset="1025"/>
+  </outline>
+</glyph>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ya.oo.ra.lig" format="1">
+  <advance width="1220"/>
+  <unicode hex="F586"/>
+  <outline>
+    <component base="oo.vs" xOffset="847"/>
+    <component base="ya"/>
+    <component base="ra.sub" xOffset="1070"/>
+  </outline>
+</glyph>

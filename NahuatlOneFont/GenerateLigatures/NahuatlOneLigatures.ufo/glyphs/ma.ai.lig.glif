@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ma.ai.lig" format="1">
+  <advance width="1653"/>
+  <unicode hex="FA34"/>
+  <outline>
+    <component base="ai.vs" xOffset="1201"/>
+    <component base="ma"/>
+  </outline>
+</glyph>

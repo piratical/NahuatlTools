@@ -1,0 +1,50 @@
+The NahuatlOne font currently uses Unicode
+Private Use Area (PUA) code points for the
+Nahuatl Abugida documented at
+http://unifont.org/nahuatl/ .
+
+The font was built from SVG outlines that
+were imported into FontForge. However FontForge
+by itself is not quite enough to get OpenType
+features to behave correctly. Therefore
+I exported the font to Unified Font Object (UFO)
+directories in order to customize the Adobe
+features.fea files.
+
+The font exists in two versions.  In the
+original version, positioning of the
+subjoined consonants is achieved via
+GSUB and GPOS rules.
+
+However, there is a bug in Apple products
+(laptops, iPhones, iPads) that prevents
+correct GPOS positioning, although GSUB
+substitutions do appear to take place.
+This bug may be due to the fact that the
+font use PUA code points, or may be due to
+some other unknown reason.
+
+Therefore, to get around the bug on
+Apple platforms, the font also exists in
+a form containing thousands of generated
+"ligatures" . The ligatures use references
+to the component characters. Since GSUB
+seems unaffected on the Apple platforms,
+this version of the font seems to work
+perfectly well (i.e., achieves correct
+rendering) on Safari on OS X, iPhone,
+and iPad.  Look in the "GenerateLigatures"
+subdirectory for the script tools that
+generate the ligatures.
+
+Currently the original directories from
+which these files were pulled are not 
+well-documented. It may take me awhile
+to achieve some better resemblance of 
+order and structure in this repository.
+
+— Edward Trager
+  Ann Arbor, Michigan, USA
+  June 13, 2016
+
+

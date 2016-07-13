@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="wa.ai.ya.lig" format="1">
+  <advance width="1652"/>
+  <unicode hex="FB84"/>
+  <outline>
+    <component base="ai.vs" xOffset="1186"/>
+    <component base="wa"/>
+    <component base="ya.sub" xOffset="1360"/>
+  </outline>
+</glyph>

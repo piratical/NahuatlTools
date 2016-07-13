@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="aa.cha.lig" format="1">
+  <advance width="1254"/>
+  <unicode hex="EE08"/>
+  <outline>
+    <component base="aa.base"/>
+    <component base="cha.sub" xOffset="1083"/>
+  </outline>
+</glyph>

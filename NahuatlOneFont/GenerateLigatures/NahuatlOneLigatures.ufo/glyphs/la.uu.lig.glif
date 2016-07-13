@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="la.uu.lig" format="1">
+  <advance width="885"/>
+  <unicode hex="F754"/>
+  <outline>
+    <component base="uu.vs" xOffset="684"/>
+    <component base="la"/>
+  </outline>
+</glyph>

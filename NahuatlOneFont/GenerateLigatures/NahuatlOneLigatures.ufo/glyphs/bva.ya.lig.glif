@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="bva.ya.lig" format="1">
+  <advance width="1097"/>
+  <unicode hex="EFDB"/>
+  <outline>
+    <component base="bva"/>
+    <component base="ya.sub" xOffset="1100"/>
+  </outline>
+</glyph>

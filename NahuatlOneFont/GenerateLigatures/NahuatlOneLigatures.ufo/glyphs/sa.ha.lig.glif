@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="sa.ha.lig" format="1">
+  <advance width="1497"/>
+  <unicode hex="EF3F"/>
+  <outline>
+    <component base="sa"/>
+    <component base="ha.sub" xOffset="1090"/>
+  </outline>
+</glyph>

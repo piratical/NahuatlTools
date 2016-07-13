@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="fa.sa.lig" format="1">
+  <advance width="1004"/>
+  <unicode hex="F019"/>
+  <outline>
+    <component base="fa"/>
+    <component base="sa.sub" xOffset="1225"/>
+  </outline>
+</glyph>

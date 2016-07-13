@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="nya.uu.na.lig" format="1">
+  <advance width="1122"/>
+  <unicode hex="F79B"/>
+  <outline>
+    <component base="uu.vs" xOffset="781"/>
+    <component base="nya"/>
+    <component base="na.sub" xOffset="1078"/>
+  </outline>
+</glyph>

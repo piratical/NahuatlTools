@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ma.xa.lig" format="1">
+  <advance width="1653"/>
+  <unicode hex="EE78"/>
+  <outline>
+    <component base="ma"/>
+    <component base="xa.sub" xOffset="1476"/>
+  </outline>
+</glyph>

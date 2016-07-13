@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tla.ei.nya.lig" format="1">
+  <advance width="1214"/>
+  <unicode hex="100D3"/>
+  <outline>
+    <component base="ei.vs" xOffset="1040"/>
+    <component base="tla"/>
+    <component base="nya.sub" xOffset="1093"/>
+  </outline>
+</glyph>

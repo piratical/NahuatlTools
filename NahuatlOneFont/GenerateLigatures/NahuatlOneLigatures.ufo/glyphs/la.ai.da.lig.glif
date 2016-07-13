@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="la.ai.da.lig" format="1">
+  <advance width="885"/>
+  <unicode hex="FB5A"/>
+  <outline>
+    <component base="ai.vs" xOffset="811"/>
+    <component base="la"/>
+    <component base="da.sub" xOffset="975"/>
+  </outline>
+</glyph>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="xa.na.lig" format="1">
+  <advance width="1481"/>
+  <unicode hex="EF4B"/>
+  <outline>
+    <component base="xa"/>
+    <component base="na.sub" xOffset="1273"/>
+  </outline>
+</glyph>

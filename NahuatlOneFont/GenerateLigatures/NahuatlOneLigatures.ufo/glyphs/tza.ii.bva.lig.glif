@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tza.ii.bva.lig" format="1">
+  <advance width="1186"/>
+  <unicode hex="F2E7"/>
+  <outline>
+    <component base="ii.vs" xOffset="863"/>
+    <component base="tza"/>
+    <component base="bva.sub" xOffset="1085"/>
+  </outline>
+</glyph>

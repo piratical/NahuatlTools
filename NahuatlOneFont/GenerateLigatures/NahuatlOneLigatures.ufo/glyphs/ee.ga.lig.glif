@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ee.ga.lig" format="1">
+  <advance width="1362"/>
+  <unicode hex="EE28"/>
+  <outline>
+    <component base="ee.base"/>
+    <component base="ga.sub" xOffset="1302"/>
+  </outline>
+</glyph>

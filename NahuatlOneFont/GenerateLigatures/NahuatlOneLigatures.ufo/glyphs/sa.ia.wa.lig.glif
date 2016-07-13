@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="sa.ia.wa.lig" format="1">
+  <advance width="1497"/>
+  <unicode hex="F918"/>
+  <outline>
+    <component base="ia.vs" xOffset="1157"/>
+    <component base="sa"/>
+    <component base="wa.sub" xOffset="1465"/>
+  </outline>
+</glyph>

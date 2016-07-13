@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="na.ii.na.lig" format="1">
+  <advance width="1220"/>
+  <unicode hex="F265"/>
+  <outline>
+    <component base="ii.vs" xOffset="893"/>
+    <component base="na"/>
+    <component base="na.sub" xOffset="1161"/>
+  </outline>
+</glyph>

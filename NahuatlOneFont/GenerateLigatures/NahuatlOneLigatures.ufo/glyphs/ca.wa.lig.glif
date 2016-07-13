@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ca.wa.lig" format="1">
+  <advance width="1039"/>
+  <unicode hex="EED4"/>
+  <outline>
+    <component base="ca"/>
+    <component base="wa.sub" xOffset="1275"/>
+  </outline>
+</glyph>

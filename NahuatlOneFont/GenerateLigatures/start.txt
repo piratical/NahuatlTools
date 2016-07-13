@@ -1,0 +1,5633 @@
+SplineFontDB: 3.0
+FontName: NahuatlOne
+FullName: NahuatlOne
+FamilyName: NahuatlOne
+Weight: Regular
+Copyright: Copyright (c) 2016, Ed Trager
+Version: 1.0
+ItalicAngle: 0
+UnderlinePosition: -204
+UnderlineWidth: 102
+Ascent: 1335
+Descent: 713
+InvalidEm: 0
+UFOAscent: 1335
+UFODescent: -713
+LayerCount: 2
+Layer: 0 0 "Back" 1
+Layer: 1 0 "Fore" 0
+StyleMap: 0x0040
+FSType: 0
+OS2Version: 0
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 0
+CreationTime: 1464712382
+ModificationTime: 1464721668
+PfmFamily: 16
+TTFWeight: 400
+TTFWidth: 5
+LineGap: 184
+VLineGap: 0
+Panose: 2 0 5 3 0 0 0 0 0 0
+OS2TypoAscent: 1335
+OS2TypoAOffset: 0
+OS2TypoDescent: -713
+OS2TypoDOffset: 0
+OS2TypoLinegap: 184
+OS2WinAscent: 0
+OS2WinAOffset: 0
+OS2WinDescent: 0
+OS2WinDOffset: 0
+HheadAscent: 0
+HheadAOffset: 0
+HheadDescent: 0
+HheadDOffset: 0
+OS2SubXSize: 1331
+OS2SubYSize: 1433
+OS2SubXOff: 0
+OS2SubYOff: 286
+OS2SupXSize: 1331
+OS2SupYSize: 1433
+OS2SupXOff: 0
+OS2SupYOff: 983
+OS2StrikeYSize: 102
+OS2StrikeYPos: 530
+OS2CapHeight: 1155
+OS2XHeight: 930
+OS2Vendor: 'PfEd'
+OS2CodePages: 00000001.00000000
+OS2UnicodeRanges: 00000001.00000000.00000000.00000000
+Lookup: 4 0 0 "BaseSubLookup0" { "BaseSubLookup0 subtable0"  } ['ccmp' ('DFLT' <'dflt' > 'cyrl' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 0 "BaseSubLookup1" { "BaseSubLookup1 subtable1"  } ['ccmp' ('DFLT' <'dflt' > 'cyrl' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 0 "BaseSubLookup2" { "BaseSubLookup2 subtable2"  } ['ccmp' ('DFLT' <'dflt' > 'cyrl' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 0 "subjoined_consonants" { "subjoined_consonants subtable"  } ['ccmp' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 4 0 0 "long_vowel_signs" { "long_vowel_signs subtable"  } ['ccmp' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 260 0 0 "Vowel_sign_positioning" { "Vowel_sign_positioning subtable"  } ['mark' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 260 0 0 "Subjoined_consonant_positioning" { "Subjoined_consonant_positioning subtable"  } ['mark' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
+MarkAttachClasses: 1
+DEI: 91125
+LangName: 1033 "Copyright (c) 2016, Ed Trager" "" "" "" "" "Version 1.000"
+Encoding: UnicodeBmp
+UnicodeInterp: none
+NameList: AGL For New Fonts
+DisplaySize: -128
+AntiAlias: 1
+FitToEm: 0
+WinInfo: 60904 8 6
+BeginPrivate: 5
+BlueValues 18 [-875 0 1433 1569]
+StemSnapH 9 [146 147]
+StemSnapV 5 [147]
+BlueShift 1 0
+BlueScale 1 0
+EndPrivate
+AnchorClass2: "vowel_signs" "Vowel_sign_positioning subtable" "subjoined_consonants" "Subjoined_consonant_positioning subtable" 
+BeginChars: 65537 105
+
+StartChar: .notdef
+Encoding: 65536 -1 0
+GlifName: _notdef
+Width: 1024
+VWidth: 0
+Flags: W
+HStem: 0 102<204 820 204 922> 788 102<204 820 204 204>
+VStem: 102 102<102 102 102 788> 820 102<102 788 788 788>
+LayerCount: 2
+Fore
+SplineSet
+102 0 m 257
+ 102 890 l 257
+ 922 890 l 257
+ 922 0 l 257
+ 102 0 l 257
+204 102 m 257
+ 820 102 l 257
+ 820 788 l 257
+ 204 788 l 257
+ 204 102 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I102
+sS'width'
+p8
+I102
+sa(dp9
+g7
+I820
+sg8
+I102
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I0
+sg8
+I102
+sa(dp13
+g7
+I788
+sg8
+I102
+sass."
+EndChar
+
+StartChar: zero
+Encoding: 48 48 1
+GlifName: zero
+Width: 1278
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -60 147<533 745 533 795.5> 1148 147
+VStem: 90 147<467 769 467 800.5> 1042 147<467 769>
+LayerCount: 2
+Fore
+SplineSet
+639 1296 m 256
+ 952 1296 1189 983 1189 618 c 256
+ 1189 253 952 -60 639 -60 c 256
+ 326 -60 90 253 90 618 c 256
+ 90 983 326 1296 639 1296 c 256
+639 1148 m 256
+ 427 1148 237 920 237 618 c 256
+ 237 316 427 87 639 87 c 256
+ 851 87 1042 316 1042 618 c 256
+ 1042 920 851 1148 639 1148 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I1042
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-60
+sg8
+I147
+sa(dp13
+g7
+I1148
+sg8
+I147
+sass."
+EndChar
+
+StartChar: one
+Encoding: 49 49 2
+GlifName: one
+Width: 700
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 0 147<160 313 460 611 160 313>
+VStem: 313 147<147 1029 1029 1029>
+LayerCount: 2
+Fore
+SplineSet
+460 1293 m 257
+ 460 147 l 257
+ 611 147 l 257
+ 611 -0 l 257
+ 160 -0 l 257
+ 160 147 l 257
+ 313 147 l 257
+ 313 1029 l 257
+ 167 939 l 257
+ 90 1064 l 257
+ 460 1293 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I313
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I0
+sg8
+I147
+sass."
+EndChar
+
+StartChar: two
+Encoding: 50 50 3
+GlifName: two
+Width: 1072
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -2 147<254 966 254 966> 1132 147<434.5 613.5>
+VStem: 835 147<877.5 985.5>
+LayerCount: 2
+Fore
+SplineSet
+835 919 m 256
+ 835 1052 681 1132 546 1132 c 256
+ 323 1132 214 958 214 958 c 257
+ 90 1036 l 257
+ 90 1036 245 1279 546 1279 c 256
+ 763 1279 982 1140 982 919 c 256
+ 982 662 752 588 572 509 c 256
+ 408 437 277 358 254 145 c 257
+ 966 145 l 257
+ 966 -2 l 257
+ 103 -2 l 257
+ 103 72 l 258
+ 103 244 156 372 236 462 c 256
+ 316 552 419 602 513 643 c 256
+ 607 684 695 718 751 759 c 256
+ 807 800 835 836 835 919 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I835
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I-2
+sg8
+I147
+sa(dp12
+g7
+I1132
+sg8
+I147
+sass."
+EndChar
+
+StartChar: three
+Encoding: 51 51 4
+GlifName: three
+Width: 1156
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -28 147<504 657.5 504 697> 1131 147<224 644 224 1040>
+VStem: 919 147<323 496.5 281.5 527>
+LayerCount: 2
+Fore
+SplineSet
+919 412 m 256
+ 919 642 759 729 519 729 c 256
+ 474 729 425 725 372 718 c 258
+ 124 683 l 257
+ 644 1131 l 257
+ 224 1131 l 257
+ 224 1278 l 257
+ 1040 1278 l 257
+ 573 875 l 257
+ 684 869 781 844 861 797 c 256
+ 991 720 1066 581 1066 412 c 256
+ 1066 151 827 -28 567 -28 c 256
+ 416 -28 239 8 90 117 c 257
+ 177 235 l 257
+ 292 151 441 119 567 119 c 256
+ 748 119 919 234 919 412 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I919
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I-28
+sg8
+I147
+sa(dp12
+g7
+I1131
+sg8
+I147
+sass."
+EndChar
+
+StartChar: uni0000
+Encoding: 0 0 5
+GlifName: uni0000
+Width: 1079
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 0 147<237 842 237 989> 756 148<237 237 237 842>
+VStem: 90 147<147 756 147 904> 842 147<147 756 756 756>
+LayerCount: 2
+Fore
+SplineSet
+90 904 m 257
+ 989 904 l 257
+ 989 0 l 257
+ 90 0 l 257
+ 90 904 l 257
+237 756 m 257
+ 237 147 l 257
+ 842 147 l 257
+ 842 756 l 257
+ 237 756 l 257
+412 666 m 257
+ 540 538 l 257
+ 667 666 l 257
+ 753 579 l 257
+ 626 452 l 257
+ 753 325 l 257
+ 667 238 l 257
+ 540 365 l 257
+ 412 238 l 257
+ 326 325 l 257
+ 453 452 l 257
+ 326 579 l 257
+ 412 666 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I842
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I0
+sg8
+I147
+sa(dp13
+g7
+I756
+sg8
+I148
+sass."
+EndChar
+
+StartChar: uni25CC_DOTTED_CIRCLE
+Encoding: 9676 9676 6
+GlifName: uni25C_C__D_O_T_T_E_D__C_I_R_C_L_E_
+Width: 1095
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -17 146<528 568> 58 146<309 312 312 330.5> 263 146<162 163 163 180.5 162 184 932 935 935 950.5> 512 146<163 166 166 181> 714 146<781 784 784 803> 791 146<528 568>
+VStem: 90 146<318 353.5 567.5 602.5> 239 146<112 150 111 151> 475 146<36 76 844 884> 711 146<111 148.5 768.5 806.5> 859 146<318 353 314.5 356.5>
+AnchorPoint: "subjoined_consonants" 549 -70 basechar 0
+AnchorPoint: "vowel_signs" 549 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+548 937 m 256
+ 588 937 621 904 621 864 c 256
+ 621 824 588 791 548 791 c 256
+ 508 791 475 824 475 864 c 256
+ 475 904 508 937 548 937 c 256
+242 789 m 256
+ 242 825 275 862 314 862 c 258
+ 315 862 l 258
+ 353 862 388 830 388 789 c 256
+ 388 751 356 716 315 716 c 256
+ 278 716 242 749 242 789 c 256
+711 787 m 256
+ 711 827 745 858 781 860 c 256
+ 782 860 783 860 784 860 c 256
+ 826 860 857 826 857 787 c 256
+ 857 746 822 714 784 714 c 256
+ 744 714 711 750 711 787 c 256
+90 585 m 256
+ 90 627 127 658 163 658 c 256
+ 164 658 165 658 166 658 c 256
+ 207 658 236 620 236 585 c 256
+ 236 543 199 512 163 512 c 256
+ 122 512 90 550 90 585 c 256
+860 584 m 256
+ 860 619 891 657 932 657 c 258
+ 933 657 l 258
+ 968 657 1006 625 1006 584 c 256
+ 1006 548 975 511 933 511 c 256
+ 896 511 860 541 860 584 c 256
+90 336 m 256
+ 90 371 122 409 162 409 c 258
+ 163 409 l 258
+ 198 409 236 377 236 336 c 256
+ 236 300 205 263 163 263 c 256
+ 127 263 90 294 90 336 c 256
+859 336 m 256
+ 859 377 897 409 932 409 c 256
+ 933 409 934 409 935 409 c 256
+ 975 409 1005 370 1005 336 c 256
+ 1005 293 969 263 932 263 c 256
+ 890 263 859 300 859 336 c 256
+239 131 m 256
+ 239 171 273 202 309 204 c 256
+ 310 204 311 204 312 204 c 256
+ 353 204 385 169 385 131 c 256
+ 385 91 349 58 312 58 c 256
+ 271 58 239 93 239 131 c 256
+711 130 m 256
+ 711 167 742 203 782 203 c 258
+ 784 203 l 258
+ 821 203 857 170 857 130 c 256
+ 857 92 825 57 784 57 c 256
+ 746 57 711 88 711 130 c 256
+548 129 m 256
+ 588 129 621 96 621 56 c 256
+ 621 16 588 -17 548 -17 c 256
+ 508 -17 475 16 475 56 c 256
+ 475 96 508 129 548 129 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I146
+sa(dp9
+g7
+I239
+sg8
+I146
+sa(dp10
+g7
+I475
+sg8
+I146
+sa(dp11
+g7
+I711
+sg8
+I146
+sa(dp12
+g7
+I859
+sg8
+I146
+sasS'hhints'
+p13
+(lp14
+(dp15
+g7
+I-17
+sg8
+I146
+sa(dp16
+g7
+I58
+sg8
+I146
+sa(dp17
+g7
+I263
+sg8
+I146
+sa(dp18
+g7
+I512
+sg8
+I146
+sa(dp19
+g7
+I714
+sg8
+I146
+sa(dp20
+g7
+I791
+sg8
+I146
+sass."
+EndChar
+
+StartChar: exclam
+Encoding: 33 33 7
+GlifName: exclam
+Width: 432
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 3 252<181 251> 1528 20<102 330 330 330>
+VStem: 90 252<94 164> 144 144<435 435>
+LayerCount: 2
+Fore
+SplineSet
+216 255 m 256
+ 286 255 342 199 342 129 c 256
+ 342 59 286 3 216 3 c 256
+ 146 3 90 59 90 129 c 256
+ 90 199 146 255 216 255 c 256
+102 1548 m 257
+ 330 1548 l 257
+ 288 435 l 257
+ 144 435 l 257
+ 102 1548 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I252
+sa(dp9
+g7
+I144
+sg8
+I144
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I3
+sg8
+I252
+sa(dp13
+g7
+I1528
+sg8
+I20
+sass."
+EndChar
+
+StartChar: exclamdown
+Encoding: 161 161 8
+GlifName: exclamdown
+Width: 432
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -871 21<102 102 102 330> 422 252<181 251>
+VStem: 90 252<513 583> 144 144<242 242>
+LayerCount: 2
+Fore
+SplineSet
+102 -871 m 257
+ 144 242 l 257
+ 288 242 l 257
+ 330 -871 l 257
+ 102 -871 l 257
+90 548 m 256
+ 90 618 146 674 216 674 c 256
+ 286 674 342 618 342 548 c 256
+ 342 478 286 422 216 422 c 256
+ 146 422 90 478 90 548 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I252
+sa(dp9
+g7
+I144
+sg8
+I144
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-871
+sg8
+I21
+sa(dp13
+g7
+I422
+sg8
+I252
+sass."
+EndChar
+
+StartChar: questiondown
+Encoding: 191 191 9
+GlifName: questiondown
+Width: 1078
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -875 147<453.407 611 453.407 645.5> -533 20<853 853> 415 252<505 575>
+VStem: 90 147<-544.053 -424.5 -544.053 -411> 414 253<506 576> 469 147<93 235 49.5 235>
+LayerCount: 2
+Fore
+SplineSet
+540 667 m 256
+ 610 667 667 611 667 541 c 256
+ 667 471 610 415 540 415 c 256
+ 470 415 414 471 414 541 c 256
+ 414 611 470 667 540 667 c 256
+534 -875 m 256
+ 294.745 -875 90 -707.263 90 -461 c 256
+ 90 -361 120 -282 165 -224 c 256
+ 210 -166 265 -129 314 -98 c 256
+ 363 -67 404 -42 430 -14 c 256
+ 456 14 469 39 469 93 c 258
+ 469 235 l 257
+ 616 235 l 257
+ 616 93 l 258
+ 616 6 582 -65 537 -114 c 256
+ 459.113 -198.81 344.92 -230.412 281 -314 c 256
+ 255 -348 237 -388 237 -461 c 256
+ 237 -627.107 372.814 -728 534 -728 c 256
+ 688 -728 810 -613 853 -513 c 257
+ 988 -571 l 257
+ 923 -723 757 -875 534 -875 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I414
+sg8
+I253
+sa(dp10
+g7
+I469
+sg8
+I147
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I-875
+sg8
+I147
+sa(dp14
+g7
+I-533
+sg8
+I20
+sa(dp15
+g7
+I415
+sg8
+I252
+sass."
+EndChar
+
+StartChar: question
+Encoding: 63 63 10
+GlifName: question
+Width: 1078
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 1 252<503 573> 1397 147<467 625>
+VStem: 412 252<92 162> 462 147<433 576 433 619.5> 841 147<1092.5 1212.5>
+LayerCount: 2
+Fore
+SplineSet
+841 1129 m 256
+ 841 1296 706 1397 544 1397 c 256
+ 390 1397 268 1281 225 1181 c 257
+ 90 1240 l 257
+ 155 1392 321 1544 544 1544 c 256
+ 783 1544 988 1375 988 1129 c 256
+ 988 1029 959 950 914 892 c 256
+ 869 834 813 797 764 766 c 256
+ 715 735 674 710 648 682 c 256
+ 622 654 609 630 609 576 c 258
+ 609 433 l 257
+ 462 433 l 257
+ 462 576 l 258
+ 462 663 496 733 541 782 c 256
+ 619 867 733 899 797 982 c 256
+ 823 1016 841 1056 841 1129 c 256
+538 253 m 256
+ 608 253 664 197 664 127 c 256
+ 664 57 608 1 538 1 c 256
+ 468 1 412 57 412 127 c 256
+ 412 197 468 253 538 253 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I412
+sS'width'
+p8
+I252
+sa(dp9
+g7
+I462
+sg8
+I147
+sa(dp10
+g7
+I841
+sg8
+I147
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I1
+sg8
+I252
+sa(dp14
+g7
+I1397
+sg8
+I147
+sass."
+EndChar
+
+StartChar: four
+Encoding: 52 52 11
+GlifName: four
+Width: 1212
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -2 21<786 933 786 786> 481 147<320 786 320 786 933 1123>
+VStem: 786 147<-2 481 -2 481 628 937>
+LayerCount: 2
+Fore
+SplineSet
+459 1282 m 257
+ 593 1221 l 257
+ 320 628 l 257
+ 786 628 l 257
+ 786 937 l 257
+ 933 937 l 257
+ 933 628 l 257
+ 1123 628 l 257
+ 1123 481 l 257
+ 933 481 l 257
+ 933 -2 l 257
+ 786 -2 l 257
+ 786 481 l 257
+ 90 481 l 257
+ 459 1282 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I786
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I-2
+sg8
+I21
+sa(dp12
+g7
+I481
+sg8
+I147
+sass."
+EndChar
+
+StartChar: five
+Encoding: 53 53 12
+GlifName: five
+Width: 1208
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -59 147<526.5 647 526.5 737.5> 685 148<524.5 636.5> 1131 147<437 984 437 437>
+VStem: 971 148<325.5 426>
+LayerCount: 2
+Fore
+SplineSet
+1119 380 m 256
+ 1119 102 867 -59 608 -59 c 256
+ 423 -59 295 -17 213 28 c 256
+ 131 73 90 129 90 129 c 257
+ 210 213 l 257
+ 210 213 224 190 284 157 c 256
+ 344 124 445 88 608 88 c 256
+ 686 88 783 111 854 159 c 256
+ 925 207 971 271 971 380 c 256
+ 971 472 946 530 905 574 c 256
+ 835 649 710 685 563 685 c 256
+ 455 685 344 667 257 641 c 258
+ 127 602 l 257
+ 327 1278 l 257
+ 984 1278 l 257
+ 984 1131 l 257
+ 437 1131 l 257
+ 343 812 l 257
+ 412 825 487 833 562 833 c 256
+ 873 833 1119 697 1119 380 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I971
+sS'width'
+p8
+I148
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I-59
+sg8
+I147
+sa(dp12
+g7
+I685
+sg8
+I148
+sa(dp13
+g7
+I1131
+sg8
+I147
+sass."
+EndChar
+
+StartChar: six
+Encoding: 54 54 13
+GlifName: six
+Width: 1141
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -59 147<510 640.5 510 716> 568 147<555.5 690> 1154 147<687.5 858>
+VStem: 90 148 904 147<291 404>
+LayerCount: 2
+Fore
+SplineSet
+1051 326 m 256
+ 1051 83 845 -59 587 -59 c 256
+ 402 -59 267 9 190 124 c 256
+ 114 238 90 384 90 542 c 256
+ 90 933 424 1301 858 1301 c 257
+ 858 1154 l 257
+ 517 1154 252 865 238 567 c 257
+ 324 651 465 715 605 715 c 256
+ 851 715 1051 562 1051 326 c 256
+904 326 m 256
+ 904 482 776 568 604 568 c 256
+ 507 568 407 525 344 465 c 256
+ 297 420 270 371 270 320 c 256
+ 270 274 293 235 312 207 c 256
+ 361 133 436 88 584 88 c 256
+ 697 88 778 117 828 158 c 256
+ 879 200 904 256 904 326 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I148
+sa(dp9
+g7
+I904
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-59
+sg8
+I147
+sa(dp13
+g7
+I568
+sg8
+I147
+sa(dp14
+g7
+I1154
+sg8
+I147
+sass."
+EndChar
+
+StartChar: seven
+Encoding: 55 55 14
+GlifName: seven
+Width: 1251
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 0 21<410 410> 1131 147<90 841 90 1161>
+VStem: 253 157<0 4>
+LayerCount: 2
+Fore
+SplineSet
+90 1278 m 257
+ 1161 1278 l 257
+ 1055 1156 l 258
+ 777 837 497 439 410 0 c 257
+ 253 4 l 257
+ 337 427 590 825 841 1131 c 257
+ 90 1131 l 257
+ 90 1278 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I253
+sS'width'
+p8
+I157
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I0
+sg8
+I21
+sa(dp12
+g7
+I1131
+sg8
+I147
+sass."
+EndChar
+
+StartChar: eight
+Encoding: 56 56 15
+GlifName: eight
+Width: 1189
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -55 147<492 698 492 730> 628 162<518.5 671.5 518.5 703> 1148 147<522.5 667.5>
+VStem: 90 147<293.5 432.5 293.5 441.5> 201 147<921 1011 921 1060.5> 841 147<921 1011> 953 147<293.5 432.5>
+LayerCount: 2
+Fore
+SplineSet
+595 1295 m 256
+ 804 1295 988 1156 988 965 c 256
+ 988 865 938 780 860 721 c 257
+ 1002 649 1100 519 1100 364 c 256
+ 1100 124 865 -55 595 -55 c 256
+ 325 -55 90 124 90 364 c 256
+ 90 519 188 649 330 721 c 257
+ 252 780 201 865 201 965 c 256
+ 201 1156 386 1295 595 1295 c 256
+595 1148 m 256
+ 450 1148 348 1057 348 965 c 256
+ 348 877 442 790 595 790 c 256
+ 748 790 841 877 841 965 c 256
+ 841 1057 740 1148 595 1148 c 256
+595 628 m 256
+ 379 628 237 501 237 364 c 256
+ 237 223 389 92 595 92 c 256
+ 801 92 953 223 953 364 c 256
+ 953 501 811 628 595 628 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I201
+sg8
+I147
+sa(dp10
+g7
+I841
+sg8
+I147
+sa(dp11
+g7
+I953
+sg8
+I147
+sasS'hhints'
+p12
+(lp13
+(dp14
+g7
+I-55
+sg8
+I147
+sa(dp15
+g7
+I628
+sg8
+I162
+sa(dp16
+g7
+I1148
+sg8
+I147
+sass."
+EndChar
+
+StartChar: nine
+Encoding: 57 57 16
+GlifName: nine
+Width: 1141
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -59 147<283 453.5 283 500> 528 147<451 585.5 451 605.5> 1153 147<503.5 636.5>
+VStem: 90 147<839 952 839 971.5> 903 148
+LayerCount: 2
+Fore
+SplineSet
+536 528 m 256
+ 289 528 90 681 90 917 c 256
+ 90 1026 136 1129 220 1198 c 256
+ 301 1264 412 1300 572 1300 c 256
+ 740 1300 876 1232 952 1118 c 256
+ 1028 1004 1051 858 1051 700 c 256
+ 1051 309 717 -59 283 -59 c 257
+ 283 88 l 257
+ 624 88 889 377 903 675 c 257
+ 817 591 675 528 536 528 c 256
+237 917 m 256
+ 237 761 365 675 537 675 c 256
+ 634 675 735 717 798 777 c 256
+ 845 822 871 871 871 922 c 256
+ 871 968 849 1008 830 1036 c 256
+ 780 1111 705 1153 568 1153 c 256
+ 439 1153 363 1124 314 1084 c 256
+ 263 1042 237 987 237 917 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I903
+sg8
+I148
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-59
+sg8
+I147
+sa(dp13
+g7
+I528
+sg8
+I147
+sa(dp14
+g7
+I1153
+sg8
+I147
+sass."
+EndChar
+
+StartChar: quotedblleft
+Encoding: 8220 8220 17
+GlifName: quotedblleft
+Width: 905
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 1002 558<200.103 338 338 657>
+VStem: 90 314 499 314
+LayerCount: 2
+Fore
+SplineSet
+813.237 1155.45 m 256
+ 813.237 1063.76 736.257 1001.98 659.676 1001.98 c 256
+ 658.784 1001.98 657.892 1001.98 657 1002 c 256
+ 559.807 1002 499.068 1082.31 499.068 1182.22 c 256
+ 499.068 1310.36 615.659 1498.52 747 1560 c 257
+ 816 1525 l 257
+ 741 1449 710 1376 696 1304 c 257
+ 767.034 1284.63 813.237 1224.84 813.237 1155.45 c 256
+404.442 1156.24 m 256
+ 404.442 1064.59 328.358 1001.98 251.676 1001.98 c 256
+ 250.784 1001.98 249.892 1001.98 249 1002 c 256
+ 151.207 1002 90.068 1081.13 90.068 1182.22 c 256
+ 90.068 1310.36 206.659 1498.52 338 1560 c 257
+ 407 1525 l 257
+ 332 1449 301 1376 287 1304 c 257
+ 358.477 1284.51 404.442 1226.25 404.442 1156.24 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I314
+sa(dp9
+g7
+I499
+sg8
+I314
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I1002
+sg8
+I558
+sass."
+EndChar
+
+StartChar: quotedblright
+Encoding: 8221 8221 18
+GlifName: quotedblright
+Width: 905
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 1002 558<159 259 248 567>
+VStem: 93 314 501 315
+LayerCount: 2
+Fore
+SplineSet
+92.7634 1406.55 m 256
+ 92.7634 1497.9 169.048 1560.02 245.324 1560.02 c 256
+ 246.216 1560.02 247.108 1560.02 248 1560 c 256
+ 270 1560 294 1554 315 1543 c 256
+ 368.642 1516.18 406.932 1460.29 406.932 1378.79 c 256
+ 406.932 1250.77 290.341 1063.48 159 1002 c 257
+ 90 1036 l 257
+ 165 1112 196 1185 210 1257 c 257
+ 139.696 1276.17 92.7634 1337.71 92.7634 1406.55 c 256
+500.763 1406.55 m 256
+ 500.763 1498.24 577.743 1560.02 654.324 1560.02 c 256
+ 655.216 1560.02 656.108 1560.02 657 1560 c 256
+ 679 1560 702 1554 723 1543 c 256
+ 776.701 1516.15 815.919 1460.58 815.919 1378.99 c 256
+ 815.919 1250.96 698.408 1063.51 567 1002 c 257
+ 499 1036 l 257
+ 574 1112 604 1185 618 1257 c 257
+ 547.696 1276.17 500.763 1337.71 500.763 1406.55 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I93
+sS'width'
+p8
+I314
+sa(dp9
+g7
+I501
+sg8
+I315
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I1002
+sg8
+I558
+sass."
+EndChar
+
+StartChar: guillemotleft
+Encoding: 171 171 19
+GlifName: guillemotleft
+Width: 946
+VWidth: 0
+GlyphClass: 2
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+432 825 m 257
+ 496 723 l 257
+ 295 472 l 257
+ 496 222 l 257
+ 432 119 l 257
+ 90 472 l 257
+ 432 825 l 257
+793 825 m 257
+ 856 723 l 257
+ 655 472 l 257
+ 856 222 l 257
+ 793 119 l 257
+ 450 472 l 257
+ 793 825 l 257
+EndSplineSet
+EndChar
+
+StartChar: guillemotright
+Encoding: 187 187 20
+GlifName: guillemotright
+Width: 946
+VWidth: 0
+GlyphClass: 2
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+154 825 m 257
+ 496 472 l 257
+ 154 119 l 257
+ 90 222 l 257
+ 291 472 l 257
+ 90 723 l 257
+ 154 825 l 257
+514 825 m 257
+ 856 472 l 257
+ 514 119 l 257
+ 450 222 l 257
+ 651 472 l 257
+ 450 723 l 257
+ 514 825 l 257
+EndSplineSet
+EndChar
+
+StartChar: plus
+Encoding: 43 43 21
+GlifName: plus
+Width: 1082
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 400 147<90 468 90 468 615 992>
+VStem: 468 147<22 400 22 400 547 924>
+LayerCount: 2
+Fore
+SplineSet
+468 924 m 257
+ 615 924 l 257
+ 615 547 l 257
+ 992 547 l 257
+ 992 400 l 257
+ 615 400 l 257
+ 615 22 l 257
+ 468 22 l 257
+ 468 400 l 257
+ 90 400 l 257
+ 90 547 l 257
+ 468 547 l 257
+ 468 924 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I468
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I400
+sg8
+I147
+sass."
+EndChar
+
+StartChar: hyphen
+Encoding: 45 45 22
+GlifName: hyphen
+Width: 1082
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 400 147<90 992 90 992>
+LayerCount: 2
+Fore
+SplineSet
+90 547 m 257
+ 992 547 l 257
+ 992 400 l 257
+ 90 400 l 257
+ 90 547 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'hhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I400
+sS'width'
+p8
+I147
+sass."
+EndChar
+
+StartChar: multiply
+Encoding: 215 215 23
+GlifName: multiply
+Width: 921
+VWidth: 0
+GlyphClass: 2
+Flags: W
+LayerCount: 2
+Fore
+SplineSet
+194 844 m 257
+ 461 577 l 257
+ 728 844 l 257
+ 832 740 l 257
+ 565 473 l 257
+ 832 206 l 257
+ 728 102 l 257
+ 461 369 l 257
+ 194 102 l 257
+ 90 206 l 257
+ 357 473 l 257
+ 90 740 l 257
+ 194 844 l 257
+EndSplineSet
+EndChar
+
+StartChar: degree
+Encoding: 176 176 24
+GlifName: degree
+Width: 676
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 1073 147<309.5 366.5 309.5 406> 1422 147<309.5 366.5>
+VStem: 90 147<1292.5 1349.5 1292.5 1389> 439 147<1292.5 1349.5>
+LayerCount: 2
+Fore
+SplineSet
+338 1569 m 256
+ 474 1569 586 1457 586 1321 c 256
+ 586 1185 474 1073 338 1073 c 256
+ 202 1073 90 1185 90 1321 c 256
+ 90 1457 202 1569 338 1569 c 256
+338 1422 m 256
+ 281 1422 237 1378 237 1321 c 256
+ 237 1264 281 1220 338 1220 c 256
+ 395 1220 439 1264 439 1321 c 256
+ 439 1378 395 1422 338 1422 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I439
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I1073
+sg8
+I147
+sa(dp13
+g7
+I1422
+sg8
+I147
+sass."
+EndChar
+
+StartChar: aa.base
+Encoding: 60816 60816 25
+GlifName: aa.base
+Width: 1254
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -6 148 799 148
+VStem: 90 147 827 147<924 924>
+AnchorPoint: "subjoined_consonants" 622 -70 basechar 0
+AnchorPoint: "vowel_signs" 622 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+567 947 m 256
+ 657 945 748 924 825 875 c 257
+ 831 882 825 909 827 924 c 257
+ 876 924 925 924 974 924 c 257
+ 974 887 974 851 974 814 c 256
+ 974.227 774.808 974.299 735.514 974.299 696.164 c 256
+ 974.299 625.978 974.068 555.614 974.068 485.335 c 256
+ 974.068 421.085 974.261 356.906 975 293 c 257
+ 983 200 1081 148 1165 142 c 257
+ 1160 93 1155 45 1150 -4 c 257
+ 1056 5 961 44 899 118 c 257
+ 834 51 744 15 653 1 c 256
+ 626.185 -3.64101 599.046 -5.91835 571.936 -5.91835 c 256
+ 441.332 -5.91835 311.436 46.9392 222 143 c 257
+ 135.91 230.395 90.2288 351.819 90.2288 473.149 c 256
+ 90.2288 537.851 103.219 602.526 130 662 c 257
+ 200.015 828.285 371.209 947.289 551.631 947.289 c 256
+ 556.747 947.289 561.871 947.193 567 947 c 256
+564 799 m 256
+ 561.071 799.089 558.143 799.133 555.217 799.133 c 256
+ 459.235 799.133 365.225 751.663 307 675 c 256
+ 260.3 617.092 237.153 543.917 237.153 470.856 c 256
+ 237.153 387.469 267.304 304.229 327 244 c 257
+ 390.21 175.645 481.513 141.864 573.112 141.864 c 256
+ 606.137 141.864 639.2 146.255 671 155 c 256
+ 735 172 811 207 826 279 c 257
+ 826.739 305.597 826.932 332.466 826.932 359.407 c 256
+ 826.932 388.876 826.701 418.43 826.701 447.806 c 256
+ 826.701 464.275 826.773 480.689 827 497 c 256
+ 826.689 503.942 826.572 510.927 826.572 517.939 c 256
+ 826.572 539.744 827.709 561.814 827.709 583.681 c 256
+ 827.709 622.651 824.097 660.974 804 696 c 257
+ 751 773 652 795 564 799 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I827
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-6
+sg8
+I148
+sa(dp13
+g7
+I799
+sg8
+I148
+sass."
+EndChar
+
+StartChar: ee.base
+Encoding: 60817 60817 26
+GlifName: ee.base
+Width: 1362
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -2 147
+VStem: 90 147<372 508.5 372 531.5> 607 147<276 797> 1125 148<354 509.5>
+AnchorPoint: "subjoined_consonants" 680 -70 basechar 0
+AnchorPoint: "vowel_signs" 680 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+681 950 m 256
+ 1005 950 1273 706 1273 433 c 256
+ 1273 208 1120 53 959 10 c 256
+ 929.601 2.28277 899.257 -1.92325 869.158 -1.92325 c 256
+ 817.353 -1.92325 766.276 10.5369 722 39 c 256
+ 652 84 607 171 607 276 c 258
+ 607 798 l 257
+ 509 786 424 752 361 702 c 256
+ 282 640 237 559 237 458 c 256
+ 237 286 311 185 428 131 c 257
+ 366 -3 l 257
+ 202 73 90 240 90 458 c 256
+ 90 605 161 733 270 818 c 256
+ 379 903 523 950 681 950 c 256
+754 797 m 257
+ 754 276 l 258
+ 754 208 774 180 801 163 c 256
+ 818.366 152.066 842.763 145.269 871.001 145.269 c 256
+ 886.667 145.269 903.515 147.361 921 152 c 256
+ 1020 178 1125 275 1125 433 c 256
+ 1125 586 966 763 754 797 c 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I607
+sg8
+I147
+sa(dp10
+g7
+I1125
+sg8
+I148
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I-2
+sg8
+I147
+sass."
+EndChar
+
+StartChar: ii.base
+Encoding: 60818 60818 27
+GlifName: ii.base
+Width: 1289
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -6 23 215 147<578.5 711.5> 800 148<532 758>
+VStem: 90 147<392 393 393 506 364.5 546> 1053 147<364 392 392 393 333.5 506>
+AnchorPoint: "subjoined_consonants" 645 -70 basechar 0
+AnchorPoint: "vowel_signs" 645 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+645 948 m 256
+ 951 948 1200 699 1200 393 c 258
+ 1200 392 l 257
+ 1200 275 1163 162 1094 67 c 258
+ 1042 -4 l 257
+ 981 59 l 258
+ 886 158 778 215 645 215 c 256
+ 512 215 397 157 310 61 c 258
+ 249 -6 l 257
+ 196 67 l 258
+ 127 161 90 275 90 392 c 258
+ 90 393 l 258
+ 90 699 339 948 645 948 c 256
+645 800 m 256
+ 419 800 237 619 237 393 c 256
+ 237 336 250 280 273 228 c 257
+ 376 312 504 362 645 362 c 256
+ 787 362 913 310 1017 226 c 257
+ 1040 278 1053 335 1053 393 c 256
+ 1053 619 871 800 645 800 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I1053
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-6
+sg8
+I23
+sa(dp13
+g7
+I215
+sg8
+I147
+sa(dp14
+g7
+I800
+sg8
+I148
+sass."
+EndChar
+
+StartChar: oo.base
+Encoding: 60819 60819 28
+GlifName: oo.base
+Width: 1131
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -5 147<475 657 475 697> 799 148<475 657>
+VStem: 90 147<380 562 380 602> 894 147<380 562>
+AnchorPoint: "subjoined_consonants" 568 -70 basechar 0
+AnchorPoint: "vowel_signs" 568 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+566 947 m 256
+ 828 947 1041 733 1041 471 c 256
+ 1041 209 828 -5 566 -5 c 256
+ 304 -5 90 209 90 471 c 256
+ 90 733 304 947 566 947 c 256
+566 799 m 256
+ 384 799 237 653 237 471 c 256
+ 237 289 384 142 566 142 c 256
+ 748 142 894 289 894 471 c 256
+ 894 653 748 799 566 799 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I894
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-5
+sg8
+I147
+sa(dp13
+g7
+I799
+sg8
+I148
+sass."
+EndChar
+
+StartChar: ee.vs
+Encoding: 60833 60833 29
+GlifName: ee.vs
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1072 135 1414 160<-286.5 -266.29 -511.184 -229.5>
+VStem: -766 147<1081 1087.84> -497 136 -154 138
+AnchorPoint: "vowel_signs" -390 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-366 1574 m 256
+ -166.58 1574 -16.1981 1489.69 -16.1981 1309.1 c 256
+ -16.1981 1294.99 -17.1159 1280.29 -19 1265 c 257
+ -41.9357 1148.56 -147.358 1071.8 -260.443 1071.8 c 256
+ -275.551 1071.8 -290.796 1073.17 -306 1076 c 256
+ -415.701 1096.85 -496.633 1196.61 -496.633 1314.92 c 256
+ -496.633 1327.1 -495.774 1339.49 -494 1352 c 256
+ -491 1373 -485 1394 -476 1414 c 257
+ -524 1398 -563 1367 -593 1298 c 256
+ -616.684 1243.53 -619.177 1180.33 -619.177 1124.15 c 256
+ -619.177 1109.17 -619 1094.68 -619 1081 c 257
+ -766 1081 l 257
+ -766.018 1083.42 -766.027 1085.83 -766.027 1088.24 c 256
+ -766.027 1354.01 -656.368 1574 -366 1574 c 256
+-258 1414 m 256
+ -315 1414 -361 1368 -361 1311 c 256
+ -361 1254 -315 1207 -258 1207 c 256
+ -201 1207 -154 1254 -154 1311 c 256
+ -154 1368 -201 1414 -258 1414 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-766
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-497
+sg8
+I136
+sa(dp10
+g7
+I-154
+sg8
+I138
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I1072
+sg8
+I135
+sa(dp14
+g7
+I1414
+sg8
+I160
+sass."
+EndChar
+
+StartChar: ii.vs
+Encoding: 60834 60834 30
+GlifName: ii.vs
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1417 147<-33.5 -8>
+VStem: -358 147<1083 1255 1083 1302>
+AnchorPoint: "vowel_signs" -280 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-8 1564 m 257
+ -8 1417 l 257
+ -59 1417 -114 1397 -152 1367 c 256
+ -190 1337 -211 1299 -211 1255 c 258
+ -211 1083 l 257
+ -358 1083 l 257
+ -358 1255 l 258
+ -358 1349 -309 1429 -243 1482 c 256
+ -177 1535 -94 1564 -8 1564 c 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-358
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I1417
+sg8
+I147
+sass."
+EndChar
+
+StartChar: oo.vs
+Encoding: 60835 60835 31
+GlifName: oo.vs
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1073 147<-280.5 -223.5 -280.5 -184> 1422 147<-280.5 -223.5>
+VStem: -500 147<1292.5 1349.5 1292.5 1389> -151 147<1292.5 1349.5>
+AnchorPoint: "vowel_signs" -249 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-252 1569 m 256
+ -116 1569 -4 1457 -4 1321 c 256
+ -4 1185 -116 1073 -252 1073 c 256
+ -388 1073 -500 1185 -500 1321 c 256
+ -500 1457 -388 1569 -252 1569 c 256
+-252 1422 m 256
+ -309 1422 -353 1378 -353 1321 c 256
+ -353 1264 -309 1220 -252 1220 c 256
+ -195 1220 -151 1264 -151 1321 c 256
+ -151 1378 -195 1422 -252 1422 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-500
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-151
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I1073
+sg8
+I147
+sa(dp13
+g7
+I1422
+sg8
+I147
+sass."
+EndChar
+
+StartChar: uu.vs
+Encoding: 60836 60836 32
+GlifName: uu.vs
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1073 147<-280.5 -223.5 -280.5 -184> 1413 20<-500 -353 -353 -353 -151 -4 -4 -4>
+VStem: -500 147<1321 1433 1292.5 1433> -151 147<1321 1433 1253 1433>
+AnchorPoint: "vowel_signs" -251 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-500 1433 m 257
+ -353 1433 l 257
+ -353 1321 l 258
+ -353 1264 -309 1220 -252 1220 c 256
+ -195 1220 -151 1264 -151 1321 c 258
+ -151 1433 l 257
+ -4 1433 l 257
+ -4 1321 l 258
+ -4 1185 -116 1073 -252 1073 c 256
+ -388 1073 -500 1185 -500 1321 c 258
+ -500 1433 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-500
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-151
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I1073
+sg8
+I147
+sa(dp13
+g7
+I1413
+sg8
+I20
+sass."
+EndChar
+
+StartChar: ia.vs
+Encoding: 60837 60837 33
+GlifName: ia.vs
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1204 147 1424 147
+VStem: -484 147 -148 147
+AnchorPoint: "vowel_signs" -414 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-550 1571.33 m 257
+ -197.761 1571.33 l 258
+ -154.267 1571.33 -108.054 1559.7 -68.3799 1528.51 c 256
+ -29.0984 1497.64 -0.748377 1443.88 -0.748377 1384.16 c 256
+ -0.748377 1321.55 -33.6831 1267.46 -73.9512 1239.46 c 256
+ -113.878 1211.69 -156.18 1203.57 -193.132 1203.57 c 258
+ -282.262 1203.57 l 258
+ -325.879 1203.57 -319.781 1199.2 -327.541 1177.97 c 256
+ -335.305 1156.74 -336.064 1116.65 -336.064 1082.15 c 257
+ -483.125 1082.15 l 257
+ -483.125 1090.57 -483.534 1101.54 -483.534 1114.38 c 256
+ -483.534 1144.86 -481.227 1185.89 -465.661 1228.46 c 256
+ -443.539 1288.98 -373.773 1350.63 -282.262 1350.63 c 258
+ -193.132 1350.63 l 258
+ -181.919 1350.63 -165.181 1355.15 -157.917 1360.2 c 256
+ -150.654 1365.25 -148.003 1364.59 -147.814 1383.78 c 256
+ -147.623 1404.04 -151.61 1406.88 -159.255 1412.89 c 256
+ -166.898 1418.9 -182.812 1424.27 -197.761 1424.27 c 258
+ -550 1424.27 l 257
+ -550 1571.33 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-484
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-148
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I1204
+sg8
+I147
+sa(dp13
+g7
+I1424
+sg8
+I147
+sass."
+EndChar
+
+StartChar: ai.vs
+Encoding: 60838 60838 34
+GlifName: ai.vs
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1073 147<-240.5 -203 -240.5 -187> 1427 142<-570 -523.5 -621 -512> 1526 20<-439 -294 -294 -294 -150 -3 -3 -3>
+VStem: -790 144<1292 1350 1292 1388> -435 141<1300 1319.5 1319.5 1321 1321 1350> -150 147<1300 1546>
+AnchorPoint: "vowel_signs" -378 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-551 1569 m 257
+ -496 1569 -469 1559 -439 1546 c 257
+ -294 1546 l 257
+ -294 1321 l 257
+ -294 1320 -294 1320 -294 1319 c 256
+ -294 1281 -285 1253 -276 1240 c 256
+ -267 1227 -259 1220 -222 1220 c 256
+ -184 1220 -174 1228 -166 1238 c 256
+ -158 1248 -150 1269 -150 1300 c 258
+ -150 1546 l 257
+ -3 1546 l 257
+ -3 1300 l 258
+ -3 1247 -15 1191 -52 1145 c 256
+ -89 1099 -152 1073 -222 1073 c 256
+ -284 1073 -341 1096 -379 1135 c 257
+ -423 1096 -480 1073 -542 1073 c 256
+ -678 1073 -790 1185 -790 1321 c 256
+ -790 1455 -691 1569 -551 1569 c 257
+-541 1427 m 256
+ -599 1427 -646 1379 -646 1321 c 256
+ -646 1263 -599 1216 -541 1216 c 256
+ -483 1216 -435 1263 -435 1321 c 256
+ -435 1379 -483 1427 -541 1427 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-790
+sS'width'
+p8
+I144
+sa(dp9
+g7
+I-435
+sg8
+I141
+sa(dp10
+g7
+I-150
+sg8
+I147
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I1073
+sg8
+I147
+sa(dp14
+g7
+I1427
+sg8
+I142
+sa(dp15
+g7
+I1526
+sg8
+I20
+sass."
+EndChar
+
+StartChar: oa.vs
+Encoding: 60839 60839 35
+GlifName: oa.vs
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1073 147<-530.5 -473.5 -530.5 -434> 1422 147<-530.5 -473.5> 1525 20<-182 -35 -35 -35>
+VStem: -750 147<1292.5 1349.5 1292.5 1389> -401 147<1292.5 1349.5> -182 147<1237 1238 1238 1242 1242 1545>
+AnchorPoint: "vowel_signs" -366 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-502 1569 m 256
+ -366 1569 -254 1457 -254 1321 c 256
+ -254 1185 -366 1073 -502 1073 c 256
+ -638 1073 -750 1185 -750 1321 c 256
+ -750 1457 -638 1569 -502 1569 c 256
+-182 1545 m 257
+ -35 1545 l 257
+ -35 1242 l 258
+ -35 1230 -32 1227 -27 1222 c 256
+ -22 1217 -11 1213 -8 1212 c 258
+ -41 1069 l 257
+ -68 1075 -98 1088 -127 1115 c 256
+ -156 1142 -180 1185 -182 1237 c 258
+ -182 1238 l 257
+ -182 1545 l 257
+-502 1422 m 256
+ -559 1422 -603 1378 -603 1321 c 256
+ -603 1264 -559 1220 -502 1220 c 256
+ -445 1220 -401 1264 -401 1321 c 256
+ -401 1378 -445 1422 -502 1422 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-750
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-401
+sg8
+I147
+sa(dp10
+g7
+I-182
+sg8
+I147
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I1073
+sg8
+I147
+sa(dp14
+g7
+I1422
+sg8
+I147
+sa(dp15
+g7
+I1525
+sg8
+I20
+sass."
+EndChar
+
+StartChar: eo.vs
+Encoding: 60840 60840 36
+GlifName: eo.vs
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1088 448<-606 -355 -355 -104>
+AnchorPoint: "vowel_signs" -358 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-355 1536 m 257
+ -2 1194 l 257
+ -104 1088 l 257
+ -355 1331 l 257
+ -606 1088 l 257
+ -708 1194 l 257
+ -355 1536 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'hhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I1088
+sS'width'
+p8
+I448
+sass."
+EndChar
+
+StartChar: ei.vs
+Encoding: 60841 60841 37
+GlifName: ei.vs
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1072 135 1511 21<-95 -95> 1556 145
+VStem: -878 147<1081 1087.84> -609 136 -266 138
+AnchorPoint: "vowel_signs" -457 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-472 1593 m 256
+ -413.747 1667.29 -326.931 1701.3 -236.283 1701.3 c 256
+ -157.315 1701.3 -75.4382 1675.49 -7 1628 c 257
+ -95 1511 l 257
+ -131.034 1537.85 -185.038 1556.21 -237.263 1556.21 c 256
+ -258.954 1556.21 -280.338 1553.04 -300 1546 c 257
+ -196.039 1507.46 -128.222 1429.57 -128.222 1308.72 c 256
+ -128.222 1294.72 -129.132 1280.15 -131 1265 c 257
+ -153.936 1148.56 -259.358 1071.8 -372.443 1071.8 c 256
+ -387.551 1071.8 -402.796 1073.17 -418 1076 c 256
+ -527.701 1096.85 -608.633 1196.61 -608.633 1314.92 c 256
+ -608.633 1327.1 -607.774 1339.49 -606 1352 c 256
+ -603 1373 -597 1394 -588 1414 c 257
+ -636 1398 -675 1367 -705 1298 c 256
+ -728.684 1243.53 -731.177 1180.33 -731.177 1124.15 c 256
+ -731.177 1109.17 -731 1094.68 -731 1081 c 257
+ -878 1081 l 257
+ -878.018 1083.41 -878.027 1085.82 -878.027 1088.22 c 256
+ -878.027 1351.03 -769.398 1570.04 -485 1574 c 257
+ -472 1593 l 256
+-370 1414 m 256
+ -427 1414 -473 1368 -473 1311 c 256
+ -473 1254 -427 1207 -370 1207 c 256
+ -313 1207 -266 1254 -266 1311 c 256
+ -266 1368 -313 1414 -370 1414 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-878
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-609
+sg8
+I136
+sa(dp10
+g7
+I-266
+sg8
+I138
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I1072
+sg8
+I135
+sa(dp14
+g7
+I1511
+sg8
+I21
+sa(dp15
+g7
+I1556
+sg8
+I145
+sass."
+EndChar
+
+StartChar: subjoiner_symbol
+Encoding: 60843 60843 38
+GlifName: subjoiner_symbol
+Width: 1095
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -832 21<468 628 468 468> -597 160<233 468 233 468 628 863> -222 20<468 628 628 628> -17 146<528 568> 58 146<309 312 312 314 314 320 309 322.5> 263 146<162 163 163 166 932 935 935 937.5> 512 146<163 166 166 168.5 163 177.5> 714 146<781 784 784 786 786 792 781 794.5> 791 146<528 568>
+VStem: 90 146<333 339 321.5 350.5 582 588> 239 146<124.5 137.5> 468 160<-832 -597 -832 -597 -437 -202> 711 146<123.5 136.5 119.5 140.5 780.5 793.5> 859 146<333 339>
+AnchorPoint: "vowel_signs" 546 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+548 937 m 256
+ 588 937 621 904 621 864 c 256
+ 621 824 588 791 548 791 c 256
+ 508 791 475 824 475 864 c 256
+ 475 904 508 937 548 937 c 256
+314 862 m 258
+ 315 862 l 258
+ 336 862 363 848 375 831 c 256
+ 382 821 388 802 388 789 c 256
+ 388 768 374 741 357 729 c 256
+ 347 722 328 716 315 716 c 256
+ 294 716 268 730 256 747 c 256
+ 249 757 242 776 242 789 c 256
+ 242 810 256 836 273 848 c 256
+ 283 855 302 862 314 862 c 258
+786 860 m 258
+ 798 860 817 854 827 847 c 256
+ 844 835 857 808 857 787 c 256
+ 857 774 852 756 844 745 c 256
+ 832 728 805 714 784 714 c 256
+ 771 714 753 720 742 728 c 256
+ 725 740 711 766 711 787 c 256
+ 711 800 717 819 725 830 c 256
+ 736 846 762 859 781 860 c 256
+ 782 860 783 860 784 860 c 258
+ 786 860 l 258
+166 658 m 256
+ 171 658 181 657 186 655 c 256
+ 214 646 236 614 236 585 c 256
+ 236 579 235 569 233 563 c 256
+ 224 535 192 512 163 512 c 256
+ 157 512 147 514 141 516 c 256
+ 113 525 90 556 90 585 c 256
+ 90 591 92 602 94 608 c 256
+ 103 636 134 658 163 658 c 256
+ 164 658 165 658 166 658 c 256
+932 657 m 258
+ 933 657 l 258
+ 962 657 993 634 1002 606 c 256
+ 1004 600 1006 590 1006 584 c 256
+ 1006 555 983 523 955 514 c 256
+ 949 512 939 511 933 511 c 256
+ 904 511 872 533 863 561 c 256
+ 861 567 860 578 860 584 c 256
+ 860 613 882 644 910 653 c 256
+ 916 655 926 657 932 657 c 258
+162 409 m 258
+ 163 409 l 258
+ 192 409 223 386 232 358 c 256
+ 234 352 236 342 236 336 c 256
+ 236 307 213 275 185 266 c 256
+ 179 264 169 263 163 263 c 256
+ 134 263 103 285 94 313 c 256
+ 92 319 90 330 90 336 c 256
+ 90 365 113 396 141 405 c 256
+ 147 407 156 409 162 409 c 258
+935 409 m 256
+ 940 409 950 407 955 405 c 256
+ 983 396 1005 365 1005 336 c 256
+ 1005 330 1004 319 1002 313 c 256
+ 993 285 961 263 932 263 c 256
+ 926 263 916 264 910 266 c 256
+ 882 275 859 307 859 336 c 256
+ 859 342 861 352 863 358 c 256
+ 872 386 903 409 932 409 c 256
+ 933 409 934 409 935 409 c 256
+314 204 m 258
+ 326 204 345 197 355 190 c 256
+ 372 178 385 152 385 131 c 256
+ 385 118 379 100 371 89 c 256
+ 359 72 333 58 312 58 c 256
+ 299 58 280 64 269 72 c 256
+ 252 84 239 110 239 131 c 256
+ 239 144 245 163 253 174 c 256
+ 264 190 290 203 309 204 c 256
+ 310 204 311 204 312 204 c 258
+ 314 204 l 258
+782 203 m 258
+ 784 203 l 258
+ 805 203 831 189 843 172 c 256
+ 850 162 857 143 857 130 c 256
+ 857 109 843 82 826 70 c 256
+ 816 63 797 57 784 57 c 256
+ 763 57 736 70 724 87 c 256
+ 717 97 711 117 711 130 c 256
+ 711 151 724 177 741 189 c 256
+ 751 196 770 203 782 203 c 258
+548 129 m 256
+ 588 129 621 96 621 56 c 256
+ 621 16 588 -17 548 -17 c 256
+ 508 -17 475 16 475 56 c 256
+ 475 96 508 129 548 129 c 256
+468 -202 m 257
+ 628 -202 l 257
+ 628 -437 l 257
+ 863 -437 l 257
+ 863 -597 l 257
+ 628 -597 l 257
+ 628 -832 l 257
+ 468 -832 l 257
+ 468 -597 l 257
+ 233 -597 l 257
+ 233 -437 l 257
+ 468 -437 l 257
+ 468 -202 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I146
+sa(dp9
+g7
+I239
+sg8
+I146
+sa(dp10
+g7
+I468
+sg8
+I160
+sa(dp11
+g7
+I711
+sg8
+I146
+sa(dp12
+g7
+I859
+sg8
+I146
+sasS'hhints'
+p13
+(lp14
+(dp15
+g7
+I-832
+sg8
+I21
+sa(dp16
+g7
+I-597
+sg8
+I160
+sa(dp17
+g7
+I-222
+sg8
+I20
+sa(dp18
+g7
+I-17
+sg8
+I146
+sa(dp19
+g7
+I58
+sg8
+I146
+sa(dp20
+g7
+I263
+sg8
+I146
+sa(dp21
+g7
+I512
+sg8
+I146
+sa(dp22
+g7
+I714
+sg8
+I146
+sa(dp23
+g7
+I791
+sg8
+I146
+sass."
+EndChar
+
+StartChar: place.sign
+Encoding: 60845 60845 39
+GlifName: place.sign
+Width: 703
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 21 148<256 447 256 613>
+VStem: 90 523<21 21>
+LayerCount: 2
+Fore
+SplineSet
+279 1571 m 257
+ 425 1571 l 257
+ 488 1054 550 538 613 21 c 257
+ 90 21 l 257
+ 279 1571 l 257
+352 954 m 257
+ 256 169 l 257
+ 447 169 l 257
+ 352 954 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I523
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I21
+sg8
+I148
+sass."
+EndChar
+
+StartChar: name.sign
+Encoding: 60846 60846 40
+GlifName: name.sign
+Width: 459
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -874 147<90 115.5 90 128.5> 1540 20<222 369 369 369>
+VStem: 222 147<-604 1560 -596 1560 -596 1560 -596 1560>
+LayerCount: 2
+Fore
+SplineSet
+222 1560 m 257
+ 369 1560 l 257
+ 369 -596 l 257
+ 369.019 -597.595 369.029 -599.187 369.029 -600.775 c 256
+ 369.029 -681.835 343.982 -753.961 292 -803 c 256
+ 239 -853 167 -874 90 -874 c 257
+ 90 -727 l 257
+ 141 -727 172 -715 191 -697 c 256
+ 209 -680 222 -654 222 -604 c 257
+ 222 -598 l 257
+ 222 1560 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I222
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I-874
+sg8
+I147
+sa(dp12
+g7
+I1540
+sg8
+I20
+sass."
+EndChar
+
+StartChar: diety.sign
+Encoding: 60847 60847 41
+GlifName: diety.sign
+Width: 678
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -868 147<309 334.5 309 347.5> 213 147<309.5 356.5> 562 147<309.5 356.5 270 366.5> 1414 147<309 334>
+VStem: 90 147<432.5 489.5 432.5 529> 441 148<-598 1288 -591 236 98 236 686 1288 -591 1313>
+LayerCount: 2
+Fore
+SplineSet
+309 1561 m 257
+ 386 1561 458 1540 510 1491 c 256
+ 562 1442 589 1368 589 1288 c 258
+ 589 -591 l 258
+ 589.018 -592.466 589.027 -593.929 589.027 -595.389 c 256
+ 589.027 -675.638 562.071 -747.894 511 -797 c 256
+ 458 -847 386 -868 309 -868 c 257
+ 309 -721 l 257
+ 360 -721 391 -709 410 -691 c 256
+ 428 -674 441 -648 441 -598 c 256
+ 441 -596 441 -594 441 -592 c 256
+ 441 -316 441 -40 441 236 c 257
+ 409 221 375 213 338 213 c 256
+ 202 213 90 325 90 461 c 256
+ 90 597 202 709 338 709 c 256
+ 375 709 409 701 441 686 c 257
+ 441 1288 l 258
+ 441 1338 428 1366 409 1384 c 256
+ 390 1402 359 1414 309 1414 c 257
+ 309 1561 l 257
+338 562 m 256
+ 281 562 237 518 237 461 c 256
+ 237 404 281 360 338 360 c 256
+ 395 360 439 404 439 461 c 256
+ 439 518 395 562 338 562 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I441
+sg8
+I148
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-868
+sg8
+I147
+sa(dp13
+g7
+I213
+sg8
+I147
+sa(dp14
+g7
+I562
+sg8
+I147
+sa(dp15
+g7
+I1414
+sg8
+I147
+sass."
+EndChar
+
+StartChar: ma
+Encoding: 60848 60848 42
+GlifName: ma
+Width: 1653
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -2 21 801 147<428.5 569 1084 1224.5>
+VStem: 90 147<364 585.5 364 619> 753 147<18 19 18 19> 1416 147<364 585.5>
+AnchorPoint: "subjoined_consonants" 840 -70 basechar 0
+AnchorPoint: "vowel_signs" 823 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+503 948 m 256
+ 637 948 755 874 826 759 c 257
+ 897 874 1016 948 1150 948 c 256
+ 1382 948 1563 746 1563 492 c 256
+ 1563 155 1278 -2 1278 -2 c 257
+ 1209 128 l 257
+ 1209 128 1416 236 1416 492 c 256
+ 1416 679 1299 801 1150 801 c 256
+ 1018 801 903 689 902 501 c 258
+ 900 19 l 257
+ 900 18 l 257
+ 753 18 l 257
+ 753 19 l 257
+ 751 500 l 258
+ 749 689 635 801 503 801 c 256
+ 354 801 237 679 237 492 c 256
+ 237 236 444 128 444 128 c 257
+ 375 -2 l 257
+ 375 -2 90 155 90 492 c 256
+ 90 746 271 948 503 948 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I753
+sg8
+I147
+sa(dp10
+g7
+I1416
+sg8
+I147
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I-2
+sg8
+I21
+sa(dp14
+g7
+I801
+sg8
+I147
+sass."
+EndChar
+
+StartChar: ma.sub
+Encoding: 60880 60880 43
+GlifName: ma.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -710 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-958 -157 m 256
+ -860 -157 -774 -206 -717 -284 c 257
+ -659 -206 -572 -157 -474 -157 c 256
+ -290 -157 -146 -319 -146 -517 c 256
+ -146 -780 -369 -903 -369 -903 c 257
+ -439 -774 l 257
+ -439 -774 -293 -699 -293 -517 c 256
+ -293 -385 -373 -304 -474 -304 c 256
+ -562 -304 -642 -377 -642 -510 c 258
+ -643 -872 l 257
+ -790 -872 l 257
+ -791 -511 l 258
+ -793 -378 -870 -304 -958 -304 c 256
+ -1059 -304 -1140 -385 -1140 -517 c 256
+ -1140 -699 -994 -774 -994 -774 c 257
+ -1064 -903 l 257
+ -1064 -903 -1287 -780 -1287 -517 c 256
+ -1287 -319 -1142 -157 -958 -157 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol ma
+EndChar
+
+StartChar: na
+Encoding: 60849 60849 44
+GlifName: na
+Width: 1220
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -4 22 798 147<518.5 703.5>
+VStem: 90 148 982 148
+AnchorPoint: "subjoined_consonants" 630 -70 basechar 0
+AnchorPoint: "vowel_signs" 613 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+611 945 m 256
+ 851 945 1018 801 1087 614 c 256
+ 1116.09 535.168 1130.07 449.049 1130.07 360.664 c 256
+ 1130.07 239.388 1103.75 113.844 1054 -3 c 257
+ 919 54 l 257
+ 961.205 152.863 982.017 259.748 982.017 359.969 c 256
+ 982.017 433.096 970.936 502.675 949 563 c 256
+ 897 706 796 798 611 798 c 256
+ 426 798 325 706 272 563 c 256
+ 249.651 502.699 238.326 433.152 238.326 360.132 c 256
+ 238.326 259.989 259.626 153.314 303 55 c 257
+ 169 -4 l 257
+ 117.003 113.283 90.0399 238.91 90.0399 360.155 c 256
+ 90.0399 448.767 104.442 535.039 134 614 c 256
+ 204 801 371 945 611 945 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I148
+sa(dp9
+g7
+I982
+sg8
+I148
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-4
+sg8
+I22
+sa(dp13
+g7
+I798
+sg8
+I147
+sass."
+EndChar
+
+StartChar: pa
+Encoding: 60850 60850 45
+GlifName: pa
+Width: 1362
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -3 21<602 843> 802 147
+VStem: 90 147<438.5 575 438.5 598> 607 147<150 671 150 671 150 723.5> 1125 148<438.5 594>
+AnchorPoint: "subjoined_consonants" 680 -70 basechar 0
+AnchorPoint: "vowel_signs" 663 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+366 950 m 256
+ 428 816 l 257
+ 311 762 237 661 237 489 c 256
+ 237 388 282 307 361 245 c 256
+ 424 195 509 161 607 149 c 257
+ 607 671 l 258
+ 607 776 652 863 722 908 c 256
+ 766.276 936.463 817.353 948.923 869.158 948.923 c 256
+ 899.257 948.923 929.601 944.717 959 937 c 256
+ 1120 894 1273 740 1273 515 c 256
+ 1273 242 1005 -3 681 -3 c 256
+ 523 -3 379 45 270 130 c 256
+ 161 215 90 342 90 489 c 256
+ 90 707 202 874 366 950 c 256
+869 802 m 256
+ 842 802 818 795 801 784 c 256
+ 774 767 754 739 754 671 c 258
+ 754 150 l 257
+ 966 184 1125 362 1125 515 c 256
+ 1125 673 1020 769 921 795 c 256
+ 903 800 885 802 869 802 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I607
+sg8
+I147
+sa(dp10
+g7
+I1125
+sg8
+I148
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I-3
+sg8
+I21
+sa(dp14
+g7
+I802
+sg8
+I147
+sass."
+EndChar
+
+StartChar: ta
+Encoding: 60851 60851 46
+GlifName: ta
+Width: 1030
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -2 147<496 628 496 661.5> 777 147<90 432 90 854>
+VStem: 140 147<309 380.5 309 399.5>
+AnchorPoint: "subjoined_consonants" 530 -70 basechar 0
+AnchorPoint: "vowel_signs" 513 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+90 924 m 257
+ 854 924 l 257
+ 865 778 l 257
+ 865 778 714 753 565 681 c 256
+ 491 645 419 598 368 541 c 256
+ 317 484 287 422 287 339 c 256
+ 287 279 310 235 353 201 c 256
+ 396 167 460 145 532 145 c 256
+ 724 145 827 272 827 272 c 257
+ 940 178 l 257
+ 940 178 791 -2 532 -2 c 256
+ 431 -2 335 28 262 86 c 256
+ 189 144 140 235 140 339 c 256
+ 140 460 189 562 258 639 c 256
+ 309 696 369 741 432 777 c 257
+ 90 777 l 257
+ 90 924 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I140
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I-2
+sg8
+I147
+sa(dp12
+g7
+I777
+sg8
+I147
+sass."
+EndChar
+
+StartChar: ca
+Encoding: 60852 60852 47
+GlifName: ca
+Width: 1039
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -5 147<475 633 475 650.5> 799 148<475 611.5>
+VStem: 90 147<380 562 380 602>
+AnchorPoint: "subjoined_consonants" 570 -70 basechar 0
+AnchorPoint: "vowel_signs" 553 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+566 947 m 256
+ 697 947 816 893 902 807 c 257
+ 798 703 l 257
+ 738 763 657 799 566 799 c 256
+ 384 799 237 653 237 471 c 256
+ 237 289 384 142 566 142 c 256
+ 700 142 747 180 853 272 c 257
+ 949 161 l 257
+ 838 65 735 -5 566 -5 c 256
+ 304 -5 90 209 90 471 c 256
+ 90 733 304 947 566 947 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I-5
+sg8
+I147
+sa(dp12
+g7
+I799
+sg8
+I148
+sass."
+EndChar
+
+StartChar: cua
+Encoding: 60853 60853 48
+GlifName: cua
+Width: 1122
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -9 21<963 963>
+VStem: 90 147<437 925> 661 146
+AnchorPoint: "subjoined_consonants" 560 -70 basechar 0
+AnchorPoint: "vowel_signs" 543 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+984 927 m 256
+ 1033 791 l 257
+ 861.785 687.93 807.39 574.702 807.39 466.768 c 256
+ 807.39 447.991 809.036 429.375 812 411 c 256
+ 832 287 931 169 1027 123 c 257
+ 963 -9 l 257
+ 819 60 696 209 667 388 c 256
+ 663.19 410.86 661.251 434.174 661.251 457.753 c 256
+ 661.251 533.19 681.097 611.337 723 686 c 257
+ 462 546 264 283 237 14 c 257
+ 90 21 l 257
+ 90 925 l 257
+ 237 925 l 257
+ 237 437 l 257
+ 399 689 675 880 984 927 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I661
+sg8
+I146
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-9
+sg8
+I21
+sass."
+EndChar
+
+StartChar: tza
+Encoding: 60854 60854 49
+GlifName: tza
+Width: 1186
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -4 24 132 147 776 147<154 710 154 1045>
+AnchorPoint: "subjoined_consonants" 600 -70 basechar 0
+AnchorPoint: "vowel_signs" 583 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+154 923 m 257
+ 1045 923 l 257
+ 437 264 l 257
+ 489.859 274.216 542.965 279.106 595.551 279.106 c 256
+ 779.733 279.106 957.533 219.127 1096 118 c 257
+ 1009 -1 l 257
+ 895.847 81.628 748.625 132.126 595.468 132.126 c 256
+ 457.615 132.126 314.953 91.2151 188 -4 c 257
+ 90 105 l 257
+ 710 776 l 257
+ 154 776 l 257
+ 154 923 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'hhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-4
+sS'width'
+p8
+I24
+sa(dp9
+g7
+I132
+sg8
+I147
+sa(dp10
+g7
+I776
+sg8
+I147
+sass."
+EndChar
+
+StartChar: tla
+Encoding: 60855 60855 50
+GlifName: tla
+Width: 1214
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -4 147<392 472.5 392 495.5> 416 147<410 487.5> 779 148
+VStem: 90 147<251.5 287.5 251.5 309>
+AnchorPoint: "subjoined_consonants" 600 -70 basechar 0
+AnchorPoint: "vowel_signs" 583 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+1042 927 m 257
+ 1030 843 l 257
+ 1030 843 1002 640 919 434 c 256
+ 909 409 898 383 886 358 c 257
+ 901 344 916 330 930 316 c 256
+ 1049 197 1125 77 1125 77 c 257
+ 1001 -2 l 257
+ 1001 -2 933 105 826 212 c 256
+ 821 217 816 221 811 226 c 257
+ 791 196 769 168 744 142 c 256
+ 666 58 559 -4 432 -4 c 256
+ 327 -4 242 24 182 74 c 256
+ 122 124 90 196 90 267 c 256
+ 90 351 129 430 194 483 c 256
+ 259 536 346 563 446 563 c 256
+ 566 563 674 516 767 453 c 257
+ 772 465 777 477 782 489 c 256
+ 826 598 854 707 869 779 c 257
+ 148 776 l 257
+ 148 923 l 257
+ 1042 927 l 257
+446 416 m 256
+ 374 416 321 395 287 368 c 256
+ 253 341 237 308 237 267 c 256
+ 237 236 248 210 276 187 c 256
+ 304 164 352 143 432 143 c 256
+ 513 143 577 179 636 242 c 256
+ 658 265 678 292 697 321 c 257
+ 617 377 529 416 446 416 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I-4
+sg8
+I147
+sa(dp12
+g7
+I416
+sg8
+I147
+sa(dp13
+g7
+I779
+sg8
+I148
+sass."
+EndChar
+
+StartChar: na.sub
+Encoding: 60881 60881 51
+GlifName: na.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -531 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-552 -159 m 256
+ -366 -159 -232 -273 -178 -419 c 256
+ -155.236 -480.547 -144.379 -547.068 -144.379 -615.121 c 256
+ -144.379 -708.501 -164.822 -804.762 -203 -895 c 257
+ -338 -838 l 257
+ -307.363 -766.322 -292.432 -688.295 -292.432 -615.702 c 256
+ -292.432 -562.712 -300.388 -512.617 -316 -470 c 256
+ -353 -369 -420 -306 -552 -306 c 256
+ -684 -306 -751 -369 -789 -470 c 256
+ -805.025 -512.593 -813.226 -562.655 -813.226 -615.537 c 256
+ -813.226 -688.053 -797.806 -765.871 -766 -837 c 257
+ -900 -896 l 257
+ -939.938 -805.705 -960.78 -709.045 -960.78 -615.327 c 256
+ -960.78 -547.131 -949.744 -480.493 -927 -419 c 256
+ -873 -273 -738 -159 -552 -159 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol na
+EndChar
+
+StartChar: pa.sub
+Encoding: 60882 60882 52
+GlifName: pa.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -590 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-470 -156 m 256
+ -445 -156 -421 -160 -397 -166 c 256
+ -269 -200 -148 -323 -148 -500 c 256
+ -148 -717 -357 -906 -609 -906 c 256
+ -731 -906 -844 -870 -929 -803 c 256
+ -1014 -736 -1071 -635 -1071 -519 c 256
+ -1071 -350 -982 -217 -853 -157 c 257
+ -791 -291 l 257
+ -873 -329 -924 -396 -924 -519 c 256
+ -924 -589 -893 -644 -838 -687 c 256
+ -798 -718 -744 -741 -683 -752 c 257
+ -683 -383 l 258
+ -683 -300 -647 -228 -589 -190 c 256
+ -553 -167 -511 -156 -470 -156 c 256
+-458 -304 m 256
+ -480 -302 -498 -306 -509 -313 c 256
+ -524 -322 -536 -337 -536 -383 c 258
+ -536 -750 l 257
+ -396 -718 -295 -598 -295 -500 c 256
+ -295 -390 -368 -326 -434 -308 c 256
+ -442 -306 -451 -305 -458 -304 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol pa
+EndChar
+
+StartChar: ta.sub
+Encoding: 60883 60883 53
+GlifName: ta.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -480 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-801 -175 m 257
+ -229 -175 l 257
+ -217 -321 l 257
+ -217 -321 -328 -340 -437 -392 c 256
+ -491 -418 -543 -452 -579 -492 c 256
+ -615 -532 -635 -575 -635 -632 c 256
+ -635 -672 -620 -698 -592 -721 c 256
+ -564 -744 -520 -759 -470 -759 c 256
+ -335 -759 -263 -670 -263 -670 c 257
+ -150 -764 l 257
+ -150 -764 -268 -906 -470 -906 c 256
+ -549 -906 -625 -883 -684 -836 c 256
+ -743 -789 -782 -715 -782 -632 c 256
+ -782 -536 -743 -455 -689 -394 c 256
+ -664 -366 -636 -343 -607 -322 c 257
+ -801 -322 l 257
+ -801 -175 l 257
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol ta
+EndChar
+
+StartChar: ca.sub
+Encoding: 60884 60884 54
+GlifName: ca.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -410 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-425 -158 m 256
+ -322 -158 -228 -200 -160 -268 c 257
+ -264 -372 l 257
+ -305 -331 -362 -305 -425 -305 c 256
+ -552 -305 -653 -406 -653 -533 c 256
+ -653 -660 -552 -761 -425 -761 c 256
+ -329 -761 -301 -737 -222 -668 c 257
+ -126 -779 l 257
+ -210 -852 -294 -908 -425 -908 c 256
+ -631 -908 -800 -739 -800 -533 c 256
+ -800 -327 -631 -158 -425 -158 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol ca
+EndChar
+
+StartChar: cua.sub
+Encoding: 60885 60885 55
+GlifName: cua.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -470 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-194 -173 m 256
+ -145 -309 l 257
+ -268.082 -383.187 -304.459 -459.505 -304.459 -533.162 c 256
+ -304.459 -546.877 -303.197 -560.5 -301 -574 c 256
+ -287 -660 -217 -745 -151 -777 c 257
+ -214 -909 l 257
+ -328 -854 -423 -739 -446 -598 c 256
+ -448.8 -579.958 -450.244 -561.53 -450.244 -542.895 c 256
+ -450.244 -501.622 -443.156 -459.336 -428 -418 c 257
+ -593 -525 -714 -700 -732 -877 c 257
+ -879 -870 l 257
+ -879 -193 l 257
+ -732 -193 l 257
+ -732 -498 l 257
+ -605 -329 -411 -206 -194 -173 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol cua
+EndChar
+
+StartChar: tza.sub
+Encoding: 60886 60886 56
+GlifName: tza.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -540 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-866 -176 m 257
+ -156 -176 l 257
+ -605 -662 l 257
+ -581.477 -659.449 -557.974 -658.204 -534.604 -658.204 c 256
+ -393.061 -658.204 -256.429 -703.896 -150 -782 c 257
+ -236 -901 l 257
+ -317.371 -841.678 -423.547 -805.506 -534.126 -805.506 c 256
+ -634.183 -805.506 -737.846 -835.121 -830 -904 c 257
+ -928 -795 l 257
+ -492 -323 l 257
+ -866 -323 l 257
+ -866 -176 l 257
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol tza
+EndChar
+
+StartChar: tla.sub
+Encoding: 60887 60887 57
+GlifName: tla.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -580 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-207 -173 m 257
+ -219 -257 l 257
+ -219 -257 -239 -411 -303 -568 c 256
+ -309 -583 -316 -598 -323 -613 c 257
+ -315 -621 -307 -628 -299 -636 c 256
+ -208 -727 -151 -818 -151 -818 c 257
+ -275 -897 l 257
+ -275 -897 -323 -821 -399 -744 c 257
+ -411 -761 -424 -777 -438 -792 c 256
+ -499 -857 -584 -907 -685 -907 c 256
+ -767 -907 -836 -886 -885 -845 c 256
+ -934 -804 -960 -744 -960 -686 c 256
+ -960 -617 -927 -553 -875 -510 c 256
+ -823 -467 -753 -445 -675 -445 c 256
+ -588 -445 -510 -476 -442 -519 c 257
+ -441 -517 -441 -514 -440 -512 c 256
+ -412 -442 -393 -372 -381 -320 c 257
+ -898 -322 l 257
+ -898 -175 l 257
+ -207 -173 l 257
+-675 -592 m 256
+ -725 -592 -761 -607 -782 -624 c 256
+ -803 -641 -813 -661 -813 -686 c 256
+ -813 -704 -808 -718 -791 -732 c 256
+ -774 -746 -742 -760 -685 -760 c 256
+ -630 -760 -588 -737 -546 -692 c 256
+ -535 -680 -524 -666 -513 -651 c 257
+ -567 -616 -623 -592 -675 -592 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol tla
+EndChar
+
+StartChar: cha
+Encoding: 60856 60856 58
+GlifName: cha
+Width: 1026
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -108 21<465 465> 21 152 316 148<724.5 744.5> 798 147<465 643.5>
+VStem: 90 147<402 579 402 617.5> 461 147<160 181 160 252> 790 147<225 277.5>
+AnchorPoint: "subjoined_consonants" 539 -70 basechar 0
+AnchorPoint: "vowel_signs" 522 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+937 260 m 256
+ 937 88 767 21 611 12 c 257
+ 612 -106 l 257
+ 465 -108 l 257
+ 464 21 l 257
+ 250 64 90 236 90 489 c 256
+ 90 746 298 945 561 945 c 256
+ 785 945 909 802 909 802 c 257
+ 796 708 l 257
+ 796 708 726 798 561 798 c 256
+ 369 798 237 669 237 489 c 256
+ 237 315 328 212 461 173 c 257
+ 461 176 461 179 461 181 c 256
+ 461 323 557 422 663 454 c 256
+ 685 461 706 464 727 464 c 256
+ 842 464 937 372 937 260 c 256
+608 160 m 257
+ 684 166 790 189 790 261 c 256
+ 790 294 761 316 728 316 c 256
+ 721 316 713 315 705 313 c 256
+ 637 293 608 260 608 168 c 256
+ 608 165 608 163 608 160 c 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I461
+sg8
+I147
+sa(dp10
+g7
+I790
+sg8
+I147
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I-108
+sg8
+I21
+sa(dp14
+g7
+I21
+sg8
+I152
+sa(dp15
+g7
+I316
+sg8
+I148
+sa(dp16
+g7
+I798
+sg8
+I147
+sass."
+EndChar
+
+StartChar: sa
+Encoding: 60857 60857 59
+GlifName: sa
+Width: 1497
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -6 147<960.5 1098.5 960.5 1139.5> 822 147<438.5 547>
+VStem: 90 147<369.5 506 369.5 591.5> 658 145<295.5 379 295.5 393.5> 695 147<586 664> 1260 148<371 554.5>
+AnchorPoint: "subjoined_consonants" 760 -70 basechar 0
+AnchorPoint: "vowel_signs" 743 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+90 471 m 256
+ 90 712 225 969 486 969 c 256
+ 686 969 842 807 842 599 c 256
+ 842 555 834 508 819 461 c 256
+ 808 427 803 394 803 364 c 256
+ 803 227 907 141 1014 141 c 256
+ 1183 141 1260 283 1260 459 c 256
+ 1260 650 1095 851 1095 851 c 257
+ 1206 948 l 257
+ 1206 948 1408 728 1408 459 c 256
+ 1408 207 1265 -6 1014 -6 c 256
+ 822 -6 658 160 658 372 c 256
+ 658 415 664 460 679 506 c 256
+ 690 539 695 571 695 601 c 256
+ 695 727 608 822 486 822 c 256
+ 391 822 338 778 297 708 c 256
+ 256 638 237 541 237 471 c 256
+ 237 268 370 81 370 81 c 257
+ 252 -6 l 257
+ 252 -6 90 206 90 471 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I658
+sg8
+I145
+sa(dp10
+g7
+I695
+sg8
+I147
+sa(dp11
+g7
+I1260
+sg8
+I148
+sasS'hhints'
+p12
+(lp13
+(dp14
+g7
+I-6
+sg8
+I147
+sa(dp15
+g7
+I822
+sg8
+I147
+sass."
+EndChar
+
+StartChar: xa
+Encoding: 60858 60858 60
+GlifName: xa
+Width: 1481
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -8 21<226 226> 69 147<834 1038 834 1070> 727 147<834.5 1035>
+VStem: 1245 147<424.5 511>
+AnchorPoint: "subjoined_consonants" 742 -70 basechar 0
+AnchorPoint: "vowel_signs" 753 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+90 47 m 257
+ 90 47 190 280 323 471 c 257
+ 191 661 90 898 90 898 c 257
+ 227 952 l 257
+ 227 952 298 775 417 594 c 257
+ 544 745 706 874 904 874 c 256
+ 1233 874 1392 643 1392 468 c 256
+ 1392 295 1236 69 904 69 c 256
+ 705 69 544 196 417 347 c 257
+ 298 167 226 -8 226 -8 c 257
+ 90 47 l 257
+904 727 m 256
+ 765 727 624 614 507 471 c 257
+ 623 328 764 216 904 216 c 256
+ 1172 216 1245 381 1245 468 c 256
+ 1245 554 1166 727 904 727 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I1245
+sS'width'
+p8
+I147
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I-8
+sg8
+I21
+sa(dp12
+g7
+I69
+sg8
+I147
+sa(dp13
+g7
+I727
+sg8
+I147
+sass."
+EndChar
+
+StartChar: ha
+Encoding: 60859 60859 61
+GlifName: ha
+Width: 1275
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -7 21<843 843> 799 147<677 816.5>
+VStem: 90 147<598 925> 1038 147<341 568>
+AnchorPoint: "subjoined_consonants" 550 -70 basechar 0
+AnchorPoint: "vowel_signs" 533 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+237 598 m 257
+ 325 774 482 946 732 946 c 256
+ 979 946 1185 742 1185 463 c 256
+ 1185 120 843 -7 843 -7 c 257
+ 793 131 l 257
+ 793 131 1038 219 1038 463 c 256
+ 1038 673 901 799 732 799 c 256
+ 622 799 543 757 476 688 c 256
+ 409 619 357 522 321 422 c 256
+ 249 222 237 17 237 17 c 257
+ 90 21 l 257
+ 90 925 l 257
+ 237 925 l 257
+ 237 598 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I1038
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-7
+sg8
+I21
+sa(dp13
+g7
+I799
+sg8
+I147
+sass."
+EndChar
+
+StartChar: la
+Encoding: 60860 60860 62
+GlifName: la
+Width: 885
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -3 21<154 154 731 731> 797 147<408.5 477.5>
+VStem: 184 148<574.5 647.5 574.5 689.5> 554 147<574 647.5>
+AnchorPoint: "subjoined_consonants" 450 -70 basechar 0
+AnchorPoint: "vowel_signs" 433 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+184 610 m 256
+ 184 769 281 944 443 944 c 256
+ 605 944 701 769 701 610 c 256
+ 701 482 636 374 553 285 c 257
+ 670 192 796 129 796 129 c 257
+ 731 -3 l 257
+ 731 -3 598 62 465 167 c 256
+ 458 173 451 179 444 185 c 257
+ 436 179 428 172 420 166 c 256
+ 287 61 154 -3 154 -3 c 257
+ 90 129 l 257
+ 90 129 218 193 334 285 c 257
+ 250 374 184 483 184 610 c 256
+554 610 m 256
+ 554 685 512 797 443 797 c 256
+ 374 797 332 685 332 610 c 256
+ 332 539 378 461 444 388 c 257
+ 509 460 554 538 554 610 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I184
+sS'width'
+p8
+I148
+sa(dp9
+g7
+I554
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-3
+sg8
+I21
+sa(dp13
+g7
+I797
+sg8
+I147
+sass."
+EndChar
+
+StartChar: ya
+Encoding: 60861 60861 63
+GlifName: ya
+Width: 1220
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -4 147<518.5 703.5 518.5 778>
+VStem: 90 148<544 630 544 641.5> 982 148<544.5 631>
+AnchorPoint: "subjoined_consonants" 615 -70 basechar 0
+AnchorPoint: "vowel_signs" 598 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+169 945 m 257
+ 303 886 l 257
+ 259 787 238 680 238 580 c 256
+ 238 508 250 438 272 378 c 256
+ 325 235 426 143 611 143 c 256
+ 796 143 897 235 949 378 c 256
+ 971 438 982 508 982 581 c 256
+ 982 681 961 788 919 887 c 257
+ 1054 944 l 257
+ 1105 824 1130 701 1130 584 c 256
+ 1130 264 945 -4 611 -4 c 256
+ 278 -4 90 264 90 583 c 256
+ 90 700 116 824 169 945 c 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I148
+sa(dp9
+g7
+I982
+sg8
+I148
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-4
+sg8
+I147
+sass."
+EndChar
+
+StartChar: wa
+Encoding: 60862 60862 64
+GlifName: wa
+Width: 1652
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -2 147<418 584.5 1069 1234>
+VStem: 90 147<350 559.5 350 595.5> 753 147<517 548 548 548> 1415 147<350 559.5>
+AnchorPoint: "subjoined_consonants" 825 -70 basechar 0
+AnchorPoint: "vowel_signs" 808 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+829 195 m 257
+ 772 86 665 -2 504 -2 c 256
+ 255 -2 90 205 90 429 c 256
+ 90 762 339 946 339 946 c 257
+ 426 828 l 257
+ 426 828 237 690 237 429 c 256
+ 237 271 332 145 504 145 c 256
+ 697 145 752 342 753 516 c 256
+ 752 536 753 548 753 548 c 257
+ 900 550 l 257
+ 900 550 900 537 900 517 c 256
+ 906 351 960 145 1148 145 c 256
+ 1320 145 1415 271 1415 429 c 256
+ 1415 690 1226 828 1226 828 c 257
+ 1313 946 l 257
+ 1313 946 1562 762 1562 429 c 256
+ 1562 205 1397 -2 1148 -2 c 256
+ 990 -2 886 88 829 195 c 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I753
+sg8
+I147
+sa(dp10
+g7
+I1415
+sg8
+I147
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I-2
+sg8
+I147
+sass."
+EndChar
+
+StartChar: cha.sub
+Encoding: 60888 60888 65
+GlifName: cha.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -461 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-333 -518 m 256
+ -239 -518 -156 -595 -156 -691 c 256
+ -156 -781 -223 -840 -283 -866 c 256
+ -322 -883 -362 -890 -400 -893 c 257
+ -399 -978 l 257
+ -546 -981 l 257
+ -547 -885 l 257
+ -708 -847 -827 -712 -827 -519 c 256
+ -827 -317 -662 -159 -456 -159 c 256
+ -281 -159 -181 -273 -181 -273 c 257
+ -294 -367 l 257
+ -294 -367 -340 -306 -456 -306 c 256
+ -591 -306 -680 -394 -680 -519 c 256
+ -680 -633 -627 -698 -548 -730 c 257
+ -539 -620 -442 -518 -333 -518 c 256
+-303 -693 m 256
+ -301 -672 -323 -663 -343 -669 c 256
+ -381 -680 -401 -693 -402 -745 c 257
+ -361 -739 -307 -726 -303 -693 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol cha
+EndChar
+
+StartChar: sa.sub
+Encoding: 60889 60889 66
+GlifName: sa.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -710 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-1167 -533 m 256
+ -1167 -342 -1057 -141 -851 -141 c 256
+ -692 -141 -567 -271 -567 -437 c 256
+ -567 -472 -572 -509 -584 -546 c 256
+ -592 -570 -596 -593 -596 -614 c 256
+ -596 -707 -526 -762 -456 -762 c 256
+ -340 -762 -290 -665 -290 -542 c 256
+ -290 -409 -409 -260 -409 -260 c 257
+ -298 -164 l 257
+ -298 -164 -143 -331 -143 -542 c 256
+ -143 -740 -258 -909 -456 -909 c 256
+ -611 -909 -741 -774 -741 -606 c 256
+ -741 -572 -735 -537 -724 -501 c 256
+ -717 -478 -713 -456 -713 -435 c 256
+ -713 -351 -769 -289 -851 -289 c 256
+ -916 -289 -948 -317 -977 -365 c 256
+ -1006 -413 -1020 -483 -1020 -533 c 256
+ -1020 -677 -923 -814 -923 -814 c 257
+ -1042 -901 l 257
+ -1042 -901 -1167 -739 -1167 -533 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol sa
+EndChar
+
+StartChar: xa.sub
+Encoding: 60890 60890 67
+GlifName: xa.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -636 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-1160 -843 m 257
+ -1160 -843 -1095 -684 -991 -533 c 257
+ -1094 -382 -1160 -220 -1160 -220 c 257
+ -1023 -165 l 257
+ -1023 -165 -976 -283 -896 -409 c 257
+ -801 -301 -682 -213 -533 -213 c 256
+ -278 -213 -149 -393 -149 -535 c 256
+ -149 -675 -276 -853 -533 -853 c 256
+ -682 -853 -802 -763 -896 -656 c 257
+ -976 -782 -1023 -898 -1023 -898 c 257
+ -1160 -843 l 257
+-533 -360 m 256
+ -624 -360 -722 -434 -806 -533 c 257
+ -723 -631 -625 -706 -533 -706 c 256
+ -340 -706 -296 -590 -296 -535 c 256
+ -296 -482 -345 -360 -533 -360 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol xa
+EndChar
+
+StartChar: ha.sub
+Encoding: 60891 60891 68
+GlifName: ha.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -330 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-202 -523 m 256
+ -202 -593 -258 -649 -328 -649 c 256
+ -398 -649 -454 -593 -454 -523 c 256
+ -454 -453 -398 -397 -328 -397 c 256
+ -258 -397 -202 -453 -202 -523 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol ha
+EndChar
+
+StartChar: la.sub
+Encoding: 60892 60892 69
+GlifName: la.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -400 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-616 -429 m 256
+ -616 -299 -537 -160 -404 -160 c 256
+ -271 -160 -192 -299 -192 -429 c 256
+ -192 -524 -237 -604 -295 -670 c 257
+ -212 -733 -132 -772 -132 -772 c 257
+ -197 -904 l 257
+ -197 -904 -305 -850 -404 -771 c 257
+ -502 -849 -613 -905 -613 -905 c 257
+ -677 -772 l 257
+ -677 -772 -596 -733 -513 -670 c 257
+ -571 -604 -616 -524 -616 -429 c 256
+-340 -429 m 256
+ -340 -385 -365 -307 -404 -307 c 256
+ -443 -307 -469 -385 -469 -429 c 256
+ -469 -470 -443 -519 -404 -567 c 257
+ -365 -520 -340 -471 -340 -429 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol la
+EndChar
+
+StartChar: ya.sub
+Encoding: 60893 60893 70
+GlifName: ya.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -535 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-903 -170 m 257
+ -768 -229 l 257
+ -800 -301 -816 -379 -816 -452 c 256
+ -816 -504 -808 -554 -792 -596 c 256
+ -754 -697 -686 -760 -554 -760 c 256
+ -422 -760 -356 -697 -319 -596 c 256
+ -303 -553 -295 -504 -295 -451 c 256
+ -295 -378 -310 -300 -341 -228 c 257
+ -205 -171 l 257
+ -166 -263 -147 -357 -147 -447 c 256
+ -147 -697 -294 -907 -554 -907 c 256
+ -814 -907 -963 -697 -963 -448 c 256
+ -963 -358 -944 -263 -903 -170 c 257
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol ya
+EndChar
+
+StartChar: wa.sub
+Encoding: 60894 60894 71
+GlifName: wa.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -705 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-711 -782 m 257
+ -759 -852 -841 -906 -953 -906 c 256
+ -1150 -906 -1282 -742 -1282 -565 c 256
+ -1282 -306 -1088 -162 -1088 -162 c 257
+ -1000 -280 l 257
+ -1000 -280 -1135 -379 -1135 -565 c 256
+ -1135 -675 -1072 -759 -953 -759 c 256
+ -823 -759 -787 -633 -785 -515 c 256
+ -785 -496 -785 -483 -785 -483 c 257
+ -638 -482 l 257
+ -638 -482 -638 -496 -638 -515 c 256
+ -635 -631 -600 -759 -471 -759 c 256
+ -352 -759 -289 -675 -289 -565 c 256
+ -289 -379 -423 -280 -423 -280 c 257
+ -336 -162 l 257
+ -336 -162 -142 -306 -142 -565 c 256
+ -142 -742 -274 -906 -471 -906 c 256
+ -582 -906 -663 -852 -711 -782 c 257
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol wa
+EndChar
+
+StartChar: nya
+Encoding: 60864 60864 72
+GlifName: nya
+Width: 1122
+VWidth: 0
+GlyphClass: 2
+Flags: W
+VStem: 90 147<22 510 22 926> 662 146<451.5 501>
+AnchorPoint: "subjoined_consonants" 547 -70 basechar 0
+AnchorPoint: "vowel_signs" 530 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+1027 824 m 257
+ 919 772 808 638 808 479 c 256
+ 808 371 862 259 1033 156 c 257
+ 984 20 l 257
+ 675 67 399 258 237 510 c 257
+ 237 22 l 257
+ 90 22 l 257
+ 90 926 l 257
+ 237 933 l 257
+ 264 664 462 402 723 262 c 257
+ 681 337 662 414 662 489 c 256
+ 662 513 663 537 667 560 c 256
+ 696 739 819 887 963 956 c 257
+ 1027 824 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I662
+sg8
+I146
+sass."
+EndChar
+
+StartChar: bva
+Encoding: 60865 60865 73
+GlifName: bva
+Width: 1097
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -2 147<553.5 574.5 553.5 613.5>
+VStem: 367 147<176 209.5 176 239.5> 616 147<177 209>
+AnchorPoint: "subjoined_consonants" 565 -70 basechar 0
+AnchorPoint: "vowel_signs" 548 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+654 470 m 257
+ 712 385 763 289 763 191 c 256
+ 763 74 663 -2 564 -2 c 256
+ 465 -2 367 76 367 191 c 256
+ 367 288 409 383 468 472 c 257
+ 434 512 397 552 360 590 c 256
+ 225 726 90 829 90 829 c 257
+ 179 946 l 257
+ 179 946 321 837 464 693 c 256
+ 496 661 528 627 559 592 c 257
+ 588 626 617 660 647 692 c 256
+ 781 836 915 944 915 944 c 257
+ 1008 830 l 257
+ 1008 830 881 727 755 591 c 256
+ 720 553 685 512 654 470 c 257
+565 336 m 257
+ 534 279 514 228 514 191 c 256
+ 514 161 543 145 564 145 c 256
+ 585 145 616 163 616 191 c 256
+ 616 227 598 279 565 336 c 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I367
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I616
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-2
+sg8
+I147
+sass."
+EndChar
+
+StartChar: da
+Encoding: 60866 60866 74
+GlifName: da
+Width: 1095
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -2 148<500 603 500 611> 458 147<479 593.5> 804 147<420 612.5>
+VStem: 129 147<286 357 286 404.5> 858 147<497 500 499.5 589.5>
+AnchorPoint: "subjoined_consonants" 544 -70 basechar 0
+AnchorPoint: "vowel_signs" 527 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+858 500 m 256
+ 858 679 696 804 529 804 c 256
+ 311 804 217 636 217 636 c 257
+ 90 709 l 257
+ 90 709 233 951 529 951 c 256
+ 777 951 1005 761 1005 500 c 256
+ 1005 341 959 213 875 126 c 256
+ 791 39 673 -2 549 -2 c 256
+ 328 -2 129 102 129 310 c 256
+ 129 499 341 605 533 605 c 256
+ 673 605 785 566 858 497 c 257
+ 858 498 858 499 858 500 c 256
+533 458 m 256
+ 425 458 276 404 276 310 c 256
+ 276 262 293 228 336 198 c 256
+ 379 168 451 146 549 146 c 256
+ 657 146 738 185 790 254 c 257
+ 795 271 798 286 798 301 c 256
+ 798 332 787 359 764 384 c 256
+ 728 423 654 458 533 458 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I129
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I858
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-2
+sg8
+I148
+sa(dp13
+g7
+I458
+sg8
+I147
+sa(dp14
+g7
+I804
+sg8
+I147
+sass."
+EndChar
+
+StartChar: ga
+Encoding: 60867 60867 75
+GlifName: ga
+Width: 1362
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -3 153<608 608 608 835> 801 148<483 504>
+VStem: 90 147<438.5 594 438.5 627.5> 608 148<150 671> 1125 148<390 575>
+AnchorPoint: "subjoined_consonants" 684 -70 basechar 0
+AnchorPoint: "vowel_signs" 667 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+756 149 m 257
+ 949 172 1125 291 1125 489 c 256
+ 1125 661 1052 762 935 816 c 257
+ 996 950 l 257
+ 1160 874 1273 707 1273 489 c 256
+ 1273 186 989 -3 681 -3 c 256
+ 357 -3 90 242 90 515 c 256
+ 90 740 243 894 404 937 c 256
+ 434 945 464 949 494 949 c 256
+ 654 949 756 831 756 671 c 258
+ 756 149 l 257
+561 784 m 256
+ 542 796 517 801 491 801 c 256
+ 475 801 458 799 442 795 c 256
+ 343 769 237 673 237 515 c 256
+ 237 362 396 184 608 150 c 257
+ 608 671 l 258
+ 608 739 588 767 561 784 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I608
+sg8
+I148
+sa(dp10
+g7
+I1125
+sg8
+I148
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I-3
+sg8
+I153
+sa(dp14
+g7
+I801
+sg8
+I148
+sass."
+EndChar
+
+StartChar: fa
+Encoding: 60868 60868 76
+GlifName: fa
+Width: 1004
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 446 147<424 657 473 656 656 657 657 659> 798 150<461 465 465 499 461 505.5>
+VStem: 165 147<21 303 21 388.5> 767 147<651.5 690.5>
+AnchorPoint: "subjoined_consonants" 515 -70 basechar 0
+AnchorPoint: "vowel_signs" 498 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+165 303 m 258
+ 165 474 299 593 473 593 c 256
+ 534 593 596 593 657 593 c 256
+ 658 593 659 593 660 593 c 256
+ 743 593 767 631 767 672 c 256
+ 767 709 742 761 638 784 c 256
+ 590 795 534 798 477 798 c 256
+ 339 798 196 773 139 753 c 257
+ 90 892 l 257
+ 172 921 313 948 461 948 c 256
+ 463 948 463 948 465 948 c 256
+ 533 948 603 942 669 927 c 256
+ 822 893 914 784 914 671 c 256
+ 914 548 804 446 659 446 c 256
+ 658 446 657 446 656 446 c 258
+ 473 446 l 258
+ 375 446 312 396 312 303 c 258
+ 312 21 l 257
+ 165 21 l 257
+ 165 303 l 258
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I165
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I767
+sg8
+I147
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I446
+sg8
+I147
+sa(dp13
+g7
+I798
+sg8
+I150
+sass."
+EndChar
+
+StartChar: ra
+Encoding: 60869 60869 77
+GlifName: ra
+Width: 1003
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -11 142<875 914> 797 148<396 525.5>
+VStem: 90 147<21 591 21 682.5> 350 147<403.5 420 420 422 403.5 456.5> 711 147<652.5 715.5>
+AnchorPoint: "subjoined_consonants" 495 -70 basechar 0
+AnchorPoint: "vowel_signs" 478 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+711 671 m 256
+ 711 760 572 797 479 797 c 256
+ 313 797 237 696 237 591 c 258
+ 237 21 l 257
+ 90 21 l 257
+ 90 591 l 258
+ 90 774 246 945 479 945 c 256
+ 657 945 858 856 858 671 c 256
+ 858 595 819 529 768 497 c 256
+ 717 465 663 456 616 448 c 256
+ 563 439 518 437 497 422 c 257
+ 497 420 l 258
+ 497 387 513 354 549 318 c 256
+ 585 282 638 247 693 219 c 256
+ 802 162 914 131 914 131 c 257
+ 875 -11 l 257
+ 723 30 350 175 350 420 c 256
+ 350 493 401 542 453 563 c 256
+ 527 592 634 586 689 621 c 256
+ 706 632 711 634 711 671 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I350
+sg8
+I147
+sa(dp10
+g7
+I711
+sg8
+I147
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I-11
+sg8
+I142
+sa(dp14
+g7
+I797
+sg8
+I148
+sass."
+EndChar
+
+StartChar: rra
+Encoding: 60870 60870 78
+GlifName: rra
+Width: 1303
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -3 143<1177 1213> 797 148<697 826.5>
+VStem: 90 147<241 925> 391 147<240 591> 651 147<403.5 420 420 422 403.5 456.5> 1012 147<652.5 715.5>
+AnchorPoint: "subjoined_consonants" 615 -70 basechar 0
+AnchorPoint: "vowel_signs" 598 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+319 -2 m 256
+ 184 -2 90 102 90 241 c 258
+ 90 925 l 257
+ 237 925 l 257
+ 237 241 l 258
+ 237 201 248 180 260 167 c 256
+ 283 143 345 136 369 163 c 256
+ 380 175 391 199 391 240 c 258
+ 391 591 l 258
+ 391 774 547 945 780 945 c 256
+ 958 945 1159 856 1159 671 c 256
+ 1159 595 1120 529 1069 497 c 256
+ 1018 465 964 456 917 448 c 256
+ 864 439 819 437 798 422 c 257
+ 798 420 l 258
+ 798 387 814 355 850 320 c 256
+ 886 285 938 251 993 224 c 256
+ 1102 169 1213 140 1213 140 c 257
+ 1177 -3 l 257
+ 1023 36 651 175 651 420 c 256
+ 651 493 702 542 754 563 c 256
+ 828 592 935 586 990 621 c 256
+ 1007 632 1012 634 1012 671 c 256
+ 1012 760 873 797 780 797 c 256
+ 614 797 538 696 538 591 c 258
+ 538 240 l 258
+ 538 172 519 109 478 64 c 256
+ 438 20 379 -2 319 -2 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I391
+sg8
+I147
+sa(dp10
+g7
+I651
+sg8
+I147
+sa(dp11
+g7
+I1012
+sg8
+I147
+sasS'hhints'
+p12
+(lp13
+(dp14
+g7
+I-3
+sg8
+I143
+sa(dp15
+g7
+I797
+sg8
+I148
+sass."
+EndChar
+
+StartChar: nya.sub
+Encoding: 60896 60896 79
+GlifName: nya.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -493 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-153 -285 m 257
+ -228 -321 -307 -417 -307 -528 c 256
+ -307 -602 -270 -679 -147 -753 c 257
+ -196 -889 l 257
+ -413 -856 -608 -732 -735 -563 c 257
+ -735 -869 l 257
+ -882 -869 l 257
+ -882 -192 l 257
+ -735 -184 l 257
+ -717 -361 -595 -536 -430 -643 c 257
+ -446 -601 -453 -559 -453 -518 c 256
+ -453 -500 -452 -481 -449 -463 c 256
+ -426 -322 -331 -207 -217 -152 c 257
+ -153 -285 l 257
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol nya
+EndChar
+
+StartChar: bva.sub
+Encoding: 60897 60897 80
+GlifName: bva.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -485 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-770 -162 m 257
+ -770 -162 -662 -244 -554 -353 c 256
+ -535 -372 -516 -393 -497 -414 c 257
+ -479 -394 -462 -374 -444 -355 c 256
+ -342 -246 -241 -164 -241 -164 c 257
+ -149 -278 l 257
+ -149 -278 -243 -354 -336 -455 c 256
+ -359 -480 -381 -507 -402 -534 c 257
+ -359 -599 -325 -666 -325 -742 c 256
+ -325 -841 -409 -906 -493 -906 c 256
+ -577 -906 -659 -839 -659 -742 c 256
+ -659 -667 -630 -598 -589 -533 c 257
+ -611 -507 -635 -481 -659 -457 c 256
+ -759 -356 -859 -279 -859 -279 c 257
+ -770 -162 l 257
+-491 -676 m 257
+ -504 -703 -512 -726 -512 -742 c 256
+ -512 -753 -499 -759 -493 -759 c 256
+ -487 -759 -472 -751 -472 -742 c 256
+ -472 -726 -479 -704 -491 -676 c 257
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol bva
+EndChar
+
+StartChar: da.sub
+Encoding: 60898 60898 81
+GlifName: da.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -525 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-306 -472 m 257
+ -324 -375 -428 -302 -530 -302 c 256
+ -684 -302 -748 -419 -748 -419 c 257
+ -875 -345 l 257
+ -875 -345 -762 -155 -530 -155 c 256
+ -334 -155 -155 -305 -155 -511 c 256
+ -155 -634 -191 -735 -258 -804 c 256
+ -325 -873 -419 -905 -516 -905 c 256
+ -691 -905 -849 -821 -849 -654 c 256
+ -849 -501 -682 -414 -528 -414 c 256
+ -439 -414 -363 -434 -306 -472 c 257
+-528 -561 m 256
+ -597 -561 -702 -596 -702 -654 c 256
+ -702 -684 -692 -702 -664 -722 c 256
+ -636 -742 -587 -758 -516 -758 c 256
+ -441 -758 -386 -732 -351 -687 c 256
+ -348 -677 -347 -668 -347 -660 c 256
+ -347 -642 -354 -626 -368 -611 c 256
+ -391 -587 -441 -561 -528 -561 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol da
+EndChar
+
+StartChar: ga.sub
+Encoding: 60899 60899 82
+GlifName: ga.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -622 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-756 -156 m 256
+ -625 -156 -541 -255 -541 -383 c 258
+ -541 -752 l 257
+ -416 -730 -301 -651 -301 -519 c 256
+ -301 -396 -351 -329 -433 -291 c 257
+ -372 -157 l 257
+ -243 -217 -154 -350 -154 -519 c 256
+ -154 -756 -375 -906 -616 -906 c 256
+ -868 -906 -1077 -717 -1077 -500 c 256
+ -1077 -323 -956 -200 -828 -166 c 256
+ -804 -160 -780 -156 -756 -156 c 256
+-716 -313 m 256
+ -725 -307 -740 -304 -756 -304 c 256
+ -767 -304 -780 -305 -790 -308 c 256
+ -856 -326 -930 -390 -930 -500 c 256
+ -930 -598 -829 -718 -689 -750 c 257
+ -689 -383 l 258
+ -689 -337 -701 -322 -716 -313 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol ga
+EndChar
+
+StartChar: fa.sub
+Encoding: 60900 60900 83
+GlifName: fa.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -465 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-743 -659 m 258
+ -743 -521 -633 -423 -493 -423 c 256
+ -447 -423 -401 -423 -355 -423 c 256
+ -354 -423 -354 -423 -353 -423 c 256
+ -298 -423 -291 -402 -291 -382 c 256
+ -291 -363 -302 -333 -374 -317 c 256
+ -408 -310 -447 -306 -488 -306 c 256
+ -590 -306 -698 -325 -738 -339 c 257
+ -787 -200 l 257
+ -723 -177 -617 -156 -505 -156 c 256
+ -503 -156 -501 -156 -499 -156 c 256
+ -447 -156 -393 -162 -342 -173 c 256
+ -221 -200 -144 -289 -144 -383 c 256
+ -144 -486 -238 -570 -354 -570 c 256
+ -355 -570 -355 -570 -356 -570 c 258
+ -493 -570 l 258
+ -557 -570 -596 -600 -596 -659 c 258
+ -596 -870 l 257
+ -743 -870 l 257
+ -743 -659 l 258
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol fa
+EndChar
+
+StartChar: ra.sub
+Encoding: 60901 60901 84
+GlifName: ra.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -455 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-318 -383 m 256
+ -318 -329 -416 -307 -473 -307 c 256
+ -589 -307 -636 -375 -636 -443 c 258
+ -636 -870 l 257
+ -783 -870 l 257
+ -783 -443 l 258
+ -783 -296 -656 -160 -473 -160 c 256
+ -330 -160 -171 -233 -171 -383 c 256
+ -171 -445 -205 -502 -247 -529 c 256
+ -310 -569 -376 -564 -440 -582 c 257
+ -437 -597 -428 -614 -408 -634 c 256
+ -383 -659 -345 -684 -305 -705 c 256
+ -225 -746 -143 -770 -143 -770 c 257
+ -182 -912 l 257
+ -304 -879 -588 -766 -588 -571 c 256
+ -588 -509 -544 -464 -500 -446 c 256
+ -444 -424 -365 -430 -326 -405 c 256
+ -318 -400 -318 -406 -318 -383 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol ra
+EndChar
+
+StartChar: rra.sub
+Encoding: 60902 60902 85
+GlifName: rra.sub
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+AnchorPoint: "subjoined_consonants" -545 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-808 -906 m 256
+ -919 -906 -998 -818 -998 -705 c 258
+ -998 -193 l 257
+ -851 -193 l 257
+ -851 -705 l 258
+ -851 -744 -841 -758 -809 -759 c 256
+ -793 -759 -789 -756 -784 -751 c 256
+ -779 -746 -773 -734 -773 -706 c 258
+ -773 -443 l 258
+ -773 -296 -646 -160 -463 -160 c 256
+ -320 -160 -160 -233 -160 -383 c 256
+ -160 -445 -194 -502 -236 -529 c 256
+ -299 -569 -366 -564 -430 -582 c 257
+ -427 -597 -418 -613 -398 -633 c 256
+ -374 -657 -335 -682 -295 -702 c 256
+ -215 -742 -134 -763 -134 -763 c 257
+ -170 -906 l 257
+ -294 -875 -578 -766 -578 -571 c 256
+ -578 -509 -533 -464 -489 -446 c 256
+ -433 -424 -355 -430 -316 -405 c 256
+ -308 -400 -307 -406 -307 -383 c 256
+ -307 -329 -406 -307 -463 -307 c 256
+ -579 -307 -626 -375 -626 -443 c 258
+ -626 -706 l 258
+ -626 -761 -641 -812 -676 -850 c 256
+ -710 -887 -759 -906 -808 -906 c 256
+EndSplineSet
+Ligature2: "subjoined_consonants subtable" subjoiner_symbol rra
+EndChar
+
+StartChar: x
+Encoding: 120 120 86
+GlifName: x
+Width: 921
+VWidth: 0
+GlyphClass: 2
+Flags: W
+AnchorPoint: "subjoined_consonants" 475 -70 basechar 0
+AnchorPoint: "vowel_signs" 458 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+194 844 m 257
+ 461 577 l 257
+ 728 844 l 257
+ 832 740 l 257
+ 565 473 l 257
+ 832 206 l 257
+ 728 102 l 257
+ 461 369 l 257
+ 194 102 l 257
+ 90 206 l 257
+ 357 473 l 257
+ 90 740 l 257
+ 194 844 l 257
+EndSplineSet
+EndChar
+
+StartChar: period
+Encoding: 46 46 87
+GlifName: period
+Width: 432
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: 17 252<181 251>
+VStem: 90 252<108 178>
+LayerCount: 2
+Fore
+SplineSet
+342 143 m 256
+ 342 73 286 17 216 17 c 256
+ 146 17 90 73 90 143 c 256
+ 90 213 146 269 216 269 c 256
+ 286 269 342 213 342 143 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I252
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I17
+sg8
+I252
+sass."
+EndChar
+
+StartChar: space
+Encoding: 32 32 88
+GlifName: space
+Width: 1180
+VWidth: 0
+GlyphClass: 2
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: uu.base
+Encoding: 60820 60820 89
+GlifName: uu.base
+Width: 1303
+VWidth: 0
+GlyphClass: 2
+Flags: W
+HStem: -5 147<565 633>
+VStem: 90 146<459 572.5 459 603.5> 876 148<293 924>
+AnchorPoint: "subjoined_consonants" 602 -70 basechar 0
+AnchorPoint: "vowel_signs" 602 1020 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+876 924 m 257
+ 1023 924 l 257
+ 1024 293 l 257
+ 1032 200 1129 148 1213 142 c 257
+ 1208 93 1203 45 1198 -4 c 257
+ 1104 5 1010 44 948 118 c 257
+ 883 51 792 15 701 1 c 256
+ 675 -3 647 -5 619 -5 c 256
+ 479 -5 320 48 230 145 c 257
+ 131 243 90 378 90 508 c 256
+ 90 699 168 840 280 928 c 257
+ 368 811 l 257
+ 290 748 236 638 236 507 c 256
+ 236 411 266 313 336 246 c 257
+ 399 177 513 142 617 142 c 256
+ 653 142 689 146 720 155 c 256
+ 784 172 860 207 875 279 c 257
+ 876 308 876 337 876 366 c 258
+ 876 924 l 257
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I90
+sS'width'
+p8
+I146
+sa(dp9
+g7
+I876
+sg8
+I148
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I-5
+sg8
+I147
+sass."
+EndChar
+
+StartChar: aa.vs
+Encoding: 60832 60832 90
+GlifName: aa.vs
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1073 147<-344.5 -287.5 -344.5 -285.5> 1422 147<-344.5 -297 -384 -287.5>
+VStem: -564 147<1292.5 1349.5 1292.5 1389> -215 148<1292.5 1349.5>
+AnchorPoint: "vowel_signs" -284 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-316 1569 m 256
+ -278 1569 -242 1560 -210 1545 c 257
+ -67 1545 l 257
+ -67 1274 l 258
+ -67 1243 -40 1217 -16 1212 c 257
+ -49 1069 l 257
+ -90 1079 -127 1102 -155 1132 c 257
+ -198 1095 -255 1073 -316 1073 c 256
+ -452 1073 -564 1185 -564 1321 c 256
+ -564 1457 -452 1569 -316 1569 c 256
+-316 1422 m 256
+ -373 1422 -417 1378 -417 1321 c 256
+ -417 1264 -373 1220 -316 1220 c 256
+ -259 1220 -215 1264 -215 1321 c 256
+ -215 1378 -259 1422 -316 1422 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-564
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-215
+sg8
+I148
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I1073
+sg8
+I147
+sa(dp13
+g7
+I1422
+sg8
+I147
+sass."
+EndChar
+
+StartChar: long_vowel_dot
+Encoding: 60821 60821 91
+GlifName: long_vowel_dot
+Width: 0
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1205 252<-179 -109>
+VStem: -270 252<1296 1366>
+AnchorPoint: "vowel_signs" -143 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-18 1331 m 256
+ -18 1261 -74 1205 -144 1205 c 256
+ -214 1205 -270 1261 -270 1331 c 256
+ -270 1401 -214 1457 -144 1457 c 256
+ -74 1457 -18 1401 -18 1331 c 256
+EndSplineSet
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-270
+sS'width'
+p8
+I252
+sasS'hhints'
+p9
+(lp10
+(dp11
+g7
+I1205
+sg8
+I252
+sass."
+EndChar
+
+StartChar: aa.vs.long
+Encoding: 60912 60912 92
+GlifName: aa.vs.long
+Width: 2048
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1073 147 1205 252 1422 147
+VStem: -883 147 -534 148 -259 252
+AnchorPoint: "vowel_signs" -434 1020 mark 0
+LayerCount: 2
+Fore
+Refer: 90 60832 N 1 0 0 1 -319 0 2
+Refer: 91 60821 N 1 0 0 1 11 0 2
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-883
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-534
+sg8
+I148
+sa(dp10
+g7
+I-259
+sg8
+I252
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I1073
+sg8
+I147
+sa(dp14
+g7
+I1205
+sg8
+I252
+sa(dp15
+g7
+I1422
+sg8
+I147
+sass."
+Ligature2: "long_vowel_signs subtable" aa.vs long_vowel_dot
+EndChar
+
+StartChar: ee.vs.long
+Encoding: 60913 60913 93
+GlifName: ee.vs.long
+Width: 2048
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1072 135 1205 252 1414 160
+VStem: -1135 147 -866 136 -523 138 -253 252
+AnchorPoint: "vowel_signs" -571 1020 mark 0
+LayerCount: 2
+Fore
+Refer: 29 60833 N 1 0 0 1 -369 0 2
+Refer: 91 60821 N 1 0 0 1 17 0 2
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-1135
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-866
+sg8
+I136
+sa(dp10
+g7
+I-523
+sg8
+I138
+sa(dp11
+g7
+I-253
+sg8
+I252
+sasS'hhints'
+p12
+(lp13
+(dp14
+g7
+I1072
+sg8
+I135
+sa(dp15
+g7
+I1205
+sg8
+I252
+sa(dp16
+g7
+I1414
+sg8
+I160
+sass."
+Ligature2: "long_vowel_signs subtable" ee.vs long_vowel_dot
+EndChar
+
+StartChar: ii.vs.long
+Encoding: 60914 60914 94
+GlifName: ii.vs.long
+Width: 2048
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1085 252 1417 147
+VStem: -558 147 -250 252
+AnchorPoint: "vowel_signs" -276 1020 mark 0
+LayerCount: 2
+Fore
+Refer: 30 60834 N 1 0 0 1 -200 0 2
+Refer: 91 60821 N 1 0 0 1 20 -120 2
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-558
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-250
+sg8
+I252
+sasS'hhints'
+p10
+(lp11
+(dp12
+g7
+I1085
+sg8
+I252
+sa(dp13
+g7
+I1417
+sg8
+I147
+sass."
+Ligature2: "long_vowel_signs subtable" ii.vs long_vowel_dot
+EndChar
+
+StartChar: oo.vs.long
+Encoding: 60915 60915 95
+GlifName: oo.vs.long
+Width: 2048
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1073 147 1195 252 1422 147
+VStem: -880 147 -531 147 -260 252
+AnchorPoint: "vowel_signs" -444 1020 mark 0
+LayerCount: 2
+Fore
+Refer: 31 60835 N 1 0 0 1 -380 0 2
+Refer: 91 60821 N 1 0 0 1 10 -10 2
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-880
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-531
+sg8
+I147
+sa(dp10
+g7
+I-260
+sg8
+I252
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I1073
+sg8
+I147
+sa(dp14
+g7
+I1195
+sg8
+I252
+sa(dp15
+g7
+I1422
+sg8
+I147
+sass."
+Ligature2: "long_vowel_signs subtable" oo.vs long_vowel_dot
+EndChar
+
+StartChar: uu.vs.long
+Encoding: 60916 60916 96
+GlifName: uu.vs.long
+Width: 2048
+VWidth: 0
+GlyphClass: 4
+Flags: W
+HStem: 1073 147 1125 252 1413 20
+VStem: -900 147 -551 147 -260 252
+AnchorPoint: "vowel_signs" -444 1020 mark 0
+LayerCount: 2
+Fore
+Refer: 32 60836 N 1 0 0 1 -400 0 2
+Refer: 91 60821 N 1 0 0 1 10 -80 2
+PickledDataWithLists: "(dp1
+S'com.fontlab.hintData'
+p2
+(dp3
+S'vhints'
+p4
+(lp5
+(dp6
+S'position'
+p7
+I-900
+sS'width'
+p8
+I147
+sa(dp9
+g7
+I-551
+sg8
+I147
+sa(dp10
+g7
+I-260
+sg8
+I252
+sasS'hhints'
+p11
+(lp12
+(dp13
+g7
+I1073
+sg8
+I147
+sa(dp14
+g7
+I1125
+sg8
+I252
+sa(dp15
+g7
+I1413
+sg8
+I20
+sass."
+LCarets2: 1 0
+Ligature2: "long_vowel_signs subtable" uu.vs long_vowel_dot
+EndChar
+

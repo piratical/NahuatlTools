@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="da.uu.lig" format="1">
+  <advance width="1095"/>
+  <unicode hex="F7C7"/>
+  <outline>
+    <component base="uu.vs" xOffset="778"/>
+    <component base="da"/>
+  </outline>
+</glyph>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tza.ai.rra.lig" format="1">
+  <advance width="1186"/>
+  <unicode hex="FAD4"/>
+  <outline>
+    <component base="ai.vs" xOffset="961"/>
+    <component base="tza"/>
+    <component base="rra.sub" xOffset="1145"/>
+  </outline>
+</glyph>

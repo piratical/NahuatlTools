@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="da.ee.cua.lig" format="1">
+  <advance width="1095"/>
+  <unicode hex="F1DF"/>
+  <outline>
+    <component base="ee.vs" xOffset="917"/>
+    <component base="da"/>
+    <component base="cua.sub" xOffset="1014"/>
+  </outline>
+</glyph>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cha.ai.lig" format="1">
+  <advance width="1026"/>
+  <unicode hex="FAEC"/>
+  <outline>
+    <component base="ai.vs" xOffset="900"/>
+    <component base="cha"/>
+  </outline>
+</glyph>

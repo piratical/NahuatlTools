@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="pa.ei.lig" format="1">
+  <advance width="1362"/>
+  <unicode hex="10050"/>
+  <outline>
+    <component base="ei.vs" xOffset="1120"/>
+    <component base="pa"/>
+  </outline>
+</glyph>

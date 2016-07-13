@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tla.ya.lig" format="1">
+  <advance width="1214"/>
+  <unicode hex="EF15"/>
+  <outline>
+    <component base="tla"/>
+    <component base="ya.sub" xOffset="1135"/>
+  </outline>
+</glyph>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ee.ra.lig" format="1">
+  <advance width="1362"/>
+  <unicode hex="EE2A"/>
+  <outline>
+    <component base="ee.base"/>
+    <component base="ra.sub" xOffset="1135"/>
+  </outline>
+</glyph>

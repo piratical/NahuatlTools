@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cha.cha.lig" format="1">
+  <advance width="1026"/>
+  <unicode hex="EF26"/>
+  <outline>
+    <component base="cha"/>
+    <component base="cha.sub" xOffset="1000"/>
+  </outline>
+</glyph>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="bva.oa.sa.lig" format="1">
+  <advance width="1097"/>
+  <unicode hex="FDA8"/>
+  <outline>
+    <component base="oa.vs" xOffset="914"/>
+    <component base="bva"/>
+    <component base="sa.sub" xOffset="1275"/>
+  </outline>
+</glyph>

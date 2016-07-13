@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ga.ei.tza.lig" format="1">
+  <advance width="1362"/>
+  <unicode hex="101C7"/>
+  <outline>
+    <component base="ei.vs" xOffset="1124"/>
+    <component base="ga"/>
+    <component base="tza.sub" xOffset="1224"/>
+  </outline>
+</glyph>

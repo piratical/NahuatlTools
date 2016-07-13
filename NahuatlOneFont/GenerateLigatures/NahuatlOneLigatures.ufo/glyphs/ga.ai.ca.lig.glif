@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ga.ai.ca.lig" format="1">
+  <advance width="1362"/>
+  <unicode hex="FBD7"/>
+  <outline>
+    <component base="ai.vs" xOffset="1045"/>
+    <component base="ga"/>
+    <component base="ca.sub" xOffset="1094"/>
+  </outline>
+</glyph>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="bva.ai.tla.lig" format="1">
+  <advance width="1097"/>
+  <unicode hex="FBAC"/>
+  <outline>
+    <component base="ai.vs" xOffset="926"/>
+    <component base="bva"/>
+    <component base="tla.sub" xOffset="1145"/>
+  </outline>
+</glyph>

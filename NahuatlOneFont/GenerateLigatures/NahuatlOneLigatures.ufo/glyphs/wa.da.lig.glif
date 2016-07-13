@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="wa.da.lig" format="1">
+  <advance width="1652"/>
+  <unicode hex="EFB3"/>
+  <outline>
+    <component base="wa"/>
+    <component base="da.sub" xOffset="1350"/>
+  </outline>
+</glyph>

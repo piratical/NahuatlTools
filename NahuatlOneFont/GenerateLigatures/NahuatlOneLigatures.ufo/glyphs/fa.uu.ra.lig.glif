@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="fa.uu.ra.lig" format="1">
+  <advance width="1004"/>
+  <unicode hex="F80A"/>
+  <outline>
+    <component base="uu.vs" xOffset="749"/>
+    <component base="fa"/>
+    <component base="ra.sub" xOffset="970"/>
+  </outline>
+</glyph>
