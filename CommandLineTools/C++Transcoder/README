@@ -1,0 +1,43 @@
+==================
+convertNahuatl.cpp
+==================
+
+(c) 2016 by Edward H. Trager ALL RIGHTS RESERVED
+
+RELEASED UNDER THE GNU GPL 2.0 OR LATER LICENSE
+
+
+SUMMARY
+=======
+The "first draft" of this C++ Transcoder was written to
+closely follow the structure of the original Perl transcoder
+as much as possible. Users may want to see the documentation
+or read the source code of the Perl transcoder for more information.
+
+However the plan going forward is to use the C++ transcoder in
+place of the Perl transcoder. The Perl transcoder was written to
+transcode to the Unicode Private Use Area (PUA) encoding used by
+the NahuatlOne digital OpenType font.
+
+The "first draft" of this C++ transcoder uses that same PUA encoding.
+However my intention is to improve improve the C++ code in such a way 
+that this tool will be easily modifiable to switch it from the current 
+PUA encoding over to a Unicode-approved non-PUA encoding if and when 
+we get a Unicode Proposal approved for the abugida orthography.
+
+
+COMPILING
+=========
+
+convertNahuatl.cpp needs to be combined with UTF8String.cpp:
+
+ g++ -Wall -std=c++11 -o convert convertNahuatl.cpp UTF8String.cpp
+
+Using the above command line, the output will be called "convert".
+
+
+
+— Edward Trager
+  Ann Arbor, Michigan, USA
+  June 13, 2016
+
