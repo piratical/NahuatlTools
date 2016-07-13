@@ -1,0 +1,32 @@
+transcode.pl (c) 2016 by Edward H. Trager ALL RIGHTS RESERVED
+
+THIS IS FREE SOFTWARE DISTRIBUTED UNDER THE TERMS OF
+THE GNU GENERAL PUBLIC LICENSE VERSION 2 OR LATER
+ 
+PURPOSE: Converts Nahuatl in Latin script to Nahuatl in 
+         the Abugida script as documented at
+         https://unifont.org/nahuatl/
+
+NOTES:   Input in TRADITIONAL orthography has been
+         tested.
+
+SUMMARY
+=======
+
+The exported "convert" function converts a Unicode 
+UTF-8-encoded string containing Nahuatl text in the
+"classical" orthography into the "Abugida" script
+documented at https://unifont.org/nahuatl/ .
+
+Some accomodations for transcoding Nahuatl in the
+"modern" script are present, but this has not been
+extensively tested.
+
+Please note that this file, as currently written
+transcodes to the PRE-UNICODE PRIVATE-USE-AREA
+encoding used by the NahuatlOne digital font.
+
+-- Ed Trager
+   Ann Arbor, Michigan, USA
+   June 13, 2016
+

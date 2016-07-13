@@ -1,0 +1,17 @@
+convert.pl is a command-line wrapper tool
+written in Perl to convert a file containing
+Nahuatl text in the classical orthography to
+the Abugida orthography as documented at
+https://unifont.org/nahuatl/ .  The converted
+text can be typeset using the NahuatlOne digital
+OpenType font.
+
+convert.pl uses the transcode.pm Perl module
+present in the Nahuatl subdirectory to do all
+of the work. Look at the README file in the
+Nahuatl subdirectory for more information.
+
+-- Ed Trager
+   Ann Arbor, Michigan, USA
+   June 13, 2016
+
