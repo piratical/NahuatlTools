@@ -1,0 +1,132 @@
+=========================================
+ucut.cpp (c) 2016 by Edward H. Trager
+umerge.cpp (c) 2016 by Edward H. Trager
+=========================================
+
+The "raison d'être" for writing ucut and umerge is that I discovered that  
+the standard UNIX command line utilities "cut" and "paste" (among others) 
+on my Apple laptop running OSX El Capitan v. 10.11.2 were not Unicode-compliant.
+
+Specifically, "cut" and "paste" and related utilities such as "lam" reject any
+byte values that are not part of the ASCII character set. 
+
+This renders these utilities completely useless for handling Unicode UTF-8-encoded
+text files.
+
+Note that ucut and umerge are *not* replacements for "cut" and "paste", but are
+rather utilities that I wrote to perform very specific functions that I originally
+thought I could do with "cut" and "paste" but then discovered that I could not, and
+so I wrote these.
+
+Usage and examples are below:
+
+
+UCUT
+====
+
+Usage: ucut <column number> file
+
+The "ucut" utility assumes that you have a TAB-DELIMITED data file encoded in the UTF-8
+format. Each column of data, irregardless of column length, is assumed to be separated
+by a TAB CHARACTER as the delimiter. No, you CANNOT use any other delimiter other than 
+TAB, so if you have a file with some other delimiter, first change the delimiters to TAB.
+As mentioned, "ucut" is not a replacement for "cut". As long as you have met these data file
+requirements, "ucut" allows you to cut exactly ONE COLUMN out of the data file.
+
+For example, if you have the following file. In these examples, pretend that "<TAB>"
+represents the TAB character (\t, hex 0x09 in ASCII, 0x0009 in UTF32):
+
+FILE 0: data.txt :: LAST_NAME FIRST_NAME TELEPHONE_NUMBER AGE GENDER
+--------------------------------------------------------
+Smith<TAB>John<TAB>+1 (734) 012-0101<TAB>43<TAB>MALE
+Doe<TAB>Jane<TAB>+1 (818) 320-1212<TAB>38<TAB>FEMALE
+Knowles<TAB>Anna<TAB>+1 (912) 907-1234<TAB>27<TAB>FEMALE
+Mikoto<TAB>Tarasi<TAB>+81 (03) 1234-5678<TAB>35<TAB>MALE
+
+... Then this command line:
+
+   ucut 3 data.txt
+
+... will give you just the telephone numbers:
+
++1 (734) 012-0101
++1 (818) 320-1212
++1 (912) 907-1234
++81 (03) 1234-5678
+
+... which you could place in a file using this:
+
+   ucut 3 data.txt > telephone_numbers.txt
+
+Of course there are many other tools available to do this. This tool meets my needs and
+is Unicode UTF-8 safe.
+
+
+UMERGE
+======
+
+Usage: umerge file1 file2 <optional_prefix>
+
+The "umerge" utility assumes you have two UTF-8-encoded text files, each of which consists
+or one or more columns of data separated by TAB characters. "umerge" allows you to merge
+or paste these files together side-by-side.  Since each file is assumed to contain columns
+of data, TAB characters are added to keep the pasted columns separate.  If an optional
+prefix is specified, then this prefix is added as the FIRST column in the resulting file.
+
+For example, suppose you have the following data. In these examples, pretend that "<TAB>"
+represents the TAB character (\t, hex 0x09 in ASCII, 0x0009 in UTF32):
+
+FILE 1: city_population.data :: JAPANESE CITIES AND POPULATION
+-------------------
+名古屋市<TAB>2,283,289
+豊橋市<TAB>377,045
+岡崎市<TAB>371,380
+一宮市<TAB>375,939
+
+FILE 2: english_names.data :: NAMES OF JAPANESE CITIES IN LATIN LETTERS
+=================================================
+Nagoya
+Toyohashi
+Okazaki
+Ichinomiya
+
+... Then the following command line:
+
+    umerge english_names.data city_population.data
+
+... will produce this result:
+
+Nagoya<TAB>名古屋市<TAB>2,283,289
+Toyohashi<TAB>豊橋市<TAB>377,045
+Okazaki<TAB>岡崎市<TAB>371,380
+Ichinomiya<TAB>一宮市<TAB>375,939
+
+Now, it turns out all of these cities are in Aichi prefecture, so if we want 
+to quickly add the prefecture as a column at the beginning, we can do this:
+
+    umerge english_names.data city_population.data Aichi
+
+... and we will get this result:
+
+Aichi<TAB>Nagoya<TAB>名古屋市<TAB>2,283,289
+Aichi<TAB>Toyohashi<TAB>豊橋市<TAB>377,045
+Aichi<TAB>Okazaki<TAB>岡崎市<TAB>371,380
+Aichi<TAB>Ichinomiya<TAB>一宮市<TAB>375,939
+
+... which we can redirect into a file using this:
+
+    umerge english_names.data city_population.data Aichi > japanese_cities.data
+
+=============
+FINAL REMARKS
+=============
+
+Of course there are many other tools and ways to manipulate this kind of data.
+As a pair, these two command-line tools allow you to do a surprisingly large
+amount of work in a Unicode-safe way to prepare data in the initial stages
+before using a more powerful tool such as an SQL database.
+
+— Ed Trager,
+  Ann Arbor, Michigan, USA
+  July 13, 2016
+

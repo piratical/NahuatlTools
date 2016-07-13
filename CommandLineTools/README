@@ -1,0 +1,5 @@
+Tools in this directory may consist of C++ source code, Perl, or tools
+written in other languages. Users are expected to have knowledge
+regarding how to compile and install these tools before being able to use
+them.  For example, for the C++ code, you may need to know how to install
+and use a command-line compiler and linker on Linux, OS X, or UNIX.
