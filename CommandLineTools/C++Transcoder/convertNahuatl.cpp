@@ -1,3 +1,17 @@
+/////////////////////////////////////////////////////////////
+//
+// convertNahuatl.cpp
+//
+// Copyright (c) 2016 by Edward H. Trager
+// ALL RIGHTS RESERVED
+//
+// Released under GNU GPL v. 2.0 or later
+//
+//
+// Initial version: July, 2016
+//
+/////////////////////////////////////////////////////////////
+
 #include <iostream>
 #include <iterator>
 #include <regex>
