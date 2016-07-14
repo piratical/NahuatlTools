@@ -1,0 +1,43 @@
+TITLE              : NahuatlOne Keyboard
+AUTHOR             : Edward H. Trager
+COPYRIGHT          : Copyright 2016 by Edward H. Trager
+LICENSE            : Released under the Creative Commons Share Alike license SA-3.0
+INFO               : Written by Edward H. Trager, April 2016
+SCRIPT             : Nahuatl Abugida by Ed Trager
+SUGGESTED FONT     : NahuatlOne
+SUGGESTED FONT FILE: NahuatlOne.otf
+
+
+NAHUATLONE.JKM
+==============
+This directory contains NahuatlOne.jkm, a JSON-based keyboard map file used with the
+online KeyCurry IME (Input Method Engine) application at http://unifont.org/keycurry/ .
+
+The NahuatlOne keyboard map is currently set up to use the Pre-Unicode 
+NahuatlOne.otf OpenType font which use PUA (Private Use Area) code point assignments
+for the Nahuatl Abugida documented at http://unifont.org/nahuatl/
+
+ABOUT KEY CURRY
+===============
+
+KeyCurry is available for public use at http://unifont.org/keycurry/
+
+Key Curry is a web application component that allows you to easily type many 
+world languages and specialized orthographies in web forms and rich internet 
+applications. The software uses a user interface framework called Gladiator 
+Components and the popular jQuery JavaScript library as a foundation and works 
+in the latest versions of Google Chrome, Firefox, Safari, Opera (limited feature set), 
+and Internet Explorer version 9 (limited feature set).
+
+Key Curry provides everything you need to type world languages and specialized 
+orthographies such as the International Phonetic Alphabet (IPA), so there is no need 
+to install complex software on your computer. Developers can incorporate Key Curry into 
+web applications with a few lines of JavaScript code.
+
+In addition to supporting major world languages and orthographies, Key Curry makes it 
+extremely easy for language advocates and web developers to provide support for the 
+orthographies of minority languages, especially the many languages that are not currently 
+supported by the major operating system vendors.
+
+Key Curry and Gladiator Components are copyright © 2010, 2011, 2012 by Edward H. Trager. 
+Please direct licensing, bug reports, and other inquiries to: ed dot trager at gmail dot com.
