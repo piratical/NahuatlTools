@@ -484,3 +484,45 @@ UTF8String::UTF8String( const std::basic_string<UTF16> & UTF16String ): std::str
 	
 }
 
+
+//
+// append(const UTF32 code_point )
+//
+UTF8String& UTF8String::append(const UTF32 code_point){
+	
+	this->std::string::append(_UTF32ValueToUTF8(code_point));
+	
+	return *this;
+	
+}
+
+//
+// operator+=(UTF32 code point)
+//
+UTF8String& UTF8String::operator+=(const UTF32 code_point){
+	
+	this->append(code_point);
+	return *this;
+	
+}
+
+//
+// operator=(UTF32 code point)
+//
+UTF8String& UTF8String::operator=(const UTF32 code_point){
+	
+	this->clear();
+	this->append(code_point);
+	return *this;
+	
+}
+
+//
+// Construct a UTF8String from a UTF32 code point:
+//
+UTF8String::UTF8String( const UTF32 code_point ): std::string("") {
+	
+	this->append(code_point);
+	
+}
+

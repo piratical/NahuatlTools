@@ -92,6 +92,15 @@ public:
 	UTF8String( const std::basic_string<UTF32> &UTF32String );
 	UTF8String( const std::basic_string<UTF16> &UTF16String );
 	
+	//
+	// Constructing UTF8Strings from a single code point:
+	//
+	UTF8String& append( const UTF32 code_point);
+	UTF8String& operator+=(const UTF32 code_point);
+	UTF8String& operator=(const UTF32 code_point);
+	// Copy constructor specialized for a single code point:
+	UTF8String( const UTF32 code_point );
+	
 };
 
 #endif

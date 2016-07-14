@@ -12,52 +12,176 @@
 // Current pre-Unicode code assignments in NahuatlOne font:
 //
 //////////////////////////////////////////////////////////////
-// Atomic vowels:
-const char *a("");
-const char *e("");
-const char *i("");
-const char *o("");
-const char *u("");
-// Native consonants:
-const char *ma("");
-const char *na("");
-const char *pa("");
-const char *ta("");
-const char *ca("");
-const char *cua("");
-const char *tza("");
-const char *tla("");
-const char *cha("");
-const char *sa("");
-const char *xa("");
-const char *ha("");
-const char *la("");
-const char *wa("");
-const char *ya("");
-// Non-native consonants:
-const char *nya("");
-const char *bva("");
-const char *da("");
-const char *ga("");
-const char *fa("");
-const char *ra("");
-const char *rra("");
-// Atomic vowel signs:
-const char *sign_a("");
-const char *sign_e("");
-const char *sign_i("");
-const char *sign_o("");
-const char *sign_u("");
-// Combined vowel signs:
-const char *sign_ia("");
-const char *sign_ai("");
-const char *sign_oa("");
-const char *sign_eo("");
-const char *sign_ei("");
+
+//////////////////////////////////////////////////////////////
+//
+// UTF32 CODE POINT ASSIGNMENTS
+//
+// NOTA BENE: THESE CHANGE IF 
+// FUTURE SCRIPT PROPOSAL GETS ACCEPTED 
+// BY UNICODE CONSORTIUM
+//
+// CURRENTLY THESE ARE PRIVATE USE AREA
+// (PUA) ASSIGNMENTS USED IN THE 
+// NahuatlOne font:
+//
+//////////////////////////////////////////////////////////////
+
+// Vowels:
+const UTF32 vowelA         = 0xED90;
+const UTF32 vowelE         = 0xED91;
+const UTF32 vowelI         = 0xED92;
+const UTF32 vowelO         = 0xED93;
+const UTF32 vowelU         = 0xED94;
+
+// Long Vowel Sign:
+const UTF32 longVowelSign  = 0xED95;
+
+// Vowel Signs:
+const UTF32 vowelSignA     = 0xEDA0;
+const UTF32 vowelSignE     = 0xEDA1;
+const UTF32 vowelSignI     = 0xEDA2;
+const UTF32 vowelSignO     = 0xEDA3;
+const UTF32 vowelSignU     = 0xEDA4;
+
+// Native Consonants:
+const UTF32 consonantMA    = 0xEDB0;
+const UTF32 consonantNA    = 0xEDB1;
+const UTF32 consonantPA    = 0xEDB2;
+const UTF32 consonantTA    = 0xEDB3;
+const UTF32 consonantCA    = 0xEDB4;
+const UTF32 consonantCUA   = 0xEDB5;
+const UTF32 consonantTZA   = 0xEDB6;
+const UTF32 consonantTLA   = 0xEDB7;
+const UTF32 consonantCHA   = 0xEDB8;
+const UTF32 consonantSA    = 0xEDB9;
+const UTF32 consonantXA    = 0xEDBA;
+const UTF32 consonantHA    = 0xEDBB;
+const UTF32 consonantLA    = 0xEDBC;
+const UTF32 consonantWA    = 0xEDBE;   // Note WA WITZITZILIN (HUITZITZILIN) should come before YA in sorted order
+const UTF32 consonantYA    = 0xEDBD;   // Note YA YOHUALLI should be the last letter in the native consonant series
+
+// Additional Spanish Consonants:
+const UTF32 consonantNYA   = 0xEDC0;
+const UTF32 consonantBVA   = 0xEDC1;
+const UTF32 consonantDA    = 0xEDC2;
+const UTF32 consonantGA    = 0xEDC3;
+const UTF32 consonantFA    = 0xEDC4;
+const UTF32 consonantRA    = 0xEDC5;
+const UTF32 consonantRRA   = 0xEDC6;
+
+// Compound (Dipthong) Vowel Signs:
+const UTF32 vowelSignIA    = 0xEDA5;
+const UTF32 vowelSignAI    = 0xEDA6;
+const UTF32 vowelSignOA    = 0xEDA7;
+const UTF32 vowelSignEO    = 0xEDA8;
+const UTF32 vowelSignEI    = 0xEDA9;
+
+// Subjoiner sign:
+const UTF32 subjoinerSign  = 0xEDAB;
+
+// Special Prefix signs:
+const UTF32 prefixPlace = 0xEDAD;
+const UTF32 prefixName  = 0xEDAE;
+const UTF32 prefixDiety = 0xEDAF;
+///////////////////////////////////////////////
+//
+// END OF CODE POINT ASSIGNMENTS
+//
+////////////////////////////////////////////////
+
+
+// Atomic vowels in UTF8 with char* references:
+const UTF8String UTF8vowelA(vowelA);
+const UTF8String UTF8vowelE(vowelE);
+const UTF8String UTF8vowelI(vowelI);
+const UTF8String UTF8vowelO(vowelO);
+const UTF8String UTF8vowelU(vowelU);
+const char *a = UTF8vowelA.c_str();
+const char *e = UTF8vowelE.c_str();
+const char *i = UTF8vowelI.c_str();
+const char *o = UTF8vowelO.c_str();
+const char *u = UTF8vowelU.c_str();
+
+// Native Consonants in UTF8 with char * references:
+const UTF8String UTF8consonantMA(consonantMA);
+const UTF8String UTF8consonantNA(consonantNA);
+const UTF8String UTF8consonantPA(consonantPA);
+const UTF8String UTF8consonantTA(consonantTA);
+const UTF8String UTF8consonantCA(consonantCA);
+const UTF8String UTF8consonantCUA(consonantCUA);
+const UTF8String UTF8consonantTZA(consonantTZA);
+const UTF8String UTF8consonantTLA(consonantTLA);
+const UTF8String UTF8consonantCHA(consonantCHA);
+const UTF8String UTF8consonantSA(consonantSA);
+const UTF8String UTF8consonantXA(consonantXA);
+const UTF8String UTF8consonantHA(consonantHA);
+const UTF8String UTF8consonantLA(consonantLA);
+const UTF8String UTF8consonantWA(consonantWA);
+const UTF8String UTF8consonantYA(consonantYA);
+const char *ma  = UTF8consonantMA.c_str();
+const char *na  = UTF8consonantNA.c_str();
+const char *pa  = UTF8consonantPA.c_str();
+const char *ta  = UTF8consonantTA.c_str();
+const char *ca  = UTF8consonantCA.c_str();
+const char *cua = UTF8consonantCUA.c_str();
+const char *tza = UTF8consonantTZA.c_str();
+const char *tla = UTF8consonantTLA.c_str();
+const char *cha = UTF8consonantCHA.c_str();
+const char *sa  = UTF8consonantSA.c_str();
+const char *xa  = UTF8consonantXA.c_str();
+const char *ha  = UTF8consonantHA.c_str();
+const char *la  = UTF8consonantLA.c_str();
+const char *wa  = UTF8consonantWA.c_str();
+const char *ya  = UTF8consonantYA.c_str();
+
+// Non-native consonants in UTF8 with char * references:
+const UTF8String UTF8consonantNYA(consonantNYA);
+const UTF8String UTF8consonantBVA(consonantBVA);
+const UTF8String UTF8consonantDA(consonantDA);
+const UTF8String UTF8consonantGA(consonantGA);
+const UTF8String UTF8consonantFA(consonantFA);
+const UTF8String UTF8consonantRA(consonantRA);
+const UTF8String UTF8consonantRRA(consonantRRA);
+const char *nya = UTF8consonantNYA.c_str();
+const char *bva = UTF8consonantBVA.c_str();
+const char *da  = UTF8consonantDA.c_str();
+const char *ga  = UTF8consonantGA.c_str();
+const char *fa  = UTF8consonantFA.c_str();
+const char *ra  = UTF8consonantRA.c_str();
+const char *rra = UTF8consonantRRA.c_str();
+
+// Atomic vowel signs in UTF8 with char * references:
+const UTF8String UTF8vowelSignA(vowelSignA);
+const UTF8String UTF8vowelSignE(vowelSignE);
+const UTF8String UTF8vowelSignI(vowelSignI);
+const UTF8String UTF8vowelSignO(vowelSignO);
+const UTF8String UTF8vowelSignU(vowelSignU);
+const char *sign_a = UTF8vowelSignA.c_str();
+const char *sign_e = UTF8vowelSignE.c_str();
+const char *sign_i = UTF8vowelSignI.c_str();
+const char *sign_o = UTF8vowelSignO.c_str();
+const char *sign_u = UTF8vowelSignU.c_str();
+
+// Combined vowel signs in UTF8 with char * references:
+const UTF8String UTF8vowelSignIA(vowelSignIA);
+const UTF8String UTF8vowelSignAI(vowelSignAI);
+const UTF8String UTF8vowelSignOA(vowelSignOA);
+const UTF8String UTF8vowelSignEO(vowelSignEO);
+const UTF8String UTF8vowelSignEI(vowelSignEI);
+const char *sign_ia = UTF8vowelSignIA.c_str();
+const char *sign_ai = UTF8vowelSignAI.c_str();
+const char *sign_oa = UTF8vowelSignOA.c_str();
+const char *sign_eo = UTF8vowelSignEO.c_str();
+const char *sign_ei = UTF8vowelSignEI.c_str();
+
 // Name prefixes:
-const char *place_prefix("");
-const char *name_prefix("");
-const char *diety_prefix("");
+const UTF8String UTF8prefixPlace(prefixPlace);
+const UTF8String UTF8prefixName(prefixName);
+const UTF8String UTF8prefixDiety(prefixDiety);
+const char *place_prefix = UTF8prefixPlace.c_str();
+const char *name_prefix  = UTF8prefixName.c_str();
+const char *diety_prefix = UTF8prefixDiety.c_str();
 
 // Additional required replacement strings:
 const char *s_se("");   // converts ce to /se/ consonant
@@ -71,30 +195,6 @@ const std::basic_string<UTF32> consonantList(UTF8String("�
 const std::basic_string<UTF32> vowelList(UTF8String("").UTF32String());
 const std::basic_string<UTF32> vowelSignList(UTF8String("").UTF32String());
 
-const UTF32 vowelA         = 0xED90;
-const UTF32 vowelE         = 0xED91;
-const UTF32 vowelI         = 0xED92;
-const UTF32 vowelO         = 0xED93;
-const UTF32 vowelU         = 0xED94;
-
-// Vowels:
-const UTF32 vowelSignA     = 0xEDA0;
-const UTF32 vowelSignE     = 0xEDA1;
-const UTF32 vowelSignI     = 0xEDA2;
-const UTF32 vowelSignO     = 0xEDA3;
-const UTF32 vowelSignU     = 0xEDA4;
-
-// Consonants:
-const UTF32 consonantWA    = 0xEDBE;
-
-const UTF32 longVowelSign  = 0xED95;
-const UTF32 subjoinerSign  = 0xEDAB;
-
-const UTF32 vowelSignIA    = 0xEDA5;
-const UTF32 vowelSignAI    = 0xEDA6;
-const UTF32 vowelSignOA    = 0xEDA7;
-const UTF32 vowelSignEO    = 0xEDA8;
-const UTF32 vowelSignEI    = 0xEDA9;
 
 //
 // vowelToVowelSign
