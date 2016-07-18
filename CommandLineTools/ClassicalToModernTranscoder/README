@@ -1,0 +1,25 @@
+SYNOPSIS
+========
+c2m: Convert Nahuatl text from classical to modern orthography.
+     (c) 2016 by Edward H. Trager. All Rights Reserved
+
+c2m: Herramienta para convertir texto en náhuatl desde la ortografía clásica
+     a la ortografía moderna.
+
+COPYRIGHT & LICENSE
+====================
+(c) 2016 by Edward H. Trager and released under the 
+GNU General Public License version 2.0 or later.
+
+Derechos de autor (c) 2016 por Edward H. Trager. Todos los derechos reservados.
+GPL v. 2.0 or later. Licencia Pública General de GNU v. 2.0 o posterior
+
+USAGE
+======
+Usage: ./c2m <file to convert>
+
+COMPILE
+=======
+Here is a typical command line to compile the software:
+
+   g++ -Wall -o c2m c2m.cpp
