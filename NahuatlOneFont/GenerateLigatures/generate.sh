@@ -42,6 +42,7 @@ var data={
   {id:'oa.vs', offset:'60839', glyfid:'35', width:'150',va:'-366',sa:''},
   {id:'eo.vs', offset:'60840', glyfid:'36', width:'150',va:'-358',sa:''},
   {id:'ei.vs', offset:'60841', glyfid:'37', width:'150',va:'-457',sa:''},
+  {id:'io.vs', offset:'60842', glyfid:'105', width:'150',va:'-366',sa:''},
   // This case is for no vowel sign but subjoiners:
   {id:'',offset:'',glyfid:'0',width:'0'}
  ],
@@ -105,8 +106,9 @@ var data={
 //
 // magic stuff:
 //
-	var currentOffset=60928;
-	var currentGlyphId=97;
+	var currentOffset=60928; // This is the decimal equivalent of U+EE00 which is just beyond the last already-defined glyph
+	// old value: var currentGlyphId=97;
+	var currentGlyphId=106;   // This is the next sequentially available glyph index
 	var EOL="\n";
 
 //
