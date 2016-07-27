@@ -97,7 +97,8 @@ var data={
   {id:'ga.sub', offset:'60899', glyfid:'82', width:'0',va:'',sa:'-622'},
   {id:'fa.sub', offset:'60900', glyfid:'83', width:'0',va:'',sa:'-465'},
   {id:'ra.sub', offset:'60901', glyfid:'84', width:'0',va:'',sa:'-455'},
-  {id:'rra.sub', offset:'60902', glyfid:'85', width:'0',va:'',sa:'-545'},
+  // Seems like subjoined cases of RRA will not occur:
+  // {id:'rra.sub', offset:'60902', glyfid:'85', width:'0',va:'',sa:'-545'},
   // This case is the one where there is no subjoiner, only vowel signs:
   {id:'',offset:'',glyfid:'0',width:'0',va:'',sa:''}
  ]
@@ -106,7 +107,11 @@ var data={
 //
 // magic stuff:
 //
-	var currentOffset=60928; // This is the decimal equivalent of U+EE00 which is just beyond the last already-defined glyph
+	var currentOffset=57344 // = U+E000, the start of the PUA region
+	var reserveStart =60816 // = U+ED90, this is where the abugida glyphs start
+	var reserveEnd   =60919 // = U+EDF7, this is where the abugida glyphs end
+
+	// old value: var currentOffset=60928; // This is the decimal equivalent of U+EE00 which is just beyond the last already-defined glyph
 	// old value: var currentGlyphId=97;
 	var currentGlyphId=106;   // This is the next sequentially available glyph index
 	var EOL="\n";
@@ -144,6 +149,14 @@ function generateLigature(i,j,k){
 	s+= 'Encoding: ' + currentOffset + ' ' + currentOffset + ' ' + currentGlyphId + EOL;
 	
 	currentOffset++;
+	/////////////////////////////////////////////////////////////////
+	// 2016.07.27.ET ADDENDUM:
+	// NOTA BENE: THIS IS WHERE WE "JUMP OVER" OUR RESERVED SECTION:
+	//
+	/////////////////////////////////////////////////////////////////
+	if(currentOffset==reserveStart){
+		currentOffset=reserveEnd+1;
+	}
 	currentGlyphId++;
 	
 	s+= 'Width: ' + data.bases[j].width + EOL;
