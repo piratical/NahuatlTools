@@ -13,6 +13,7 @@
 /////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <fstream>
 #include <iterator>
 #include <regex>
 #include <string>
@@ -619,23 +620,39 @@ UTF8String structure(const UTF8String &target){
 int main(int argc, const char *argv[]){
 	
 	if(argc !=2){
-		std::cerr << "Usage: " << argv[0] << " <phrase to convert " << std::endl;
+		std::cerr << "cn: Convert Nahuatl text from classical to the new abugida." << std::endl;
+		std::cerr << "    (c) 2016 by Edward H. Trager. All Rights Reserved" << std::endl;
+		std::cerr << std::endl;
+		std::cerr << "cn: Herramienta para convertir texto en náhuatl desde la ortografía clásica" << std::endl;
+		std::cerr << "     al nuevo abugida." << std::endl;
+		std::cerr << std::endl;
+		std::cerr << "Derechos de autor (c) 2016 por Edward H. Trager. Todos los derechos reservados." << std::endl;
+		std::cerr << std::endl;
+		std::cerr << "GPL v. 2.0 or later. Licencia Pública General de GNU v. 2.0 o posterior" << std::endl;
+		std::cerr << std::endl;
+		std::cerr << "Usage: " << argv[0] << " <file to convert>" << std::endl;
+		std::cerr << "Uso:   " << argv[0] << " <archivo a convertir>" << std::endl;
 		exit(1);
 	}
 	
-	std::string target(argv[1]);
-	
-	toLowerCase(target);
-	//std::cout << "toLowerCase(): " << target << std::endl;
-	asciifyVowels(target);
-	//std::cout << "asciifyVowels(): " << target << std::endl;
-	convertDigraphs(target);
-	//std::cout << "convertDigraphs(): " << target << std::endl;
-	convertSingleConsonants(target);
-	//std::cout << "convertSingleConsonants(): " << target << std::endl;
-	convertVowels(target);
-	//std::cout << "convertVowels(): " << target << std::endl;
-	std::cout << structure((UTF8String)target) << std::endl;
+	std::string target;
+	std::ifstream file1(argv[1]);
+	while (std::getline(file1,target)){
+		
+		toLowerCase(target);
+		//std::cout << "toLowerCase(): " << target << std::endl;
+		asciifyVowels(target);
+		//std::cout << "asciifyVowels(): " << target << std::endl;
+		convertDigraphs(target);
+		//std::cout << "convertDigraphs(): " << target << std::endl;
+		convertSingleConsonants(target);
+		//std::cout << "convertSingleConsonants(): " << target << std::endl;
+		convertVowels(target);
+		//std::cout << "convertVowels(): " << target << std::endl;
+		std::cout << structure((UTF8String)target) << std::endl;
+		
+	}
 	return 0;
 }
+
 
