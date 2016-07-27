@@ -6,7 +6,7 @@
 "info":"Written by Edward H. Trager, April 2016",
 "script":"nahuatl",
 "suggestedFont":"NahuatlOne",
-"suggestedFontFileName":"NahuatlOne.otf",
+"suggestedFontFileName":"NahuatlOne_1.1.otf",
 "keymap":{
 	"a":"",
 	"e":"",
@@ -63,6 +63,7 @@
 	"OA":"",
 	"EO":"",
 	"EI":"",
+	"IO":"",
 	"*":"",
 	"_":"",
 	"^":"",
