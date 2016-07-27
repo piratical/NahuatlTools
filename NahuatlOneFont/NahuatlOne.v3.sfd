@@ -5,7 +5,6 @@ FamilyName: NahuatlOne
 Weight: Regular
 Copyright: Copyright (c) 2016, Ed Trager
 Version: 1.0
-StyleMapFamilyName: 
 ItalicAngle: 0
 UnderlinePosition: -204
 UnderlineWidth: 102
@@ -23,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1464015724
-ModificationTime: 1464019675
+ModificationTime: 1469644314
 PfmFamily: 16
 TTFWeight: 400
 TTFWidth: 5
@@ -64,13 +63,13 @@ Lookup: 260 0 0 "Vowel_sign_positioning" { "Vowel_sign_positioning subtable"  } 
 Lookup: 260 0 0 "Subjoined_consonant_positioning" { "Subjoined_consonant_positioning subtable"  } ['mark' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
 DEI: 91125
 LangName: 1033 "Copyright (c) 2016, Ed Trager" "" "" "" "" "Version 1.000"
-Encoding: Custom
+Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 11 6
+WinInfo: 60888 8 5
 BeginPrivate: 5
 BlueValues 18 [-875 0 1433 1569]
 StemSnapH 9 [146 147]
@@ -79,10 +78,10 @@ BlueShift 1 0
 BlueScale 1 0
 EndPrivate
 AnchorClass2: "vowel_signs" "Vowel_sign_positioning subtable" "subjoined_consonants" "Subjoined_consonant_positioning subtable" 
-BeginChars: 97 97
+BeginChars: 65537 98
 
 StartChar: .notdef
-Encoding: 0 -1 0
+Encoding: 65536 -1 0
 GlifName: _notdef
 Width: 1024
 VWidth: 0
@@ -103,6 +102,7 @@ SplineSet
  204 788 l 257
  204 102 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -139,7 +139,7 @@ sass."
 EndChar
 
 StartChar: zero
-Encoding: 1 48 1
+Encoding: 48 48 1
 GlifName: zero
 Width: 1278
 VWidth: 0
@@ -161,6 +161,7 @@ SplineSet
  851 87 1042 316 1042 618 c 256
  1042 920 851 1148 639 1148 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -197,7 +198,7 @@ sass."
 EndChar
 
 StartChar: one
-Encoding: 2 49 2
+Encoding: 49 49 2
 GlifName: one
 Width: 700
 VWidth: 0
@@ -220,6 +221,7 @@ SplineSet
  90 1064 l 257
  460 1293 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -246,7 +248,7 @@ sass."
 EndChar
 
 StartChar: two
-Encoding: 3 50 3
+Encoding: 50 50 3
 GlifName: two
 Width: 1072
 VWidth: 0
@@ -274,6 +276,7 @@ SplineSet
  607 684 695 718 751 759 c 256
  807 800 835 836 835 919 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -305,7 +308,7 @@ sass."
 EndChar
 
 StartChar: three
-Encoding: 4 51 4
+Encoding: 51 51 4
 GlifName: three
 Width: 1156
 VWidth: 0
@@ -333,6 +336,7 @@ SplineSet
  292 151 441 119 567 119 c 256
  748 119 919 234 919 412 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -364,7 +368,7 @@ sass."
 EndChar
 
 StartChar: uni0000
-Encoding: 5 0 5
+Encoding: 0 0 5
 GlifName: uni0000
 Width: 1079
 VWidth: 0
@@ -399,6 +403,7 @@ SplineSet
  326 579 l 257
  412 666 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -435,7 +440,7 @@ sass."
 EndChar
 
 StartChar: uni25CC_DOTTED_CIRCLE
-Encoding: 6 9676 6
+Encoding: 9676 9676 6
 GlifName: uni25C_C__D_O_T_T_E_D__C_I_R_C_L_E_
 Width: 1095
 VWidth: 0
@@ -448,11 +453,11 @@ AnchorPoint: "vowel_signs" 549 1020 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-548 937 m 256
+548 937 m 256x37e0
  588 937 621 904 621 864 c 256
  621 824 588 791 548 791 c 256
  508 791 475 824 475 864 c 256
- 475 904 508 937 548 937 c 256
+ 475 904 508 937 548 937 c 256x37e0
 242 789 m 256
  242 825 275 862 314 862 c 258
  315 862 l 258
@@ -463,7 +468,7 @@ SplineSet
  711 827 745 858 781 860 c 256
  782 860 783 860 784 860 c 256
  826 860 857 826 857 787 c 256
- 857 746 822 714 784 714 c 256
+ 857 746 822 714 784 714 c 256x3be0
  744 714 711 750 711 787 c 256
 90 585 m 256
  90 627 127 658 163 658 c 256
@@ -493,7 +498,7 @@ SplineSet
  239 171 273 202 309 204 c 256
  310 204 311 204 312 204 c 256
  353 204 385 169 385 131 c 256
- 385 91 349 58 312 58 c 256
+ 385 91 349 58 312 58 c 256x73e0
  271 58 239 93 239 131 c 256
 711 130 m 256
  711 167 742 203 782 203 c 258
@@ -501,12 +506,13 @@ SplineSet
  821 203 857 170 857 130 c 256
  857 92 825 57 784 57 c 256
  746 57 711 88 711 130 c 256
-548 129 m 256
+548 129 m 256xb3e0
  588 129 621 96 621 56 c 256
  621 16 588 -17 548 -17 c 256
  508 -17 475 16 475 56 c 256
- 475 96 508 129 548 129 c 256
+ 475 96 508 129 548 129 c 256xb3e0
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -578,14 +584,12 @@ sass."
 EndChar
 
 StartChar: exclam
-Encoding: 7 33 7
+Encoding: 33 33 7
 GlifName: exclam
 Width: 432
 VWidth: 0
 GlyphClass: 2
-Flags: W
-HStem: 3 252<181 251> 1528 20<102 330 330 330>
-VStem: 90 252<94 164> 144 144<435 435>
+Flags: MW
 LayerCount: 2
 Fore
 SplineSet
@@ -600,6 +604,7 @@ SplineSet
  144 435 l 257
  102 1548 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -636,28 +641,29 @@ sass."
 EndChar
 
 StartChar: exclamdown
-Encoding: 8 161 8
+Encoding: 161 161 8
 GlifName: exclamdown
 Width: 432
 VWidth: 0
 GlyphClass: 2
 Flags: W
-HStem: -871 21<102 102 102 330> 422 252<181 251>
-VStem: 90 252<513 583> 144 144<242 242>
+HStem: -871 21G<102 330> 422 252<120.587 311.413>
+VStem: 90 252<-871 -575.519 452.587 643.413> 144 144<-137.904 242>
 LayerCount: 2
 Fore
 SplineSet
-102 -871 m 257
+102 -871 m 257xd0
  144 242 l 257
  288 242 l 257
  330 -871 l 257
- 102 -871 l 257
-90 548 m 256
+ 102 -871 l 257xd0
+90 548 m 256xe0
  90 618 146 674 216 674 c 256
  286 674 342 618 342 548 c 256
  342 478 286 422 216 422 c 256
- 146 422 90 478 90 548 c 256
+ 146 422 90 478 90 548 c 256xe0
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -694,14 +700,12 @@ sass."
 EndChar
 
 StartChar: questiondown
-Encoding: 9 191 9
+Encoding: 191 191 9
 GlifName: questiondown
 Width: 1078
 VWidth: 0
 GlyphClass: 2
-Flags: W
-HStem: -875 147<453.407 611 453.407 645.5> -533 20<853 853> 415 252<505 575>
-VStem: 90 147<-544.053 -424.5 -544.053 -411> 414 253<506 576> 469 147<93 235 49.5 235>
+Flags: MW
 LayerCount: 2
 Fore
 SplineSet
@@ -727,6 +731,7 @@ SplineSet
  988 -571 l 257
  923 -723 757 -875 534 -875 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -773,14 +778,12 @@ sass."
 EndChar
 
 StartChar: question
-Encoding: 10 63 10
+Encoding: 63 63 10
 GlifName: question
 Width: 1078
 VWidth: 0
 GlyphClass: 2
-Flags: W
-HStem: 1 252<503 573> 1397 147<467 625>
-VStem: 412 252<92 162> 462 147<433 576 433 619.5> 841 147<1092.5 1212.5>
+Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
@@ -806,6 +809,7 @@ SplineSet
  468 1 412 57 412 127 c 256
  412 197 468 253 538 253 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -847,7 +851,7 @@ sass."
 EndChar
 
 StartChar: four
-Encoding: 11 52 11
+Encoding: 52 52 11
 GlifName: four
 Width: 1212
 VWidth: 0
@@ -874,6 +878,7 @@ SplineSet
  90 481 l 257
  459 1282 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -905,7 +910,7 @@ sass."
 EndChar
 
 StartChar: five
-Encoding: 12 53 12
+Encoding: 53 53 12
 GlifName: five
 Width: 1208
 VWidth: 0
@@ -937,6 +942,7 @@ SplineSet
  412 825 487 833 562 833 c 256
  873 833 1119 697 1119 380 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -973,7 +979,7 @@ sass."
 EndChar
 
 StartChar: six
-Encoding: 13 54 13
+Encoding: 54 54 13
 GlifName: six
 Width: 1141
 VWidth: 0
@@ -1002,6 +1008,7 @@ SplineSet
  697 88 778 117 828 158 c 256
  879 200 904 256 904 326 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1043,7 +1050,7 @@ sass."
 EndChar
 
 StartChar: seven
-Encoding: 14 55 14
+Encoding: 55 55 14
 GlifName: seven
 Width: 1251
 VWidth: 0
@@ -1063,6 +1070,7 @@ SplineSet
  90 1131 l 257
  90 1278 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1094,14 +1102,12 @@ sass."
 EndChar
 
 StartChar: eight
-Encoding: 15 56 15
+Encoding: 56 56 15
 GlifName: eight
 Width: 1189
 VWidth: 0
 GlyphClass: 2
-Flags: W
-HStem: -55 147<492 698 492 730> 628 162<518.5 671.5 518.5 703> 1148 147<522.5 667.5>
-VStem: 90 147<293.5 432.5 293.5 441.5> 201 147<921 1011 921 1060.5> 841 147<921 1011> 953 147<293.5 432.5>
+Flags: MW
 LayerCount: 2
 Fore
 SplineSet
@@ -1125,6 +1131,7 @@ SplineSet
  801 92 953 223 953 364 c 256
  953 501 811 628 595 628 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1176,7 +1183,7 @@ sass."
 EndChar
 
 StartChar: nine
-Encoding: 16 57 16
+Encoding: 57 57 16
 GlifName: nine
 Width: 1141
 VWidth: 0
@@ -1206,6 +1213,7 @@ SplineSet
  439 1153 363 1124 314 1084 c 256
  263 1042 237 987 237 917 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1247,7 +1255,7 @@ sass."
 EndChar
 
 StartChar: quotedblleft
-Encoding: 17 8220 17
+Encoding: 8220 8220 17
 GlifName: quotedblleft
 Width: 905
 VWidth: 0
@@ -1275,6 +1283,7 @@ SplineSet
  332 1449 301 1376 287 1304 c 257
  358.477 1284.51 404.442 1226.25 404.442 1156.24 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1306,7 +1315,7 @@ sass."
 EndChar
 
 StartChar: quotedblright
-Encoding: 18 8221 18
+Encoding: 8221 8221 18
 GlifName: quotedblright
 Width: 905
 VWidth: 0
@@ -1336,6 +1345,7 @@ SplineSet
  574 1112 604 1185 618 1257 c 257
  547.696 1276.17 500.763 1337.71 500.763 1406.55 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1367,7 +1377,7 @@ sass."
 EndChar
 
 StartChar: guillemotleft
-Encoding: 19 171 19
+Encoding: 171 171 19
 GlifName: guillemotleft
 Width: 946
 VWidth: 0
@@ -1391,10 +1401,11 @@ SplineSet
  450 472 l 257
  793 825 l 257
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: guillemotright
-Encoding: 20 187 20
+Encoding: 187 187 20
 GlifName: guillemotright
 Width: 946
 VWidth: 0
@@ -1418,10 +1429,11 @@ SplineSet
  450 723 l 257
  514 825 l 257
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: plus
-Encoding: 21 43 21
+Encoding: 43 43 21
 GlifName: plus
 Width: 1082
 VWidth: 0
@@ -1446,6 +1458,7 @@ SplineSet
  468 547 l 257
  468 924 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1472,7 +1485,7 @@ sass."
 EndChar
 
 StartChar: hyphen
-Encoding: 22 45 22
+Encoding: 45 45 22
 GlifName: hyphen
 Width: 1082
 VWidth: 0
@@ -1488,6 +1501,7 @@ SplineSet
  90 400 l 257
  90 547 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1506,7 +1520,7 @@ sass."
 EndChar
 
 StartChar: multiply
-Encoding: 23 215 23
+Encoding: 215 215 23
 GlifName: multiply
 Width: 921
 VWidth: 0
@@ -1529,10 +1543,11 @@ SplineSet
  90 740 l 257
  194 844 l 257
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: degree
-Encoding: 24 176 24
+Encoding: 176 176 24
 GlifName: degree
 Width: 676
 VWidth: 0
@@ -1554,6 +1569,7 @@ SplineSet
  395 1220 439 1264 439 1321 c 256
  439 1378 395 1422 338 1422 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1590,7 +1606,7 @@ sass."
 EndChar
 
 StartChar: aa.base
-Encoding: 25 60816 25
+Encoding: 60816 60816 25
 GlifName: aa.base
 Width: 1254
 VWidth: 0
@@ -1637,6 +1653,7 @@ SplineSet
  827.709 622.651 824.097 660.974 804 696 c 257
  751 773 652 795 564 799 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1673,7 +1690,7 @@ sass."
 EndChar
 
 StartChar: ee.base
-Encoding: 26 60817 26
+Encoding: 60817 60817 26
 GlifName: ee.base
 Width: 1362
 VWidth: 0
@@ -1708,6 +1725,7 @@ SplineSet
  1020 178 1125 275 1125 433 c 256
  1125 586 966 763 754 797 c 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1744,7 +1762,7 @@ sass."
 EndChar
 
 StartChar: ii.base
-Encoding: 27 60818 27
+Encoding: 60818 60818 27
 GlifName: ii.base
 Width: 1289
 VWidth: 0
@@ -1778,6 +1796,7 @@ SplineSet
  1040 278 1053 335 1053 393 c 256
  1053 619 871 800 645 800 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1819,7 +1838,7 @@ sass."
 EndChar
 
 StartChar: oo.base
-Encoding: 28 60819 28
+Encoding: 60819 60819 28
 GlifName: oo.base
 Width: 1131
 VWidth: 0
@@ -1843,6 +1862,7 @@ SplineSet
  748 142 894 289 894 471 c 256
  894 653 748 799 566 799 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1879,7 +1899,7 @@ sass."
 EndChar
 
 StartChar: ee.vs
-Encoding: 29 60833 29
+Encoding: 60833 60833 29
 GlifName: ee.vs
 Width: 0
 VWidth: 0
@@ -1911,6 +1931,7 @@ SplineSet
  -521 1207 -474 1254 -474 1311 c 256
  -474 1368 -521 1414 -578 1414 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -1952,7 +1973,7 @@ sass."
 EndChar
 
 StartChar: ii.vs
-Encoding: 30 60834 30
+Encoding: 60834 60834 30
 GlifName: ii.vs
 Width: 0
 VWidth: 0
@@ -1974,6 +1995,7 @@ SplineSet
  -768 1349 -719 1429 -653 1482 c 256
  -587 1535 -504 1564 -418 1564 c 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2000,7 +2022,7 @@ sass."
 EndChar
 
 StartChar: oo.vs
-Encoding: 31 60835 31
+Encoding: 60835 60835 31
 GlifName: oo.vs
 Width: 0
 VWidth: 0
@@ -2023,6 +2045,7 @@ SplineSet
  -653 1220 -609 1264 -609 1321 c 256
  -609 1378 -653 1422 -710 1422 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2059,7 +2082,7 @@ sass."
 EndChar
 
 StartChar: uu.vs
-Encoding: 32 60836 32
+Encoding: 60836 60836 32
 GlifName: uu.vs
 Width: 0
 VWidth: 0
@@ -2083,6 +2106,7 @@ SplineSet
  -851 1073 -963 1185 -963 1321 c 258
  -963 1433 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2119,7 +2143,7 @@ sass."
 EndChar
 
 StartChar: ia.vs
-Encoding: 33 60837 33
+Encoding: 60837 60837 33
 GlifName: ia.vs
 Width: 0
 VWidth: 0
@@ -2152,6 +2176,7 @@ SplineSet
  -871 1424 l 257
  -871 1571 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2188,7 +2213,7 @@ sass."
 EndChar
 
 StartChar: ai.vs
-Encoding: 34 60838 34
+Encoding: 60838 60838 34
 GlifName: ai.vs
 Width: 0
 VWidth: 0
@@ -2224,6 +2249,7 @@ SplineSet
  -833 1216 -785 1263 -785 1321 c 256
  -785 1379 -833 1427 -891 1427 c 256xdc
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2270,7 +2296,7 @@ sass."
 EndChar
 
 StartChar: oa.vs
-Encoding: 35 60839 35
+Encoding: 60839 60839 35
 GlifName: oa.vs
 Width: 0
 VWidth: 0
@@ -2303,6 +2329,7 @@ SplineSet
  -825 1220 -781 1264 -781 1321 c 256
  -781 1378 -825 1422 -882 1422 c 256xdc
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2349,7 +2376,7 @@ sass."
 EndChar
 
 StartChar: eo.vs
-Encoding: 36 60840 36
+Encoding: 60840 60840 36
 GlifName: eo.vs
 Width: 0
 VWidth: 0
@@ -2368,6 +2395,7 @@ SplineSet
  -1051 1194 l 257
  -698 1536 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2386,7 +2414,7 @@ sass."
 EndChar
 
 StartChar: ei.vs
-Encoding: 37 60841 37
+Encoding: 60841 60841 37
 GlifName: ei.vs
 Width: 0
 VWidth: 0
@@ -2424,6 +2452,7 @@ SplineSet
  -573 1207 -526 1254 -526 1311 c 256
  -526 1368 -573 1414 -630 1414 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2470,7 +2499,7 @@ sass."
 EndChar
 
 StartChar: subjoiner_symbol
-Encoding: 38 60843 38
+Encoding: 60843 60843 38
 GlifName: subjoiner_symbol
 Width: 1095
 VWidth: 0
@@ -2482,11 +2511,11 @@ AnchorPoint: "vowel_signs" 546 1020 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-548 937 m 256
+548 937 m 256xe6fc
  588 937 621 904 621 864 c 256
  621 824 588 791 548 791 c 256
  508 791 475 824 475 864 c 256
- 475 904 508 937 548 937 c 256
+ 475 904 508 937 548 937 c 256xe6fc
 314 862 m 258
  315 862 l 258
  336 862 363 848 375 831 c 256
@@ -2497,7 +2526,7 @@ SplineSet
  249 757 242 776 242 789 c 256
  242 810 256 836 273 848 c 256
  283 855 302 862 314 862 c 258
-786 860 m 258
+786 860 m 258xe77c
  798 860 817 854 827 847 c 256
  844 835 857 808 857 787 c 256
  857 774 852 756 844 745 c 256
@@ -2507,7 +2536,7 @@ SplineSet
  711 800 717 819 725 830 c 256
  736 846 762 859 781 860 c 256
  782 860 783 860 784 860 c 258
- 786 860 l 258
+ 786 860 l 258xe77c
 166 658 m 256
  171 658 181 657 186 655 c 256
  214 646 236 614 236 585 c 256
@@ -2548,7 +2577,7 @@ SplineSet
  859 342 861 352 863 358 c 256
  872 386 903 409 932 409 c 256
  933 409 934 409 935 409 c 256
-314 204 m 258
+314 204 m 258xee7c
  326 204 345 197 355 190 c 256
  372 178 385 152 385 131 c 256
  385 118 379 100 371 89 c 256
@@ -2558,7 +2587,7 @@ SplineSet
  239 144 245 163 253 174 c 256
  264 190 290 203 309 204 c 256
  310 204 311 204 312 204 c 258
- 314 204 l 258
+ 314 204 l 258xee7c
 782 203 m 258
  784 203 l 258
  805 203 831 189 843 172 c 256
@@ -2569,11 +2598,11 @@ SplineSet
  717 97 711 117 711 130 c 256
  711 151 724 177 741 189 c 256
  751 196 770 203 782 203 c 258
-548 129 m 256
+548 129 m 256xf67c
  588 129 621 96 621 56 c 256
  621 16 588 -17 548 -17 c 256
  508 -17 475 16 475 56 c 256
- 475 96 508 129 548 129 c 256
+ 475 96 508 129 548 129 c 256xf67c
 468 -202 m 257
  628 -202 l 257
  628 -437 l 257
@@ -2588,6 +2617,7 @@ SplineSet
  468 -437 l 257
  468 -202 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2674,7 +2704,7 @@ sass."
 EndChar
 
 StartChar: place.sign
-Encoding: 39 60845 39
+Encoding: 60845 60845 39
 GlifName: place.sign
 Width: 703
 VWidth: 0
@@ -2695,6 +2725,7 @@ SplineSet
  447 169 l 257
  352 954 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2721,7 +2752,7 @@ sass."
 EndChar
 
 StartChar: name.sign
-Encoding: 40 60846 40
+Encoding: 60846 60846 40
 GlifName: name.sign
 Width: 459
 VWidth: 0
@@ -2744,6 +2775,7 @@ SplineSet
  222 -598 l 257
  222 1560 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2775,7 +2807,7 @@ sass."
 EndChar
 
 StartChar: diety.sign
-Encoding: 41 60847 41
+Encoding: 60847 60847 41
 GlifName: diety.sign
 Width: 678
 VWidth: 0
@@ -2812,6 +2844,7 @@ SplineSet
  395 360 439 404 439 461 c 256
  439 518 395 562 338 562 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2858,7 +2891,7 @@ sass."
 EndChar
 
 StartChar: ma
-Encoding: 42 60848 42
+Encoding: 60848 60848 42
 GlifName: ma
 Width: 1653
 VWidth: 0
@@ -2892,6 +2925,7 @@ SplineSet
  375 -2 90 155 90 492 c 256
  90 746 271 948 503 948 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -2933,7 +2967,7 @@ sass."
 EndChar
 
 StartChar: ma.sub
-Encoding: 43 60880 43
+Encoding: 60880 60880 43
 GlifName: ma.sub
 Width: 0
 VWidth: 0
@@ -2965,12 +2999,13 @@ SplineSet
  -1064 -903 -1287 -780 -1287 -517 c 256
  -1287 -319 -1142 -157 -958 -157 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol ma
 EndChar
 
 StartChar: na
-Encoding: 44 60849 44
+Encoding: 60849 60849 44
 GlifName: na
 Width: 1220
 VWidth: 0
@@ -2999,6 +3034,7 @@ SplineSet
  90.0399 448.767 104.442 535.039 134 614 c 256
  204 801 371 945 611 945 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3035,7 +3071,7 @@ sass."
 EndChar
 
 StartChar: pa
-Encoding: 45 60850 45
+Encoding: 60850 60850 45
 GlifName: pa
 Width: 1362
 VWidth: 0
@@ -3070,6 +3106,7 @@ SplineSet
  1125 673 1020 769 921 795 c 256
  903 800 885 802 869 802 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3111,7 +3148,7 @@ sass."
 EndChar
 
 StartChar: ta
-Encoding: 46 60851 46
+Encoding: 60851 60851 46
 GlifName: ta
 Width: 1030
 VWidth: 0
@@ -3142,6 +3179,7 @@ SplineSet
  90 777 l 257
  90 924 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3173,7 +3211,7 @@ sass."
 EndChar
 
 StartChar: ca
-Encoding: 47 60852 47
+Encoding: 60852 60852 47
 GlifName: ca
 Width: 1039
 VWidth: 0
@@ -3198,6 +3236,7 @@ SplineSet
  304 -5 90 209 90 471 c 256
  90 733 304 947 566 947 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3229,7 +3268,7 @@ sass."
 EndChar
 
 StartChar: cua
-Encoding: 48 60853 48
+Encoding: 60853 60853 48
 GlifName: cua
 Width: 1122
 VWidth: 0
@@ -3258,6 +3297,7 @@ SplineSet
  237 437 l 257
  399 689 675 880 984 927 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3289,7 +3329,7 @@ sass."
 EndChar
 
 StartChar: tza
-Encoding: 49 60854 49
+Encoding: 60854 60854 49
 GlifName: tza
 Width: 1186
 VWidth: 0
@@ -3314,6 +3354,7 @@ SplineSet
  154 776 l 257
  154 923 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3342,7 +3383,7 @@ sass."
 EndChar
 
 StartChar: tla
-Encoding: 50 60855 50
+Encoding: 60855 60855 50
 GlifName: tla
 Width: 1214
 VWidth: 0
@@ -3385,6 +3426,7 @@ SplineSet
  658 265 678 292 697 321 c 257
  617 377 529 416 446 416 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3421,7 +3463,7 @@ sass."
 EndChar
 
 StartChar: na.sub
-Encoding: 51 60881 51
+Encoding: 60881 60881 51
 GlifName: na.sub
 Width: 0
 VWidth: 0
@@ -3449,12 +3491,13 @@ SplineSet
  -1121 -547 -1110 -480 -1087 -419 c 256
  -1033 -273 -898 -159 -712 -159 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol na
 EndChar
 
 StartChar: pa.sub
-Encoding: 52 60882 52
+Encoding: 60882 60882 52
 GlifName: pa.sub
 Width: 0
 VWidth: 0
@@ -3489,12 +3532,13 @@ SplineSet
  -405 -390 -478 -326 -544 -308 c 256
  -552 -306 -561 -305 -568 -304 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol pa
 EndChar
 
 StartChar: ta.sub
-Encoding: 53 60883 53
+Encoding: 60883 60883 53
 GlifName: ta.sub
 Width: 0
 VWidth: 0
@@ -3524,12 +3568,13 @@ SplineSet
  -991 -322 l 257
  -991 -175 l 257
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol ta
 EndChar
 
 StartChar: ca.sub
-Encoding: 54 60884 54
+Encoding: 60884 60884 54
 GlifName: ca.sub
 Width: 0
 VWidth: 0
@@ -3553,12 +3598,13 @@ SplineSet
  -901 -908 -1070 -739 -1070 -533 c 256
  -1070 -327 -901 -158 -695 -158 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol ca
 EndChar
 
 StartChar: cua.sub
-Encoding: 55 60885 55
+Encoding: 60885 60885 55
 GlifName: cua.sub
 Width: 0
 VWidth: 0
@@ -3586,12 +3632,13 @@ SplineSet
  -915 -498 l 257
  -788 -329 -594 -206 -377 -173 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol cua
 EndChar
 
 StartChar: tza.sub
-Encoding: 56 60886 56
+Encoding: 60886 60886 56
 GlifName: tza.sub
 Width: 0
 VWidth: 0
@@ -3615,12 +3662,13 @@ SplineSet
  -1032 -323 l 257
  -1032 -176 l 257
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol tza
 EndChar
 
 StartChar: tla.sub
-Encoding: 57 60887 57
+Encoding: 60887 60887 57
 GlifName: tla.sub
 Width: 0
 VWidth: 0
@@ -3661,12 +3709,13 @@ SplineSet
  -683 -680 -672 -666 -661 -651 c 257
  -715 -616 -771 -592 -823 -592 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol tla
 EndChar
 
 StartChar: cha
-Encoding: 58 60856 58
+Encoding: 60856 60856 58
 GlifName: cha
 Width: 1026
 VWidth: 0
@@ -3702,6 +3751,7 @@ SplineSet
  637 293 608 260 608 168 c 256
  608 165 608 163 608 160 c 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3753,7 +3803,7 @@ sass."
 EndChar
 
 StartChar: sa
-Encoding: 59 60857 59
+Encoding: 60857 60857 59
 GlifName: sa
 Width: 1497
 VWidth: 0
@@ -3766,9 +3816,9 @@ AnchorPoint: "vowel_signs" 743 1020 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-90 471 m 256
+90 471 m 256xec
  90 712 225 969 486 969 c 256
- 686 969 842 807 842 599 c 256
+ 686 969 842 807 842 599 c 256xec
  842 555 834 508 819 461 c 256
  808 427 803 394 803 364 c 256
  803 227 907 141 1014 141 c 256
@@ -3777,7 +3827,7 @@ SplineSet
  1206 948 l 257
  1206 948 1408 728 1408 459 c 256
  1408 207 1265 -6 1014 -6 c 256
- 822 -6 658 160 658 372 c 256
+ 822 -6 658 160 658 372 c 256xf4
  658 415 664 460 679 506 c 256
  690 539 695 571 695 601 c 256
  695 727 608 822 486 822 c 256
@@ -3785,8 +3835,9 @@ SplineSet
  256 638 237 541 237 471 c 256
  237 268 370 81 370 81 c 257
  252 -6 l 257
- 252 -6 90 206 90 471 c 256
+ 252 -6 90 206 90 471 c 256xec
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3833,7 +3884,7 @@ sass."
 EndChar
 
 StartChar: xa
-Encoding: 60 60858 60
+Encoding: 60858 60858 60
 GlifName: xa
 Width: 1481
 VWidth: 0
@@ -3863,6 +3914,7 @@ SplineSet
  1172 216 1245 381 1245 468 c 256
  1245 554 1166 727 904 727 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3899,7 +3951,7 @@ sass."
 EndChar
 
 StartChar: ha
-Encoding: 61 60859 61
+Encoding: 60859 60859 61
 GlifName: ha
 Width: 1275
 VWidth: 0
@@ -3927,6 +3979,7 @@ SplineSet
  237 925 l 257
  237 598 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -3963,7 +4016,7 @@ sass."
 EndChar
 
 StartChar: la
-Encoding: 62 60860 62
+Encoding: 60860 60860 62
 GlifName: la
 Width: 885
 VWidth: 0
@@ -3995,6 +4048,7 @@ SplineSet
  332 539 378 461 444 388 c 257
  509 460 554 538 554 610 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -4031,7 +4085,7 @@ sass."
 EndChar
 
 StartChar: ya
-Encoding: 63 60861 63
+Encoding: 60861 60861 63
 GlifName: ya
 Width: 1220
 VWidth: 0
@@ -4058,6 +4112,7 @@ SplineSet
  278 -4 90 264 90 583 c 256
  90 700 116 824 169 945 c 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -4089,7 +4144,7 @@ sass."
 EndChar
 
 StartChar: wa
-Encoding: 64 60862 64
+Encoding: 60862 60862 64
 GlifName: wa
 Width: 1652
 VWidth: 0
@@ -4121,6 +4176,7 @@ SplineSet
  1562 205 1397 -2 1148 -2 c 256
  990 -2 886 88 829 195 c 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -4157,7 +4213,7 @@ sass."
 EndChar
 
 StartChar: cha.sub
-Encoding: 65 60888 65
+Encoding: 60888 60888 65
 GlifName: cha.sub
 Width: 0
 VWidth: 0
@@ -4189,12 +4245,13 @@ SplineSet
  -603 -680 -623 -693 -624 -745 c 257
  -583 -739 -529 -726 -525 -693 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol cha
 EndChar
 
 StartChar: sa.sub
-Encoding: 66 60889 66
+Encoding: 60889 60889 66
 GlifName: sa.sub
 Width: 0
 VWidth: 0
@@ -4227,12 +4284,13 @@ SplineSet
  -1082 -901 l 257
  -1082 -901 -1207 -739 -1207 -533 c 256xd6
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol sa
 EndChar
 
 StartChar: xa.sub
-Encoding: 67 60890 67
+Encoding: 60890 60890 67
 GlifName: xa.sub
 Width: 0
 VWidth: 0
@@ -4261,12 +4319,13 @@ SplineSet
  -419 -706 -375 -590 -375 -535 c 256
  -375 -482 -424 -360 -612 -360 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol xa
 EndChar
 
 StartChar: ha.sub
-Encoding: 68 60891 68
+Encoding: 60891 60891 68
 GlifName: ha.sub
 Width: 0
 VWidth: 0
@@ -4284,12 +4343,13 @@ SplineSet
  -813 -453 -757 -397 -687 -397 c 256
  -617 -397 -561 -453 -561 -523 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol ha
 EndChar
 
 StartChar: la.sub
-Encoding: 69 60892 69
+Encoding: 60892 60892 69
 GlifName: la.sub
 Width: 0
 VWidth: 0
@@ -4318,12 +4378,13 @@ SplineSet
  -773 -470 -747 -519 -708 -567 c 257
  -669 -520 -644 -471 -644 -429 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol la
 EndChar
 
 StartChar: ya.sub
-Encoding: 70 60893 70
+Encoding: 60893 60893 70
 GlifName: ya.sub
 Width: 0
 VWidth: 0
@@ -4349,12 +4410,13 @@ SplineSet
  -956 -907 -1105 -697 -1105 -448 c 256
  -1105 -358 -1086 -263 -1045 -170 c 257
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol ya
 EndChar
 
 StartChar: wa.sub
-Encoding: 71 60894 71
+Encoding: 60894 60894 71
 GlifName: wa.sub
 Width: 0
 VWidth: 0
@@ -4385,12 +4447,13 @@ SplineSet
  -120 -742 -252 -906 -449 -906 c 256
  -560 -906 -641 -852 -689 -782 c 257
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol wa
 EndChar
 
 StartChar: nya
-Encoding: 72 60864 72
+Encoding: 60864 60864 72
 GlifName: nya
 Width: 1122
 VWidth: 0
@@ -4417,6 +4480,7 @@ SplineSet
  696 739 819 887 963 956 c 257
  1027 824 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -4440,7 +4504,7 @@ sass."
 EndChar
 
 StartChar: bva
-Encoding: 73 60865 73
+Encoding: 60865 60865 73
 GlifName: bva
 Width: 1097
 VWidth: 0
@@ -4474,6 +4538,7 @@ SplineSet
  585 145 616 163 616 191 c 256
  616 227 598 279 565 336 c 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -4505,7 +4570,7 @@ sass."
 EndChar
 
 StartChar: da
-Encoding: 74 60866 74
+Encoding: 60866 60866 74
 GlifName: da
 Width: 1095
 VWidth: 0
@@ -4539,6 +4604,7 @@ SplineSet
  798 332 787 359 764 384 c 256
  728 423 654 458 533 458 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -4580,7 +4646,7 @@ sass."
 EndChar
 
 StartChar: ga
-Encoding: 75 60867 75
+Encoding: 60867 60867 75
 GlifName: ga
 Width: 1362
 VWidth: 0
@@ -4612,6 +4678,7 @@ SplineSet
  608 671 l 258
  608 739 588 767 561 784 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -4653,7 +4720,7 @@ sass."
 EndChar
 
 StartChar: fa
-Encoding: 76 60868 76
+Encoding: 60868 60868 76
 GlifName: fa
 Width: 1004
 VWidth: 0
@@ -4687,6 +4754,7 @@ SplineSet
  165 21 l 257
  165 303 l 258
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -4723,7 +4791,7 @@ sass."
 EndChar
 
 StartChar: ra
-Encoding: 77 60869 77
+Encoding: 60869 60869 77
 GlifName: ra
 Width: 1003
 VWidth: 0
@@ -4757,6 +4825,7 @@ SplineSet
  527 592 634 586 689 621 c 256
  706 632 711 634 711 671 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -4798,14 +4867,14 @@ sass."
 EndChar
 
 StartChar: rra
-Encoding: 78 60870 78
+Encoding: 60870 60870 78
 GlifName: rra
 Width: 1303
 VWidth: 0
 GlyphClass: 2
 Flags: W
-HStem: -3 143<1177 1213> 797 148<697 826.5>
-VStem: 90 147<241 925> 391 147<240 591> 651 147<403.5 420 420 422 403.5 456.5> 1012 147<652.5 715.5>
+HStem: -2 148<254.177 375.472 1071.27 1180.38> 797 148<621.116 957.066>
+VStem: 90 147<167.615 925> 391 147<163.571 715.647> 651 147<333.082 436.584> 1012 147<609.715 744.164>
 AnchorPoint: "subjoined_consonants" 615 -70 basechar 0
 AnchorPoint: "vowel_signs" 598 1020 basechar 0
 LayerCount: 2
@@ -4817,7 +4886,8 @@ SplineSet
  237 925 l 257
  237 241 l 258
  237 201 248 180 260 167 c 256
- 283 143 345 136 369 163 c 256
+ 273 154 297 146 321 146 c 0
+ 340 146 358 151 369 163 c 256
  380 175 391 199 391 240 c 258
  391 591 l 258
  391 774 547 945 780 945 c 256
@@ -4840,6 +4910,7 @@ SplineSet
  538 172 519 109 478 64 c 256
  438 20 379 -2 319 -2 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -4886,7 +4957,7 @@ sass."
 EndChar
 
 StartChar: nya.sub
-Encoding: 79 60896 79
+Encoding: 60896 60896 79
 GlifName: nya.sub
 Width: 0
 VWidth: 0
@@ -4913,12 +4984,13 @@ SplineSet
  -583 -322 -488 -207 -374 -152 c 257
  -310 -285 l 257
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol nya
 EndChar
 
 StartChar: bva.sub
-Encoding: 80 60897 80
+Encoding: 60897 60897 80
 GlifName: bva.sub
 Width: 0
 VWidth: 0
@@ -4951,12 +5023,13 @@ SplineSet
  -685 -759 -670 -751 -670 -742 c 256
  -670 -726 -677 -704 -689 -676 c 257
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol bva
 EndChar
 
 StartChar: da.sub
-Encoding: 81 60898 81
+Encoding: 60898 60898 81
 GlifName: da.sub
 Width: 0
 VWidth: 0
@@ -4988,12 +5061,13 @@ SplineSet
  -517 -642 -524 -626 -538 -611 c 256
  -561 -587 -611 -561 -698 -561 c 256xdc
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol da
 EndChar
 
 StartChar: ga.sub
-Encoding: 82 60899 82
+Encoding: 60899 60899 82
 GlifName: ga.sub
 Width: 0
 VWidth: 0
@@ -5024,12 +5098,13 @@ SplineSet
  -789 -383 l 258
  -789 -337 -801 -322 -816 -313 c 256
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol ga
 EndChar
 
 StartChar: fa.sub
-Encoding: 83 60900 83
+Encoding: 60900 60900 83
 GlifName: fa.sub
 Width: 0
 VWidth: 0
@@ -5062,12 +5137,13 @@ SplineSet
  -953 -870 l 257
  -953 -659 l 258xb8
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol fa
 EndChar
 
 StartChar: ra.sub
-Encoding: 84 60901 84
+Encoding: 60901 60901 84
 GlifName: ra.sub
 Width: 0
 VWidth: 0
@@ -5098,12 +5174,13 @@ SplineSet
  -657 -424 -578 -430 -539 -405 c 256
  -531 -400 -531 -406 -531 -383 c 256xb8
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol ra
 EndChar
 
 StartChar: rra.sub
-Encoding: 85 60902 85
+Encoding: 60902 60902 85
 GlifName: rra.sub
 Width: 0
 VWidth: 0
@@ -5142,12 +5219,13 @@ SplineSet
  -776 -761 -791 -812 -826 -850 c 256
  -860 -887 -909 -906 -958 -906 c 256xdc
 EndSplineSet
+Validated: 1
 LCarets2: 1 0
 Ligature2: "subjoined_consonants subtable" subjoiner_symbol rra
 EndChar
 
 StartChar: x
-Encoding: 86 120 86
+Encoding: 120 120 86
 GlifName: x
 Width: 921
 VWidth: 0
@@ -5172,10 +5250,11 @@ SplineSet
  90 740 l 257
  194 844 l 257
 EndSplineSet
+Validated: 1
 EndChar
 
 StartChar: period
-Encoding: 87 46 87
+Encoding: 46 46 87
 GlifName: period
 Width: 432
 VWidth: 0
@@ -5192,6 +5271,7 @@ SplineSet
  90 213 146 269 216 269 c 256
  286 269 342 213 342 143 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -5218,17 +5298,19 @@ sass."
 EndChar
 
 StartChar: space
-Encoding: 88 32 88
+Encoding: 32 32 88
 GlifName: space
 Width: 1180
 VWidth: 0
 GlyphClass: 2
 Flags: W
 LayerCount: 2
+Fore
+Validated: 1
 EndChar
 
 StartChar: uu.base
-Encoding: 89 60820 89
+Encoding: 60820 60820 89
 GlifName: uu.base
 Width: 1303
 VWidth: 0
@@ -5261,6 +5343,7 @@ SplineSet
  876 308 876 337 876 366 c 258
  876 924 l 257
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -5292,7 +5375,7 @@ sass."
 EndChar
 
 StartChar: aa.vs
-Encoding: 90 60832 90
+Encoding: 60832 60832 90
 GlifName: aa.vs
 Width: 0
 VWidth: 0
@@ -5320,6 +5403,7 @@ SplineSet
  -640 1220 -596 1264 -596 1321 c 256
  -596 1378 -640 1422 -697 1422 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -5356,7 +5440,7 @@ sass."
 EndChar
 
 StartChar: long_vowel_dot
-Encoding: 91 60821 91
+Encoding: 60821 60821 91
 GlifName: long_vowel_dot
 Width: 0
 VWidth: 0
@@ -5374,6 +5458,7 @@ SplineSet
  -830 1401 -774 1457 -704 1457 c 256
  -634 1457 -578 1401 -578 1331 c 256
 EndSplineSet
+Validated: 1
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -5400,19 +5485,19 @@ sass."
 EndChar
 
 StartChar: aa.vs.long
-Encoding: 92 60912 92
+Encoding: 60912 60912 92
 GlifName: aa.vs.long
-Width: 2048
+Width: 0
 VWidth: 0
 GlyphClass: 4
 Flags: W
-HStem: 1073 147<-1217.62 -1051.62> 1205 252<-908.413 -717.587> 1422 147<-1217.62 -1051.74>
-VStem: -1384 147<1239.38 1402.62> -1035 148<1236.93 1405.07> -939 252<1235.59 1426.41>
-AnchorPoint: "vowel_signs" -694 1020 mark 0
+HStem: 1073 147<-695.62 -529.619> 1205 252<-226.413 -35.587> 1422 147<-695.62 -529.741>
+VStem: -862 147<1239.38 1402.62> -513 148<1236.93 1405.07> -257 252<1235.59 1426.41>
+AnchorPoint: "vowel_signs" -386 1020 mark 0
 LayerCount: 2
 Fore
-Refer: 90 60832 N 1 0 0 1 -439 0 2
-Refer: 91 60821 N 1 0 0 1 -109 0 2
+Refer: 90 60832 N 1 0 0 1 83 0 2
+Refer: 91 60821 N 1 0 0 1 573 0 2
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -5461,19 +5546,19 @@ Ligature2: "long_vowel_signs subtable" aa.vs long_vowel_dot
 EndChar
 
 StartChar: ee.vs.long
-Encoding: 93 60913 93
+Encoding: 60913 60913 93
 GlifName: ee.vs.long
-Width: 2048
+Width: 0
 VWidth: 0
 GlyphClass: 4
 Flags: W
-HStem: 1072 135<-1010.51 -842.171> 1205 252<-762.413 -571.587> 1414 160<-1180 -843.07>
-VStem: -1435 147<1081 1328.84> -1166 136<1226.12 1395.49> -823 138<1227.35 1394.41> -793 252<1235.59 1426.41>
-AnchorPoint: "vowel_signs" -711 1020 mark 0
+HStem: 1072 135<-654.507 -486.171> 1205 252<-226.413 -35.587> 1414 160<-824 -487.07>
+VStem: -1079 147<1081 1328.84> -810 136<1226.12 1395.49> -467 138<1227.35 1394.41> -257 252<1235.59 1426.41>
+AnchorPoint: "vowel_signs" -495 1020 mark 0
 LayerCount: 2
 Fore
-Refer: 29 60833 N 1 0 0 1 -349 0 2
-Refer: 91 60821 N 1 0 0 1 37 0 2
+Refer: 29 60833 N 1 0 0 1 7 0 2
+Refer: 91 60821 N 1 0 0 1 573 0 2
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -5527,19 +5612,19 @@ Ligature2: "long_vowel_signs subtable" ee.vs long_vowel_dot
 EndChar
 
 StartChar: ii.vs.long
-Encoding: 94 60914 94
+Encoding: 60914 60914 94
 GlifName: ii.vs.long
-Width: 2048
+Width: 0
 VWidth: 0
 GlyphClass: 4
 Flags: W
-HStem: 1085 252<-949.413 -758.587> 1417 147<-984.112 -848>
-VStem: -1198 147<1083 1353.87> -980 252<1115.59 1306.41>
-AnchorPoint: "vowel_signs" -708 1020 mark 0
+HStem: 1085 252<-228.413 -37.587> 1417 147<-303.112 -167>
+VStem: -517 147<1083 1353.87> -259 252<1115.59 1306.41>
+AnchorPoint: "vowel_signs" -256 1020 mark 0
 LayerCount: 2
 Fore
-Refer: 30 60834 N 1 0 0 1 -430 0 2
-Refer: 91 60821 N 1 0 0 1 -150 -120 2
+Refer: 30 60834 N 1 0 0 1 251 0 2
+Refer: 91 60821 N 1 0 0 1 571 -120 2
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -5578,19 +5663,19 @@ Ligature2: "long_vowel_signs subtable" ii.vs long_vowel_dot
 EndChar
 
 StartChar: oo.vs.long
-Encoding: 95 60915 95
+Encoding: 60915 60915 95
 GlifName: oo.vs.long
-Width: 2048
+Width: 0
 VWidth: 0
 GlyphClass: 4
 Flags: W
-HStem: 1073 147<-1273.62 -1110.38> 1195 252<-891.413 -700.587> 1422 147<-1273.62 -1110.38>
-VStem: -1440 147<1239.38 1402.62> -1091 147<1239.38 1402.62> -922 252<1225.59 1416.41>
-AnchorPoint: "vowel_signs" -732 1020 mark 0
+HStem: 1073 147<-643.62 -480.38> 1195 252<-231.413 -40.587> 1422 147<-643.62 -480.38>
+VStem: -810 147<1239.38 1402.62> -461 147<1239.38 1402.62> -262 252<1225.59 1416.41>
+AnchorPoint: "vowel_signs" -372 1020 mark 0
 LayerCount: 2
 Fore
-Refer: 31 60835 N 1 0 0 1 -482 0 2
-Refer: 91 60821 N 1 0 0 1 -92 -10 2
+Refer: 31 60835 N 1 0 0 1 148 0 2
+Refer: 91 60821 N 1 0 0 1 568 -10 2
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -5639,19 +5724,19 @@ Ligature2: "long_vowel_signs subtable" oo.vs long_vowel_dot
 EndChar
 
 StartChar: uu.vs.long
-Encoding: 96 60916 96
+Encoding: 60916 60916 96
 GlifName: uu.vs.long
-Width: 2048
+Width: 0
 VWidth: 0
 GlyphClass: 4
 Flags: W
-HStem: 1073 147<-1275.62 -1112.38> 1125 252<-868.413 -677.587> 1413 20G<-1442 -1295 -1093 -946>
-VStem: -1442 147<1241.83 1433> -1093 147<1241.83 1433> -899 252<1155.59 1346.41>
-AnchorPoint: "vowel_signs" -734 1020 mark 0
+HStem: 1073 147<-633.62 -470.38> 1125 252<-226.413 -35.587> 1413 20G<-800 -653 -451 -304>
+VStem: -800 147<1241.83 1433> -451 147<1241.83 1433> -257 252<1155.59 1346.41>
+AnchorPoint: "vowel_signs" -373 1020 mark 0
 LayerCount: 2
 Fore
-Refer: 32 60836 N 1 0 0 1 -479 0 2
-Refer: 91 60821 N 1 0 0 1 -69 -80 2
+Refer: 32 60836 N 1 0 0 1 163 0 2
+Refer: 91 60821 N 1 0 0 1 573 -80 2
 PickledDataWithLists: "(dp1
 S'com.fontlab.hintData'
 p2
@@ -5697,6 +5782,41 @@ I20
 sass."
 LCarets2: 1 0
 Ligature2: "long_vowel_signs subtable" uu.vs long_vowel_dot
+EndChar
+
+StartChar: io.vs
+Encoding: 60842 60842 97
+Width: 0
+VWidth: 0
+Flags: W
+HStem: 1073 147<-745.62 -582.38> 1422 147<-745.62 -582.38> 1525 20G<-1131 -984>
+VStem: -1131 147<1212.05 1545> -912 147<1239.38 1402.62> -563 147<1239.38 1402.62>
+AnchorPoint: "vowel_signs" -746 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-664 1569 m 260xdc
+ -528 1569 -416 1457 -416 1321 c 260
+ -416 1185 -528 1073 -664 1073 c 260
+ -800 1073 -912 1185 -912 1321 c 260
+ -912 1457 -800 1569 -664 1569 c 260xdc
+-984 1545 m 261xbc
+ -984 1238 l 261
+ -984 1237 l 262
+ -986 1185 -1010 1142 -1039 1115 c 260
+ -1068 1088 -1098 1075 -1125 1069 c 261
+ -1158 1212 l 262
+ -1155 1213 -1144 1217 -1139 1222 c 260
+ -1134 1227 -1131 1230 -1131 1242 c 262
+ -1131 1545 l 261
+ -984 1545 l 261xbc
+-664 1422 m 260xdc
+ -721 1422 -765 1378 -765 1321 c 260
+ -765 1264 -721 1220 -664 1220 c 260
+ -607 1220 -563 1264 -563 1321 c 260
+ -563 1378 -607 1422 -664 1422 c 260xdc
+EndSplineSet
+Validated: 1
 EndChar
 EndChars
 EndSplineFont
