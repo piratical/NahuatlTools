@@ -2,10 +2,32 @@
 //
 // generateLigatures.js (c) 2016.05.30 by Ed Trager
 //
+// Here are directions for the entire procedure:
+//
+// (1) run:
+//            ./generateLigatures.sh > mid.txt
+//
+// (2) cat start.txt mid.txt end.txt > result.sfd
+//
+//     "start.txt" is an existing FontForge SFD file, all the way up to
+//                 last glyph but not including "EndChars" & "EndSplineFont"
+//
+//     N.B.: Be sure that start.txt has the correct definitions for the GSUB table(s)
+//           and subtable(s) that will be filled in after running this script!
+//
+//     "end.txt" consists of just the "EndChars" and "EndSplineFont" closers.
+//
+//     "mid.txt" is obviously the section containing all the generated ligatures
+//
+// (3) Use FontForge to open the "result.sfd" file and generate the final font.
+//     (The file is for some reason called "new.sfd" in my NahuatlTools github repository)
+//
+
 
 
 //
-// data:
+// data: These data were culled directly from the NahuatlOne 
+//       FontForge SFD file:
 //
 var data={
  // others are not used currently
@@ -47,6 +69,10 @@ var data={
   {id:'',offset:'',glyfid:'0',width:'0'}
  ],
  bases:[
+  //
+  // va => x-coordinate of the above-base vowel sign anchor
+  // sa => x-coordinate of the below-base subjoiner anchor
+  //
   {id:'aa.base', offset:'60816', glyfid:'25', width:'1254',va:'622',sa:'622'},
   {id:'ee.base', offset:'60817', glyfid:'26', width:'1362',va:'680',sa:'680'},
   {id:'ii.base', offset:'60818', glyfid:'27', width:'1289',va:'645',sa:'645'},
@@ -76,6 +102,10 @@ var data={
   {id:'rra', offset:'60870', glyfid:'78', width:'1303',va:'598',sa:'615'}
  ],
  subjoiners:[
+  //
+  // va => x-coordinate of the vowel sign anchor (not applicable here)
+  // sa => x-coordinate of the below-base subjoiner anchor
+  //
   {id:'ma.sub', offset:'60880', glyfid:'43', width:'0',va:'',sa:'-710'},
   {id:'na.sub', offset:'60881', glyfid:'51', width:'0',va:'',sa:'-531'},
   {id:'pa.sub', offset:'60882', glyfid:'52', width:'0',va:'',sa:'-590'},
@@ -107,17 +137,36 @@ var data={
 //
 // magic stuff:
 //
+// => In FontForge, I originally made a few sample ligatures in order to 
+//    see how Fontforge would write the entries in the SFD files for
+//    ligatures created using references to existing glyphs or glyph components.
+//
+//    The "currentOffset" appears to be the index which FontForge uses for the
+//    Unicode CMAP. In the SFD file, this is expressed in decimal format, so one
+//    has to convert to hex format if you need to lookup where these entries will
+//    be in Unicode.
+//
+//    For the "pre-Unicode" Nahuatl abugida, I had already chosen and
+//    created glyphs in the "reserveStart" to "reserveEnd" region. This was done
+//    before I ever thought about generating all these ligatures. However after
+//    I discovered bugs especially on the Apple platforms (OSX, iPhone, iPad)
+//    where the GPOS positioning instructions appear to be ignored, I chose to
+//    generate these referential ligatures as a work-around.
+//
 	var currentOffset=57344 // = U+E000, the start of the PUA region
 	var reserveStart =60816 // = U+ED90, this is where the abugida glyphs start
 	var reserveEnd   =60919 // = U+EDF7, this is where the abugida glyphs end
-
-	// old value: var currentOffset=60928; // This is the decimal equivalent of U+EE00 which is just beyond the last already-defined glyph
-	// old value: var currentGlyphId=97;
+	
+	// obsolete value: var currentOffset=60928; // This is the decimal equivalent of U+EE00 which is just beyond the last already-defined glyph
+	// obsolete value: var currentGlyphId=97;
+	
 	var currentGlyphId=106;   // This is the next sequentially available glyph index
 	var EOL="\n";
 
 //
 // generateLigatures
+//
+// This generates one referential ligature glyph entry in the SFD format
 //
 function generateLigature(i,j,k){
 	
@@ -190,6 +239,8 @@ function generateLigature(i,j,k){
 //
 // loop
 //
+// => Loop over vowel signs (i), base consonants (j), and subjoined consonant glyphs (k):
+//
 function loop(){
 	var i=0;
 	var j=0;
@@ -210,7 +261,13 @@ function loop(){
 	return code;
 }
 
+//
+// MAIN
+//
 var result = loop();
+//
+// console.log just prints to the terminal:
+//
 console.log(result);
 
 
