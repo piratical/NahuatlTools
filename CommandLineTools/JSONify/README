@@ -1,0 +1,32 @@
+JSONify
+
+jsonify.sh
+
+(c) 2016 by Edward H. Trager ALL RIGHTS RESERVED
+Released under GNU GPL v. 2.0 or later
+
+"jsonify.sh" is a simple NODE.js script that takes
+a data file consisting of Nahuatl flash card data
+and converts it to a JSON file that can be read by
+my http://unifont.org/flashcards/ nahuatl flashcard
+web & mobile app.
+
+The expected order of the data columns is already
+documented within the script itself and is therefore
+not repeated here.
+
+Obviously, it would be a simple matter to modify the
+script to deal with different arrangements of incoming
+data.
+
+The incoming data file may contain data for more than
+one deck of cards. There is a "category" ("cat") column
+that tells the script where to divide the card decks, and
+the script will automatically produce one JSON data file
+for each category (Be sure to put all the data for one
+category next to each other in contiguous blocks, however).
+
+-- Ed Trager
+   Ann Arbor, Michigan, USA
+   July 29, 2016
+
