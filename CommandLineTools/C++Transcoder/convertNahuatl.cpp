@@ -91,6 +91,7 @@ const UTF32 vowelSignAI    = 0xEDA6;
 const UTF32 vowelSignOA    = 0xEDA7;
 const UTF32 vowelSignEO    = 0xEDA8;
 const UTF32 vowelSignEI    = 0xEDA9;
+const UTF32 vowelSignIO    = 0xEDAA; // 2017.01.20.ET addendum
 
 // Subjoiner sign:
 const UTF32 subjoinerSign  = 0xEDAB;
@@ -184,11 +185,13 @@ const UTF8String UTF8vowelSignAI(vowelSignAI);
 const UTF8String UTF8vowelSignOA(vowelSignOA);
 const UTF8String UTF8vowelSignEO(vowelSignEO);
 const UTF8String UTF8vowelSignEI(vowelSignEI);
+const UTF8String UTF8vowelSignIO(vowelSignIO);
 const char *sign_ia = UTF8vowelSignIA.c_str();
 const char *sign_ai = UTF8vowelSignAI.c_str();
 const char *sign_oa = UTF8vowelSignOA.c_str();
 const char *sign_eo = UTF8vowelSignEO.c_str();
 const char *sign_ei = UTF8vowelSignEI.c_str();
+const char *sign_io = UTF8vowelSignIO.c_str(); // 2017.01.20.ET addendum
 
 // Name prefixes:
 const UTF8String UTF8prefixPlace(prefixPlace);
@@ -254,6 +257,9 @@ void exchangeCompoundVowels(std::basic_string<UTF32> &target,unsigned pos,UTF32 
 	}else if(vowelSign==vowelSignE && vowel==vowelI){
 		replacement=vowelSignEI;
 		target.replace(pos,2,replacement);
+	}else if(vowelSign==vowelSignI && vowel==vowelO){
+		replacement=vowelSignIO;
+		target.replace(pos,2,replacement);
 	}
 	// If we get here, then there is no replacement for
 	// the vowel combination, so nothing happens ...
@@ -288,8 +294,10 @@ void convertDigraphs(std::string &target){
 	rer(target,"tl",tla);    // converts tl to /t͡ɬ/ consonant
 	rer(target,"ch",cha);    // converts ch to /t͡ʃ/ consonant
 	rer(target,"rr",rra);    // converts rr to trilled /r/ consonant
-	// This could be an option:
-	rer(target,"ll",la);     // converts geminated ll to geminated /l/ consonant
+	// This could be an option: I now believe the geminated ll should be spelled out
+	// so don't convert here (hence, it is commented out):
+	// rer(target,"ll",la);     // converts geminated ll to geminated /l/ consonant
+	
 	// The following are Spanish-specific: ge and gi need to become /he/ and /hi/
 	// (not /ge/ and /gi/) and jua needs to become /wa/. The vowels remain Latin
 	// at this point so that the rest of the processing pipeline will function
