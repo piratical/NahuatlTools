@@ -1,0 +1,25 @@
+SYNOPSIS
+========
+ca: Remove accent marks from Nahuatl text.
+     (c) 2016 by Edward H. Trager. All Rights Reserved
+
+ca: Herramienta para eliminar marcas diacríticas en un texto en náhuatl.
+
+COPYRIGHT & LICENSE
+====================
+(c) 2017 by Edward H. Trager and released under the 
+GNU General Public License version 2.0 or later.
+
+Derechos de autor (c) 2017 por Edward H. Trager. Todos los derechos reservados.
+GPL v. 2.0 or later. Licencia Pública General de GNU v. 2.0 o posterior
+
+USAGE
+======
+Usage: ./ca <file to convert>
+
+COMPILE
+=======
+Here is a typical command line to compile the software:
+
+   g++ -Wall -o ca ca.cpp
+
