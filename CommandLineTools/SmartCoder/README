@@ -1,0 +1,14 @@
+smartCoder.sh   — 2017.04.21.ET
+
+Copyright (c) 2017 by Edward H. Trager. All Rights Reserved.
+Derechos de autor (c) 2017 por Edward H. Trager. Todos los derechos reservados.
+
+This is a new tool to convert Nahuatl text from (1)classical, (2)classical variants, 
+or (3) the modern SEP orthography into Trager's new abugida. Requires node.js (https://nodejs.org/).
+
+Esta es una nueva herramienta para convertir texto en náhuatl desde (1)la ortografía clásica, 
+(2) varientes de la ortografía clásica, o (3)la ortografía moderno de SEP al nuevo abugida 
+de Trager. Se requiere node.js (https://nodejs.org/)
+
+GPL v. 2.0 or later. Licencia Pública General de GNU v. 2.0 o posterior.
+
