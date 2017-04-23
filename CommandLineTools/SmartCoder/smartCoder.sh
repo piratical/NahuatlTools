@@ -235,7 +235,7 @@ function preConversions(str){
 	//
 	// RULE 3: When a "u" is sandwiched between a preceding vowel and a following consonant, it is really a "w" (i.e., "uh"):
 	//
-	var rule3 = new RegExp(/([ aeioAEIO])u([ BbCcDdFfGgLlNnÑñMmPpTtWwXxYy])/g);
+	var rule3 = new RegExp(/([ aeioAEIO])u([ bcdfgklnñmptwxy])/g);
 	function myReplacer3(str,group1,group2){ return group1 + "uh" + group2; }
 	str = str.replace(rule3,myReplacer3); // e.g., kuau => kuauh ; kuautli => kuauhtli, etc.
 	
