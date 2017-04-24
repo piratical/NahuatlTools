@@ -220,15 +220,23 @@ function preConversions(str){
 	
 	// RULE 1: When "u" occurs between certain consonants, it is really an "o":
 	//
-	var rule1 = new RegExp(/([CcLlPpTt])ul/g);
-	function myReplacer(str,group1){ return group1 + "ol"; }
+	var rule1 = new RegExp(/([CcLlPpTtZz])u([lmnz])/g);
+	function myReplacer(str,group1,group2){ return group1 + "o" + group2; }
 	str = str.replace(rule1,myReplacer); // e.g.: Culhuacan to Colhuacan, Chapulin to Chapolin, Tullan to Tollan, etc.
+	//
+	// RULE 1.1: The processor will recognize "uc" as /kw/ but that should not happen if we have something like "tepuchtli" 
+	//           where clearly "puch" == "poch". Hence, this rule which is really part of rule 1 but we separate it here because
+	//           of the digraph "ch":
+	//
+	var rule1_1 = new RegExp(/([CcNnPpTt])uch/g);
+	function myReplacer1_1(str,group1){ return group1 + "och"; }
+	str = str.replace(rule1_1,myReplacer1_1); // e.g.: "tepuch" => "tepoch", "Tenuch" => "Tenoch" etc.
 	
 	//
 	// RULE 2: When a "u" is sandwiched between vowels, it is really a "w" (i.e., "hu"):
 	//         => Also includes case where u preceded by space ...
-	//
-	var rule2 = new RegExp(/([ aeioAEIO])u([aeio])/g);
+	//         => Also could be a "v" sandwiched between two vowels, so we include this too:
+	var rule2 = new RegExp(/([ aeioAEIO])[uv]([aeio])/g);
 	function myReplacer2(str,group1,group2){ return group1 + "hu" + group2; }
 	str = str.replace(rule2,myReplacer2); // e.g., nieua => niehua
 	
