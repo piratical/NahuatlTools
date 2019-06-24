@@ -3,8 +3,8 @@ FontName: NahuatlOne
 FullName: NahuatlOne
 FamilyName: NahuatlOne
 Weight: Regular
-Copyright: Copyright (c) 2016, Ed Trager
-Version: 1.0
+Copyright: Copyright (c) 2016, 2019 Ed Trager
+Version: 2019_06_24
 ItalicAngle: 0
 UnderlinePosition: -204
 UnderlineWidth: 102
@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1464015724
-ModificationTime: 1469644314
+ModificationTime: 1561406820
 PfmFamily: 16
 TTFWeight: 400
 TTFWidth: 5
@@ -61,6 +61,7 @@ Lookup: 4 0 0 "subjoined_consonants" { "subjoined_consonants subtable"  } ['ccmp
 Lookup: 4 0 0 "long_vowel_signs" { "long_vowel_signs subtable"  } ['ccmp' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "Vowel_sign_positioning" { "Vowel_sign_positioning subtable"  } ['mark' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "Subjoined_consonant_positioning" { "Subjoined_consonant_positioning subtable"  } ['mark' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
+MarkAttachClasses: 1
 DEI: 91125
 LangName: 1033 "Copyright (c) 2016, Ed Trager" "" "" "" "" "Version 1.000"
 Encoding: UnicodeBmp
@@ -69,7 +70,7 @@ NameList: AGL For New Fonts
 DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 60888 8 5
+WinInfo: 60801 13 4
 BeginPrivate: 5
 BlueValues 18 [-875 0 1433 1569]
 StemSnapH 9 [146 147]
@@ -77,8 +78,8 @@ StemSnapV 5 [147]
 BlueShift 1 0
 BlueScale 1 0
 EndPrivate
-AnchorClass2: "vowel_signs" "Vowel_sign_positioning subtable" "subjoined_consonants" "Subjoined_consonant_positioning subtable" 
-BeginChars: 65537 98
+AnchorClass2: "vowel_signs" "Vowel_sign_positioning subtable" "subjoined_consonants" "Subjoined_consonant_positioning subtable"
+BeginChars: 65537 99
 
 StartChar: .notdef
 Encoding: 65536 -1 0
@@ -5817,6 +5818,26 @@ SplineSet
  -563 1378 -607 1422 -664 1422 c 260xdc
 EndSplineSet
 Validated: 1
+EndChar
+
+StartChar: uniEDAC
+Encoding: 60844 60844 98
+Width: 0
+VWidth: 0
+Flags: W
+HStem: 1092 448
+AnchorPoint: "vowel_signs" -701 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-698 1092 m 261
+ -1051 1434 l 261
+ -949 1540 l 261
+ -698 1297 l 261
+ -447 1540 l 261
+ -345 1434 l 261
+ -698 1092 l 261
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
