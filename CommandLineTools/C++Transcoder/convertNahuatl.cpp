@@ -92,6 +92,7 @@ const UTF32 vowelSignOA    = 0xEDA7;
 const UTF32 vowelSignEO    = 0xEDA8;
 const UTF32 vowelSignEI    = 0xEDA9;
 const UTF32 vowelSignIO    = 0xEDAA; // 2017.01.20.ET addendum
+const UTF32 vowelSignAO    = 0xEDAC; // 2019.06.25.ET addendum
 
 // Subjoiner sign:
 const UTF32 subjoinerSign  = 0xEDAB;
@@ -186,12 +187,14 @@ const UTF8String UTF8vowelSignOA(vowelSignOA);
 const UTF8String UTF8vowelSignEO(vowelSignEO);
 const UTF8String UTF8vowelSignEI(vowelSignEI);
 const UTF8String UTF8vowelSignIO(vowelSignIO);
+const UTF8String UTF8vowelSignAO(vowelSignAO);
 const char *sign_ia = UTF8vowelSignIA.c_str();
 const char *sign_ai = UTF8vowelSignAI.c_str();
 const char *sign_oa = UTF8vowelSignOA.c_str();
 const char *sign_eo = UTF8vowelSignEO.c_str();
 const char *sign_ei = UTF8vowelSignEI.c_str();
 const char *sign_io = UTF8vowelSignIO.c_str(); // 2017.01.20.ET addendum
+const char *sign_ao = UTF8vowelSignAO.c_str(); // 2019.06.25.ET addendum
 
 // Name prefixes:
 const UTF8String UTF8prefixPlace(prefixPlace);
@@ -259,6 +262,9 @@ void exchangeCompoundVowels(std::basic_string<UTF32> &target,unsigned pos,UTF32 
 		target.replace(pos,2,replacement);
 	}else if(vowelSign==vowelSignI && vowel==vowelO){
 		replacement=vowelSignIO;
+		target.replace(pos,2,replacement);
+	}else if(vowelSign==vowelSignA && vowel==vowelO){
+		replacement=vowelSignAO;
 		target.replace(pos,2,replacement);
 	}
 	// If we get here, then there is no replacement for
