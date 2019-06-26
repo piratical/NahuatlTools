@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1464015724
-ModificationTime: 1469644314
+ModificationTime: 1561519651
 PfmFamily: 16
 TTFWeight: 400
 TTFWidth: 5
@@ -69,7 +69,7 @@ NameList: AGL For New Fonts
 DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 60888 8 5
+WinInfo: 60801 13 5
 BeginPrivate: 5
 BlueValues 18 [-875 0 1433 1569]
 StemSnapH 9 [146 147]
@@ -78,7 +78,7 @@ BlueShift 1 0
 BlueScale 1 0
 EndPrivate
 AnchorClass2: "vowel_signs" "Vowel_sign_positioning subtable" "subjoined_consonants" "Subjoined_consonant_positioning subtable" 
-BeginChars: 65537 98
+BeginChars: 65537 99
 
 StartChar: .notdef
 Encoding: 65536 -1 0
@@ -5817,6 +5817,26 @@ SplineSet
  -563 1378 -607 1422 -664 1422 c 260xdc
 EndSplineSet
 Validated: 1
+EndChar
+
+StartChar: uniEDAC
+Encoding: 60844 60844 98
+Width: 0
+VWidth: 0
+Flags: W
+HStem: 1083.31 447.483
+AnchorPoint: "vowel_signs" -701 1020 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-701.44921875 1083.31152344 m 261
+ -1055.15136719 1424.58496094 l 261
+ -953.370117188 1530.79492188 l 261
+ -701.87109375 1288.31152344 l 261
+ -451.37109375 1531.828125 l 261
+ -349.153320312 1426.03808594 l 261
+ -701.44921875 1083.31152344 l 261
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
