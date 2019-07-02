@@ -127,8 +127,11 @@ int main(int argc, const char *argv[]){
 		rer(target,"ci","si");
 		rer(target,"cu","ku");
 		rer(target,"uc","ku");
+    // 2019.07.02.et addendum: Actual usage of SEP-style orthography by
+    // nahua-hablantes seems to be to maintain the spelling of both "l"s,
+    // so this should is now commented out:
 		// Geminated ll to single l:
-		rer(target,"ll","l");
+		// rer(target,"ll","l");
 		// Non-digraph conversions:
 		rer(target,"c","k");
 		rer(target,"h","j");
