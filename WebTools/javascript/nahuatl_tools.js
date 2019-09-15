@@ -142,10 +142,10 @@ const nwt={
       'p':{hmod:'p',ack:'p',sep:'p',intr:'p',nab:nab.consonantPA},
       't':{hmod:'t',ack:'t',sep:'t',intr:'t',nab:nab.consonantTA},
       'k':{hmod:'k',ack:'c',sep:'k',intr:'k',nab:nab.consonantCA},
-      'q':{hmod:'ku',ack:'cu',sep:'ku',intr:'ku',nab:nab.consonantCUA}, // [kʷ]
+      'κ':{hmod:'ku',ack:'cu',sep:'ku',intr:'ku',nab:nab.consonantCUA}, // greek kappa          for [kʷ]
       'ʔ':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA}, // [ʔ]
-      'τ':{hmod:'tz',ack:'tz',sep:'ts',intr:'tz',nab:nab.consonantTZA}, // [t͡s]
-      'λ':{hmod:'tl',ack:'tl',sep:'tl',intr:'tl',nab:nab.consonantTLA}, // greek lambda for [t͡ɬ]
+      'τ':{hmod:'tz',ack:'tz',sep:'ts',intr:'tz',nab:nab.consonantTZA}, // greek tau            for [t͡s]
+      'λ':{hmod:'tl',ack:'tl',sep:'tl',intr:'tl',nab:nab.consonantTLA}, // greek lambda         for [t͡ɬ]
       'ς':{hmod:'ch',ack:'ch',sep:'ch',intr:'ch',nab:nab.consonantCHA}, // terminal greek sigma for [t͡ʃ]
       's':{hmod:'s',ack:'c',sep:'s',intr:'s',nab:nab.consonantSA},
       'l':{hmod:'l',ack:'l',sep:'l',intr:'l',nab:nab.consonantLA},
@@ -161,8 +161,73 @@ const nwt={
       'f':{hmod:'f',ack:'f',sep:'f',intr:'f',nab:nab.consonantFA},
       'r':{hmod:'r',ack:'r',sep:'r',intr:'r',nab:nab.consonantRA}, // 'r'
       'ρ':{hmod:'rr',ack:'rr',sep:'rr',intr:'rr',nab:nab.consonantRRA} // 'rr'
+    },
+    // END ATOMIC SECTION
+
+    ////////////////////////
+    //
+    // STT ACK SECTION
+    //
+    ////////////////////////
+    ack_to_atomic:{
+      'cuh':'κ', // /kʷ/ consonant
+      'hu':'w',
+      'uh':'w',
+      'qu':'k',
+      'cu':'κ', // /kʷ/ consonant
+      'ce':'se',
+      'ci':'si',
+      'ku':'κ', // /kʷ/ consonant modern orthography
+      'kw':'κ', // /kʷ/ consonant modern variant orthography
+      'uc':'κ', // /kʷ/ consonant
+      'tz':'τ', // /t͡s/ consonant
+      'ts':'τ', // /t͡s/ consonant modern orthography
+      'tl':'λ', // /t͡ɬ/ consonant
+      'ch':'ς', // /t͡ʃ/ consonant
+      // FOREIGN CONSONANTS:
+      'rr':'ρ'
+    },
+    // END ACK SECTION
+    
+    ////////////////////////
+    //
+    // STT SEP SECTION
+    //
+    ////////////////////////
+    sep_to_atomic:{
+      'ku':'κ', // /kʷ/ consonant
+      'ts':'τ', // /t͡s/ consonant
+      'tz':'τ', // /t͡s/ consonant
+      'tl':'λ', // /t͡ɬ/ consonant
+      'ch':'ς', // /t͡ʃ/ consonant
+      'sh':'x', // modern internet/inuitive addition
+      // FOREIGN CONSONANTS:
+      'rr':'ρ',
+      // SINGLE GRAPH CONVERSIONS:
+      'u':'w',  // 
+      'j':'h'   // /h/ and glottal stop
+    },
+    // END SEP SECTION
+    
+    ////////////////////////
+    //
+    // STT HASLER MODERN SECTION
+    //
+    ////////////////////////
+    hasler_to_atomic:{
+      'ku':'κ', // /kʷ/ consonant
+      'ts':'τ', // /t͡s/ consonant
+      'tz':'τ', // /t͡s/ consonant
+      'tl':'λ', // /t͡ɬ/ consonant
+      'ch':'ς', // /t͡ʃ/ consonant
+      'sh':'x', // modern internet/inuitive addition
+      // FOREIGN CONSONANTS:
+      'rr':'ρ'
     }
-    // END ATOMIC SECTION  
+    // END HASLER MODERN SECTION
+
+
+
   }
   // END MAP SECTION
 };
