@@ -106,10 +106,19 @@ const nabMap={
     'e':nab.vowelSignE,
     'i':nab.vowelSignI,
     'o':nab.vowelSignO
+  },
+  atomicVowelPairsToCompoundVowelSign:{
+    'ia':nab.vowelSignIA,
+    'ai':nab.vowelSignAI,
+    'oa':nab.vowelSignOA,
+    'eo':nab.vowelSignEO,
+    'ei':nab.vowelSignEI,
+    'io':nab.vowelSignIO,
+    'ao':nab.vowelSignAO
   }
 }
 
-// namespace "nwt" :
+//
 const nwt={
   ///////////////////////////////////////////////////////////
   // 
@@ -286,23 +295,28 @@ const nwt={
   // END MAP SECTION
 
   //////////////////////////
-  // 
+  //
+  // isAtomicLetter
+  //
+  //////////////////////////
+  isAtomicLetter:function(c){
+    return 'aeioumnptkκτλςsxhlwyñβdgfrρ'.indexOf(c) != -1;
+  },
+  //////////////////////////
+  //
   // isAtomicVowel
   //
   //////////////////////////
-  isAtomicVowel:function(atomicLetter){
-    return 'aeiou'.indexOf(atomicLetter) != -1 ;
-  },
-  isSomethingElse:function(somethingElse){
-    return ' .?"1234567890'.indexOf(somethingElse) != -1 ;
+  isAtomicVowel:function(c){
+    return 'aeiou'.indexOf(c) != -1;
   },
   //////////////////////////
-  // 
+  //
   // isAtomicConsonant
   //
   //////////////////////////
-  isAtomicConsonant:function(something){
-    return !(nwt.isAtomicVowel(something) || nwt.isSomethingElse(something));
+  isAtomicConsonant:function(c){
+    return 'mnptkκτλςsxhlwyñβdgfrρ'.indexOf(c) != -1;
   }
 };
 
@@ -327,37 +341,76 @@ for(let [key,val] of Object.entries(nwt.map.atomic)){
   hmod = hmod.replace(regex,val.hmod);
 }
 
-// Nahuatl Abugida:
-let nwa = atomic;
-let mxt = nwa[0]; // The mixed intermediate
+// CONVERT ATOMIC TO ABUGIDA:
+
+/////////////////////
+//
+// First letter:
+//
+/////////////////////
+//const c = atomic[0];
+//let result; 
+//if(nwt.isAtomicLetter(c)){
+//  result = nwt.map.atomic[c].nab;
+//}else{
+//  result = atomic[0];
+//}
+
 // Convert atomic vowels right away to above-base vowel signs when
 // preceded by a consonant:
-for(let i=1;i<nwa.length;i++){
-  //console.log(nwa[i-1] + ' is consn:' + nwt.isAtomicConsonant( nwa[i-1] ) );
-  //console.log(nwa[i] +   ' is vowel:' + nwt.isAtomicVowel(nwa[i]) );
-  if( nwt.isAtomicVowel( nwa[i] ) && nwt.isAtomicConsonant( nwa[i-1] ) ){
-    if(nwa[i]==='a'){
-      // Don't push anything because the vowel a sign is intrinsic 
+let result='';
+for(let i=0;i<atomic.length;i++){
+  
+  const current  = atomic[ i ];
+  const previous = i>0               ? atomic[i-1] : ' ' ;
+  const next     = i<atomic.length-1 ? atomic[i+1] : ' ' ;
+  
+  if(nwt.isAtomicVowel(current) && nwt.isAtomicConsonant(previous)){
+    // Convert atomic vowels following consonants immediately 
+    // to above-base vowel signs:
+    if(current==='a'){
+      // Don't push anything because the vowel /a/ sign is intrinsic 
       // and not normally written over the abugida base consonant
     }else{
-      mxt += nabMap.atomicVowelToVowelSign[nwa[i]];
+      result += nabMap.atomicVowelToVowelSign[current];
     }
+  }else if(nwt.isAtomicConsonant(current) && nwt.isAtomicVowel(previous) && !nwt.isAtomicVowel(next)){
+    // If the previous letter is a vowel and this is a consonant, then we have to think about making
+    // consonant a subjoined consonant. However, if the *next* letter is a vowel, then this consonant
+    // is actually the base for the next syllabic cluster. But if the *next* letter is *not* a vowel,
+    // then indeed this consonant is a final consonant on the current syllabic cluster. So we have:
+    result += nab.subjoinerSign;             // Push subjoiner
+    result += nwt.map.atomic[current].nab;   // Push consonant
+  }else if(nwt.isAtomicVowel(current) && nwt.isAtomicVowel(previous)){
+    // Opportunity for combined vowel sign:
+    const compoundSign = nabMap.atomicVowelPairsToCompoundVowelSign[previous+current];
+    if(compoundSign){
+      // The vowel combination has a special combined symbol, so replace
+      // the current singleton vowel sign with the compound vowel sign.
+      //
+      // However, in the case of a previous 'a', then there is no visible sign
+      // so in that case, just add the combined symbol at the end, as there is
+      // nothing to replace:
+      if(previous==='a'){
+        result += compoundSign;
+      }else{
+        result = result.slice(0, -1) + compoundSign;
+      }
+    }
+    // Otherwise do nothing if no special combined vowel sign exists ...
+  }else if(nwt.isAtomicLetter(current)){
+    result += nwt.map.atomic[current].nab;
   }else{
-    mxt += nwa[i];
+    result += current;
   }
 }
-for(let [key,val] of Object.entries(nwt.map.atomic)){
-  regex = new RegExp(key,'g');
-  mxt = mxt.replace(regex,val.nab);
-}
 
-//console.log(nwt.isAtomicVowel('e'));
-//console.log(nwt.isSomethingElse(' '));
-//console.log(nwt.isAtomicConsonant('k'));
-//return;
 
 console.log(input);
+console.log('↓ CONVERTED TO INTERNAL ATOMIC ORTHOGRAPHY ↓');
 console.log(atomic);
+console.log('↓ CONVERTED TO HASLER MODERN ↓');
 console.log(hmod);
-console.log(mxt);
+console.log('↓ CONVERTED TO TRAGER ABUGIDA ↓');
+console.log(result);
 
