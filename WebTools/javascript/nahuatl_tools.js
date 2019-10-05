@@ -87,13 +87,27 @@ const nab={
   // Special Prefix signs:
   prefixPlace:'\uEDAD',
   prefixName:'\uEDAE',
-  prefixDiety:'\uEDAF'
+  prefixDiety:'\uEDAF',
   ///////////////////////////////////////////////////////
   //
   // END OF ABUGIDA CURRENT PUA CODE POINT ASSIGNMENTS
   //
   ///////////////////////////////////////////////////////
 };
+
+/////////////////////
+//
+// nab.map
+//
+/////////////////////
+const nabMap={
+  atomicVowelToVowelSign:{
+    'a':nab.vowelSignA,
+    'e':nab.vowelSignE,
+    'i':nab.vowelSignI,
+    'o':nab.vowelSignO
+  }
+}
 
 // namespace "nwt" :
 const nwt={
@@ -268,8 +282,28 @@ const nwt={
       'j':'h'   // /h/ and glottal stop
     }
 
-  }
+  },
   // END MAP SECTION
+
+  //////////////////////////
+  // 
+  // isAtomicVowel
+  //
+  //////////////////////////
+  isAtomicVowel:function(atomicLetter){
+    return 'aeiou'.indexOf(atomicLetter) != -1 ;
+  },
+  isSomethingElse:function(somethingElse){
+    return ' .?"1234567890'.indexOf(somethingElse) != -1 ;
+  },
+  //////////////////////////
+  // 
+  // isAtomicConsonant
+  //
+  //////////////////////////
+  isAtomicConsonant:function(something){
+    return !(nwt.isAtomicVowel(something) || nwt.isSomethingElse(something));
+  }
 };
 
 if(process.argv.length<3){
@@ -286,14 +320,44 @@ for(let [key,val] of Object.entries(nwt.map.general_to_atomic)){
   atomic = atomic.replace(regex,val);
 }
 
-// Now recode atomic to something else:
+// Now recode atomic to Hasler modern:
 let hmod = atomic;
 for(let [key,val] of Object.entries(nwt.map.atomic)){
   regex = new RegExp(key,'g');
   hmod = hmod.replace(regex,val.hmod);
 }
 
+// Nahuatl Abugida:
+let nwa = atomic;
+let mxt = nwa[0]; // The mixed intermediate
+// Convert atomic vowels right away to above-base vowel signs when
+// preceded by a consonant:
+for(let i=1;i<nwa.length;i++){
+  //console.log(nwa[i-1] + ' is consn:' + nwt.isAtomicConsonant( nwa[i-1] ) );
+  //console.log(nwa[i] +   ' is vowel:' + nwt.isAtomicVowel(nwa[i]) );
+  if( nwt.isAtomicVowel( nwa[i] ) && nwt.isAtomicConsonant( nwa[i-1] ) ){
+    if(nwa[i]==='a'){
+      // Don't push anything because the vowel a sign is intrinsic 
+      // and not normally written over the abugida base consonant
+    }else{
+      mxt += nabMap.atomicVowelToVowelSign[nwa[i]];
+    }
+  }else{
+    mxt += nwa[i];
+  }
+}
+for(let [key,val] of Object.entries(nwt.map.atomic)){
+  regex = new RegExp(key,'g');
+  mxt = mxt.replace(regex,val.nab);
+}
+
+//console.log(nwt.isAtomicVowel('e'));
+//console.log(nwt.isSomethingElse(' '));
+//console.log(nwt.isAtomicConsonant('k'));
+//return;
+
 console.log(input);
 console.log(atomic);
 console.log(hmod);
+console.log(mxt);
 
