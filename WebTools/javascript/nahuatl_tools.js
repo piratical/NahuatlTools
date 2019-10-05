@@ -108,7 +108,7 @@ const nwt={
   // with the goal of simplifying at least some of the
   // mapping and translation code. We call this ATOMIC.
   //
-  // (2) Mapping to the nabgida and to ACK requires additional
+  // (2) Mapping to the abugida and to ACK requires additional
   // processing, but the first step is an initial symbolic
   // mapping that is identical to mapping to the Latin-based
   // orthographies.
@@ -123,6 +123,8 @@ const nwt={
   //
   // (6) INTR: (internet/intuitive) is like #3 but using sh for [ʃ]
   // 
+  // (7) We are also going to try to have a generic reader/transcoder
+  //
   ///////////////////////////////////////////////////////////
   // 
   // STT MAP SECTION
@@ -147,7 +149,7 @@ const nwt={
       'τ':{hmod:'tz',ack:'tz',sep:'ts',intr:'tz',nab:nab.consonantTZA}, // greek tau            for [t͡s]
       'λ':{hmod:'tl',ack:'tl',sep:'tl',intr:'tl',nab:nab.consonantTLA}, // greek lambda         for [t͡ɬ]
       'ς':{hmod:'ch',ack:'ch',sep:'ch',intr:'ch',nab:nab.consonantCHA}, // terminal greek sigma for [t͡ʃ]
-      's':{hmod:'s',ack:'c',sep:'s',intr:'s',nab:nab.consonantSA},
+      's':{hmod:'s',ack:'s',sep:'s',intr:'s',nab:nab.consonantSA},
       'l':{hmod:'l',ack:'l',sep:'l',intr:'l',nab:nab.consonantLA},
       'x':{hmod:'x',ack:'x',sep:'x',intr:'sh',nab:nab.consonantXA}, // [ʃ]
       'h':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA}, // [h]
@@ -185,7 +187,10 @@ const nwt={
       'tl':'λ', // /t͡ɬ/ consonant
       'ch':'ς', // /t͡ʃ/ consonant
       // FOREIGN CONSONANTS:
-      'rr':'ρ'
+      'rr':'ρ',
+      // ALTERNATIVE SPELLINGS:
+      'ç':'s',
+      'z':'s'
     },
     // END ACK SECTION
     
@@ -223,11 +228,72 @@ const nwt={
       'sh':'x', // modern internet/inuitive addition
       // FOREIGN CONSONANTS:
       'rr':'ρ'
-    }
+    },
     // END HASLER MODERN SECTION
-
-
+    
+    /////////////////////////////////
+    //
+    // STT GENERAL ATTEMPT SECTION
+    //
+    /////////////////////////////////
+    general_to_atomic:{
+      'cuh':'κ', // /kʷ/ consonant
+      'hu':'w',
+      'uh':'w',
+      'qu':'k',
+      'cu':'κ', // /kʷ/ consonant
+      'ca':'ka',
+      'co':'ko',
+      'ce':'se',
+      'ci':'si',
+      'ku':'κ', // /kʷ/ consonant modern orthography
+      'kw':'κ', // /kʷ/ consonant modern variant orthography
+      'uc':'κ', // /kʷ/ consonant
+      'tz':'τ', // /t͡s/ consonant
+      'ts':'τ', // /t͡s/ consonant modern orthography
+      'tl':'λ', // /t͡ɬ/ consonant
+      'ch':'ς', // /t͡ʃ/ consonant
+      // SINGLE CHARACTERS:
+      'c':'k',
+      // FOREIGN CONSONANTS:
+      'rr':'ρ',
+      // ALTERNATIVE SPELLINGS:
+      'ç':'s',
+      'z':'s',
+      'sh':'x', // modern internet/inuitive addition
+      // FOREIGN CONSONANTS:
+      'rr':'ρ',
+      // SINGLE GRAPH CONVERSIONS:
+      'u':'w',  // 
+      'j':'h'   // /h/ and glottal stop
+    }
 
   }
   // END MAP SECTION
 };
+
+if(process.argv.length<3){
+  console.log('No string to process');
+  return 0;
+}
+
+const input = process.argv[2];
+
+//const input = 'Ye yuh matlac xihuitl in opehualoc in atl in tepetl Mexico, in ye omoman in mitl in chimalli, in ye nohuian ontlamatcamani in ahuacan in tepehuacan';
+let   atomic = input;
+for(let [key,val] of Object.entries(nwt.map.general_to_atomic)){
+  regex = new RegExp(key,'g');
+  atomic = atomic.replace(regex,val);
+}
+
+// Now recode atomic to something else:
+let hmod = atomic;
+for(let [key,val] of Object.entries(nwt.map.atomic)){
+  regex = new RegExp(key,'g');
+  hmod = hmod.replace(regex,val.hmod);
+}
+
+console.log(input);
+console.log(atomic);
+console.log(hmod);
+
