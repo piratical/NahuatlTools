@@ -396,8 +396,10 @@ for(let i=0;i<atomic.length;i++){
       }else{
         result = result.slice(0, -1) + compoundSign;
       }
-    }
+    }else{
     // Otherwise do nothing if no special combined vowel sign exists ...
+      result += nwt.map.atomic[current].nab;
+    }
   }else if(nwt.isAtomicLetter(current)){
     result += nwt.map.atomic[current].nab;
   }else{
