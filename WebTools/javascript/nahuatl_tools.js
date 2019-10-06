@@ -260,7 +260,15 @@ const nwt={
     //
     /////////////////////////////////
     general_to_atomic:{
+      // SOME ARCHAIC CONVENTIONS:
+      ' yn':' in', // experimental inclusion
+      ' yp':' ip', // experimental inclusion
+      ' yc':' ic', // experimental inclusion
       'cuh':'κ', // /kʷ/ consonant
+      // n BEFORE p GENERALLY NOW SPELLED WITH m
+      // (ex: pampa, cempoalli, etc.):
+      'np':'mp', // experimental inclusion
+      // STANDARD DIGRAPHS:
       'hu':'w',
       'uh':'w',
       'qu':'k',
@@ -276,16 +284,14 @@ const nwt={
       'ts':'τ', // /t͡s/ consonant modern orthography
       'tl':'λ', // /t͡ɬ/ consonant
       'ch':'ς', // /t͡ʃ/ consonant
-      // SINGLE CHARACTERS:
-      'c':'k',
-      // FOREIGN CONSONANTS:
-      'rr':'ρ',
-      // ALTERNATIVE SPELLINGS:
-      'ç':'s',
-      'z':'s',
       'sh':'x', // modern internet/inuitive addition
       // FOREIGN CONSONANTS:
       'rr':'ρ',
+      // SINGLE CHARACTERS:
+      'c':'k',
+      // ALTERNATIVE SPELLINGS:
+      'ç':'s',
+      'z':'s',
       // SINGLE GRAPH CONVERSIONS:
       'u':'w',  // 
       'j':'h'   // /h/ and glottal stop
@@ -341,20 +347,23 @@ for(let [key,val] of Object.entries(nwt.map.atomic)){
   hmod = hmod.replace(regex,val.hmod);
 }
 
-// CONVERT ATOMIC TO ABUGIDA:
+// Now recode atomic to SEP:
+let sep = '';
+for(let i=0;i<atomic.length;i++){
+  const current = atomic[i];
+  if(nwt.isAtomicLetter(current)){
+    sep += nwt.map.atomic[current].sep;
+  }else{
+    sep += current;
+  }
+}
 
-/////////////////////
-//
-// First letter:
-//
-/////////////////////
-//const c = atomic[0];
-//let result; 
-//if(nwt.isAtomicLetter(c)){
-//  result = nwt.map.atomic[c].nab;
-//}else{
-//  result = atomic[0];
+//for(let [key,val] of Object.entries(nwt.map.atomic)){
+//  regex = new RegExp(key,'g');
+//  sep = sep.replace(regex,val.sep);
 //}
+
+// CONVERT ATOMIC TO ABUGIDA:
 
 // Convert atomic vowels right away to above-base vowel signs when
 // preceded by a consonant:
@@ -407,12 +416,54 @@ for(let i=0;i<atomic.length;i++){
   }
 }
 
+//////////////////////////////
+//
+// Convert Atomic to ACK:
+//
+//////////////////////////////
+let result2='';
+for(let i=0;i<atomic.length;i++){
+  
+  const current  = atomic[ i ];
+  const previous = i>0               ? atomic[i-1] : ' ' ;
+  const next     = i<atomic.length-1 ? atomic[i+1] : ' ' ;
+
+  // If the current consonant is a syllable-
+  // terminating /w/ or /kʷ/ , then use 
+  // 'uh' in place of 'hu' or 'uc' in place 
+  // of 'cu', respectively:
+  if( (current==='w' || current==='κ') && nwt.isAtomicVowel(previous) && !nwt.isAtomicVowel(next) ){
+    // w maps to 'uh'
+    // κ maps to 'uc'
+    result2 += current==='w' ? 'uh' : 'uc' ;
+  }else if( (current==='k' || current==='s') && nwt.isAtomicVowel(next) ){
+    if(next==='e' || next==='i'){
+      // vowels e and i:
+      // k maps to: que , qui
+      // s maps to: ce  , ci
+      result2 += current==='k' ? 'qu' : 'c'; 
+    }else{
+      // vowels a and o:
+      // k maps to: ca , co
+      // s maps to: za , zo
+      result2 += current==='k' ? 'c' : 'z'; 
+    }
+  }else if(nwt.isAtomicLetter(current)){
+    result2 += nwt.map.atomic[current].ack;
+  }else{
+    result2 += current;
+  }
+}
 
 console.log(input);
 console.log('↓ CONVERTED TO INTERNAL ATOMIC ORTHOGRAPHY ↓');
 console.log(atomic);
 console.log('↓ CONVERTED TO HASLER MODERN ↓');
 console.log(hmod);
+console.log('↓ CONVERTED TO SEP ↓');
+console.log(sep);
 console.log('↓ CONVERTED TO TRAGER ABUGIDA ↓');
 console.log(result);
+console.log('↓ CONVERTED TO ACK ↓');
+console.log(result2);
 
