@@ -1,4 +1,4 @@
-////////////////////////////////////////
+///////////////////////////////////////
 //
 // nahuatl_tools.js
 //
@@ -142,13 +142,15 @@ const nwt={
   // code-use-only "computational" orthography that is
   // based on a modern Hasler orthography but where we
   // reduce the digraphs to single Unicode code points
-  // with the goal of simplifying at least some of the
-  // mapping and translation code. We call this ATOMIC.
+  // with the goal of simplifying the mapping and
+  // translation code. We currently use some greek letters
+  // as placeholders for the digraph phonemes. 
+  // We call this ATOMIC.
   //
-  // (2) Mapping to the abugida and to ACK requires additional
-  // processing, but the first step is an initial symbolic
-  // mapping that is identical to mapping to the Latin-based
-  // orthographies.
+  // (2) Mapping from ATOMIC to SEP or HASLER MODERN is trivial.
+  // However, mapping to ACK and to the Trager abugida require 
+  // additional processing in a more nuanced manner. Nevertheless
+  // the first step is still the same: map to ATOMIC.
   // 
   // (3) HMOD is our version of Hasler Modern 
   // using 'w' for [w] and 'h' for [ʔ]
@@ -159,12 +161,18 @@ const nwt={
   // (5) SEP is SEP using 'u' for [w] and 'j' for [ʔ]
   //
   // (6) INTR: (internet/intuitive) is like #3 but using sh for [ʃ]
-  // 
-  // (7) We are also going to try to have a generic reader/transcoder
+  //     As Hasler Modern seems sufficient, we don't have a writer
+  //     for INTR, although we still try to handle it on the input
+  //     (reading) side of things.
+  //
+  // (7) The general reader, toAtomic() which uses the general_to_atomic
+  //     map  seems to function well. There does not seem to be a 
+  //     compelling need for individual readers for SEP, ACK, etc.
   //
   ///////////////////////////////////////////////////////////
   // 
   // STT MAP SECTION
+  //
   map:{
     // STT ATOMIC mapping:
     atomic:{
@@ -203,71 +211,6 @@ const nwt={
     },
     // END ATOMIC SECTION
 
-    ////////////////////////
-    //
-    // STT ACK SECTION
-    //
-    ////////////////////////
-    //ack_to_atomic:{
-    //  'cuh':'κ', // /kʷ/ consonant
-    //  'hu':'w',
-    //  'uh':'w',
-    //  'qu':'k',
-    //  'cu':'κ', // /kʷ/ consonant
-    //  'ce':'se',
-    //  'ci':'si',
-    //  'ku':'κ', // /kʷ/ consonant modern orthography
-    //  'kw':'κ', // /kʷ/ consonant modern variant orthography
-    //  'uc':'κ', // /kʷ/ consonant
-    //  'tz':'τ', // /t͡s/ consonant
-    //  'ts':'τ', // /t͡s/ consonant modern orthography
-    //  'tl':'λ', // /t͡ɬ/ consonant
-    //  'ch':'ς', // /t͡ʃ/ consonant
-    //  // FOREIGN CONSONANTS:
-    //  'rr':'ρ',
-    //  // ALTERNATIVE SPELLINGS:
-    //  'ç':'s',
-    //  'z':'s'
-    //},
-    // END ACK SECTION
-    
-    ////////////////////////
-    //
-    // STT SEP SECTION
-    //
-    ////////////////////////
-    //sep_to_atomic:{
-    //  'ku':'κ', // /kʷ/ consonant
-    //  'ts':'τ', // /t͡s/ consonant
-    //  'tz':'τ', // /t͡s/ consonant
-    //  'tl':'λ', // /t͡ɬ/ consonant
-    //  'ch':'ς', // /t͡ʃ/ consonant
-    //  'sh':'x', // modern internet/inuitive addition
-    //  // FOREIGN CONSONANTS:
-    //  'rr':'ρ',
-    //  // SINGLE GRAPH CONVERSIONS:
-    //  'u':'w',  // 
-    //  'j':'h'   // /h/ and glottal stop
-    //},
-    // END SEP SECTION
-    
-    ////////////////////////
-    //
-    // STT HASLER MODERN SECTION
-    //
-    ////////////////////////
-    //hasler_to_atomic:{
-    //  'ku':'κ', // /kʷ/ consonant
-    //  'ts':'τ', // /t͡s/ consonant
-    //  'tz':'τ', // /t͡s/ consonant
-    //  'tl':'λ', // /t͡ɬ/ consonant
-    //  'ch':'ς', // /t͡ʃ/ consonant
-    //  'sh':'x', // modern internet/inuitive addition
-    //  // FOREIGN CONSONANTS:
-    //  'rr':'ρ'
-    //},
-    // END HASLER MODERN SECTION
-    
     //////////////////////////////////////////////////////
     //
     // STT GENERAL SECTION
@@ -354,7 +297,13 @@ const nwt={
   isAtomicConsonant:function(c){
     return 'mnptkκτλςsxhlwyñβdgfrρ'.indexOf(c) != -1;
   },
+  /////////////////////////////////////////////////////
+  //
+  // toAtomic: converts input in any format to Atomic
+  //
+  /////////////////////////////////////////////////////
   toAtomic:function(input){
+    if(!input) return '';
     let atomic=input;
     for(let entry of nwt.map.general_to_atomic){
       regex = new RegExp(entry.k,'g');
@@ -492,8 +441,25 @@ const nwt={
       }
     }
     return result;
-  }
+  },
   // END atomicToTragerModern
+
+  /////////////////////////////////////////
+  //
+  // splitToMetaWords
+  //
+  /////////////////////////////////////////
+  splitToMetaWords:function(input){
+    const words = input.split(/ +/);
+    const metaWords=[];
+    for(let word of words){
+      const firstLetter = word[0];
+      const firstLetterIsCapitalized = firstLetter===firstLetter.toUpperCase(); // flic
+      const text = word.toLowerCase();
+      metaWords.push({text:text,flic:firstLetterIsCapitalized});
+    }
+    return metaWords; 
+  }
 };
 
 
@@ -531,6 +497,27 @@ console.log('↓ CONVERTED TO TRAGER ABUGIDA ↓');
 console.log(tmod);
 console.log('↓ CONVERTED TO ACK ↓');
 console.log(ack);
+
+
+//
+// More complicated pipeline:
+//
+console.log('===============');
+console.log(input);
+const metaWords = nwt.splitToMetaWords(input);
+console.log(metaWords.length);
+let result='';
+for(const word of metaWords){
+  const atom = nwt.toAtomic(word.text);
+  let tmod = nwt.atomicToTragerModern( atom );
+  if(word.flic){
+    result += nab.prefixName;
+  }
+  result += tmod;
+  result += ' ';
+}
+// Show the result:
+console.log(result);
 
 // END OF CODE 
 
