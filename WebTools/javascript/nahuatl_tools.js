@@ -444,6 +444,16 @@ const nwt={
   },
   // END atomicToTragerModern
 
+  ////////////////////////////////////////////////////////////
+  //
+  // hasLocativeSuffix
+  //
+  // NOTA BENE: This works on a word in ATOMIC orthography
+  //
+  ////////////////////////////////////////////////////////////
+  hasLocativeSuffix(s){
+    return s.match(/(ko|λan|tepek|τinco|singo|apa|apan)$/);
+  },
   /////////////////////////////////////////
   //
   // splitToMetaWords
@@ -453,12 +463,23 @@ const nwt={
     const words = input.split(/ +/);
     const metaWords=[];
     for(let word of words){
+      const mw = {}; // meta-word object
+      mw.original       = word;
+      mw.atomic         = nwt.toAtomic( word.toLowerCase() );
       const firstLetter = word[0];
-      const firstLetterIsCapitalized = firstLetter===firstLetter.toUpperCase(); // flic
-      const text = word.toLowerCase();
-      metaWords.push({text:text,flic:firstLetterIsCapitalized});
+      mw.flic           = firstLetter===firstLetter.toUpperCase(); // flic
+      mw.isPlaceName    = nwt.hasLocativeSuffix( mw.atomic );
+      metaWords.push( mw );
     }
     return metaWords; 
+  },
+  /////////////////////////////////////////
+  //
+  // capitalize:
+  //
+  /////////////////////////////////////////
+  capitalize:function(s){
+    return s[0].toUpperCase() + s.slice(1);
   }
 };
 
@@ -481,43 +502,77 @@ const atomic = nwt.toAtomic(input);
 // Convert Atomic to ACK, SEP:
 //
 //////////////////////////////
-const sep  = nwt.atomicToSEP(atomic);
-const hmod = nwt.atomicToHaslerModern(atomic);
-const ack  = nwt.atomicToACK(atomic);
-const tmod = nwt.atomicToTragerModern(atomic);
 
-console.log(input);
-console.log('↓ CONVERTED TO INTERNAL ATOMIC ORTHOGRAPHY ↓');
-console.log(atomic);
-console.log('↓ CONVERTED TO HASLER MODERN ↓');
-console.log(hmod);
-console.log('↓ CONVERTED TO SEP ↓');
-console.log(sep);
-console.log('↓ CONVERTED TO TRAGER ABUGIDA ↓');
-console.log(tmod);
-console.log('↓ CONVERTED TO ACK ↓');
-console.log(ack);
+//const sep  = nwt.atomicToSEP(atomic);
+//const hmod = nwt.atomicToHaslerModern(atomic);
+//const ack  = nwt.atomicToACK(atomic);
+//const tmod = nwt.atomicToTragerModern(atomic);
+
+//console.log(input);
+//console.log('↓ CONVERTED TO INTERNAL ATOMIC ORTHOGRAPHY ↓');
+//console.log(atomic);
+//console.log('↓ CONVERTED TO HASLER MODERN ↓');
+//console.log(hmod);
+//console.log('↓ CONVERTED TO SEP ↓');
+//console.log(sep);
+//console.log('↓ CONVERTED TO TRAGER ABUGIDA ↓');
+//console.log(tmod);
+//console.log('↓ CONVERTED TO ACK ↓');
+//console.log(ack);
 
 
 //
 // More complicated pipeline:
 //
-console.log('===============');
+console.log('===== Pipeline that handles capitalization properly =====');
 console.log(input);
 const metaWords = nwt.splitToMetaWords(input);
-console.log(metaWords.length);
-let result='';
-for(const word of metaWords){
-  const atom = nwt.toAtomic(word.text);
-  let tmod = nwt.atomicToTragerModern( atom );
-  if(word.flic){
-    result += nab.prefixName;
+
+// CREATE RESULT SET CONTAINERS:
+let hmod=''; // Hasler Modern
+let sep =''; // SEP
+let ack =''; // ACK
+let tmod=''; // Trager Modern
+
+for(const metaWord of metaWords){
+  // CONVERT WORDS TO OUTPUT ORTHOGRAPHIES:
+  let hhmod  = nwt.atomicToHaslerModern( metaWord.atomic );
+  let ssep   = nwt.atomicToSEP( metaWord.atomic );
+  let aack   = nwt.atomicToACK( metaWord.atomic );
+  let ttmod  = nwt.atomicToTragerModern( metaWord.atomic );
+  if(metaWord.flic){
+    // Hasler Modern with NO conversion of capitalized names:
+    hmod += metaWord.original;
+    // SEP with conversion of ALL capitalized words:
+    sep  += nwt.capitalize( ssep  );
+    // ACK with NO conversion of capitalized names:
+    ack  += metaWord.original;
+    // TRAGER with conversion of place names but NO conversion of other names:
+    if( metaWord.isPlaceName ){
+      // Quite likely a place name:
+      tmod += nab.prefixPlace + ttmod;
+    }else{
+      // Some other name, don't convert:
+      tmod += metaWord.original;
+    }
+  }else{
+    hmod += hhmod;
+    sep  += ssep ;
+    ack  += aack ;
+    tmod += ttmod;
   }
-  result += tmod;
-  result += ' ';
+  hmod += ' ';
+  sep  += ' ';
+  ack  += ' ';
+  tmod += ' ';
 }
-// Show the result:
-console.log(result);
+
+
+// Show the results:
+console.log(hmod);
+console.log(sep );
+console.log(ack );
+console.log(tmod);
 
 // END OF CODE 
 
