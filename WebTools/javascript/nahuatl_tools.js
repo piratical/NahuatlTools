@@ -24,7 +24,7 @@
 //
 // CURRENT ABUGIDA CODE POINTS SECTION:
 //
-// Nahuatl Abugida -> nab
+// Trager's Nahuatl Abugida -> nab
 //
 ///////////////////////////////////////////
 const nab={
@@ -121,7 +121,6 @@ nab.map={
     'ao':nab.vowelSignAO
   } 
 };
-
 /////////////////////////////////////
 //
 // END OF nab definitions section
@@ -209,27 +208,27 @@ const nwt={
     // STT ACK SECTION
     //
     ////////////////////////
-    ack_to_atomic:{
-      'cuh':'κ', // /kʷ/ consonant
-      'hu':'w',
-      'uh':'w',
-      'qu':'k',
-      'cu':'κ', // /kʷ/ consonant
-      'ce':'se',
-      'ci':'si',
-      'ku':'κ', // /kʷ/ consonant modern orthography
-      'kw':'κ', // /kʷ/ consonant modern variant orthography
-      'uc':'κ', // /kʷ/ consonant
-      'tz':'τ', // /t͡s/ consonant
-      'ts':'τ', // /t͡s/ consonant modern orthography
-      'tl':'λ', // /t͡ɬ/ consonant
-      'ch':'ς', // /t͡ʃ/ consonant
-      // FOREIGN CONSONANTS:
-      'rr':'ρ',
-      // ALTERNATIVE SPELLINGS:
-      'ç':'s',
-      'z':'s'
-    },
+    //ack_to_atomic:{
+    //  'cuh':'κ', // /kʷ/ consonant
+    //  'hu':'w',
+    //  'uh':'w',
+    //  'qu':'k',
+    //  'cu':'κ', // /kʷ/ consonant
+    //  'ce':'se',
+    //  'ci':'si',
+    //  'ku':'κ', // /kʷ/ consonant modern orthography
+    //  'kw':'κ', // /kʷ/ consonant modern variant orthography
+    //  'uc':'κ', // /kʷ/ consonant
+    //  'tz':'τ', // /t͡s/ consonant
+    //  'ts':'τ', // /t͡s/ consonant modern orthography
+    //  'tl':'λ', // /t͡ɬ/ consonant
+    //  'ch':'ς', // /t͡ʃ/ consonant
+    //  // FOREIGN CONSONANTS:
+    //  'rr':'ρ',
+    //  // ALTERNATIVE SPELLINGS:
+    //  'ç':'s',
+    //  'z':'s'
+    //},
     // END ACK SECTION
     
     ////////////////////////
@@ -237,19 +236,19 @@ const nwt={
     // STT SEP SECTION
     //
     ////////////////////////
-    sep_to_atomic:{
-      'ku':'κ', // /kʷ/ consonant
-      'ts':'τ', // /t͡s/ consonant
-      'tz':'τ', // /t͡s/ consonant
-      'tl':'λ', // /t͡ɬ/ consonant
-      'ch':'ς', // /t͡ʃ/ consonant
-      'sh':'x', // modern internet/inuitive addition
-      // FOREIGN CONSONANTS:
-      'rr':'ρ',
-      // SINGLE GRAPH CONVERSIONS:
-      'u':'w',  // 
-      'j':'h'   // /h/ and glottal stop
-    },
+    //sep_to_atomic:{
+    //  'ku':'κ', // /kʷ/ consonant
+    //  'ts':'τ', // /t͡s/ consonant
+    //  'tz':'τ', // /t͡s/ consonant
+    //  'tl':'λ', // /t͡ɬ/ consonant
+    //  'ch':'ς', // /t͡ʃ/ consonant
+    //  'sh':'x', // modern internet/inuitive addition
+    //  // FOREIGN CONSONANTS:
+    //  'rr':'ρ',
+    //  // SINGLE GRAPH CONVERSIONS:
+    //  'u':'w',  // 
+    //  'j':'h'   // /h/ and glottal stop
+    //},
     // END SEP SECTION
     
     ////////////////////////
@@ -257,16 +256,16 @@ const nwt={
     // STT HASLER MODERN SECTION
     //
     ////////////////////////
-    hasler_to_atomic:{
-      'ku':'κ', // /kʷ/ consonant
-      'ts':'τ', // /t͡s/ consonant
-      'tz':'τ', // /t͡s/ consonant
-      'tl':'λ', // /t͡ɬ/ consonant
-      'ch':'ς', // /t͡ʃ/ consonant
-      'sh':'x', // modern internet/inuitive addition
-      // FOREIGN CONSONANTS:
-      'rr':'ρ'
-    },
+    //hasler_to_atomic:{
+    //  'ku':'κ', // /kʷ/ consonant
+    //  'ts':'τ', // /t͡s/ consonant
+    //  'tz':'τ', // /t͡s/ consonant
+    //  'tl':'λ', // /t͡ɬ/ consonant
+    //  'ch':'ς', // /t͡ʃ/ consonant
+    //  'sh':'x', // modern internet/inuitive addition
+    //  // FOREIGN CONSONANTS:
+    //  'rr':'ρ'
+    //},
     // END HASLER MODERN SECTION
     
     //////////////////////////////////////////////////////
@@ -354,137 +353,172 @@ const nwt={
   //////////////////////////
   isAtomicConsonant:function(c){
     return 'mnptkκτλςsxhlwyñβdgfrρ'.indexOf(c) != -1;
+  },
+  toAtomic:function(input){
+    let atomic=input;
+    for(let entry of nwt.map.general_to_atomic){
+      regex = new RegExp(entry.k,'g');
+      atomic = atomic.replace(regex,entry.v);
+    }
+    return atomic;
+  },
+  /////////////////////////////////////////
+  //
+  // atomicToSEP:
+  //
+  /////////////////////////////////////////
+  atomicToSEP:function(atomic){
+    let sep = '';
+    for(let i=0;i<atomic.length;i++){
+      const current = atomic[i];
+      if(nwt.isAtomicLetter(current)){
+        sep += nwt.map.atomic[current].sep;
+      }else{
+        sep += current;
+      }
+    }
+    return sep;
+  },
+  /////////////////////////////////////////
+  //
+  // atomicToHaslerModern:
+  //
+  /////////////////////////////////////////
+  atomicToHaslerModern:function(atomic){
+    let hmod = '';
+    for(let i=0;i<atomic.length;i++){
+      const current = atomic[i];
+      if(nwt.isAtomicLetter(current)){
+        hmod += nwt.map.atomic[current].hmod;
+      }else{
+        hmod += current;
+      }
+    }
+    return hmod;
+  },
+  /////////////////////////////////////////
+  //
+  // atomicToACK: Convert Atomic to ACK:
+  //
+  /////////////////////////////////////////
+  atomicToACK:function(atomic){
+    let result='';
+    for(let i=0;i<atomic.length;i++){
+      
+      const current  = atomic[ i ];
+      const previous = i>0               ? atomic[i-1] : ' ' ;
+      const next     = i<atomic.length-1 ? atomic[i+1] : ' ' ;
+    
+      // If the current consonant is a syllable-
+      // terminating /w/ or /kʷ/ , then use 
+      // 'uh' in place of 'hu' or 'uc' in place 
+      // of 'cu', respectively:
+      if( (current==='w' || current==='κ') && nwt.isAtomicVowel(previous) && !nwt.isAtomicVowel(next) ){
+        // w maps to 'uh'
+        // κ maps to 'uc'
+        result += current==='w' ? 'uh' : 'uc' ;
+      }else if( (current==='k' || current==='s') && nwt.isAtomicVowel(next) ){
+        if(next==='e' || next==='i'){
+          // vowels e and i:
+          // k maps to: que , qui
+          // s maps to: ce  , ci
+          result += current==='k' ? 'qu' : 'c'; 
+        }else{
+          // vowels a and o:
+          // k maps to: ca , co
+          // s maps to: za , zo
+          result += current==='k' ? 'c' : 'z'; 
+        }
+      }else if(nwt.isAtomicLetter(current)){
+        result += nwt.map.atomic[current].ack;
+      }else{
+        result += current;
+      }
+    }
+    return result;
+  },
+  ////////////////////////////////////////////
+  //
+  // atomicToTragerModern
+  //
+  ////////////////////////////////////////////
+  atomicToTragerModern:function(atomic){
+    let result='';
+    for(let i=0;i<atomic.length;i++){
+      
+      const current  = atomic[ i ];
+      const previous = i>0               ? atomic[i-1] : ' ' ;
+      const next     = i<atomic.length-1 ? atomic[i+1] : ' ' ;
+      
+      if(nwt.isAtomicVowel(current) && nwt.isAtomicConsonant(previous)){
+        // Convert atomic vowels following consonants immediately 
+        // to above-base vowel signs:
+        if(current==='a'){
+          // Don't push anything because the vowel /a/ sign is intrinsic 
+          // and not normally written over the abugida base consonant
+        }else{
+          result += nab.map.atomicVowelToVowelSign[current];
+        }
+      }else if(nwt.isAtomicConsonant(current) && nwt.isAtomicVowel(previous) && !nwt.isAtomicVowel(next)){
+        // If the previous letter is a vowel and this is a consonant, then we have to think about making
+        // consonant a subjoined consonant. However, if the *next* letter is a vowel, then this consonant
+        // is actually the base for the next syllabic cluster. But if the *next* letter is *not* a vowel,
+        // then indeed this consonant is a final consonant on the current syllabic cluster. So we have:
+        result += nab.subjoinerSign;             // Push subjoiner
+        result += nwt.map.atomic[current].nab;   // Push consonant
+      }else if(nwt.isAtomicVowel(current) && nwt.isAtomicVowel(previous)){
+        // Opportunity for combined vowel sign:
+        const compoundSign = nab.map.atomicVowelPairsToCompoundVowelSign[previous+current];
+        if(compoundSign){
+          // The vowel combination has a special combined symbol, so replace
+          // the current singleton vowel sign with the compound vowel sign.
+          //
+          // However, in the case of a previous 'a', then there is no visible sign
+          // so in that case, just add the combined symbol at the end, as there is
+          // nothing to replace:
+          if(previous==='a'){
+            result += compoundSign;
+          }else{
+            result = result.slice(0, -1) + compoundSign;
+          }
+        }else{
+        // Otherwise do nothing if no special combined vowel sign exists ...
+          result += nwt.map.atomic[current].nab;
+        }
+      }else if(nwt.isAtomicLetter(current)){
+        result += nwt.map.atomic[current].nab;
+      }else{
+        result += current;
+      }
+    }
+    return result;
   }
+  // END atomicToTragerModern
 };
 
+
+//////////////////////////
+//
+// MAIN
+//
+//////////////////////////
 if(process.argv.length<3){
   console.log('No string to process');
   return 0;
 }
 
 const input = process.argv[2];
-
-//const input = 'Ye yuh matlac xihuitl in opehualoc in atl in tepetl Mexico, in ye omoman in mitl in chimalli, in ye nohuian ontlamatcamani in ahuacan in tepehuacan';
-let   atomic = input;
-for(let entry of nwt.map.general_to_atomic){
-  regex = new RegExp(entry.k,'g');
-  atomic = atomic.replace(regex,entry.v);
-}
-
-// Now recode atomic to Hasler modern:
-let hmod = atomic;
-for(let [key,val] of Object.entries(nwt.map.atomic)){
-  regex = new RegExp(key,'g');
-  hmod = hmod.replace(regex,val.hmod);
-}
-
-// Now recode atomic to SEP:
-let sep = '';
-for(let i=0;i<atomic.length;i++){
-  const current = atomic[i];
-  if(nwt.isAtomicLetter(current)){
-    sep += nwt.map.atomic[current].sep;
-  }else{
-    sep += current;
-  }
-}
-
-//for(let [key,val] of Object.entries(nwt.map.atomic)){
-//  regex = new RegExp(key,'g');
-//  sep = sep.replace(regex,val.sep);
-//}
-
-// CONVERT ATOMIC TO ABUGIDA:
-
-// Convert atomic vowels right away to above-base vowel signs when
-// preceded by a consonant:
-let result='';
-for(let i=0;i<atomic.length;i++){
-  
-  const current  = atomic[ i ];
-  const previous = i>0               ? atomic[i-1] : ' ' ;
-  const next     = i<atomic.length-1 ? atomic[i+1] : ' ' ;
-  
-  if(nwt.isAtomicVowel(current) && nwt.isAtomicConsonant(previous)){
-    // Convert atomic vowels following consonants immediately 
-    // to above-base vowel signs:
-    if(current==='a'){
-      // Don't push anything because the vowel /a/ sign is intrinsic 
-      // and not normally written over the abugida base consonant
-    }else{
-      result += nab.map.atomicVowelToVowelSign[current];
-    }
-  }else if(nwt.isAtomicConsonant(current) && nwt.isAtomicVowel(previous) && !nwt.isAtomicVowel(next)){
-    // If the previous letter is a vowel and this is a consonant, then we have to think about making
-    // consonant a subjoined consonant. However, if the *next* letter is a vowel, then this consonant
-    // is actually the base for the next syllabic cluster. But if the *next* letter is *not* a vowel,
-    // then indeed this consonant is a final consonant on the current syllabic cluster. So we have:
-    result += nab.subjoinerSign;             // Push subjoiner
-    result += nwt.map.atomic[current].nab;   // Push consonant
-  }else if(nwt.isAtomicVowel(current) && nwt.isAtomicVowel(previous)){
-    // Opportunity for combined vowel sign:
-    const compoundSign = nab.map.atomicVowelPairsToCompoundVowelSign[previous+current];
-    if(compoundSign){
-      // The vowel combination has a special combined symbol, so replace
-      // the current singleton vowel sign with the compound vowel sign.
-      //
-      // However, in the case of a previous 'a', then there is no visible sign
-      // so in that case, just add the combined symbol at the end, as there is
-      // nothing to replace:
-      if(previous==='a'){
-        result += compoundSign;
-      }else{
-        result = result.slice(0, -1) + compoundSign;
-      }
-    }else{
-    // Otherwise do nothing if no special combined vowel sign exists ...
-      result += nwt.map.atomic[current].nab;
-    }
-  }else if(nwt.isAtomicLetter(current)){
-    result += nwt.map.atomic[current].nab;
-  }else{
-    result += current;
-  }
-}
+const atomic = nwt.toAtomic(input);
 
 //////////////////////////////
 //
-// Convert Atomic to ACK:
+// Convert Atomic to ACK, SEP:
 //
 //////////////////////////////
-let result2='';
-for(let i=0;i<atomic.length;i++){
-  
-  const current  = atomic[ i ];
-  const previous = i>0               ? atomic[i-1] : ' ' ;
-  const next     = i<atomic.length-1 ? atomic[i+1] : ' ' ;
-
-  // If the current consonant is a syllable-
-  // terminating /w/ or /kʷ/ , then use 
-  // 'uh' in place of 'hu' or 'uc' in place 
-  // of 'cu', respectively:
-  if( (current==='w' || current==='κ') && nwt.isAtomicVowel(previous) && !nwt.isAtomicVowel(next) ){
-    // w maps to 'uh'
-    // κ maps to 'uc'
-    result2 += current==='w' ? 'uh' : 'uc' ;
-  }else if( (current==='k' || current==='s') && nwt.isAtomicVowel(next) ){
-    if(next==='e' || next==='i'){
-      // vowels e and i:
-      // k maps to: que , qui
-      // s maps to: ce  , ci
-      result2 += current==='k' ? 'qu' : 'c'; 
-    }else{
-      // vowels a and o:
-      // k maps to: ca , co
-      // s maps to: za , zo
-      result2 += current==='k' ? 'c' : 'z'; 
-    }
-  }else if(nwt.isAtomicLetter(current)){
-    result2 += nwt.map.atomic[current].ack;
-  }else{
-    result2 += current;
-  }
-}
+const sep  = nwt.atomicToSEP(atomic);
+const hmod = nwt.atomicToHaslerModern(atomic);
+const ack  = nwt.atomicToACK(atomic);
+const tmod = nwt.atomicToTragerModern(atomic);
 
 console.log(input);
 console.log('↓ CONVERTED TO INTERNAL ATOMIC ORTHOGRAPHY ↓');
@@ -494,7 +528,9 @@ console.log(hmod);
 console.log('↓ CONVERTED TO SEP ↓');
 console.log(sep);
 console.log('↓ CONVERTED TO TRAGER ABUGIDA ↓');
-console.log(result);
+console.log(tmod);
 console.log('↓ CONVERTED TO ACK ↓');
-console.log(result2);
+console.log(ack);
+
+// END OF CODE 
 
