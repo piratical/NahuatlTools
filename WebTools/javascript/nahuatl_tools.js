@@ -16,13 +16,15 @@
 // la licencia GNU GPL versión 2.0 
 // o posterior.
 //
-// INITIAL DATE: 2019.09.13 ET
+// INITIAL CREATION DATE: 2019.09.13 ET
 //
 ////////////////////////////////////////
 
 ///////////////////////////////////////////
 //
 // CURRENT ABUGIDA CODE POINTS SECTION:
+//
+// Nahuatl Abugida -> nab
 //
 ///////////////////////////////////////////
 const nab={
@@ -97,15 +99,17 @@ const nab={
 
 /////////////////////
 //
-// nab.map
+// nab abugida maps
 //
 /////////////////////
-const nabMap={
+nab.map={
   atomicVowelToVowelSign:{
     'a':nab.vowelSignA,
     'e':nab.vowelSignE,
     'i':nab.vowelSignI,
-    'o':nab.vowelSignO
+    'o':nab.vowelSignO,
+    // FOREIGN VOWEL:
+    'u':nab.vowelSignU
   },
   atomicVowelPairsToCompoundVowelSign:{
     'ia':nab.vowelSignIA,
@@ -115,10 +119,21 @@ const nabMap={
     'ei':nab.vowelSignEI,
     'io':nab.vowelSignIO,
     'ao':nab.vowelSignAO
-  }
-}
+  } 
+};
 
+/////////////////////////////////////
 //
+// END OF nab definitions section
+//
+/////////////////////////////////////
+
+
+////////////////////////////////////////////
+//
+// BEGIN nwt (nawatl) definitions section
+//
+////////////////////////////////////////////
 const nwt={
   ///////////////////////////////////////////////////////////
   // 
@@ -159,7 +174,7 @@ const nwt={
       'e':{hmod:'e',ack:'e',sep:'e',intr:'e',nab:nab.vowelE},
       'i':{hmod:'i',ack:'i',sep:'i',intr:'i',nab:nab.vowelI},
       'o':{hmod:'o',ack:'o',sep:'o',intr:'o',nab:nab.vowelO},
-      // FOREIGN VOWEL:
+      // FOREIGN (SPANISH) VOWEL:
       'u':{hmod:'u',ack:'u',sep:'u',intr:'u',nab:nab.vowelU},
       // NATIVE CONSONANTS:
       'm':{hmod:'m',ack:'m',sep:'m',intr:'m',nab:nab.consonantMA},
@@ -168,17 +183,17 @@ const nwt={
       't':{hmod:'t',ack:'t',sep:'t',intr:'t',nab:nab.consonantTA},
       'k':{hmod:'k',ack:'c',sep:'k',intr:'k',nab:nab.consonantCA},
       'κ':{hmod:'ku',ack:'cu',sep:'ku',intr:'ku',nab:nab.consonantCUA}, // greek kappa          for [kʷ]
-      'ʔ':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA}, // [ʔ]
+      'ʔ':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA},      // [ʔ]
       'τ':{hmod:'tz',ack:'tz',sep:'ts',intr:'tz',nab:nab.consonantTZA}, // greek tau            for [t͡s]
       'λ':{hmod:'tl',ack:'tl',sep:'tl',intr:'tl',nab:nab.consonantTLA}, // greek lambda         for [t͡ɬ]
       'ς':{hmod:'ch',ack:'ch',sep:'ch',intr:'ch',nab:nab.consonantCHA}, // terminal greek sigma for [t͡ʃ]
       's':{hmod:'s',ack:'s',sep:'s',intr:'s',nab:nab.consonantSA},
       'l':{hmod:'l',ack:'l',sep:'l',intr:'l',nab:nab.consonantLA},
-      'x':{hmod:'x',ack:'x',sep:'x',intr:'sh',nab:nab.consonantXA}, // [ʃ]
-      'h':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA}, // [h]
-      'y':{hmod:'y',ack:'y',sep:'y',intr:'y',nab:nab.consonantYA}, // [j]
-      'w':{hmod:'w',ack:'hu',sep:'u',intr:'w',nab:nab.consonantWA}, // [w]
-      // FOREIGN CONSONANTS:
+      'x':{hmod:'x',ack:'x',sep:'x',intr:'sh',nab:nab.consonantXA},     // [ʃ]
+      'h':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA},      // [h]
+      'y':{hmod:'y',ack:'y',sep:'y',intr:'y',nab:nab.consonantYA},      // [j]
+      'w':{hmod:'w',ack:'hu',sep:'u',intr:'w',nab:nab.consonantWA},     // [w]
+      // FOREIGN (SPANISH) CONSONANTS:
       'ñ':{hmod:'ñ',ack:'ñ',sep:'ñ',intr:'ñ',nab:nab.consonantNYA},
       'β':{hmod:'b',ack:'b',sep:'b',intr:'b',nab:nab.consonantBVA},
       'd':{hmod:'d',ack:'d',sep:'d',intr:'d',nab:nab.consonantDA},
@@ -254,47 +269,64 @@ const nwt={
     },
     // END HASLER MODERN SECTION
     
-    /////////////////////////////////
+    //////////////////////////////////////////////////////
     //
-    // STT GENERAL ATTEMPT SECTION
+    // STT GENERAL SECTION
     //
-    /////////////////////////////////
+    // This is used as a general map to convert
+    // "any" incoming orthography to the atomic
+    //
+    // k: The key in the incoming orthography. 
+    //    Keys can be of any length. Longest
+    //    keys first. Additional rules on key order
+    //    may also apply: there may exist good reasons
+    //    to process certain keys before others even when
+    //    key length is not different.
+    //
+    // v: The value in the internal atomic orthography
+    //
+    //////////////////////////////////////////////////////
     general_to_atomic:[
       // SOME ARCHAIC CONVENTIONS:
-      {k:'cuh',v:'κ'}, // /kʷ/ consonant
+      {k:'cuh',v:'κ'},   // /kʷ/ consonant in some classical variants
       {k:' yn',v:' in'}, // experimental inclusion
       {k:' yp',v:' ip'}, // experimental inclusion
       {k:' yc',v:' ic'}, // experimental inclusion
       // n BEFORE p GENERALLY NOW SPELLED WITH m
-      // (ex: pampa, cempoalli, etc.):
+      // (ex: panpa -> pampa, cenpoalli -> cempoalli, etc.).
       {k:'np',v:'mp'}, // experimental inclusion
       // STANDARD DIGRAPHS:
-      {k:'hu',v:'w'},
-      {k:'uh',v:'w'},
+      // DIGRAPHS FROM CLASSICAL ORTHOGRAPHIC VARIANTS:
+      {k:'hu',v:'w'}, // [w] initial
+      {k:'uh',v:'w'}, // [w] final
       {k:'qu',v:'k'},
-      {k:'cu',v:'κ'}, // /kʷ/ consonant
-      {k:'ca',v:'ka'},
-      {k:'co',v:'ko'},
-      {k:'ce',v:'se'},
-      {k:'ci',v:'si'},
-      {k:'ku',v:'κ'}, // /kʷ/ consonant modern orthography
-      {k:'kw',v:'κ'}, // /kʷ/ consonant modern variant orthography
-      {k:'uc',v:'κ'}, // /kʷ/ consonant
+      {k:'cu',v:'κ'}, // [kʷ] consonant initial
+      {k:'uc',v:'κ'}, // [kʷ] consonant final
       {k:'tz',v:'τ'}, // /t͡s/ consonant
       {k:'ts',v:'τ'}, // /t͡s/ consonant modern orthography
       {k:'tl',v:'λ'}, // /t͡ɬ/ consonant
       {k:'ch',v:'ς'}, // /t͡ʃ/ consonant
+      // DISAMBIGUATION OF [k] and [s] phonemes:
+      {k:'ca',v:'ka'},
+      {k:'co',v:'ko'},
+      {k:'ce',v:'se'},
+      {k:'ci',v:'si'},
+      // DIGRAPHS IN MODERN VARIANTS:
+      {k:'ku',v:'κ'}, // /kʷ/ consonant modern orthography
+      {k:'kw',v:'κ'}, // /kʷ/ consonant modern variant orthography
       {k:'sh',v:'x'}, // modern internet/inuitive addition
       // FOREIGN CONSONANTS:
       {k:'rr',v:'ρ'},
-      // SINGLE CHARACTERS:
+      //
+      // SINGLE CHARACTER SUBSTITUTIONS:
+      //
       {k:'c',v:'k'},
       // ALTERNATIVE SPELLINGS:
       {k:'ç',v:'s'},
       {k:'z',v:'s'},
       // SINGLE GRAPH CONVERSIONS:
-      {k:'u',v:'w'},  // 
-      {k:'j',v:'h'}   // /h/ and glottal stop
+      {k:'u',v:'w'},  // SEP 
+      {k:'j',v:'h'}   // SEP /h/ and glottal stop
     ]
   },
   // END MAP SECTION
@@ -380,7 +412,7 @@ for(let i=0;i<atomic.length;i++){
       // Don't push anything because the vowel /a/ sign is intrinsic 
       // and not normally written over the abugida base consonant
     }else{
-      result += nabMap.atomicVowelToVowelSign[current];
+      result += nab.map.atomicVowelToVowelSign[current];
     }
   }else if(nwt.isAtomicConsonant(current) && nwt.isAtomicVowel(previous) && !nwt.isAtomicVowel(next)){
     // If the previous letter is a vowel and this is a consonant, then we have to think about making
@@ -391,7 +423,7 @@ for(let i=0;i<atomic.length;i++){
     result += nwt.map.atomic[current].nab;   // Push consonant
   }else if(nwt.isAtomicVowel(current) && nwt.isAtomicVowel(previous)){
     // Opportunity for combined vowel sign:
-    const compoundSign = nabMap.atomicVowelPairsToCompoundVowelSign[previous+current];
+    const compoundSign = nab.map.atomicVowelPairsToCompoundVowelSign[previous+current];
     if(compoundSign){
       // The vowel combination has a special combined symbol, so replace
       // the current singleton vowel sign with the compound vowel sign.
