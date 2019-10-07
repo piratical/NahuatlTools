@@ -89,7 +89,7 @@ const nab={
   // Special Prefix signs:
   prefixPlace:'\uEDAD',
   prefixName:'\uEDAE',
-  prefixDiety:'\uEDAF',
+  prefixDeity:'\uEDAF',
   ///////////////////////////////////////////////////////
   //
   // END OF ABUGIDA CURRENT PUA CODE POINT ASSIGNMENTS
@@ -269,7 +269,20 @@ const nwt={
       // SINGLE GRAPH CONVERSIONS:
       {k:'u',v:'w'},  // SEP 
       {k:'j',v:'h'}   // SEP /h/ and glottal stop
-    ]
+    ],
+    //////////////////////////////////////////
+    //
+    // deities: map of Nahuatl deity names
+    // (in ATOMIC orthography)
+    //
+    // NOTA BENE: This list was originally based on 
+    // https://en.wikipedia.org/wiki/List_of_Aztec_gods_and_supernatural_beings
+    //
+    //////////////////////////////////////////
+    deities:{
+      'awiateteo':1,'amapan':1,'aλakoya':1,'aλawa':1,'aλatoman':1,'kamaxλi':1,'senτonwiτnawa':1,'senτonmimixkoa':1,'senτontotoςtin':1,'ςalςiwλiκe':1,'ςalςiwtotolin':1,'ςalmekkasiwaλ':1,'ςantiko':1,'ςikomekoaλ':1,'ςikomexoςiλ':1,'ςimalma':1,'siwakoaλ':1,'siwateteo':1,'sinteoλ':1,'sinteoλ':1,'sinteteo':1,'sipaktonal':1,'siλalatonak':1,'siλaliκe':1,'koasiwaλ':1,'koaλiκe':1,'koaλiκe':1,'kolwaτinkaλ':1,'koyolxawki':1,'kosawkasinteoλ':1,'ehekaλ':1,'wewekoyoλ':1,'wewekoyoλ':1,'weweteoλ':1,'wiτilopoςλi':1,'wiτilopoςλi':1,'wixtosiwaλ':1,'iixposteke':1,'ilamateκthli':1,'iτkake':1,'iτpapaloλ':1,'iτpapaloλ':1,'iτpapaloλsiwaλ':1,'iτpapaloλtotek':1,'iτλakoliwki':1,'iτλi':1,'ixkimilli':1,'ixkitekaλ':1,'ixλilton':1,'istaκkasinteoλ':1,'maκilkoskaκawλi':1,'maκilκeτpalin':1,'maκilmalinalli':1,'maκiltoςλi':1,'maκiltoςλi':1,'maκiltotek':1,'maκilxoςiλ':1,'malinalxoςiλ':1,'mayawel':1,'meτλi':1,'mikapeλakalli':1,'miktekasiwaλ':1,'mikλanteκλi':1,'mixkoaλ':1,'mixkoaλ':1,'nanawaτin':1,'nappateκλi':1,'nesoxoςi':1,'nextepewa':1,'omakaλ':1,'omesiwaλ':1,'ometeκλi':1,'ometeoλ':1,'ometoςλi':1,'opoςλi':1,'oxomo':1,'painal':1,'patekaλ':1,'pilτinteκλi':1,'kawsiwaλ':1,'keτalkoaλ':1,'kilasli':1,'teksistekaλ':1,'teςloλ':1,'temaskaltesi':1,'tepeyolloλ':1,'tepostekaλ':1,'texkaτonaλ':1,'teskaλipoka':1,'teskaτonkaλ':1,'λakawepan':1,'λakoτonλi':1,'λawiskalpanteκλi':1,'λalsiwaλ':1,'λalok':1,'λalok':1,'λaloke':1,'λaltekayoa':1,'λalteκλi':1,'λaλawkasinteoλ':1,'λasolteoλ':1,'λasolteoλ':1,'λilwa':1,'tosi':1,'toltekaλ':1,'tonakasiwaλ':1,'tonakateκλi':1,'tonatiw':1,'tonatiw.':1,'τiτimimeh':1,'τiτiminsiwaλ':1,'τiτimiλ':1,'τontemok':1,'xilonen':1,'xipetotek':1,'xipetotek':1,'xipetotek':1,'xippilli':1,'xiwkosawki':1,'xiwistaκki':1,'xiwteκλi':1,'xiwteκλi':1,'xiwλaλawki':1,'xiwtotonλi':1,'xiwxoxoawki':1,'xoςipilli':1,'xoςikeτal':1,'xoςiλiκe':1,'xoςiλiκe':1,'xoloλ':1,'xoloλ':1,'yakateκλi':1,'yakateκλi':1,'yaosiwaλ':1,'yayawkasinteoλ':1,'sakaτonλi':1,'sakaτonλi':1
+    }
+    // END OF deities list
   },
   // END MAP SECTION
 
@@ -454,6 +467,16 @@ const nwt={
   hasLocativeSuffix(s){
     return s.match(/(ko|λan|tepek|τinco|singo|apa|apan)$/);
   },
+  ////////////////////////////////////////////////////////////
+  //
+  // isDeity: true if the name is in the list of deities
+  //
+  // NOTA BENE: This works on a name in ATOMIC orthography
+  //
+  ////////////////////////////////////////////////////////////
+  isDeity:function(name){
+    return nwt.map.deities[name];
+  },
   /////////////////////////////////////////
   //
   // splitToMetaWords
@@ -468,7 +491,8 @@ const nwt={
       mw.atomic         = nwt.toAtomic( word.toLowerCase() );
       const firstLetter = word[0];
       mw.flic           = firstLetter===firstLetter.toUpperCase(); // flic
-      mw.isPlaceName    = nwt.hasLocativeSuffix( mw.atomic );
+      mw.isPlace        = nwt.hasLocativeSuffix( mw.atomic );
+      mw.isDeity        = nwt.isDeity( mw.atomic );
       metaWords.push( mw );
     }
     return metaWords; 
@@ -496,6 +520,11 @@ if(process.argv.length<3){
 
 const input = process.argv[2];
 const atomic = nwt.toAtomic(input);
+
+//console.log('XXXXXXXXXXXXXXXXXXXXXXXXX');
+//console.log(atomic);
+//console.log('XXXXXXXXXXXXXXXXXXXXXXXXX');
+//return;
 
 //////////////////////////////
 //
@@ -547,8 +576,17 @@ for(const metaWord of metaWords){
     sep  += nwt.capitalize( ssep  );
     // ACK with NO conversion of capitalized names:
     ack  += metaWord.original;
+    ///////////////////////////////////////////////////////////////////////////
+    //
     // TRAGER with conversion of place names but NO conversion of other names:
-    if( metaWord.isPlaceName ){
+    //
+    // NOTA BENE: Test for deity first because a few deity names look like 
+    // they have place name suffixes:
+    //
+    ///////////////////////////////////////////////////////////////////////////
+    if( metaWord.isDeity ){
+      tmod += nab.prefixDeity + ttmod;
+    }else if( metaWord.isPlace ){
       // Quite likely a place name:
       tmod += nab.prefixPlace + ttmod;
     }else{
