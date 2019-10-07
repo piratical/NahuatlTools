@@ -259,44 +259,43 @@ const nwt={
     // STT GENERAL ATTEMPT SECTION
     //
     /////////////////////////////////
-    general_to_atomic:{
+    general_to_atomic:[
       // SOME ARCHAIC CONVENTIONS:
-      ' yn':' in', // experimental inclusion
-      ' yp':' ip', // experimental inclusion
-      ' yc':' ic', // experimental inclusion
-      'cuh':'κ', // /kʷ/ consonant
+      {k:'cuh',v:'κ'}, // /kʷ/ consonant
+      {k:' yn',v:' in'}, // experimental inclusion
+      {k:' yp',v:' ip'}, // experimental inclusion
+      {k:' yc',v:' ic'}, // experimental inclusion
       // n BEFORE p GENERALLY NOW SPELLED WITH m
       // (ex: pampa, cempoalli, etc.):
-      'np':'mp', // experimental inclusion
+      {k:'np',v:'mp'}, // experimental inclusion
       // STANDARD DIGRAPHS:
-      'hu':'w',
-      'uh':'w',
-      'qu':'k',
-      'cu':'κ', // /kʷ/ consonant
-      'ca':'ka',
-      'co':'ko',
-      'ce':'se',
-      'ci':'si',
-      'ku':'κ', // /kʷ/ consonant modern orthography
-      'kw':'κ', // /kʷ/ consonant modern variant orthography
-      'uc':'κ', // /kʷ/ consonant
-      'tz':'τ', // /t͡s/ consonant
-      'ts':'τ', // /t͡s/ consonant modern orthography
-      'tl':'λ', // /t͡ɬ/ consonant
-      'ch':'ς', // /t͡ʃ/ consonant
-      'sh':'x', // modern internet/inuitive addition
+      {k:'hu',v:'w'},
+      {k:'uh',v:'w'},
+      {k:'qu',v:'k'},
+      {k:'cu',v:'κ'}, // /kʷ/ consonant
+      {k:'ca',v:'ka'},
+      {k:'co',v:'ko'},
+      {k:'ce',v:'se'},
+      {k:'ci',v:'si'},
+      {k:'ku',v:'κ'}, // /kʷ/ consonant modern orthography
+      {k:'kw',v:'κ'}, // /kʷ/ consonant modern variant orthography
+      {k:'uc',v:'κ'}, // /kʷ/ consonant
+      {k:'tz',v:'τ'}, // /t͡s/ consonant
+      {k:'ts',v:'τ'}, // /t͡s/ consonant modern orthography
+      {k:'tl',v:'λ'}, // /t͡ɬ/ consonant
+      {k:'ch',v:'ς'}, // /t͡ʃ/ consonant
+      {k:'sh',v:'x'}, // modern internet/inuitive addition
       // FOREIGN CONSONANTS:
-      'rr':'ρ',
+      {k:'rr',v:'ρ'},
       // SINGLE CHARACTERS:
-      'c':'k',
+      {k:'c',v:'k'},
       // ALTERNATIVE SPELLINGS:
-      'ç':'s',
-      'z':'s',
+      {k:'ç',v:'s'},
+      {k:'z',v:'s'},
       // SINGLE GRAPH CONVERSIONS:
-      'u':'w',  // 
-      'j':'h'   // /h/ and glottal stop
-    }
-
+      {k:'u',v:'w'},  // 
+      {k:'j',v:'h'}   // /h/ and glottal stop
+    ]
   },
   // END MAP SECTION
 
@@ -335,9 +334,9 @@ const input = process.argv[2];
 
 //const input = 'Ye yuh matlac xihuitl in opehualoc in atl in tepetl Mexico, in ye omoman in mitl in chimalli, in ye nohuian ontlamatcamani in ahuacan in tepehuacan';
 let   atomic = input;
-for(let [key,val] of Object.entries(nwt.map.general_to_atomic)){
-  regex = new RegExp(key,'g');
-  atomic = atomic.replace(regex,val);
+for(let entry of nwt.map.general_to_atomic){
+  regex = new RegExp(entry.k,'g');
+  atomic = atomic.replace(regex,entry.v);
 }
 
 // Now recode atomic to Hasler modern:
