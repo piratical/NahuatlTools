@@ -478,7 +478,8 @@ const nwt={
   //
   ////////////////////////////////////////////////////////////
   hasLocativeSuffix(s){
-    return s.match(/(ko|λan|tepek|τinco|singo|apa|apan|kan)$/);
+    const matches = s.match(/(ko|λan|tepek|τinco|singo|apa|apan|kan)\b/);
+    return matches && matches[1];
   },
   ////////////////////////////////////////////////////////////
   //
@@ -506,7 +507,9 @@ const nwt={
   //
   /////////////////////////////////////////
   splitToMetaWords:function(input){
+    //const words = input.split(/[\.\,\!\?]| +/);
     const words = input.split(/ +/);
+
     const metaWords=[];
     for(let word of words){
       const mw = {}; // meta-word object
@@ -546,11 +549,6 @@ if(process.argv.length<3){
 const input = process.argv[2];
 const atomic = nwt.toAtomic(input);
 
-//console.log('XXXXXXXXXXXXXXXXXXXXXXXXX');
-//console.log(atomic);
-//console.log('XXXXXXXXXXXXXXXXXXXXXXXXX');
-//return;
-
 //////////////////////////////
 //
 // Convert Atomic to ACK, SEP:
@@ -578,6 +576,10 @@ const atomic = nwt.toAtomic(input);
 //console.log(`${nm} : ${nwt.isPerson(nm)}`);
 //nm='pedro';
 //console.log(`${nm} : ${nwt.isPerson(nm)}`);
+//return;
+//let nm='Mexico';
+//let na= nwt.toAtomic(nm);
+//console.log(`${nm} => ${na} => ${nwt.hasLocativeSuffix(na)}`);
 //return;
 
 //
@@ -617,14 +619,18 @@ for(const metaWord of metaWords){
     if( metaWord.isDeity ){
       tmod += nab.prefixDeity + ttmod;
     }else if( metaWord.isPlace ){
+      console.log(`${metaWord.original} => ${ttmod} => isPlace`);
       // Quite likely a place name:
       tmod += nab.prefixPlace + ttmod;
     }else if( metaWord.isPerson ){
       console.log('processing person '+metaWord.original);
       tmod += nab.prefixName + ttmod;
     }else{
-      // Some other name, don't convert:
-      tmod += metaWord.original;
+      // Some other name, 
+      // One approach is to not convert:
+      //tmod += metaWord.original;
+      // Another approach is to convert since we convert everything else:
+      tmod += ttmod;
     }
   }else{
     hmod += hhmod;
