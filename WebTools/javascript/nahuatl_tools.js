@@ -619,7 +619,6 @@ for(const metaWord of metaWords){
     if( metaWord.isDeity ){
       tmod += nab.prefixDeity + ttmod;
     }else if( metaWord.isPlace ){
-      console.log(`${metaWord.original} => ${ttmod} => isPlace`);
       // Quite likely a place name:
       tmod += nab.prefixPlace + ttmod;
     }else if( metaWord.isPerson ){
