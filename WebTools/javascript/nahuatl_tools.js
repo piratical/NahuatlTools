@@ -653,7 +653,7 @@ for(const metaWord of metaWords){
       // Quite likely a place name:
       tmod += nab.prefixPlace + ttmod;
     }else if( metaWord.isPerson ){
-      console.log('processing person '+metaWord.original);
+      //console.log('processing person '+metaWord.original);
       tmod += nab.prefixName + ttmod;
     }else{
       // Some other name, 
