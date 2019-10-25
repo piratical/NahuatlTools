@@ -323,6 +323,14 @@ const nwt={
   isAtomicConsonant:function(c){
     return 'mnptkκτλςsxhlwyñβdgfrρ'.indexOf(c) != -1;
   },
+  ///////////////////////////
+  //
+  // isForeignConsonant
+  //
+  ///////////////////////////
+  isForeignConsonant:function(c){
+    return 'ñβdgfrρbv'.indexOf(c) != -1;
+  },
   /////////////////////////////////////////////////////
   //
   // toAtomic: converts input in any format to Atomic
@@ -479,7 +487,30 @@ const nwt={
   ////////////////////////////////////////////////////////////
   hasLocativeSuffix(s){
     const matches = s.match(/(ko|λan|tepek|τinco|singo|apa|apan|kan)\b/);
-    return matches && matches[1];
+    if(matches && matches[1]){
+      //
+      // This is a strong indication of a locative suffix on a nahuatl
+      // word. 
+      // 
+      // BUT if the beginning of the word contains foreign consonants,
+      // then it is very likely *NOT* a Nahuatl word. A good example is the
+      // name "Francisco" which looks to have "co" at the end, but is
+      // clearly not nahuatl.
+      //
+      // So here we add this refinement to insure that we return false 
+      // for words like "Fransisco" but true for words like "Telpancingo" ...
+      //
+      const firstPart = s.substring(0,matches.index);
+      for(let i=0;i<firstPart.length;i++){
+        if(nwt.isForeignConsonant(firstPart[i])){
+          return false;
+        }
+      }
+      // Get here if no foreign consonants, so:
+      return true;
+    }else{
+      return false;
+    }
   },
   ////////////////////////////////////////////////////////////
   //
