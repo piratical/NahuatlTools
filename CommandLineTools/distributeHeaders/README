@@ -1,0 +1,54 @@
+distributeHeaders.js
+
+Given a text file containing grouped lists such as:
+
+=== START EXAMPLE ======
+
+BAJA CALIFORNIA
+ENSENADA
+MEXICALI
+TECATE
+TIJUANA
+PLAYAS DE ROSARITO
+
+CIUDAD DE MÉXICO
+AZCAPOTZALCO
+COYOACÁN
+CUAJIMALPA DE MORELOS
+GUSTAVO A. MADERO
+IZTACALCO
+IZTAPALAPA
+LA MAGDALENA CONTRERAS
+MILPA ALTA
+... etc. ...
+=== END EXAMPLE =======
+
+... wherein each group is separated by a blank line and then the first line
+following after the blank line represents the group heading (e.g., 'Baja California'
+and 'Ciudad de México' are the groups in the example above), this NODE.JS script 
+distributes the group heading onto each of the lines in the group, using a tab 
+character as separator, so that the result for the above example would be:
+
+=== START EXAMPLE ======
+BAJA CALIFORNIA<TAB>ENSENADA
+BAJA CALIFORNIA<TAB>MEXICALI
+BAJA CALIFORNIA<TAB>TECATE
+BAJA CALIFORNIA<TAB>TIJUANA
+BAJA CALIFORNIA<TAB>PLAYAS DE ROSARITO
+CIUDAD DE MÉXICO<TAB>AZCAPOTZALCO
+CIUDAD DE MÉXICO<TAB>COYOACÁN
+CIUDAD DE MÉXICO<TAB>CUAJIMALPA DE MORELOS
+CIUDAD DE MÉXICO<TAB>GUSTAVO A. MADERO
+CIUDAD DE MÉXICO<TAB>IZTACALCO
+CIUDAD DE MÉXICO<TAB>IZTAPALAPA
+CIUDAD DE MÉXICO<TAB>LA MAGDALENA CONTRERAS
+CIUDAD DE MÉXICO<TAB>MILPA ALTA
+... etc. ...
+=== END EXAMPLE ======
+
+This script thus makes it very easy to quickly convert a list grouped by
+categories (such as municipalities grouped by states in the example above)
+into a CSV table that can be imported into a database table.
+
+-- Ed Trager, 2019.11.25
+
