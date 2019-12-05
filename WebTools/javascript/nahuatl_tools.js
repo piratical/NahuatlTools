@@ -2,10 +2,10 @@
 //
 // nahuatl_tools.js
 //
-// (c) 2019 by Edward H. Trager
+// (c) 2019, 2020 by Edward H. Trager
 //     ALL RIGHTS RESERVED
 //
-// (c) 2019 por Edward H. TRAGER
+// (c) 2019, 2020 por Edward H. TRAGER
 //     TODOS LOS DERECHOS RESERVADOS
 //
 // This is FREE/LIBRE SOFTWARE published 
@@ -17,8 +17,120 @@
 // o posterior.
 //
 // INITIAL CREATION DATE: 2019.09.13 ET
+// LAST NOTED UPDATE: 2019.12.05.ET
+// (SOME UPDATES MAY NOT BE 'NOTED':
+// CHECK GITHUB HISTORY FOR THE AUTHORATIVE
+// CHANGE LOG).
 //
 ////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////
+//
+// INTROUCTION
+//
+// Here we introduce an internal code-use-only 
+// "computational orthography" that is
+// based on a modern Hasler orthography but where we
+// reduce digraphs to single Unicode code points
+// with the goal of simplifying the mapping and
+// translation code. We currently use a few greek letters
+// as 'placeholders' for Náhuatl phonemes which must be 
+// written as digraphs in Latin-based orthographies. We call this 
+// ATOMIC. The TRAGER orthography, which is included here, is the only 
+// "non-computational orthography" that has unique letter symols for 
+// all consonantal phonemes, thus eliminating the need for (and unwanted 
+// complexity of) digraphs.
+//
+// With this ATOMIC orthography in place, the general idea is that we
+// should be able —within reasonable bounds— to "map" almost *any*
+// colonial-era or modern written representation of Nahuatl language
+// into the ATOMIC orthography. From the ATOMIC representation,
+// we can then run the mapping process the other way to produce output
+// in any desired orthographic format. In practice, we limit the
+// output formats to well-known orthographies: Hasler modern, ACK, SEP,
+// —and of course also to the TRAGER orthography.
+//
+// Here is a summary diagram of this process:
+//
+//             COLONIAL-ERA           HASLER     INTERNET
+//               NAHUATL       SEP    MODERN     INTUITIVE    ACK
+//                 |            |       |            |         |
+//                 +------------+-------+------------+---------+
+//                                      |
+//                                      V
+//                                    ATOMIC
+//                                      |
+//                                      V
+//                                      |
+//                     +-------+--------+-------+--- ... -----+
+//                     |       |        |       |             |
+//                     V       V        V       V             V
+//                   HASLER   ACK     TRAGER   SEP          (ETC.)
+//
+//
+// It sounds simple, right? But of course the "devil is in the 
+// details." For example, the code now includes a lookup-table of
+// common names of people, so that we can intentionally avoid
+// "converting" the spelling of people's names. Also, there is
+// a lookup-table for the names of Aztec gods and dieties. And there
+// is a heuristic function for place names. With these, we can
+// look for capitalized words in a text and at least somewhat 
+// heuristically decide what to do with them. For example, the TRAGER
+// orthography does not have upper-case vs. lower-case 
+// letters, but it does have a special set of prefix characters for
+// marking names of people, names of deities, and place names. So
+// the code here will mark off such names, although naturally it 
+// can only do so within the mechanical limitations of the lookup
+// tables and heuristics. Nevertheless, this feature saves time and
+// reduces the amount of manual editing required. For the other
+// orthographies, the main thing is to preserve capitalization and
+// avoid unecessary conversions on the spellings of proper names.
+//
+////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////
+//
+// STT OF ato definitions section
+//
+// ==> Classification of letters used
+//     for the internal ATOMIC
+//     orthography.
+//
+// ==> Anything not present here
+//     should, as a general principle,
+//     pass through without change.
+//
+// ==> Note that now 'b' and 'v' are included
+//     as discrete items in the atomic set
+//     so that we can preserve the spelling distinctions
+//     between them for orthographies like Hasler and SEP
+//     but we can still group them together (into the 'β')
+//     for the TRAGER orthography (The phoneme-based TRAGER
+//     orthography does not differentiate 'b' from 'v').
+//
+///////////////////////////////////////////////////////////////
+const ato={
+  vowels:{
+    native:'aeio',
+    foreign:'u'
+  },
+  consonants:{
+    native:'mnptkκτλςsxhlwy',
+    foreign:'ñβdgfrρbv'  // NOTA BENE: ADDITION OF 'bv' AT END HERE
+  }
+};
+//
+// Convenience groupings:
+//
+ato.vowels.all     = ato.vowels.native     + ato.vowels.foreign;
+ato.consonants.all = ato.consonants.native + ato.consonants.foreign;
+ato.all            = ato.vowels.all + ato.consonants.all;
+/////////////////////////////////////
+//
+// END OF ato definitions section
+//
+/////////////////////////////////////
+
 
 ///////////////////////////////////////////
 //
@@ -28,22 +140,22 @@
 //
 ///////////////////////////////////////////
 const nab={
-  //////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
   //
-  // CURRENT ABUGIDA CODE ASSIGNMENTS
+  // CURRENT ABUGIDA CODE ASSIGNMENTS FOR THE TRAGER ORTHOGRAPHY
   //
   // CURRENTLY THESE ARE PRIVATE USE AREA
-  // (PUA) ASSIGNMENTS USED IN THE 
-  // NahuatlOne font:
-  // (Assignments taken from the Nahuatl Tools C++ Transcoder)
+  // (PUA) ASSIGNMENTS USED IN THE NahuatlOne font.
   //
-  //////////////////////////////////////////////////////////////
+  // (Assignments taken from Trager's Nahuatl Tools C++ Transcoder)
+  //
+  ////////////////////////////////////////////////////////////////////
   // Vowels:
   vowelA:'\uED90',
   vowelE:'\uED91',
   vowelI:'\uED92',
   vowelO:'\uED93',
-  vowelU:'\uED94',
+  vowelU:'\uED94',        // FOREIGN VOWEL
   // Long Vowel Sign:
   longVowelSign:'\uED95',
   // Vowel Signs:
@@ -127,38 +239,32 @@ nab.map={
 //
 /////////////////////////////////////
 
-
 ////////////////////////////////////////////
 //
 // BEGIN nwt (nawatl) definitions section
 //
 ////////////////////////////////////////////
 const nwt={
-  ///////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
   // 
   // NOTA BENE:
   // 
-  // (1) We introduce an internal
-  // code-use-only "computational" orthography that is
-  // based on a modern Hasler orthography but where we
-  // reduce the digraphs to single Unicode code points
-  // with the goal of simplifying the mapping and
-  // translation code. We currently use some greek letters
-  // as placeholders for the digraph phonemes. 
-  // We call this ATOMIC.
+  // (1) Here we employ the internal
+  // code-use-only "computational" ATOMIC orthography
+  // described in detail in the INTRODUCTION.
   //
   // (2) Mapping from ATOMIC to SEP or HASLER MODERN is trivial.
-  // However, mapping to ACK and to the Trager abugida require 
+  // However, mapping to ACK and to the TRAGER abugida require 
   // additional processing in a more nuanced manner. Nevertheless
   // the first step is still the same: map to ATOMIC.
   // 
   // (3) HMOD is our version of Hasler Modern 
-  // using 'w' for [w] and 'h' for [ʔ]
+  // using 'w' for [w] and 'h' for [ʔ]/[h]
   // 
   // (4) ACK  is Andrews-Campbell-Kartunnen 
   // "ACK" appears to have been coined by Sullivan & Olko
   //
-  // (5) SEP is SEP using 'u' for [w] and 'j' for [ʔ]
+  // (5) SEP is SEP using 'u' for [w] and 'j' for [ʔ]/[h]
   //
   // (6) INTR: (internet/intuitive) is like #3 but using sh for [ʃ]
   //     As Hasler Modern seems sufficient, we don't have a writer
@@ -168,8 +274,10 @@ const nwt={
   // (7) The general reader, toAtomic() which uses the general_to_atomic
   //     map  seems to function well. There does not seem to be a 
   //     compelling need for individual readers for SEP, ACK, etc.
+  //     One could always add additional specific readers to handle 
+  //     some other orthography that the general reader cannot handle.
   //
-  ///////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
   // 
   // STT MAP SECTION
   //
@@ -203,6 +311,8 @@ const nwt={
       // FOREIGN (SPANISH) CONSONANTS:
       'ñ':{hmod:'ñ',ack:'ñ',sep:'ñ',intr:'ñ',nab:nab.consonantNYA},
       'β':{hmod:'b',ack:'b',sep:'b',intr:'b',nab:nab.consonantBVA},
+      'b':{hmod:'b',ack:'b',sep:'b',intr:'b',nab:nab.consonantBVA}, // NOTA BENE!
+      'v':{hmod:'v',ack:'v',sep:'v',intr:'v',nab:nab.consonantBVA}, // NOTA BENE!
       'd':{hmod:'d',ack:'d',sep:'d',intr:'d',nab:nab.consonantDA},
       'g':{hmod:'g',ack:'g',sep:'g',intr:'g',nab:nab.consonantGA},
       'f':{hmod:'f',ack:'f',sep:'f',intr:'f',nab:nab.consonantFA},
@@ -219,8 +329,8 @@ const nwt={
     // "any" incoming orthography to the atomic
     //
     // k: The key in the incoming orthography. 
-    //    Keys can be of any length. Longest
-    //    keys first. Additional rules on key order
+    //    Keys can be of any length. LONGEST
+    //    KEYS FIRST. Additional rules on key order
     //    may also apply: there may exist good reasons
     //    to process certain keys before others even when
     //    key length is not different.
@@ -231,9 +341,41 @@ const nwt={
     general_to_atomic:[
       // SOME ARCHAIC CONVENTIONS:
       {k:'cuh',v:'κ'},   // /kʷ/ consonant in some classical variants
-      {k:' yn',v:' in'}, // experimental inclusion
-      {k:' yp',v:' ip'}, // experimental inclusion
-      {k:' yc',v:' ic'}, // experimental inclusion
+      // 2019.12.05.ET addenda: Possibly rare case in colonial era documents 
+      // of a "v" representing /w/ e.g., "çivatl" for "cihuatl". 
+      // Presumably this variant spelling only occurs
+      // when "v" is nested between vowels. There are 4 vowels, so 4x4=16 cases:
+      {k:'ava',v:'awa'},
+      {k:'ave',v:'awe'},
+      {k:'avi',v:'awi'},
+      {k:'avo',v:'awo'},
+      {k:'eva',v:'ewa'},
+      {k:'eve',v:'ewe'},
+      {k:'evi',v:'ewi'},
+      {k:'evo',v:'ewo'},
+      {k:'iva',v:'iwa'},
+      {k:'ive',v:'iwe'},
+      {k:'ivi',v:'iwi'},
+      {k:'ivo',v:'iwo'},
+      {k:'ova',v:'owa'},
+      {k:'ove',v:'owe'},
+      {k:'ovi',v:'owi'},
+      {k:'ovo',v:'owo'},
+      // 2019.12.05.ET addenda: Anytime a "y" is followed by a consonant,
+      // treat the "y" as vowel /i/, e.g. ymach=>imach, ytoca=>itoca, yn=>in, yhuan=>ihuan, etc.
+      // This thus covers one of the common colonial variant practices:
+      {k:'ym',v:'im'}, //
+      {k:'yn',v:'in'}, //
+      {k:'yp',v:'ip'}, //
+      {k:'yt',v:'it'}, //
+      {k:'yc',v:'ic'}, // covers colonial era /ik/ and /ikʷ/ and /it͡ʃ/
+      {k:'yq',v:'iq'}, // covers colonial era /iki/ and /ike/
+      {k:'yh',v:'ih'}, // covers colonial era /ih/ and /iw/
+      {k:'yt',v:'it'}, // covers colonial era /it/, /it͡s/ and /it͡ɬ/
+      {k:'ys',v:'is'}, //
+      {k:'yl',v:'il'}, //
+      {k:'yx',v:'ix'}, //
+      {k:'yw',v:'iw'}, // hmmm ... no idea if this one really occurs
       // n BEFORE p GENERALLY NOW SPELLED WITH m
       // (ex: panpa -> pampa, cenpoalli -> cempoalli, etc.).
       {k:'np',v:'mp'}, // experimental inclusion
@@ -305,7 +447,7 @@ const nwt={
   //
   //////////////////////////
   isAtomicLetter:function(c){
-    return 'aeioumnptkκτλςsxhlwyñβdgfrρ'.indexOf(c) != -1;
+    return ato.all.indexOf(c) != -1;
   },
   //////////////////////////
   //
@@ -313,7 +455,7 @@ const nwt={
   //
   //////////////////////////
   isAtomicVowel:function(c){
-    return 'aeiou'.indexOf(c) != -1;
+    return ato.vowels.all.indexOf(c) != -1;
   },
   //////////////////////////
   //
@@ -321,7 +463,7 @@ const nwt={
   //
   //////////////////////////
   isAtomicConsonant:function(c){
-    return 'mnptkκτλςsxhlwyñβdgfrρ'.indexOf(c) != -1;
+    return ato.consonants.all.indexOf(c) != -1;
   },
   ///////////////////////////
   //
@@ -329,7 +471,7 @@ const nwt={
   //
   ///////////////////////////
   isForeignConsonant:function(c){
-    return 'ñβdgfrρbv'.indexOf(c) != -1;
+    return ato.consonants.foreign.indexOf(c) != -1;
   },
   /////////////////////////////////////////////////////
   //
@@ -572,8 +714,17 @@ const nwt={
 // MAIN
 //
 //////////////////////////
+const announcement = 'Náhuatl Orthography Converter ©2019, 2020 by Edward H. Trager. All Rights Reserved';
+const usage        = `node.js ${process.argv[1]} <input string to convert>`;
+if(process.argv.length===3 && (process.argv[2]==='-h' || process.argv[2]==='--help')){
+  console.log(announcement);
+  console.log(usage);
+  return 0;
+}
 if(process.argv.length<3){
-  console.log('No string to process');
+  console.log(announcement);
+  console.log(usage);
+  console.log('ERROR: No string to process.');
   return 0;
 }
 
@@ -617,7 +768,7 @@ const atomic = nwt.toAtomic(input);
 // More complicated pipeline:
 //
 console.log('===== Pipeline that handles capitalization properly =====');
-console.log(input);
+console.log('[INP]',input);
 const metaWords = nwt.splitToMetaWords(input);
 
 // CREATE RESULT SET CONTAINERS:
@@ -676,10 +827,10 @@ for(const metaWord of metaWords){
 
 
 // Show the results:
-console.log(hmod);
-console.log(sep );
-console.log(ack );
-console.log(tmod);
+console.log('[HAS]',hmod);
+console.log('[SEP]',sep );
+console.log('[ACK]',ack );
+console.log('[TRA]',tmod);
 
 // END OF CODE 
 
