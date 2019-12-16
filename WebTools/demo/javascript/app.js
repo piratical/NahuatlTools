@@ -1,4 +1,11 @@
 
+//
+// Background:
+//
+const backgroundDiv = document.getElementById('background');
+scatterFill(backgroundDiv);
+
+
 // References to the TEXTAREA nodes:
 const ta_inp    = document.getElementById('input' );
 const ta_ack    = document.getElementById('ack'   );
