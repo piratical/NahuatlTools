@@ -690,7 +690,7 @@ const nwt={
       mw.atomic         = nwt.toAtomic( word.toLowerCase() );
       const firstLetter = word[0];
       // flic = first letter is capital
-      mw.flic           = firstLetter===firstLetter.toUpperCase(); // flic
+      mw.flic           = firstLetter ? firstLetter===firstLetter.toUpperCase() : false; // flic
       mw.isPlace        = nwt.hasLocativeSuffix( mw.atomic );
       mw.isDeity        = nwt.isDeity( mw.atomic );
       mw.isPerson       = nwt.isPersonName( mw.original );
@@ -707,130 +707,6 @@ const nwt={
     return s[0].toUpperCase() + s.slice(1);
   }
 };
-
-
-//////////////////////////
-//
-// MAIN
-//
-//////////////////////////
-const announcement = 'Náhuatl Orthography Converter ©2019, 2020 by Edward H. Trager. All Rights Reserved';
-const usage        = `node.js ${process.argv[1]} <input string to convert>`;
-if(process.argv.length===3 && (process.argv[2]==='-h' || process.argv[2]==='--help')){
-  console.log(announcement);
-  console.log(usage);
-  return 0;
-}
-if(process.argv.length<3){
-  console.log(announcement);
-  console.log(usage);
-  console.log('ERROR: No string to process.');
-  return 0;
-}
-
-const input = process.argv[2];
-const atomic = nwt.toAtomic(input);
-
-//////////////////////////////
-//
-// Convert Atomic to ACK, SEP:
-//
-//////////////////////////////
-
-//const sep  = nwt.atomicToSEP(atomic);
-//const hmod = nwt.atomicToHaslerModern(atomic);
-//const ack  = nwt.atomicToACK(atomic);
-//const tmod = nwt.atomicToTragerModern(atomic);
-
-//console.log(input);
-//console.log('↓ CONVERTED TO INTERNAL ATOMIC ORTHOGRAPHY ↓');
-//console.log(atomic);
-//console.log('↓ CONVERTED TO HASLER MODERN ↓');
-//console.log(hmod);
-//console.log('↓ CONVERTED TO SEP ↓');
-//console.log(sep);
-//console.log('↓ CONVERTED TO TRAGER ABUGIDA ↓');
-//console.log(tmod);
-//console.log('↓ CONVERTED TO ACK ↓');
-//console.log(ack);
-
-//let nm='alejandra';
-//console.log(`${nm} : ${nwt.isPerson(nm)}`);
-//nm='pedro';
-//console.log(`${nm} : ${nwt.isPerson(nm)}`);
-//return;
-//let nm='Mexico';
-//let na= nwt.toAtomic(nm);
-//console.log(`${nm} => ${na} => ${nwt.hasLocativeSuffix(na)}`);
-//return;
-
-//
-// More complicated pipeline:
-//
-console.log('===== Pipeline that handles capitalization properly =====');
-console.log('[INP]',input);
-const metaWords = nwt.splitToMetaWords(input);
-
-// CREATE RESULT SET CONTAINERS:
-let hmod=''; // Hasler Modern
-let sep =''; // SEP
-let ack =''; // ACK
-let tmod=''; // Trager Modern
-
-for(const metaWord of metaWords){
-  // CONVERT WORDS TO OUTPUT ORTHOGRAPHIES:
-  let hhmod  = nwt.atomicToHaslerModern( metaWord.atomic );
-  let ssep   = nwt.atomicToSEP( metaWord.atomic );
-  let aack   = nwt.atomicToACK( metaWord.atomic );
-  let ttmod  = nwt.atomicToTragerModern( metaWord.atomic );
-  if(metaWord.flic){
-    // Hasler Modern with NO conversion of capitalized names:
-    hmod += metaWord.original;
-    // SEP with conversion of ALL capitalized words:
-    sep  += nwt.capitalize( ssep  );
-    // ACK with NO conversion of capitalized names:
-    ack  += metaWord.original;
-    ///////////////////////////////////////////////////////////////////////////
-    //
-    // TRAGER 
-    //
-    // NOTA BENE: Test for deity first because a few deity names look like 
-    // they have place name suffixes:
-    //
-    ///////////////////////////////////////////////////////////////////////////
-    if( metaWord.isDeity ){
-      tmod += nab.prefixDeity + ttmod;
-    }else if( metaWord.isPlace ){
-      // Quite likely a place name:
-      tmod += nab.prefixPlace + ttmod;
-    }else if( metaWord.isPerson ){
-      //console.log('processing person '+metaWord.original);
-      tmod += nab.prefixName + ttmod;
-    }else{
-      // Some other name, 
-      // One approach is to not convert:
-      //tmod += metaWord.original;
-      // Another approach is to convert since we convert everything else:
-      tmod += ttmod;
-    }
-  }else{
-    hmod += hhmod;
-    sep  += ssep ;
-    ack  += aack ;
-    tmod += ttmod;
-  }
-  hmod += ' ';
-  sep  += ' ';
-  ack  += ' ';
-  tmod += ' ';
-}
-
-
-// Show the results:
-console.log('[HAS]',hmod);
-console.log('[SEP]',sep );
-console.log('[ACK]',ack );
-console.log('[TRA]',tmod);
 
 // END OF CODE 
 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="16x16"   href="images/icam_icon_16x16.png">
+  <!-- UTF-8 -->
+  <meta charset="utf-8">
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&amp;subset=greek,latin-ext" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,400i,700&amp;subset=latin-ext" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/app.css"  media="screen">
+
+  <!-- INCLUDE D3 -->
+  <!-- <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script> -->
+
+  <!-- INCLUDE NAHUATL-TOOLS -->
+  <script src="javascript/nahuatl_tools.js" charset="utf-8"></script>
+
+  
+</head>
+<body>
+ <div id='background'>
+ </div>
+ <div id='content'>
+  <div class='vblock' id='v1'>
+   <div class='vunit' id='v1h1'>
+    <h2>Input:</h2>
+    <textarea id='input'></textarea>
+   </div>
+  </div>
+  <div class='vblock' id='v2'>
+   <div class='vunit' id='v2h1'>
+    <div class='fr'>
+     <input type='checkbox' id='hmod_cn' />
+     <label for='hmod_cn'>Convertir nombres propios</label>
+    </div>
+    <h2>Hasler Modern:</h2>
+    <textarea id='hasler'></textarea>
+   </div>
+   <div class='vunit' id='v2h2'>
+    <div class='fr'>
+     <input type='checkbox' id='ack_cn' />
+     <label for='ack_cn'>Convertir nombres propios</label>
+    </div>
+    <h2>ACK:</h2>
+    <textarea id='ack'></textarea>
+   </div>
+  </div>
+  <div class='vblock' id='v3'>
+   <div class='vunit' id='v3h1'>
+    <div class='fr'>
+     <input type='checkbox' id='tmod_cn' checked />
+     <label for='tmod_cn'>Convertir nombres propios</label>
+    </div>
+    <h2>:</h2>
+    <textarea id='trager'></textarea>
+   </div>
+   <div class='vunit' id='v3h2'>
+    <div class='fr'>
+     <input type='checkbox' id='sep_cn' />
+     <label for='sep_cn'>Convertir nombres propios</label>
+    </div>
+    <h2>SEP:</h2>
+    <textarea id='sep'></textarea>
+   </div>
+  </div>
+ </div>
+</body>
+<!-- INCLUDE APP.JS -->
+<script src="javascript/app.js" charset="utf-8"></script>
+</html>
