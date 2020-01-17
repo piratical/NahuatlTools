@@ -562,12 +562,46 @@ const nwt={
     }
     return result;
   },
+  /////////////////////////////////////////
+  //
+  // preserveVerbStemVowels(): 
+  //
+  // In the Trager orthography when
+  // a verb stem starts with a vowel, we
+  // may want to maintain that vowel as an
+  // independent vowel instead of having it
+  // become an above-consonant vowel sign on
+  // the preceding consonant when the preceing
+  // consonant is part of a verb prefix (such
+  // as 'mitz', 'nech', etc.
+  // We use ZWJ to prevent combining.
+  //
+  ////////////////////////////////////////
+  preserveVerbStemVowels:function(s){
+    //const zwj = 0x200B;
+    const replacement = '$1$2\u200B$3';
+    const pattern = new RegExp('(xi|ni|ti|in)?(neς|miτ|teς|meς|mo|ki|kin)(a|e|i|o)','g');
+    return s.replace(pattern,replacement);
+  },
+  /////////////////////////////////////////
+  //
+  // removeZWJ: remove Zero Width Joiner
+  //
+  /////////////////////////////////////////
+  removeZWJ:function(s){
+    const pattern = new RegExp('\u200B','g');
+    const replacement = ''; // Empty string, so just remove
+    return s.replace(pattern,replacement);
+  },
   ////////////////////////////////////////////
   //
   // atomicToTragerModern
   //
   ////////////////////////////////////////////
   atomicToTragerModern:function(atomic){
+
+    atomic = nwt.preserveVerbStemVowels(atomic);
+
     let result='';
     for(let i=0;i<atomic.length;i++){
       
@@ -616,7 +650,7 @@ const nwt={
         result += current;
       }
     }
-    return result;
+    return nwt.removeZWJ(result);
   },
   // END atomicToTragerModern
 
