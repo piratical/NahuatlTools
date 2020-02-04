@@ -1,0 +1,30 @@
+// tocsv.js (c) 2020 by Edward H. Trager ALL RIGHTS RESERVED
+//
+// released under GNU GPL 2.0 or later at your discretion
+//
+// Initiated on: 2020.02.04.ET
+//
+// THIS SCRIPT CONVERTS POSTGRES QUERY OUTPUT THAT LOOKS LIKE THIS AS IT IS PRINTED IN THE TERMINAL:
+//
+// PRDM 2014-5905 |       25102 |     45290 |       2153 |    125156 | 4 - complete with review | male   |  1.000 | 23
+// PRDM 2014-5906 |       25694 |     56851 |       1773 |    376254 | 4 - complete with review | female | 69.000 | 21
+// PRDM 2014-5903 |       35694 |     16851 |       5793 |    796255 | 4 - complete with review | male   | 73.000 | 23
+// PRDM 2014-5912 |       78456 |     70577 |       8426 |    668858 |                          | male   | 46.000 | 21
+// PRDM 2014-5917 |       18748 |     81144 |       1813 |    929613 | 4 - complete with review | female | 27.000 | 23
+// PRDM 2014-5919 |       58764 |     31174 |       2223 |    259655 |                          | male   | 12.000 | 21
+//
+// ... TO COMMA-SEPARATED VALUE (CSV) OUTPUT THAT LOOKS LIKE THIS:
+//
+// "PRDM 2014-5905","25102","45290","2153","125156","4 - complete with review","male","1.000","23"
+// "PRDM 2014-5906","25694","56851","1773","376254","4 - complete with review","female","69.000","21"
+// "PRDM 2014-5903","35694","16851","5793","796255","4 - complete with review","male","73.000","23"
+// "PRDM 2014-5912","78456","70577","8426","668858",".","male","46.000","21"
+// "PRDM 2014-5917","18748","81144","1813","929613","4 - complete with review","female","27.000","23"
+// "PRDM 2014-5919","58764","31174","2223","259655",".","male","12.000","21"
+//
+// ... AND CONVENIENTLY ALSO ADDS AT THE BEGINNING A UNICODE BYTE ORDER MARK WHICH IS REQUIRED BY CERTAIN MICROSOFT PRODUCTS
+// SUCH AS EXCEL IN ORDER TO HANDLE UNICODE PROPERLY.
+//
+// FOR RELATIVELY SHORT QUERY OUTPUT (UP TO A FEW HUNDRED LINES), COPYING AND PASTING THE ON-SCREEN RESULTS TO A FILE AND
+// THEN RUNNING THIS SCRIPT IS A TIMESAVER WHEN YOU NEED TO DELIVER THE RESULTS IN A FORMAT THAT EXCEL CAN READ.
+
