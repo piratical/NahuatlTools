@@ -1,0 +1,5 @@
+ADDBOM is (c) 2019 by Edward H. Trager.
+
+addbom adds a Unicode byte order mark to the beginning of a file.
+Microsoft Excel very curiously requires this in order to treat a file as UTF-8.
+
