@@ -285,39 +285,39 @@ const nwt={
     // STT ATOMIC mapping:
     atomic:{
       // NATIVE VOWELS:
-      'a':{hmod:'a',ack:'a',sep:'a',intr:'a',nab:nab.vowelA},
-      'e':{hmod:'e',ack:'e',sep:'e',intr:'e',nab:nab.vowelE},
-      'i':{hmod:'i',ack:'i',sep:'i',intr:'i',nab:nab.vowelI},
-      'o':{hmod:'o',ack:'o',sep:'o',intr:'o',nab:nab.vowelO},
+      'a':{hmod:'a',ack:'a',sep:'a',intr:'a',nab:nab.vowelA,ipa:'a'},
+      'e':{hmod:'e',ack:'e',sep:'e',intr:'e',nab:nab.vowelE,ipa:'e'},
+      'i':{hmod:'i',ack:'i',sep:'i',intr:'i',nab:nab.vowelI,ipa:'i'},
+      'o':{hmod:'o',ack:'o',sep:'o',intr:'o',nab:nab.vowelO,ipa:'o'},
       // FOREIGN (SPANISH) VOWEL:
-      'u':{hmod:'u',ack:'u',sep:'u',intr:'u',nab:nab.vowelU},
+      'u':{hmod:'u',ack:'u',sep:'u',intr:'u',nab:nab.vowelU,ipa:'u'},
       // NATIVE CONSONANTS:
-      'm':{hmod:'m',ack:'m',sep:'m',intr:'m',nab:nab.consonantMA},
-      'n':{hmod:'n',ack:'n',sep:'n',intr:'n',nab:nab.consonantNA},
-      'p':{hmod:'p',ack:'p',sep:'p',intr:'p',nab:nab.consonantPA},
-      't':{hmod:'t',ack:'t',sep:'t',intr:'t',nab:nab.consonantTA},
-      'k':{hmod:'k',ack:'c',sep:'k',intr:'k',nab:nab.consonantCA},
-      'κ':{hmod:'ku',ack:'cu',sep:'ku',intr:'ku',nab:nab.consonantCUA}, // greek kappa          for [kʷ]
-      'ʔ':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA},      // [ʔ]
-      'τ':{hmod:'tz',ack:'tz',sep:'ts',intr:'tz',nab:nab.consonantTZA}, // greek tau            for [t͡s]
-      'λ':{hmod:'tl',ack:'tl',sep:'tl',intr:'tl',nab:nab.consonantTLA}, // greek lambda         for [t͡ɬ]
-      'ς':{hmod:'ch',ack:'ch',sep:'ch',intr:'ch',nab:nab.consonantCHA}, // terminal greek sigma for [t͡ʃ]
-      's':{hmod:'s',ack:'z',sep:'s',intr:'s',nab:nab.consonantSA},
-      'l':{hmod:'l',ack:'l',sep:'l',intr:'l',nab:nab.consonantLA},
-      'x':{hmod:'x',ack:'x',sep:'x',intr:'sh',nab:nab.consonantXA},     // [ʃ]
-      'h':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA},      // [h]
-      'y':{hmod:'y',ack:'y',sep:'y',intr:'y',nab:nab.consonantYA},      // [j]
-      'w':{hmod:'w',ack:'hu',sep:'u',intr:'w',nab:nab.consonantWA},     // [w]
+      'm':{hmod:'m',ack:'m',sep:'m',intr:'m',nab:nab.consonantMA,ipa:'m'},
+      'n':{hmod:'n',ack:'n',sep:'n',intr:'n',nab:nab.consonantNA,ipa:'n'},
+      'p':{hmod:'p',ack:'p',sep:'p',intr:'p',nab:nab.consonantPA,ipa:'p'},
+      't':{hmod:'t',ack:'t',sep:'t',intr:'t',nab:nab.consonantTA,ipa:'t'},
+      'k':{hmod:'k',ack:'c',sep:'k',intr:'k',nab:nab.consonantCA,ipa:'k'},
+      'κ':{hmod:'ku',ack:'cu',sep:'ku',intr:'ku',nab:nab.consonantCUA,ipa:'kʷ'}, // greek kappa          for [kʷ]
+      'ʔ':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA,ipa:'ʔ'},      // [ʔ]
+      'τ':{hmod:'tz',ack:'tz',sep:'ts',intr:'tz',nab:nab.consonantTZA,ipa:'ts'}, // greek tau            for [t͡s]
+      'λ':{hmod:'tl',ack:'tl',sep:'tl',intr:'tl',nab:nab.consonantTLA,ipa:'tɬ'}, // greek lambda         for [t͡ɬ]
+      'ς':{hmod:'ch',ack:'ch',sep:'ch',intr:'ch',nab:nab.consonantCHA,ipa:'tʃ'}, // terminal greek sigma for [t͡ʃ]
+      's':{hmod:'s',ack:'z',sep:'s',intr:'s',nab:nab.consonantSA,ipa:'s'},
+      'l':{hmod:'l',ack:'l',sep:'l',intr:'l',nab:nab.consonantLA,ipa:'l'},
+      'x':{hmod:'x',ack:'x',sep:'x',intr:'sh',nab:nab.consonantXA,ipa:'ʃ'},     // [ʃ]
+      'h':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA,ipa:'h'},      // [h]
+      'y':{hmod:'y',ack:'y',sep:'y',intr:'y',nab:nab.consonantYA,ipa:'j'},      // [j]
+      'w':{hmod:'w',ack:'hu',sep:'u',intr:'w',nab:nab.consonantWA,ipa:'w'},     // [w]
       // FOREIGN (SPANISH) CONSONANTS:
-      'ñ':{hmod:'ñ',ack:'ñ',sep:'ñ',intr:'ñ',nab:nab.consonantNYA},
-      'β':{hmod:'b',ack:'b',sep:'b',intr:'b',nab:nab.consonantBVA},
-      'b':{hmod:'b',ack:'b',sep:'b',intr:'b',nab:nab.consonantBVA}, // NOTA BENE!
-      'v':{hmod:'v',ack:'v',sep:'v',intr:'v',nab:nab.consonantBVA}, // NOTA BENE!
-      'd':{hmod:'d',ack:'d',sep:'d',intr:'d',nab:nab.consonantDA},
-      'g':{hmod:'g',ack:'g',sep:'g',intr:'g',nab:nab.consonantGA},
-      'f':{hmod:'f',ack:'f',sep:'f',intr:'f',nab:nab.consonantFA},
-      'r':{hmod:'r',ack:'r',sep:'r',intr:'r',nab:nab.consonantRA}, // 'r'
-      'ρ':{hmod:'rr',ack:'rr',sep:'rr',intr:'rr',nab:nab.consonantRRA} // 'rr'
+      'ñ':{hmod:'ñ',ack:'ñ',sep:'ñ',intr:'ñ',nab:nab.consonantNYA,ipa:'ɲ'},
+      'β':{hmod:'b',ack:'b',sep:'b',intr:'b',nab:nab.consonantBVA,ipa:'β'},
+      'b':{hmod:'b',ack:'b',sep:'b',intr:'b',nab:nab.consonantBVA,ipa:'b'}, // NOTA BENE!
+      'v':{hmod:'v',ack:'v',sep:'v',intr:'v',nab:nab.consonantBVA,ipa:'v'}, // NOTA BENE!
+      'd':{hmod:'d',ack:'d',sep:'d',intr:'d',nab:nab.consonantDA,ipa:'d'},
+      'g':{hmod:'g',ack:'g',sep:'g',intr:'g',nab:nab.consonantGA,ipa:'g'},
+      'f':{hmod:'f',ack:'f',sep:'f',intr:'f',nab:nab.consonantFA,ipa:'f'},
+      'r':{hmod:'r',ack:'r',sep:'r',intr:'r',nab:nab.consonantRA,ipa:'ɾ'}, // 'r'
+      'ρ':{hmod:'rr',ack:'rr',sep:'rr',intr:'rr',nab:nab.consonantRRA,ipa:'r'} // 'rr'
     },
     // END ATOMIC SECTION
 
@@ -523,6 +523,23 @@ const nwt={
   },
   /////////////////////////////////////////
   //
+  // atomicToIPA:
+  //
+  /////////////////////////////////////////
+  atomicToIPA:function(atomic){
+    let ipa = '';
+    for(let i=0;i<atomic.length;i++){
+      const current = atomic[i];
+      if(nwt.isAtomicLetter(current)){
+        ipa += nwt.map.atomic[current].ipa;
+      }else{
+        ipa += current;
+      }
+    }
+    return ipa;
+  },
+  /////////////////////////////////////////
+  //
   // atomicToACK: Convert Atomic to ACK:
   //
   /////////////////////////////////////////
@@ -708,5 +725,6 @@ const nwt={
   }
 };
 
+exports.nwt = nwt;
 // END OF CODE 
 
