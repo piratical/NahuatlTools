@@ -592,16 +592,34 @@ const nwt={
       const previous = i>0               ? atomic[i-1] : ' ' ;
       const next     = i<atomic.length-1 ? atomic[i+1] : ' ' ;
       
-      if(nwt.isAtomicVowel(current) && nwt.isAtomicConsonant(previous)){
+      if(nwt.isAtomicVowel(current) && nwt.isAtomicConsonant(previous) && previous!=='h' ){
         // Convert atomic vowels following consonants immediately 
-        // to above-base vowel signs:
+        // to above-base vowel signs *EXCEPT* in the case of 'h' which can only be a terminal:
         if(current==='a'){
           // Don't push anything because the vowel /a/ sign is intrinsic 
           // and not normally written over the abugida base consonant
         }else{
           result += nab.map.atomicVowelToVowelSign[current];
         }
-      }else if(nwt.isAtomicConsonant(current) && nwt.isAtomicVowel(previous) && !nwt.isAtomicVowel(next)){
+      }else if(nwt.isAtomicVowel(current) && previous==='h' && (i===1 || !nwt.isAtomicLetter(atomic[i-2])) ){
+        // This is the special case where atomic 'h' starts a word (which therefore means it is actually
+        // a borrow word, not a native Nahuatl word) and now we have a vowel, so in this case the vowel
+        // become a vowel sign over the 'h' consonant. Although this case could be folded into the previous
+        // "if" section, it is kept apart here for clarity: 
+        if(current==='a'){
+          // Don't push anything because the vowel /a/ sign is intrinsic 
+          // and not normally written over the abugida base consonant
+        }else{
+          result += nab.map.atomicVowelToVowelSign[current];
+        }
+      }else if( current==='h' && nwt.isAtomicVowel(previous) ){
+        // Special case where we only allow atomic 'h' to be a *terminal* consonant on syllabic clusters
+        // and never at the beginning of cluster *unless* it is the first consonant in a foreign borrow word
+        // (so this clause *must* precede the following clause which treats all the other consonants in 
+        // a general fashion):
+        result += nab.subjoinerSign;
+        result += nwt.map.atomic[current].nab;   // Push consonant
+      }else if(nwt.isAtomicConsonant(current) && nwt.isAtomicVowel(previous) && !nwt.isAtomicVowel(next) ){
         // If the previous letter is a vowel and this is a consonant, then we have to think about making
         // consonant a subjoined consonant. However, if the *next* letter is a vowel, then this consonant
         // is actually the base for the next syllabic cluster. But if the *next* letter is *not* a vowel,
