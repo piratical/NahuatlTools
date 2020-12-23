@@ -407,6 +407,10 @@ const nwt={
       {k:'co',v:'ko'},
       {k:'ce',v:'se'},
       {k:'ci',v:'si'},
+      {k:'cā',v:'kā'},
+      {k:'cō',v:'kō'},
+      {k:'cē',v:'sē'},
+      {k:'cī',v:'sī'},
       // DIGRAPHS IN MODERN VARIANTS:
       {k:'ku',v:'κ'}, // /kʷ/ consonant modern orthography
       {k:'kw',v:'κ'}, // /kʷ/ consonant modern variant orthography
@@ -572,7 +576,7 @@ const nwt={
         // κ maps to 'uc'
         result += current==='w' ? 'uh' : 'uc' ;
       }else if( (current==='k' || current==='s') && nwt.isAtomicVowel(next) ){
-        if(next==='e' || next==='i'){
+        if(next==='e' || next==='i' || next==='ē' || next==='ī'){
           // vowels e and i:
           // k maps to: que , qui
           // s maps to: ce  , ci
