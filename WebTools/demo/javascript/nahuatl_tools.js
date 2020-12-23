@@ -106,13 +106,13 @@
 //     between them for orthographies like Hasler and SEP
 //     but we can still group them together (into the 'β')
 //     for the TRAGER orthography (The phoneme-based TRAGER
-//     orthography does not differentiate 'b' from 'v').
+//     orthography does not differentiate Spanish 'b' from 'v').
 //
 ///////////////////////////////////////////////////////////////
 const ato={
   vowels:{
-    native:'aeio',
-    foreign:'u'
+    native:'aeioāēīō',
+    foreign:'uū'
   },
   consonants:{
     native:'mnptkκτλςsxhlwy',
@@ -221,7 +221,13 @@ nab.map={
     'i':nab.vowelSignI,
     'o':nab.vowelSignO,
     // FOREIGN VOWEL:
-    'u':nab.vowelSignU
+    'u':nab.vowelSignU,
+    // LONG VOWELS: āēīōū
+    'ā':nab.vowelSignA + nab.longVowelSign,
+    'ē':nab.vowelSignE + nab.longVowelSign,
+    'ī':nab.vowelSignI + nab.longVowelSign,
+    'ō':nab.vowelSignO + nab.longVowelSign,
+    'ū':nab.vowelSignU + nab.longVowelSign
   },
   atomicVowelPairsToCompoundVowelSign:{
     'ia':nab.vowelSignIA,
@@ -291,6 +297,12 @@ const nwt={
       'o':{hmod:'o',ack:'o',sep:'o',intr:'o',nab:nab.vowelO,ipa:'o'},
       // FOREIGN (SPANISH) VOWEL:
       'u':{hmod:'u',ack:'u',sep:'u',intr:'u',nab:nab.vowelU,ipa:'u'},
+      // LONG VOWEL MAPPING: āēīōū
+      'ā':{hmod:'ā',ack:'ā',sep:'ā',intr:'ā',nab:nab.vowelA + nab.longVowelSign,ipa:'aː'},
+      'ē':{hmod:'ē',ack:'ē',sep:'ē',intr:'ē',nab:nab.vowelE + nab.longVowelSign,ipa:'eː'},
+      'ī':{hmod:'ī',ack:'ī',sep:'ī',intr:'ī',nab:nab.vowelI + nab.longVowelSign,ipa:'iː'},
+      'ō':{hmod:'ō',ack:'ō',sep:'ō',intr:'ō',nab:nab.vowelO + nab.longVowelSign,ipa:'oː'},
+      'ū':{hmod:'ū',ack:'ū',sep:'ū',intr:'ū',nab:nab.vowelU + nab.longVowelSign,ipa:'uː'},
       // NATIVE CONSONANTS:
       'm':{hmod:'m',ack:'m',sep:'m',intr:'m',nab:nab.consonantMA,ipa:'m'},
       'n':{hmod:'n',ack:'n',sep:'n',intr:'n',nab:nab.consonantNA,ipa:'n'},
@@ -743,6 +755,7 @@ const nwt={
   }
 };
 
+exports.nab = nab;
 exports.nwt = nwt;
 // END OF CODE 
 

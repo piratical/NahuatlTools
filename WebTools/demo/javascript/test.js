@@ -1,4 +1,5 @@
 const NWT = require('./nahuatl_tools.js');
+const nab = NWT.nab;
 const nwt = NWT.nwt;
 
 ////////////////////////////////////////////////////////////////
