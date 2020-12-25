@@ -652,7 +652,8 @@ const nwt={
         // then indeed this consonant is a final consonant on the current syllabic cluster. So we have:
         result += nab.subjoinerSign;             // Push subjoiner
         result += nwt.map.atomic[current].nab;   // Push consonant
-      }else if(nwt.isAtomicVowel(current) && nwt.isAtomicVowel(previous)){
+      }else if(nwt.isAtomicVowel(current) && nwt.isAtomicVowel(previous) && !(i===1 || !nwt.isAtomicLetter(atomic[i-2])) ){
+        // 2020.12.24.ET: Added new constraint in the if clause: don't use compound signs if word starts with a vowel
         // Opportunity for combined vowel sign:
         // 2020.12.24.ET ADDENDA: As there does not appear to be a 
         // reasonable way to include vowel length indicators on compound 
@@ -669,9 +670,7 @@ const nwt={
           // so in that case, just add the combined symbol at the end, as there is
           // nothing to replace:
           if(previous==='a'){
-            console.log(`BEFORE: ${result}`);
             result += compoundSign;
-            console.log(`AFTER: ${result}`);
           }else if(previous==='ā'){
             // Remove the nab.longVowelSign marker only, then add the compound sign:
             result = result.slice(0, -1 ) + compoundSign;
