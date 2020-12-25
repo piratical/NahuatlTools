@@ -236,7 +236,7 @@ nab.map={
     'eo':nab.vowelSignEO,
     'ei':nab.vowelSignEI,
     'io':nab.vowelSignIO,
-    'ao':nab.vowelSignAO
+    'ao':nab.vowelSignAO,
   } 
 };
 /////////////////////////////////////
@@ -489,6 +489,10 @@ const nwt={
   isForeignConsonant:function(c){
     return ato.consonants.foreign.indexOf(c) != -1;
   },
+  // toUnmarkedVowel: removes long vowel marker:
+  toUnmarkedVowel:function(v){
+    return v==='ā'?'a':v==='ē'?'e':v==='ī'?'i':v==='ō'?'o':v==='ū'?'u':v;
+  },
   /////////////////////////////////////////////////////
   //
   // toAtomic: converts input in any format to Atomic
@@ -614,6 +618,9 @@ const nwt={
         if(current==='a'){
           // Don't push anything because the vowel /a/ sign is intrinsic 
           // and not normally written over the abugida base consonant
+        }else if(current==='ā'){
+          // In this case, only add the longVowelSign marker, but not the intrinic /a/ vowelSign symbol:
+          result += nab.longVowelSign;
         }else{
           result += nab.map.atomicVowelToVowelSign[current];
         }
@@ -625,6 +632,9 @@ const nwt={
         if(current==='a'){
           // Don't push anything because the vowel /a/ sign is intrinsic 
           // and not normally written over the abugida base consonant
+        }else if(current==='ā'){
+          // In this case, only add the longVowelSign marker, but not the intrinic /a/ vowelSign symbol:
+          result += nab.longVowelSign;
         }else{
           result += nab.map.atomicVowelToVowelSign[current];
         }
@@ -644,7 +654,13 @@ const nwt={
         result += nwt.map.atomic[current].nab;   // Push consonant
       }else if(nwt.isAtomicVowel(current) && nwt.isAtomicVowel(previous)){
         // Opportunity for combined vowel sign:
-        const compoundSign = nab.map.atomicVowelPairsToCompoundVowelSign[previous+current];
+        // 2020.12.24.ET ADDENDA: As there does not appear to be a 
+        // reasonable way to include vowel length indicators on compound 
+        // vowel signs, the decision here is to ignore the vowel length
+        // by folding the short and long vowels together:
+        const prevVowel = nwt.toUnmarkedVowel(previous);
+        const vowelPair = prevVowel + nwt.toUnmarkedVowel(current);
+        const compoundSign = nab.map.atomicVowelPairsToCompoundVowelSign[vowelPair];
         if(compoundSign){
           // The vowel combination has a special combined symbol, so replace
           // the current singleton vowel sign with the compound vowel sign.
@@ -653,9 +669,18 @@ const nwt={
           // so in that case, just add the combined symbol at the end, as there is
           // nothing to replace:
           if(previous==='a'){
+            console.log(`BEFORE: ${result}`);
             result += compoundSign;
+            console.log(`AFTER: ${result}`);
+          }else if(previous==='ā'){
+            // Remove the nab.longVowelSign marker only, then add the compound sign:
+            result = result.slice(0, -1 ) + compoundSign;
           }else{
-            result = result.slice(0, -1) + compoundSign;
+            // if prevVowel != previous, this means "previous" is actually
+            // a *long vowel* which means that result will already have both the
+            // vowel sign *AND* the long vowel indicator, so in that case we
+            // must remove both:
+            result = result.slice(0, prevVowel===previous ? -1 : -2 ) + compoundSign;
           }
         }else{
         // Otherwise do nothing if no special combined vowel sign exists ...
