@@ -24,6 +24,9 @@
 //
 ////////////////////////////////////////
 
+// REQUIRES:
+const nms = require('./names.js').nms;
+
 ////////////////////////////////////////////////////////////////////
 //
 // INTROUCTION
@@ -729,6 +732,14 @@ const nwt={
       return false;
     }
   },
+  /////////////////////////////////
+  //
+  // stripPunctuation:
+  //
+  /////////////////////////////////
+  stripPunctuation:function(s){
+    return s.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '');
+  },
   ////////////////////////////////////////////////////////////
   //
   // isDeity: true if the name is in the list of deities
@@ -737,7 +748,7 @@ const nwt={
   //
   ////////////////////////////////////////////////////////////
   isDeity:function(name){
-    return nwt.map.deities[name];
+    return nwt.map.deities[nwt.stripPunctuation(name)];
   },
   //////////////////////////////////////////////
   // 
@@ -768,7 +779,8 @@ const nwt={
       mw.flic           = firstLetter ? firstLetter===firstLetter.toUpperCase() : false; // flic
       mw.isPlace        = nwt.hasLocativeSuffix( mw.atomic );
       mw.isDeity        = nwt.isDeity( mw.atomic );
-      mw.isPerson       = nwt.isPersonName( mw.original );
+      // Now using the much more comprehensive names.js module:
+      mw.isPerson       = nms.isName( nwt.stripPunctuation(mw.original) );
       metaWords.push( mw );
     }
     return metaWords; 

@@ -28,9 +28,12 @@ function convertNahuatl(inString){
   let tmod=''; // Trager Modern
   let ipa =''; // New IPA
 
-  // Fake "check boxes":
+  // "Check boxes" to determine if capitalized words should be converted or not:
   let cb_hasler={}, cb_sep={},cb_ack={},cb_trager={};
-  cb_hasler.checked=cb_sep.checked=cb_ack.checked=cb_trager.checked=true;
+  cb_hasler.checked=false; 
+  cb_sep.checked=false;
+  cb_ack.checked=false;
+  cb_trager.checked=false;
 
   for(const metaWord of metaWords){
     // CONVERT WORDS TO OUTPUT ORTHOGRAPHIES:
@@ -102,6 +105,11 @@ function convertNahuatl(inString){
   //ta_sep.value    = sep;
   //ta_ack.value    = ack;
   //ta_trager.value = tmod;
+  hmod = hmod.trim();
+  sep  = sep.trim();
+  ack  = ack.trim();
+  tmod = tmod.trim();
+  ipa  = ipa.trim();
   return { hasler:hmod,sep:sep,ack:ack,trager:tmod,ipa:ipa }
 
 }
