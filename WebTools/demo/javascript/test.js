@@ -2,6 +2,9 @@ const NWT = require('./nahuatl_tools.js');
 const nab = NWT.nab;
 const nwt = NWT.nwt;
 
+// Experimental:
+const gmn = require('./geminate.js').gmn;
+
 ////////////////////////////////////////////////////////////////
 //
 // convertNahuatl()
@@ -16,7 +19,7 @@ function convertNahuatl(inString){
     //ta_hasler.value = '';
     //ta_sep.value    = '';
     //ta_ack.value    = '';
-    //ta_trager.value = '';    
+    //ta_trager.value = '';
     return;
   }  
   const metaWords = nwt.splitToMetaWords(inString);
@@ -38,6 +41,10 @@ function convertNahuatl(inString){
 
   for(const metaWord of metaWords){
     // CONVERT WORDS TO OUTPUT ORTHOGRAPHIES:
+    
+    // EXPERIMENTAL: See if the word should have a geminated consonant:
+    metaWord.atomic = gmn.findGeminate(metaWord.atomic);
+
     let hhmod  = nwt.atomicToHaslerModern( metaWord.atomic );
     let ssep   = nwt.atomicToSEP( metaWord.atomic );
     let aack   = nwt.atomicToACK( metaWord.atomic );
