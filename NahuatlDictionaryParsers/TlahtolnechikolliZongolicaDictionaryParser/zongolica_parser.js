@@ -63,7 +63,6 @@ const p1 = new RegExp('^ *$');
 // These are listed from longest to shortest to insure proper
 // matching behavior:
 const abbr=[
-'v.1, intr.',
 'part.',
 'pron.',
 'expr. adj.',
@@ -78,6 +77,12 @@ const abbr=[
 'v[ée]a.',
 'dir.',
 'lit.',
+'v.1, intr.',
+'v.2, intr.',
+'v.3, intr.',
+'v.4, intr.',
+'v.5, intr.',
+'v. irr.',
 'v.1',
 'v.2',
 'v.3',
@@ -311,13 +316,19 @@ lineReader.on('close',function(){
       entry.roots = entry.roots.replace('.','');
       entry.roots = splitRoots(entry.roots);
     }
+    // Definition:
+    if(entry.def){
+      entry.def = entry.def.replace(/^– /,'');
+      // Perhaps best to keep final period on definitions ... ?
+      // entry.def = entry.def.replace(/\.$/,'');
+    }
     // See:
     if(entry.see){
-      entry.see = entry.see.replace('.','');
+      entry.see = entry.see.replace(/\.$/,'');
     }
     // Synonyms:
     if(entry.synonyms){
-      entry.synonyms = entry.synonyms.replace('.','');
+      entry.synonyms = entry.synonyms.replace(/\.$/,'');
     }
   });
   //
