@@ -1,0 +1,49 @@
+
+zongolica_parser.js
+
+(c) 2020, 2021 by Edward H. Trager
+<ed.trager@gmail.com> All Rights Reserved
+
+This NODE.JS script has been specifically designed to parse
+out the entries in the Nahuatl-Español dictionary
+"TLAHTOLNECHIKOLLI DICCIONARIO NAWATL MODERNO - ESPAÑOL
+DE LA SIERRA DE ZONGOLICA VER." by EUTIQUIO GERÓNIMO SÁNCHEZ,
+EZEQUIEL JIMENEZ ROMERO,EZEQUIEL JIMENEZ ROMERO, 
+RAMÓN TEPOLE GONZÁLEZ, ANDRÉS HASLER HANGERT,
+AQUILES QUIAHUA MACUIXTLE and JORGE LUIS HERNANDEZ
+which can be found online at:
+
+http://www.vcn.bc.ca/prisons/dicc-zon.pdf
+
+The procedure is as follows:
+
+(1) Convert the PDF to a text file using
+"pdftotext" (Poppler Developers http://poppler.freedesktop.org 
+& Glyph & Cog, LLC). Other tools may also work. 
+I used version 0.57.0 as follows:
+
+~> pdftotext dicc-zon.pdf dicc-zon.txt
+
+(2) Run this script against the text file:
+
+~> node ./zongolica_parser.js dicc-zon.txt > results.json
+
+Results are in JSON format, e.g.:
+
+...
+{
+  "entry": "AHWILIA, AHWILIH, AHWILI",
+  "pos": "v.4",
+  "def": "Echar agua.",
+  "ejemplos": [
+   {
+    "nah": "okahwilih",
+    "es": "le echó agua ."
+   }
+  ],
+  "synonyms": "atekia"
+ },
+ ...
+
+-- 2021.01.01.ET
+
