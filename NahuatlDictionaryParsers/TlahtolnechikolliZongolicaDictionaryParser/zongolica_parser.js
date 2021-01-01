@@ -27,7 +27,7 @@
 //
 // (2) Run this script against the text file:
 //
-// ~> zongolica_parser.js dicc-zon.txt > results.json
+// ~> node ./zongolica_parser.js dicc-zon.txt > results.json
 //
 // Results are in JSON format, e.g.:
 // 
