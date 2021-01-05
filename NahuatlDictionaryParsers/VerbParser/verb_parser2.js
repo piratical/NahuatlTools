@@ -221,13 +221,25 @@ const suffs=[
   {s:'lo'},   // passive form
   {s:'yaya'},  // imperfect singular form
   {s:'ya'},    // imperfect singular form (Z)
+  {s:'yahki'}, // auxiliary verb past tense: -ti-yahqui
+  {s:'wallaw'}, // auxiliary verb huallah: -ti-huallah
+  {s:'waltok'}, // auxiliary past tense of huallah: -ti-hualtoc
+  {s:'wetzi'},  // auxiliary verb wetzi: -ti-huetzi
+  {s:'wetzkeh'}, // auxiliary past tense of huetzki: -ti-huetzqueh
+  {s:'wetzki'}, // auxiliary past tense of huetzki: -ti-huetzqui
+  {s:'nemi'},   // auxiliary verb nemi:    -ti-nemi 
+  {s:'kisa'},   // auxiliary verb kisa: -ti-quiza
+  {s:'kiskeh'},   // auxiliary past tense kisa: -ti-quizqueh
+  {s:'kiski'},   // auxiliary past tense kisa: -ti-quizqui
+  {s:'ewa'},    // auxiliary verb ewa: -ti-ehua
   {s:'skia'},  // conditional singular form
-  {s:'ti'},    // future propositivo 'to'ward (ir) singular
-  {s:'to'},    // past propositivo 'to'ward (ir)   singular
-  {s:'ssa'},   // future 's' + 'ya' = 'ssa' singular
-  {s:'sa'},    // future 's' + 'ya' = 'ssa' singular
-  {s:'ko'},   // past propositivo 'c'ome (venir) singular
-  {s:'ki'},   // preterit singular form / also future propositivo 'c'ome (venir) singular
+  {s:'ti'},    // future propositivo 'to'ward (ir)
+  {s:'to'},    // past propositivo 'to'ward (ir)
+  {s:'tiw'},   // = -tiuh 'ti'+ 'yauh' (to go)
+  {s:'ssa'},   // future 's' + 'ya' = 'ssa'
+  {s:'sa'},    // future 's' + 'ya' = 'ssa'
+  {s:'ki'},   // future propositivo 'c'ome (venir)
+  {s:'ko'},   // past propositivo 'c'ome (venir)
   {s:'k'},    // preterit singular form
   {s:'s'},    // future singular form
   {s:'toya'}, //
