@@ -13,7 +13,9 @@ if(process.argv.length!=3){
   console.error('Please specify a verb form to test on the command line');
   return 1;
 }
-const testForm = process.argv[2];
+
+// The verb form to process:
+const verbForm = process.argv[2];
 
 
 const hasl_cons=['m','n','p','t','k','ku','tz','tl','ch','s','l','x','h','y','w'];
@@ -173,41 +175,35 @@ prefs.forEach(entry=>{
 /////////////////////////////////////////
 //
 // SUFFIXES
+// 
+// NOTE1: The ORDER of these is important
+// but note that the algorithm for the
+// suffixes works *BACKWARDS* from the
+// end of the verb form toward the middle
+// of the verb form.
 //
 /////////////////////////////////////////
 const suffs=[
-  {s:'h'},     // plural form
-  {s:'yahah'}, // imperfect plural form
-  {s:'yaya'},  // imperfect singular form
-  {s:'yah'},   // imperfect plural form   (Z)
-  {s:'ya'},    // imperfect singular form (Z)
-  {s:'skiah'}, // conditional plural form
-  {s:'skia'},  // conditional singular form
-  {s:'tih'},   // future propositivo 'to'ward (ir) plural
-  {s:'ti'},    // future propositivo 'to'ward (ir) singular
-  {s:'toh'},   // past propositivo 'to'ward (ir)   plural
-  {s:'to'},    // past propositivo 'to'ward (ir)   singular
-  {s:'ssah'},  // future 's' + 'ya' = 'ssa' plural
-  {s:'ssa'},   // future 's' + 'ya' = 'ssa' singular
-  {s:'sah'},   // future 's' + 'ya' = 'ssa' plural
-  {s:'sa'},    // future 's' + 'ya' = 'ssa' singular
   {s:'sseh'}, // future plural form
   {s:'seh'},  // future plural form
   {s:'kan'},  // plural imperative ending
   {s:'kah'},  // plural imperative ending (NOTE TO SELF: But maybe we just should handle terminal 'n' phonetics ...)
   {s:'keh'},  // preterit plural form
-  {s:'kih'},  // future propositivo 'c'ome (venir) plural
-  {s:'koh'},  // past propositivo 'c'ome (venir) plural
+  {s:'h'},     // plural form
+  {s:'lo'},   // passive form
+  {s:'yaya'},  // imperfect singular form
+  {s:'ya'},    // imperfect singular form (Z)
+  {s:'skia'},  // conditional singular form
+  {s:'ti'},    // future propositivo 'to'ward (ir) singular
+  {s:'to'},    // past propositivo 'to'ward (ir)   singular
+  {s:'ssa'},   // future 's' + 'ya' = 'ssa' singular
+  {s:'sa'},    // future 's' + 'ya' = 'ssa' singular
   {s:'ko'},   // past propositivo 'c'ome (venir) singular
   {s:'ki'},   // preterit singular form / also future propositivo 'c'ome (venir) singular
   {s:'k'},    // preterit singular form
   {s:'s'},    // future singular form
-  {s:'loh'},  // passive form
-  {s:'lo'},   // passive form
   {s:'toya'}, //
-  {s:'toyah'},//
   {s:'tika'},
-  {s:'tikah'}
 ];
 // Make a set of regexps:
 suffs.forEach(entry=>{
@@ -217,9 +213,6 @@ suffs.forEach(entry=>{
   // as we do here:
   entry.r=new RegExp(`([a-z]*)(${entry.s})$`);
 });
-console.log(suffs);
-
-
 
 //console.log(prefs);
 //return;
@@ -234,7 +227,6 @@ console.log(suffs);
 //
 /////////////////////////////
 function test(verbForm){
-  console.log(`VERB FORM IS ${verbForm}`);
   const marker='•';
   let result='';
   let remainder=verbForm;
@@ -297,10 +289,8 @@ function test(verbForm){
   for(let i=0;i<suffs.length;i++){
     let matched = remainder.match(suffs[i].r);
     if(matched){
-      console.log(matched);
       remainder = matched[1];
-      tail = marker + matched[2];
-      break;
+      tail = marker + matched[2] + tail;
     }
   }
   //return {prefs:result,remainder:remainder,suffs:tail};
@@ -312,8 +302,7 @@ function test(verbForm){
 // MAIN
 //
 ///////////////////////////////
-console.log('===========');
-result = test(testForm);
-console.log(result);
+const parsedForm = test(verbForm);
+console.log(`${verbForm}\t${parsedForm}`);
 
 
