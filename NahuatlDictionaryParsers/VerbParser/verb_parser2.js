@@ -63,8 +63,6 @@ const verbList=[
 //       in order to put longest options first
 //       which is what you will want for proper
 //       behavior in your regular expression.
-// NB2:  We add '?' indicating "zero or one occurrence"
-//       at the end of the parenthesized group.
 //
 /////////////////////////////////////////////////
 function arrayToRegexOptionGroup(arr){
@@ -77,7 +75,7 @@ function arrayToRegexOptionGroup(arr){
   arr.sort( (a,b)=>{
     return b.length-a.length || b.localeCompare(a);
   });
-  return '('+arr.join('|')+')?';
+  return '('+arr.join('|')+')';
 }
 
 // reverse
@@ -109,6 +107,36 @@ function verbArrayToRegexOptionGroup(arr){
   // This forces matching to any specific option first, with the [a-z]+ option as a final resort:
   return '('+arr.join('|')+'|[a-z]+)?';
 }
+
+// iVerbStems:
+iVerbStems=[
+ 'ikana',
+ 'ikxi',
+ 'ichteki',
+ 'isiowil',
+ 'ikpow',
+ 'iih',
+ 'iil',
+ 'iix',
+ 'ilaka',
+ 'ilkaw',
+ 'ilwi',
+ 'illa',
+ 'ilpi',
+ 'inama',
+ 'itta',
+ 'itzki',
+ 'itz',
+ 'ikw',
+ 'iyoka',
+ 'iska',
+ 'isti',
+ 'istla',
+];
+
+const iVerbPattern = arrayToRegexOptionGroup(iVerbStems);
+const iVerbRegex   = new RegExp('^'+iVerbPattern);
+
 
 //////////////////////////////////////////////////////////////
 //
@@ -243,11 +271,13 @@ function test(verbForm){
       // SPECIAL CASE FOR 'k' AND 'ki':
       if(matched[1]==='k'){
         if(precededByNiTiXi){
+          // FIRST AND SECOND PERSON FORMS:
           // Easy case because we can only have 'k' here:
           // Any vowel following the 'k' is part of the verb:
           result += 'k' + marker;
         }else{
-          // Difficult case because 3rd person sg is 'ki'
+          // THIRD PERSON FORMS:
+          // Difficult because 3rd person sg is 'ki'
           // but verb may start with vowel i too:
           result += 'ki' + marker;
           if(matched[2][0]==='i'){
@@ -257,10 +287,14 @@ function test(verbForm){
               // if followed by 'h'. No change to the remainder.
               //
               // But here we *don't* have an 'h'
-              // so it is more complicated. Sometimes 
+              // so it is more complicated. Sometimes
               // we need to peel off the 'i' on the 
               // remainder, and sometimes not:
-              if(!matched[2].match(/^(it[tz])/)){
+              // 
+              // Cases where we would keep the 'i'
+              // as part of the verb stem include:
+              //  'itt(a)' , 'itz' , 'ix', etc.:
+              if(!matched[2].match(iVerbRegex)){
                 matched[2] = matched[2].substring(1);
               }
             }
