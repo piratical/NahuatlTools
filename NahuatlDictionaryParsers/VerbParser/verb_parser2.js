@@ -80,38 +80,19 @@ function arrayToRegexOptionGroup(arr){
   return '('+arr.join('|')+')';
 }
 
-// reverse
-function reverse(str){
-  return str.split('').reduce((reversed, character) => character + reversed, '');
-}
-
-// reverseArrayToRegexOptionGroup
-function reverseArrayToRegexOptionGroup(arr){
-  arr.sort( (a,b)=>{
-    return a.length-b.length || a.localeCompare(b);
-  });
-  return '('+reverse(arr.join('|'))+')?';
-}
-
+///////////////////////////////////////////////////
 //
-// verbArrayToRegexOptionGroup(arr)
+// VerbStemsStartingWith_i:
 //
-function verbArrayToRegexOptionGroup(arr){
-  // Sort to longest strings first.
-  // Since we are sorting in descending order by
-  // length, it seems reasonable to also do
-  // the nested alphabetic sort in reverse order too.
-  // This nested sort is not critical, but makes it a
-  // little bit easier for human eyes:
-  arr.sort( (a,b)=>{
-    return b.length-a.length || b.localeCompare(a);
-  });
-  // This forces matching to any specific option first, with the [a-z]+ option as a final resort:
-  return '('+arr.join('|')+'|[a-z]+)?';
-}
-
-// iVerbStems:
-iVerbStems=[
+// NOTE1: Verb stems starting with 'i-' must
+// not have the 'i' gobbled up / peeled off by
+// prefixes like 'ni','ti','xi'.
+//
+// NOTE2: RECHECK THIS LIST AFTER WE HAVE DATABASE
+// WITH ATOMIC ORTHOGRAPHY
+//
+//////////////////////////////////////////////////
+const verbStemsStartingWith_i = [
  'ikana',
  'ikxi',
  'ichteki',
@@ -135,9 +116,42 @@ iVerbStems=[
  'isti',
  'istla',
 ];
-
-const iVerbPattern = arrayToRegexOptionGroup(iVerbStems);
+const iVerbPattern = arrayToRegexOptionGroup(verbStemsStartingWith_i);
 const iVerbRegex   = new RegExp('^'+iVerbPattern);
+
+//////////////////////////////////////////////////////////
+//
+// verb stems ending in -ki
+//
+// NOTE1: These must not be interpreted
+// as verb forms with '-ki' suffixes
+//
+// NOTE2: RECHECK THIS LIST AFTER WE HAVE DATABASE
+// WITH ATOMIC ORTHOGRAPHY
+//
+//////////////////////////////////////////////////////////
+const verbStemsEndingWith_ki = [
+ 'ahki',
+ 'itzki',
+ 'kalaki',
+ 'kaki',
+ 'miki',
+ 'neki',
+ 'paki',
+ 'piki',
+ 'patzki',
+ 'pixki',
+ 'patzki',
+ 'potzaki',
+ 'saki',
+ 'teki',
+ 'tiotlaki',
+ 'tlaki',
+ 'waki'
+];
+const kiVerbPattern = arrayToRegexOptionGroup(verbStemsEndingWith_ki);
+const kiVerbRegex   = new RegExp(kiVerbPattern+'$');
+
 
 
 //////////////////////////////////////////////////////////////
@@ -321,8 +335,15 @@ function test(verbForm){
   for(let i=0;i<suffs.length;i++){
     let matched = remainder.match(suffs[i].r);
     if(matched){
-      remainder = matched[1];
-      tail = marker + matched[2] + tail;
+      //
+      // * If the suffix is not '-ki', then process the match.
+      // * Else if the suffix is '-ki' and it is *NOT* one of
+      //   the verbs ending in 'ki', then also process the match:
+      //
+      if(suffs[i].s!='ki' || !remainder.match(kiVerbRegex)){
+        remainder = matched[1];
+        tail = marker + matched[2] + tail;
+      }
     }
   }
 
