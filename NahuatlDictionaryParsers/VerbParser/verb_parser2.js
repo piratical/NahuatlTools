@@ -9,6 +9,8 @@
 // 2021.01.01.ET
 //
 ///////////////////////////////////////////////////
+const gemMap = require('./gem_map.js').gemMap;
+
 if(process.argv.length!=3){
   console.error('Please specify a verb form to test on the command line');
   return 1;
@@ -156,37 +158,21 @@ const iVerbRegex   = new RegExp('^'+iVerbPattern);
 //
 //////////////////////////////////////////////////////////////
 const prefs = [
-// PAST TENSE PREFIX IN Zongolica, Tenochtitlan (Classical), Milpa Alta, and probably other variants:
- { p:'o',d:'PAST'},
-// IMPERATIVE:
- { p:'xi',d:'IMPE'},
-// VERB SUBJECT PREFIXES:
- { p:'ni',d:'1PSS'},
- { p:'ti',d:'2PSS'},
- { p:'in',d:'2PPS'},
- { p:'nan',d:'2PPS',v:'Z'}, // Zongolica
-// VERB OBJECT PREFIXES:
- { p:'nech',d:'1PSO'},
- { p:'mitz',d:'2PSO'},
- { p:'kin',d:'3PPO'},
- { p:'k',d:'3PSO'}, // NB: We now use this one to handle both 'k' and 'ki' cases
- // { p:'ki',d:'3PSO'}, // cannot be preceded by ni/ti/xi; but could have 'o' preceding
- { p:'tech',d:'1PPO'},
- { p:'namech',d:'2PPO',v:'Z'},
- { p:'nimech',d:'2PPO',v:'Z'},
- { p:'amech' ,d:'2PPO',v:'Z'},
- { p:'mech',d:'2PPO'},
-// ON & HUAL PROPOSITIVOS:
- { p:'onwal',d:''},
- { p:'wal'  ,d:''},
- { p:'on'   ,d:''},
-// MO REFLEXIVE:
- { p:'mo',d:'REFL'},
- { p:'no',d:'REFL',v:'T'} //,
-// INDEFINITE OBJECTS: Let's skip these ones for now, as otherwise they gobble up
-// things like the 'te' in 'tekiti' and 'tla' in 'tlahtlalia' (Note to self:
-// we should probably take advantage of any 'h' following 'tlah' to confirm that the
-// 'tlah' is part of a verb in those cases)
+ // PAST TENSE PREFIX IN Zongolica, Tenochtitlan (Classical), Milpa Alta, and probably other variants:
+ { p:'o'},
+ // VERB SUBJECT PREFIXES (INCL. IMPERATIVE xi):
+ { p:'ni|xi|ti|in|nan'},
+ // VERB OBJECT PREFIXES:
+ // 'k' will be handled specially to account for both 'k' and 'ki'
+ { p:'nech|mitz|kin|k|tech|namech|nimech|amech|mech'},
+ // ON & HUAL PROPOSITIVOS:
+ { p:'onwal|wal|on'},
+ // REFLEXIVE 'mo': 'no' is from Classical:
+ { p:'mo|no'},
+ // INDEFINITE OBJECTS: Let's skip these ones for now, as otherwise they gobble up
+ // things like the 'te' in 'tekiti' and 'tla' in 'tlahtlalia' (Note to self:
+ // we should probably take advantage of any 'h' following 'tlah' to confirm that the
+ // 'tlah' is part of a verb in those cases)
  //{ p:'te',d:'3PIO'},
  //{ p:'tla',d:'3TIO'}
 ];
@@ -339,8 +325,17 @@ function test(verbForm){
       tail = marker + matched[2] + tail;
     }
   }
+
+  // Automatically 'geminate' mispelled verb nuclei:
+  remainder = gemMap.convert(remainder);
+
   //return {prefs:result,remainder:remainder,suffs:tail};
-  return `${result}${remainder}${tail}`;
+  const color=true;
+  if(color){
+    return `${result}\u001b[35m${remainder}\u001b[0m${tail}`;
+  }else{
+    return `${result}${remainder}${tail}`;
+  }
 }
 
 ///////////////////////////////
