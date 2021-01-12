@@ -85,7 +85,7 @@ function arrayToRegexOptionGroup(arr){
 
 // Turn the array into a regexp fragment with the OR operator '|' between each option:
 const posAbbr = arrayToRegexOptionGroup(abbr);
-console.log(posAbbr);
+//console.log(posAbbr);
 // REGEXPS FOR DATA COLLECTION:
 const startOfEntryPattern  = new RegExp(`^([A-ZĀĒĪŌŪ]+[1-9]?). ${posAbbr}\.? (.+)$`);
 
@@ -155,7 +155,7 @@ var lineReader = require('readline').createInterface({
 /////////////////////////////////////
 let count=0;
 lineReader.on('line', function (line) {
-  console.log(count++);
+  //console.log(count++);
   // STUFF TO DISCARD:
   const discard = line.match(discardable);
   if( discard ){
@@ -166,8 +166,8 @@ lineReader.on('line', function (line) {
   // DATA TO SAVE:
   const entry = line.match(startOfEntryPattern);
   if( entry ){
-    console.log(`MATCHED: ${entry[1]}`);
-    console.log(entry);
+    //console.log(`MATCHED: ${entry[1]}`);
+    //console.log(entry);
     // Start of a new entry, so first write out the existing entry:
     if(accumulator.entry){
       accumulatorArray.push( accumulator.copy() );
@@ -175,13 +175,13 @@ lineReader.on('line', function (line) {
     }
     // Set new entries:
     accumulator.set(entry[1],entry[2],entry[3]);
-    console.log(accumulator);
+    //console.log(accumulator);
   }else if(line.length && line.trim()){
-    console.log(`LINE ${count}: ${line}`);
-    console.log(`=== ${accumulator.entry} ===`);
-    console.log(`BEFORE=${accumulator.def}`);
+    //console.log(`LINE ${count}: ${line}`);
+    //console.log(`=== ${accumulator.entry} ===`);
+    //console.log(`BEFORE=${accumulator.def}`);
     accumulator.addToDefinition(line);
-    console.log(`AFTER=${accumulator.def}`);
+    //console.log(`AFTER=${accumulator.def}`);
   }
 });
 
@@ -209,6 +209,29 @@ lineReader.on('close',function(){
   // from the definitions.
   ///////////////////////////////////
   accumulatorArray.forEach( entry =>{
+    // Let's start by splitting the "def"
+    // block into constituent numbered definitions.
+    // When not numbered, we just get one resulting
+    // definition block in the array:
+    entry.def = entry.def.split(/ *[1-9]\. /);
+    // Remove the artifacts of empty string entries
+    // at position zero, if such are present:
+    if(entry.def[0]===''){
+      //console.log('Fixing ...');
+      entry.def.splice(0,1);
+    }
+    // Start processing each split definition:
+    for(let i=0;i<entry.def.length;i++){
+      const parts = entry.def[i].split(' "');
+      //console.log(`DEF_EJ: ${parts.length}`);
+      //console.log(parts);
+      if(parts.length===2){
+        entry.def[i]= { def:parts[0] , ej:parts[1] };
+      }else{
+        entry.def[i]= { def:parts[0] };
+      }
+    };
+    
   });
   //
   // JSONIFIED OUTPUT:
