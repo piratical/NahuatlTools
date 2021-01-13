@@ -88,6 +88,7 @@ const posAbbr = arrayToRegexOptionGroup(abbr);
 //console.log(posAbbr);
 // REGEXPS FOR DATA COLLECTION:
 const startOfEntryPattern  = new RegExp(`^([A-ZĀĒĪŌŪ]+[1-9]?). ${posAbbr}\.? (.+)$`);
+const peelPattern = new RegExp(`(.+) ${posAbbr}\. (.+)$`);
 
 // Accumulator class to save data in for multiline reads:
 class Accumulator {
@@ -200,7 +201,7 @@ lineReader.on('close',function(){
 
   ///////////////////////////////////
   //
-  // Start the next processing step:
+  // Start the next processing steps:
   // Here we do additional processing on
   // each entry to break it up properly
   // into all the relevant pieces.
@@ -208,6 +209,33 @@ lineReader.on('close',function(){
   // the "también se dice"s are broken out
   // from the definitions.
   ///////////////////////////////////
+  
+
+  //
+  // 1. PEEL OF TAIL ELEMENTS:
+  //
+  accumulatorArray.forEach( entry =>{
+    let c=0;
+    let matched;
+    while( matched = entry.def.match(peelPattern) ){
+      //console.log(`==== PEELING ${++c} ====`);
+      //console.log(matched);
+      
+      // Remainder of the def block:
+      entry.def = matched[1];
+      // The "peeled off" part of speech and value
+      // Are now added as key-value pairs to the entry object:
+      entry[matched[2]]=matched[3];
+    }
+  
+  });
+
+  //
+  // 2. INDIVIDUAL DEFINITIONS:
+  //
+  // split the def block into constituent numbered
+  // definitions:
+  //
   accumulatorArray.forEach( entry =>{
     // Let's start by splitting the "def"
     // block into constituent numbered definitions.
