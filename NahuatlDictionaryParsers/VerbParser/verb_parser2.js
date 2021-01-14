@@ -161,6 +161,17 @@ const kiVerbRegex   = new RegExp(kiVerbPattern+'$');
 //   issue needs to be generalized in order to convert this from a 'toy'
 //   into a useful algorithm ...
 //
+// NB: This may not yet be in atomic and is definitely still incomplete:
+const verbStemsEndingWith_ti = [
+ 'mati',
+ 'tekiti',
+ 'koti',
+ 'kuati',
+ 'kati',
+ 'wati'
+];
+const tiVerbPattern = arrayToRegexOptionGroup(verbStemsEndingWith_ti);
+const tiVerbRegex   = new RegExp(tiVerbPattern+'$');
 
 //////////////////////////////////////////////////////////////
 //
@@ -348,8 +359,17 @@ function test(verbForm){
       // * If the suffix is not '-ki', then process the match.
       // * Else if the suffix is '-ki' and it is *NOT* one of
       //   the verbs ending in 'ki', then also process the match:
-      //
-      if(suffs[i].s!='ki' || !remainder.match(kiVerbRegex)){
+      // * Else if the suffix is '-ti' and it is *NOT* one of
+      //   the verbs ending in 'ti', then also process the match:
+      // * The following may not be pretty code, but the first
+      //   step is just figuring out what the right answers are,
+      //   so here we go:
+      let suf = suffs[i].s;
+      if(suf==='ki' && remainder.match(kiVerbRegex)){
+        // do nothing
+      }else if(suf==='ti' && remainder.match(tiVerbRegex)){
+        // likewise do nothing
+      }else{
         remainder = matched[1];
         tail = marker + matched[2] + tail;
       }
