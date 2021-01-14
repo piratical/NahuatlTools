@@ -17,6 +17,8 @@
 const fs       = require('fs');
 const readline = require('readline');
 
+const makeEntriesLowerCase = true;
+
 if(process.argv.length != 3){
   console.log('Please specify file to read.');
   process.exit(1);
@@ -198,8 +200,6 @@ lineReader.on('close',function(){
   if(accumulator.entry){
     accumulatorArray.push( accumulator.copy() );
   }
-
-  ///////////////////////////////////
   //
   // Start the next processing steps:
   // Here we do additional processing on
@@ -208,8 +208,7 @@ lineReader.on('close',function(){
   // Most importantly, the examples and
   // the "también se dice"s are broken out
   // from the definitions.
-  ///////////////////////////////////
-  
+  //
 
   ///////////////////////////////////
   //
@@ -238,9 +237,20 @@ lineReader.on('close',function(){
   //
   // 2. Convert the "achi" (i.e., "roots")
   //    entries to arrays:
+  //    
+  //    This is a reasonable place to also
+  //    convert to lowercase, if desired:
   //
   //////////////////////////////////////////
   accumulatorArray.forEach( entry =>{
+    // Lower case, if specified:
+    if(makeEntriesLowerCase){
+      entry.entry = entry.entry.toLowerCase();
+      if(entry.achi){
+        entry.achi = entry.achi.toLowerCase();
+      }
+    }
+    // convert achi entry to array:
     if(entry.achi){
       entry.achi = entry.achi.split(', ');
       // Remove trailing period from last entry
