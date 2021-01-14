@@ -24,7 +24,7 @@ if(process.argv.length != 3){
 
 // REGEXP PATTERNS FOR DISCARDABLE STUFF:
 // This includes blank lines as well as the page headwords and page number:
-const discardable = new RegExp('^\u000c* *$|^\u000c*[A-ZĀĒĪŌŪ]+[1-9]?$|^\u000c*[1-9]{1,3}$');
+const discardable = new RegExp('^\u000c* *$|^\u000c*[A-ZĀĒĪŌŪ]+[1-9]?$|^\u000c*[0-9]{1,3}$');
 
 // Parts of speech abbreviations list from the PDF:
 // These are listed from longest to shortest to insure proper
@@ -211,9 +211,13 @@ lineReader.on('close',function(){
   ///////////////////////////////////
   
 
+  ///////////////////////////////////
   //
-  // 1. PEEL OF TAIL ELEMENTS:
+  // 1. PEEL OFF "TAIL" ELEMENTS:
+  //    These are essentially trailing
+  //    key-value pairs:
   //
+  ///////////////////////////////////
   accumulatorArray.forEach( entry =>{
     let c=0;
     let matched;
@@ -229,16 +233,34 @@ lineReader.on('close',function(){
     }
   
   });
-
+  
+  //////////////////////////////////////////
   //
-  // 2. INDIVIDUAL DEFINITIONS:
+  // 2. Convert the "achi" (i.e., "roots")
+  //    entries to arrays:
+  //
+  //////////////////////////////////////////
+  accumulatorArray.forEach( entry =>{
+    if(entry.achi){
+      entry.achi = entry.achi.split(', ');
+      // Remove trailing period from last entry
+      // in the array:
+      entry.achi[entry.achi.length-1] = entry.achi[entry.achi.length-1].replace('.','');
+    }
+  });
+
+  ////////////////////////////////////////////////////
+  //
+  // 3. INDIVIDUAL DEFINITIONS:
   //
   // split the def block into constituent numbered
-  // definitions:
+  // definitions. In this dictionary, the definitions
+  // are in Nahuatl and usually there is also an
+  // example sentance for each definition. Hence
+  // we have the following:
   //
+  ////////////////////////////////////////////////////
   accumulatorArray.forEach( entry =>{
-    // Let's start by splitting the "def"
-    // block into constituent numbered definitions.
     // When not numbered, we just get one resulting
     // definition block in the array:
     entry.def = entry.def.split(/ *[1-9]\. /);
@@ -254,9 +276,11 @@ lineReader.on('close',function(){
       //console.log(`DEF_EJ: ${parts.length}`);
       //console.log(parts);
       if(parts.length===2){
-        entry.def[i]= { def:parts[0] , ej:parts[1] };
+        // Note how we remove a trailing '"' which
+        // may be present at the end of the example:
+        entry.def[i]= { nah:parts[0] , ej:parts[1].replace('"','') };
       }else{
-        entry.def[i]= { def:parts[0] };
+        entry.def[i]= { nah:parts[0] };
       }
     };
     
