@@ -152,7 +152,15 @@ const verbStemsEndingWith_ki = [
 const kiVerbPattern = arrayToRegexOptionGroup(verbStemsEndingWith_ki);
 const kiVerbRegex   = new RegExp(kiVerbPattern+'$');
 
-
+//
+// NOTE TO SELF: We are also going to need a list of verb stems:
+//
+// * ending in '-ti' (e.g., 'mati') to use when looking for -ti suffix
+// * starting with 'ax' to use when looking for 'ax-' negative prefix
+// * I'm sure there are a bunch more similar to these and this whole 
+//   issue needs to be generalized in order to convert this from a 'toy'
+//   into a useful algorithm ...
+//
 
 //////////////////////////////////////////////////////////////
 //
@@ -173,7 +181,8 @@ const kiVerbRegex   = new RegExp(kiVerbPattern+'$');
 //////////////////////////////////////////////////////////////
 const prefs = [
  // PAST TENSE PREFIX IN Zongolica, Tenochtitlan (Classical), Milpa Alta, and probably other variants:
- { p:'o'},
+ // ALSO NEGATIVE PREFIX ax IS HERE:
+ { p:'o|ax'},
  // VERB SUBJECT PREFIXES (INCL. IMPERATIVE xi):
  { p:'ni|xi|ti|in|nan'},
  // VERB OBJECT PREFIXES:
