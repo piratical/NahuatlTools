@@ -33,11 +33,12 @@ function convertNahuatl(inString){
   let atom=''; // Atomic
 
   // "Check boxes" to determine if capitalized words should be converted or not:
-  let cb_hasler={}, cb_sep={},cb_ack={},cb_trager={};
+  let cb_hasler={}, cb_sep={},cb_ack={},cb_trager={},cb_atom={};
   cb_hasler.checked=false; 
   cb_sep.checked=false;
   cb_ack.checked=false;
   cb_trager.checked=false;
+  cb_atom.checked=false;
 
   for(const metaWord of metaWords){
     // CONVERT WORDS TO OUTPUT ORTHOGRAPHIES:
@@ -63,8 +64,8 @@ function convertNahuatl(inString){
       ack  += cb_ack.checked    ? nwt.capitalize(aack ) :  metaWord.original;
       // IPA: ignore capitalization for IPA:
       ipa  += iipa;
-      // ATOM: Also ignores capitalization:
-      atom += aatom;
+      // ATOM: Treat just like the others so that examples with names can be atomized:
+      atom += cb_atom.checked   ? nwt.capitalize(aatom) : metaWord.original;
       
       // TRAGER:
       if(cb_trager.checked){
