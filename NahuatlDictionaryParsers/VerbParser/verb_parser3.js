@@ -387,6 +387,41 @@ const vstem={
      'teςti',
    ],
    λa:[
+     // any occurrences of λa followed by a terminal consonant 
+     // then followed by another consonant are clearly not the 
+     // 'λa' indefinite direct object:
+     'λahk',
+     'λahm',
+     'λahp',
+     'λaht',
+     'λahκ',
+     'λahλ',
+     'λahς',
+     'λahτ',
+     'λakk',
+     'λakp',
+     'λalk',
+     'λall',
+     'λalm',
+     'λalp',
+     'λalt',
+     'λalw',
+     'λalς',
+     'λalτ',
+     'λamp',
+     'λank',
+     'λann',
+     'λany',
+     'λanκ',
+     'λanλ',
+     'λawt',
+     'λaτk',
+     'λaςp',
+     'λaςκ',
+     'λaςς',
+     // Any instance of 'λah' followed by a vowel would also
+     // not be 'λa' indefinite object, but no such records were found.
+     // ... still there are over 900 more that need to be looked at :(
    ]
 
  },
