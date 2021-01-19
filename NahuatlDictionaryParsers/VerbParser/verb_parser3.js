@@ -430,5 +430,5 @@ const vstem={
  }
 };
 
-//console.log(vstem.stt['o']);
+console.log(vstem.stt['λa']);
 
