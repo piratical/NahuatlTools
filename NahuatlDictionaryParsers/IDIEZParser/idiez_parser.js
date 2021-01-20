@@ -59,6 +59,7 @@ const abbr=[
   'tlaten',
   'tlazal',
   'tzinpehua',
+  'tzimpehua', // This is actually the better spelling, but the previous is much more common
   'xiquitta'
 ];
 
