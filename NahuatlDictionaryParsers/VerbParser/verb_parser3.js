@@ -260,7 +260,27 @@ const vstem={
    {
      key:'k',
      include:/^(k)(.*)/,
-     exclude:0
+     exclude:arrayToRegexOptionGroup([
+       'kafe',
+       'kahka',
+       'kal',
+       'koς',
+       'kow',
+       'koxon',
+       'kohko',
+       'koko',
+       'kimil',
+       'komal',
+       'kone',
+       'koxtal',
+       'kak',
+       'koy',
+       'koτ',
+       'kisa',
+       'kixt',
+       'keς',
+       '',
+     ])
    },
    {
      // NOTE TO SELF: CHECK THIS ONE:
