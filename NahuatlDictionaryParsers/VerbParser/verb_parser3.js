@@ -41,6 +41,29 @@
 //
 ///////////////////////////////////////////
 
+/////////////////////////////////////////////////
+//
+// arrayToRegexOptionGroup
+//
+// NOTE: This also sorts the array in place
+//       in order to put longest options first
+//       which is what you will want for proper
+//       behavior in your regular expression.
+//
+/////////////////////////////////////////////////
+function arrayToRegexOptionGroup(arr){
+  // Sort to longest strings first.
+  // Since we are sorting in descending order by
+  // length, it seems reasonable to also do
+  // the nested alphabetic sort in reverse order too.
+  // This nested sort is not critical, but makes it a
+  // little bit easier for human eyes:
+  arr.sort( (a,b)=>{
+    return b.length-a.length || b.localeCompare(a);
+  });
+  return new RegExp('^('+arr.join('|')+')');
+}
+
 ///////////////////////////////////////////
 //
 // SECTION I : PREFIXES
@@ -58,77 +81,96 @@
 ///////////////////////////////////////////
 
 const vstem={
- stt:{
-   ax:[
-     'axix',
-     'axkati',
-     'axoxokti',
-     'axoxowi'
-   ],
-   o:[
-     'oh',
-     'okiς',
-     'okti',
-     'olin',
-     'olol',
-     'olςo',
-     'omewi',
-     'omiyo',
-     'ompaka',
-     'ompan',
-     'ompaya',
-     'ompowi',
-     'oni',
-     'onka',
-     'ooni',
-     'ooxki',
-     'ooya',
-     'ooyil',
-     'ostokti',
-     'owia',
-     'owih',
-     'oxki',
-     'oya',
-     'oyi',
-     'oyil',
-     'oκil',
-     'oςpan',
-     'oτti'
-   ],
-   ni:[
-     'niτκa' // maybe never used without tlan- prefix?
-   ],
-   xi:[
-     'xihx',
-     'xikalti',
-     'xikanti',
-     'xikiwi',
-     'xiko',
-     'xilwi',
-     'xima',
-     'ximi',
-     'xinehpal',
-     'xinepal',
-     'xinki',
-     'xipew',
-     'xitini',
-     'xitom',
-     'xiton',
-     'xiwimaκi',
-     'xiwi',
-     'xiwλam',
-     'xiwλan',
-     'xixa',
-     'xixi',
-     'xixki',
-     'xiya',
-     'xiλakti',
-     'xiλan',
-     'xiλaw',
-     'xiκeni',
-     'xiκenki'
-   ],
-   ti:[
+ stt:[
+   {
+     key:'ax',
+     include:/^(ax)(.*)/,
+     exclude:arrayToRegexOptionGroup([
+       'axix',
+       'axkati',
+       'axoxokti',
+       'axoxowi'
+     ])
+   },
+   {
+     key:'o',
+     include:/^(o)(.*)/,
+     exclude:arrayToRegexOptionGroup([
+       'oh',
+       'okiς',
+       'okti',
+       'olin',
+       'olol',
+       'olςo',
+       'omewi',
+       'omiyo',
+       'ompaka',
+       'ompan',
+       'ompaya',
+       'ompowi',
+       'oni',
+       'onka',
+       'ooni',
+       'ooxki',
+       'ooya',
+       'ooyil',
+       'ostokti',
+       'owia',
+       'owih',
+       'oxki',
+       'oya',
+       'oyi',
+       'oyil',
+       'oκil',
+       'oςpan',
+       'oτti'
+     ])
+   },
+   {
+     key:'ni',
+     include:/^(ni)(.*)/,
+     exclude:arrayToRegexOptionGroup([
+       'niτκa' // maybe never used without tlan- prefix?
+     ])
+   },
+   {
+     key:'xi',
+     include:/^(xi)(.*)/,
+     exclude:arrayToRegexOptionGroup([
+       'xihx',
+       'xikalti',
+       'xikanti',
+       'xikiwi',
+       'xiko',
+       'xilwi',
+       'xima',
+       'ximi',
+       'xinehpal',
+       'xinepal',
+       'xinki',
+       'xipew',
+       'xitini',
+       'xitom',
+       'xiton',
+       'xiwimaκi',
+       'xiwi',
+       'xiwλam',
+       'xiwλan',
+       'xixa',
+       'xixi',
+       'xixki',
+       'xiya',
+       'xiλakti',
+       'xiλan',
+       'xiλaw',
+       'xiκeni',
+       'xiκenki'
+     ])
+   },
+   {
+     key:'ti',
+     include:/^(ti)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'tiamiki',
      'tiankiso',
      'tihtilan',
@@ -160,25 +202,50 @@ const vstem={
      'tixwak',
      'tiλan',
      'tiκin'
-   ],
-   in:[
+     ])
+   },
+   {
+     key:'in',
+     include:/^(in)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'inama',
      'inanki'
-   ],
-   nan:[
+     ])
+   },
+   {
+     key:'nan',
+     include:/^(nan)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'nanalka',
      'nanamak',
      'nanamik',
      'nanankili',
      'nankili'
-   ],
-   neς:[
+     ])
+   },
+   {
+     key:'neς',
+     include:/^(neς)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'neςik',
      'neςkawi'
-   ],
-   miτ:[ // no entries found
-   ],
-   ki:[
+     ])
+   },
+   {
+     key:'miτ',
+     include:/^(miτ)(.*)/,
+     exclude:0
+   },
+   // NB: kin MUST PRECEDE ki:
+   {
+     key:'kin',
+     include:/^(kin)(.*)/,
+     exclude:0
+   },
+   {
+     key:'ki',
+     include:/^(ki)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'kihki',
      'kikis',
      'kikixili',
@@ -187,37 +254,79 @@ const vstem={
      'kiski',
      'kixkix',
      'kixti'
-   ],
-   i:[
-     
-   ],
-   teς:[
+     ])
+   },
+   // SPECIAL CASE WITH k:
+   {
+     key:'k',
+     include:/^(k)(.*)/,
+     exclude:0
+   },
+   {
+     // NOTE TO SELF: CHECK THIS ONE:
+     key:'i',
+     include:/^(ki)(.*)/,
+     exclude:arrayToRegexOptionGroup([
+     'ih',
+     'ikxi',
+     'ix'
+     ])
+   },
+   {
+     key:'teς',
+     include:/^(teς)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'teςankalak',
      'teςti'
-   ],
-   meς:[ // no entries found
-   ],
-   ameς:[ // no entries found
-   ],
-   nameς:[ // no entries found
-   ],
-   nimeς:[ // no entries found
-   ],
-   kin:[ // no entries found
-   ],
-   on:[
+     ])
+   },
+   {
+     key:'meς',
+     include:/^(meς)(.*)/,
+     exclude:0
+   },
+   {
+     key:'ameς',
+     include:/^(ameς)(.*)/,
+     exclude:0
+   },
+   {
+     key:'nameς',
+     include:/^(nameς)(.*)/,
+     exclude:0
+   },
+   {
+     key:'nimeς',
+     include:/^(nimeς)(.*)/,
+     exclude:0
+   },
+   {
+     key:'onwal',
+     include:/^(onwal)(.*)/,
+     exclude:0
+   },
+   {
+     key:'on',
+     include:/^(on)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'oni',
      'onka'
-   ],
-   wal:[
+     ])
+   },
+   {
+     key:'wal',
+     include:/^(wal)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'walani',
      'walla',
      'walki',
      'wallik'
-   ],
-   onwal:[ // no entries found
-   ],
-   mo:[
+     ])
+   },
+   {
+     key:'mo',
+     include:/^(mo)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'mohmol',
      'mohmoyaw',
      'mohmoτki',
@@ -259,8 +368,12 @@ const vstem={
      'moτki',
      'moτo',
      'moτti'
-   ],
-   no:[
+     ])
+   },
+   {
+     key:'no',
+     include:/^(no)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'nohnoτ',
      'nokixki',
      'nokiya',
@@ -268,8 +381,12 @@ const vstem={
      'nonoτ',
      'noτa',
      'noτki',
-   ],
-   te:[
+     ])
+   },
+   {
+     key:'te',
+     include:/^(te)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      'teh',
      'teiski',
      'teka',
@@ -385,8 +502,12 @@ const vstem={
      'teτil',
      'teτonkalyamanil',
      'teςti',
-   ],
-   λa:[
+     ])
+   },
+   {
+     key:'λa',
+     include:/^(λa)(.*)/,
+     exclude:arrayToRegexOptionGroup([
      // any occurrences of λa followed by a terminal consonant 
      // then followed by another consonant are clearly not the 
      // 'λa' indefinite direct object:
@@ -699,7 +820,7 @@ const vstem={
     'λasohso',
     'λasokwi',
     'λasolte',
-    'λasolλati',
+    'λasolλa',
     'λatehtek',
     'λatehteka',
     'λatehtemil',
@@ -870,12 +991,131 @@ const vstem={
     'λaτontekili',
     'λaτoyonil',
     'λaςoςopika'
-   ]
- },
+    ])
+  }
+ ],
  end:{
+   ki:[
+    'ahki',
+    'aki',
+    'iτki',
+    'kaki',
+    'kalaki',
+    'miki',
+    'neki',
+    'paki',
+    'paτki',
+    'piki',
+    'pixki',
+    'poτaki',
+    'saki',
+    'teki',
+    'waki',
+    'λaki'
+   ],
+   ti:[
+    'mati'
+   ],
+   ko:[
+   ],
+   to:[
+   ],
 
  }
 };
 
-console.log(vstem.stt['λa']);
+/////////////////////////////
+//
+// SEGMENT:
+//
+/////////////////////////////
+function segment(verbForm){
+  const marker='•';
+  let result='';
+  let remainder=verbForm;
+  let precededByNiTiXi = false;
+
+  ////////////////////////
+  //
+  // PART I: PREFIXES
+  //
+  ////////////////////////
+  vstem.stt.forEach(obj=>{
+    let excluded = remainder.match(obj.exclude);
+    let matched  = remainder.match(obj.include);
+    if(matched && !excluded){
+      // SPECIAL CASE FOR 'k' AND 'ki':
+      if(matched[1]==='k'){
+        if(precededByNiTiXi){
+          // FIRST AND SECOND PERSON FORMS:
+          // Easy case because we can only have 'k' here:
+          // Any vowel following the 'k' is part of the verb:
+          result += 'k' + marker;
+        }else{
+          // THIRD PERSON FORMS:
+          // Difficult because 3rd person sg is 'ki'
+          // but verb may start with vowel i too:
+          result += 'ki' + marker;
+          if(matched[2][0]==='i'){
+            if(matched[2][1]!='h'){
+              // 'h' can only be a terminal consonant, so
+              // we know for sure the verb starts with 'i'
+              // if followed by 'h'. No change to the remainder.
+              //
+              // But here we *don't* have an 'h'
+              // so it is more complicated. Sometimes
+              // we need to peel off the 'i' on the 
+              // remainder, and sometimes not:
+              // 
+              // Cases where we would keep the 'i'
+              // as part of the verb stem include:
+              //  'itt(a)' , 'itz' , 'ix', etc.:
+              // // if(!matched[2].match(iVerbRegex)){
+              // //  matched[2] = matched[2].substring(1);
+              // //}
+            }
+          }
+        }
+      }else{
+        // NOT the 'k' case, so:
+        result += matched[1] + marker;
+      }
+      // Store the fact that the verb is not in
+      // 3rd person:
+      if(matched[1].match(/ni|ti|xi/)){
+        precededByNiTiXi=true;
+      }
+      // 'peel' off the prefix from what is left:
+      // and save it:
+      remainder = matched[2];
+    // -- ++ --
+    }
+  });
+  // SUFFIXES (NOT COMPLETE YET)
+  const tail = '';
+
+  // RETURN:
+  return `${result}\u001b[35m${remainder}\u001b[0m${tail}`;
+}
+
+//vstem.stt.forEach(obj=>{
+//  console.log('============');
+//  console.log(`KEY=${obj.key}`);
+//  console.log(obj.exclude);
+//});
+
+///////////////////////////////
+//
+// MAIN
+//
+///////////////////////////////
+if(process.argv.length!=3){
+  console.error('Please specify a verb form to test on the command line');
+  return 1;
+}
+
+// The verb form to process:
+const verbForm = process.argv[2];
+const result = segment(verbForm);
+console.log(result);
 
