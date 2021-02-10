@@ -64,6 +64,24 @@ function arrayToRegexOptionGroup(arr){
   return new RegExp('^('+arr.join('|')+')');
 }
 
+//////////////////////////////////////////////
+//
+// arrayToEndRegexOptionGroup
+//
+//////////////////////////////////////////////
+function arrayToEndRegexOptionGroup(arr){
+  // Sort to longest strings first.
+  // Since we are sorting in descending order by
+  // length, it seems reasonable to also do
+  // the nested alphabetic sort in reverse order too.
+  // This nested sort is not critical, but makes it a
+  // little bit easier for human eyes:
+  arr.sort( (a,b)=>{
+    return b.length-a.length || b.localeCompare(a);
+  });
+  return new RegExp('('+arr.join('|')+')$');
+}
+
 ////////////////////////////////////////////
 //
 // keyToStartRegex
@@ -1052,7 +1070,7 @@ const vstem={
   {
    key:'kah', //plural imperative ending (NOTE TO SELF: But maybe we just should handle terminal 'n' phonetics ...)
    include:keyToEndRegex('kah'),
-   exclude:arrayToRegexOptionGroup([
+   exclude:arrayToEndRegexOptionGroup([
     'onkah'
    ])
   },
@@ -1064,7 +1082,7 @@ const vstem={
   {
    key:'h', //plural form
    include:keyToEndRegex('h'),
-   exclude:arrayToRegexOptionGroup([
+   exclude:arrayToEndRegexOptionGroup([
     'onkah'
    ])
   },
@@ -1081,7 +1099,7 @@ const vstem={
   {
    key:'yaya', //imperfect singular form
    include:keyToEndRegex('yaya'),
-   exclude:arrayToRegexOptionGroup([
+   exclude:arrayToEndRegexOptionGroup([
     'kahyaya',
     'ihyaya'
    ])
@@ -1090,7 +1108,7 @@ const vstem={
   {
    key:'ya', //imperfect singular form (Z)
    include:keyToEndRegex('ya'),
-   exclude:arrayToRegexOptionGroup([
+   exclude:arrayToEndRegexOptionGroup([
     'aya',
     'eya',
     'iya',
@@ -1130,7 +1148,7 @@ const vstem={
   {
    key:'nemi', //auxiliary verb nemi:    -ti-nemi 
    include:keyToEndRegex('nemi'),
-   exclude:arrayToRegexOptionGroup([
+   exclude:arrayToEndRegexOptionGroup([
     'nehnemi'
    ])
   },
@@ -1164,8 +1182,9 @@ const vstem={
   {
    key:'ti', //future propositivo 'to'ward (ir)
    include:keyToEndRegex('ti'),
-   exclude:arrayToRegexOptionGroup([
-    'mati'
+   exclude:arrayToEndRegexOptionGroup([
+    'mati',
+    'tekiti'
    ])
   },
   {
@@ -1191,7 +1210,7 @@ const vstem={
   {
    key:'ki', //future propositivo 'c'ome (venir)
    include:keyToEndRegex('ki'),
-   exclude:arrayToRegexOptionGroup([
+   exclude:arrayToEndRegexOptionGroup([
     'ahki',
     'aki',
     'iτki',
