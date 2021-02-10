@@ -301,16 +301,16 @@ const vstem={
        '',
      ])
    },
-   {
-     // NOTE TO SELF: CHECK THIS ONE:
-     key:'i',
-     include:keyToStartRegex('i'),
-     exclude:arrayToRegexOptionGroup([
-     'ih',
-     'ikxi',
-     'ix'
-     ])
-   },
+   //{
+   //  // NOTE TO SELF: CHECK THIS ONE:
+   //  key:'i',
+   //  include:keyToStartRegex('i'),
+   //  exclude:arrayToRegexOptionGroup([
+   //  'ih',
+   //  'ikxi',
+   //  'ix'
+   //  ])
+   //},
    {
      key:'teς',
      include:keyToStartRegex('teς'),
