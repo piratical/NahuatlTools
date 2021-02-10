@@ -7,6 +7,9 @@
 //
 ///////////////////////////////////////////
 
+//import { respellVerbStem } from './respell.js';
+const respellVerbStem = require('./respell.js').respellVerbStem;
+
 ///////////////////////////////////////////
 //
 // INTRODUCTION
@@ -315,8 +318,7 @@ const vstem={
        'koτ',
        'kisa',
        'kixt',
-       'keς',
-       '',
+       'keς'
      ])
    },
    //{
@@ -1240,6 +1242,11 @@ const vstem={
    exclude:0
   },
   {
+   key:'neki', // neki as an auxilliary verb coming after a future form ending in 's'
+   include:keyToEndRegex('neki'),
+   exclude:0
+  },
+  {
    key:'s', //future singular form
    include:keyToEndRegex('s'),
    exclude:0
@@ -1254,7 +1261,142 @@ const vstem={
    include:keyToEndRegex('tika'),
    exclude:0
   }
- ]
+ ],
+ iverb:arrayToRegexOptionGroup([
+ 'iil',
+ 'iinama',
+ 'iiskaltia',
+ 'iiwinti',
+ 'iixawia',
+ 'iixka',
+ 'iixkopewi',
+ 'iixtemo',
+ 'iixwa',
+ 'iixκati',
+ 'iiκsi',
+ 'ikana',
+ 'ikaniwi',
+ 'ikanoa',
+ 'ikanλaςilia',
+ 'iknelia',
+ 'ikneya',
+ 'ikpaya',
+ 'ikpow',
+ 'ikxi',
+ 'ilakaτ',
+ 'ilkawa',
+ 'illamiki',
+ 'illia',
+ 'iloh',
+ 'ilpi',
+ 'ilwi',
+ 'inama',
+ 'isahwia',
+ 'isawia',
+ 'isiowi',
+ 'iskalti',
+ 'iskaya',
+ 'istal',
+ 'istaya',
+ 'istitehteki',
+ 'isλaka',
+ 'itona',
+ 'itoni',
+ 'itta',
+ 'itwilia',
+ 'iwi',
+ 'iwint',
+ 'ixahaloa',
+ 'ixahsi',
+ 'ixalaxoa',
+ 'ixapoloni',
+ 'ixawi',
+ 'ixayotemo',
+ 'ixil',
+ 'ixisiowi',
+ 'ixitta',
+ 'ixiτkia',
+ 'ixka',
+ 'ixkeτa',
+ 'ixkilia',
+ 'ixkixtilia',
+ 'ixko',
+ 'ixmana',
+ 'ixmanilia',
+ 'ixmati',
+ 'ixmayati',
+ 'ixmaςyotia',
+ 'ixmelaw',
+ 'ixmik',
+ 'ixmina',
+ 'ixnamiki',
+ 'ixnesi',
+ 'ixnewia',
+ 'ixnex',
+ 'ixolini',
+ 'ixoni',
+ 'ixpa',
+ 'ixpah',
+ 'ixpaki',
+ 'ixpaktia',
+ 'ixpan',
+ 'ixparehomana',
+ 'ixpaςiwi',
+ 'ixpeλani',
+ 'ixpiki',
+ 'ixpinawa',
+ 'ixpiya',
+ 'ixpiτini',
+ 'ixpohpo',
+ 'ixpol',
+ 'ixpoposoka',
+ 'ixposokti',
+ 'ixposoni',
+ 'ixposteki',
+ 'ixpoyawi',
+ 'ixsiowi',
+ 'ixsokowia',
+ 'ixtamalkisa',
+ 'ixteh',
+ 'ixtek',
+ 'ixtem',
+ 'ixtenexiwi',
+ 'ixti',
+ 'ixto',
+ 'ixtronkeτa',
+ 'ixwa',
+ 'ixwe',
+ 'ixwi',
+ 'ixxi',
+ 'ixya',
+ 'ixye',
+ 'ixκa',
+ 'ixλa',
+ 'ixκa',
+ 'ixτa',
+ 'ixλa',
+ 'ixλehko',
+ 'ixκi',
+ 'ixλikisa',
+ 'ixκi',
+ 'ixτinλa',
+ 'ixςi',
+ 'ixςo',
+ 'ixτo',
+ 'iyoa',
+ 'iyoka',
+ 'iςkayolti',
+ 'iτki',
+ 'iςpokati',
+ 'iκsi',
+ 'iςta',
+ 'iςteki',
+ 'iτti',
+ 'iτto',
+ 'iςtoka',
+ 'iτwilia',
+ 'iκxitia'  
+ ])
 };
 
 /////////////////////////////
@@ -1302,10 +1444,10 @@ function segment(verbForm){
               // 
               // Cases where we would keep the 'i'
               // as part of the verb stem include:
-              //  'itt(a)' , 'itz' , 'ix', etc.:
-              // // if(!matched[2].match(iVerbRegex)){
-              // //  matched[2] = matched[2].substring(1);
-              // //}
+              //  'itt(a)' , 'itz' , 'ix', 'ihtoa' etc.:
+              if(!matched[2].match(vstem.iverb)){
+                matched[2] = matched[2].substring(1);
+              }
             }
           }
         }
@@ -1335,8 +1477,10 @@ function segment(verbForm){
     }
   });
 
+  // Check whether we need to respell the verb stem:
+  const stem = respellVerbStem(remainder);
   // RETURN:
-  return `${result}\u001b[35m${remainder}\u001b[0m${tail}`;
+  return `${result}\u001b[35m${stem}\u001b[0m${tail}`;
 }
 
 ///////////////////////////////
