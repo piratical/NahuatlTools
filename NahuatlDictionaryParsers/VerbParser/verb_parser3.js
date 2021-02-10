@@ -64,6 +64,24 @@ function arrayToRegexOptionGroup(arr){
   return new RegExp('^('+arr.join('|')+')');
 }
 
+////////////////////////////////////////////
+//
+// keyToStartRegex
+//
+////////////////////////////////////////////
+function keyToStartRegex(key){
+  return new RegExp(`^(${key})(.*)`);
+}
+
+////////////////////////////////////////////
+//
+// keyToEndRegex
+//
+////////////////////////////////////////////
+function keyToEndRegex(key){
+  return new RegExp(`(.*)(${key})$`);
+}
+
 ///////////////////////////////////////////
 //
 // SECTION I : PREFIXES
@@ -80,11 +98,12 @@ function arrayToRegexOptionGroup(arr){
 //
 ///////////////////////////////////////////
 
+
 const vstem={
  stt:[
    {
      key:'ax',
-     include:/^(ax)(.*)/,
+     include:keyToStartRegex('ax'),
      exclude:arrayToRegexOptionGroup([
        'axix',
        'axkati',
@@ -94,7 +113,7 @@ const vstem={
    },
    {
      key:'o',
-     include:/^(o)(.*)/,
+     include:keyToStartRegex('o'),
      exclude:arrayToRegexOptionGroup([
        'oh',
        'okiς',
@@ -128,14 +147,14 @@ const vstem={
    },
    {
      key:'ni',
-     include:/^(ni)(.*)/,
+     include:keyToStartRegex('ni'),
      exclude:arrayToRegexOptionGroup([
        'niτκa' // maybe never used without tlan- prefix?
      ])
    },
    {
      key:'xi',
-     include:/^(xi)(.*)/,
+     include:keyToStartRegex('xi'),
      exclude:arrayToRegexOptionGroup([
        'xihx',
        'xikalti',
@@ -169,7 +188,7 @@ const vstem={
    },
    {
      key:'ti',
-     include:/^(ti)(.*)/,
+     include:keyToStartRegex('ti'),
      exclude:arrayToRegexOptionGroup([
      'tiamiki',
      'tiankiso',
@@ -206,7 +225,7 @@ const vstem={
    },
    {
      key:'in',
-     include:/^(in)(.*)/,
+     include:keyToStartRegex('in'),
      exclude:arrayToRegexOptionGroup([
      'inama',
      'inanki'
@@ -214,7 +233,7 @@ const vstem={
    },
    {
      key:'nan',
-     include:/^(nan)(.*)/,
+     include:keyToStartRegex('nan'),
      exclude:arrayToRegexOptionGroup([
      'nanalka',
      'nanamak',
@@ -225,7 +244,7 @@ const vstem={
    },
    {
      key:'neς',
-     include:/^(neς)(.*)/,
+     include:keyToStartRegex('neς'),
      exclude:arrayToRegexOptionGroup([
      'neςik',
      'neςkawi'
@@ -233,18 +252,18 @@ const vstem={
    },
    {
      key:'miτ',
-     include:/^(miτ)(.*)/,
+     include:keyToStartRegex('miτ'),
      exclude:0
    },
    // NB: kin MUST PRECEDE ki:
    {
      key:'kin',
-     include:/^(kin)(.*)/,
+     include:keyToStartRegex('kin'),
      exclude:0
    },
    {
      key:'ki',
-     include:/^(ki)(.*)/,
+     include:keyToStartRegex('ki'),
      exclude:arrayToRegexOptionGroup([
      'kihki',
      'kikis',
@@ -259,7 +278,7 @@ const vstem={
    // SPECIAL CASE WITH k:
    {
      key:'k',
-     include:/^(k)(.*)/,
+     include:keyToStartRegex('k'),
      exclude:arrayToRegexOptionGroup([
        'kafe',
        'kahka',
@@ -285,7 +304,7 @@ const vstem={
    {
      // NOTE TO SELF: CHECK THIS ONE:
      key:'i',
-     include:/^(ki)(.*)/,
+     include:keyToStartRegex('i'),
      exclude:arrayToRegexOptionGroup([
      'ih',
      'ikxi',
@@ -294,7 +313,7 @@ const vstem={
    },
    {
      key:'teς',
-     include:/^(teς)(.*)/,
+     include:keyToStartRegex('teς'),
      exclude:arrayToRegexOptionGroup([
      'teςankalak',
      'teςti'
@@ -302,32 +321,32 @@ const vstem={
    },
    {
      key:'meς',
-     include:/^(meς)(.*)/,
+     include:keyToStartRegex('meς'),
      exclude:0
    },
    {
      key:'ameς',
-     include:/^(ameς)(.*)/,
+     include:keyToStartRegex('ameς'),
      exclude:0
    },
    {
      key:'nameς',
-     include:/^(nameς)(.*)/,
+     include:keyToStartRegex('nameς'),
      exclude:0
    },
    {
      key:'nimeς',
-     include:/^(nimeς)(.*)/,
+     include:keyToStartRegex('nimeς'),
      exclude:0
    },
    {
      key:'onwal',
-     include:/^(onwal)(.*)/,
+     include:keyToStartRegex('onwal'),
      exclude:0
    },
    {
      key:'on',
-     include:/^(on)(.*)/,
+     include:keyToStartRegex('on'),
      exclude:arrayToRegexOptionGroup([
      'oni',
      'onka'
@@ -335,7 +354,7 @@ const vstem={
    },
    {
      key:'wal',
-     include:/^(wal)(.*)/,
+     include:keyToStartRegex('wal'),
      exclude:arrayToRegexOptionGroup([
      'walani',
      'walla',
@@ -345,7 +364,7 @@ const vstem={
    },
    {
      key:'mo',
-     include:/^(mo)(.*)/,
+     include:keyToStartRegex('mo'),
      exclude:arrayToRegexOptionGroup([
      'mohmol',
      'mohmoyaw',
@@ -1014,8 +1033,165 @@ const vstem={
     ])
   }
  ],
- end:{
-   ki:[
+ end:[
+  {
+   key:'sseh', //future plural form
+   include:keyToEndRegex('sseh'),
+   exclude:0
+  },
+  {
+   key:'seh', //future plural form
+   include:keyToEndRegex('seh'),
+   exclude:0
+  },
+  {
+   key:'kan', //plural imperative ending
+   include:keyToEndRegex('kan'),
+   exclude:0
+  },
+  {
+   key:'kah', //plural imperative ending (NOTE TO SELF: But maybe we just should handle terminal 'n' phonetics ...)
+   include:keyToEndRegex('kah'),
+   exclude:arrayToRegexOptionGroup([
+    'onkah'
+   ])
+  },
+  {
+   key:'keh', //preterit plural form
+   include:keyToEndRegex('keh'),
+   exclude:0
+  },
+  {
+   key:'h', //plural form
+   include:keyToEndRegex('h'),
+   exclude:arrayToRegexOptionGroup([
+    'onkah'
+   ])
+  },
+  {
+   key:'lo', //passive form
+   include:keyToEndRegex('lo'),
+   exclude:arrayToRegexOptionGroup([
+    'κalo',
+    'wilo',
+    'tilo',
+    'lilo'
+   ])
+  },
+  {
+   key:'yaya', //imperfect singular form
+   include:keyToEndRegex('yaya'),
+   exclude:arrayToRegexOptionGroup([
+    'kahyaya',
+    'ihyaya'
+   ])
+  },
+  // NOTE TO SELF: CHECK THIS ONE CAREFULLY AGAIN:
+  {
+   key:'ya', //imperfect singular form (Z)
+   include:keyToEndRegex('ya'),
+   exclude:arrayToRegexOptionGroup([
+    'aya',
+    'eya',
+    'iya',
+    'oya',
+   ])
+  },
+  {
+   key:'yahki', //auxiliary verb past tense: -ti-yahqui
+   include:keyToEndRegex('yahki'),
+   exclude:0
+  },
+  {
+   key:'wallaw', //auxiliary verb huallah: -ti-huallah
+   include:keyToEndRegex('wallaw'),
+   exclude:0
+  },
+  {
+   key:'waltok', //auxiliary past tense of huallah: -ti-hualtoc
+   include:keyToEndRegex('waltok'),
+   exclude:0
+  },
+  {
+   key:'wetzi', //auxiliary verb wetzi: -ti-huetzi
+   include:keyToEndRegex('wetzi'),
+   exclude:0
+  },
+  {
+   key:'wetzkeh', //auxiliary past tense of huetzki: -ti-huetzqueh
+   include:keyToEndRegex('wetzkeh'),
+   exclude:0
+  },
+  {
+   key:'wetzki', //auxiliary past tense of huetzki: -ti-huetzqui
+   include:keyToEndRegex('wetzki'),
+   exclude:0
+  },
+  {
+   key:'nemi', //auxiliary verb nemi:    -ti-nemi 
+   include:keyToEndRegex('nemi'),
+   exclude:arrayToRegexOptionGroup([
+    'nehnemi'
+   ])
+  },
+  // NOTE TO SELF: CHECK AGAIN
+  {
+   key:'kisa', //auxiliary verb kisa: -ti-quiza
+   include:keyToEndRegex('kisa'),
+   exclude:0
+  },
+  {
+   key:'kiskeh', //auxiliary past tense kisa: -ti-quizqueh
+   include:keyToEndRegex('kiskeh'),
+   exclude:0
+  },
+  {
+   key:'kiski', //auxiliary past tense kisa: -ti-quizqui
+   include:keyToEndRegex('kiski'),
+   exclude:0
+  },
+  // NOTE TO SELF: CHECK AGAIN:
+  {
+   key:'ewa', //auxiliary verb ewa: -ti-ehua
+   include:keyToEndRegex('ewa'),
+   exclude:0
+  },
+  {
+   key:'skia', //conditional singular form
+   include:keyToEndRegex('skia'),
+   exclude:0
+  },
+  {
+   key:'ti', //future propositivo 'to'ward (ir)
+   include:keyToEndRegex('ti'),
+   exclude:arrayToRegexOptionGroup([
+    'mati'
+   ])
+  },
+  {
+   key:'to', //past propositivo 'to'ward (ir)
+   include:keyToEndRegex('to'),
+   exclude:0
+  },
+  {
+   key:'tiw', //= -tiuh 'ti'+ 'yauh' (to go)
+   include:keyToEndRegex('tiw'),
+   exclude:0
+  },
+  {
+   key:'ssa', //future 's' + 'ya' = 'ssa'
+   include:keyToEndRegex('ssa'),
+   exclude:0
+  },
+  {
+   key:'sa', //future 's' + 'ya' = 'ssa'
+   include:keyToEndRegex('sa'),
+   exclude:0
+  },
+  {
+   key:'ki', //future propositivo 'c'ome (venir)
+   include:keyToEndRegex('ki'),
+   exclude:arrayToRegexOptionGroup([
     'ahki',
     'aki',
     'iτki',
@@ -1032,16 +1208,34 @@ const vstem={
     'teki',
     'waki',
     'λaki'
-   ],
-   ti:[
-    'mati'
-   ],
-   ko:[
-   ],
-   to:[
-   ],
-
- }
+   ])
+  },
+  {
+   key:'ko', //past propositivo 'c'ome (venir)
+   include:keyToEndRegex('ko'),
+   exclude:0
+  },
+  {
+   key:'k', //preterit singular form
+   include:keyToEndRegex('k'),
+   exclude:0
+  },
+  {
+   key:'s', //future singular form
+   include:keyToEndRegex('s'),
+   exclude:0
+  },
+  {
+   key:'toya', //
+   include:keyToEndRegex('toya'),
+   exclude:0
+  },
+  {
+   key:'tika', //
+   include:keyToEndRegex('tika'),
+   exclude:0
+  }
+ ]
 };
 
 /////////////////////////////
@@ -1112,17 +1306,19 @@ function segment(verbForm){
     }
   });
   // SUFFIXES (NOT COMPLETE YET)
-  const tail = '';
+  let tail = '';
+  vstem.end.forEach(obj=>{
+    let excluded = remainder.match(obj.exclude);
+    let matched  = remainder.match(obj.include);
+    if(matched && !excluded){
+        remainder = matched[1]
+        tail = marker + matched[2] + tail;
+    }
+  });
 
   // RETURN:
   return `${result}\u001b[35m${remainder}\u001b[0m${tail}`;
 }
-
-//vstem.stt.forEach(obj=>{
-//  console.log('============');
-//  console.log(`KEY=${obj.key}`);
-//  console.log(obj.exclude);
-//});
 
 ///////////////////////////////
 //
