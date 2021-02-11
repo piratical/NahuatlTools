@@ -1477,20 +1477,34 @@ function segment(verbForm){
   });
   // SUFFIXES (NOT COMPLETE YET)
   let tail = '';
-  vstem.end.forEach(obj=>{
+  const savedRemainder = remainder;
+  for(let i=0;i<vstem.end.length;i++){
+    let obj = vstem.end[i];
     let excluded = remainder.match(obj.exclude);
     let matched  = remainder.match(obj.include);
     if(matched && !excluded){
-        remainder = matched[1]
-        tail = marker + matched[2] + tail;
+      if(!matched[1]){
+        // Nothing left to do in this case:
+        // Check whether we need to respell the verb stem
+        // and then return:
+        // DEBUG: console.log(`No remainder with ${matched[2]}`);
+        break;
+      }else{
+          remainder = matched[1]
+          tail = marker + matched[2] + tail;
+      }
     }
-  });
-
-  // Check whether we need to respell the verb stem:
+  };
+  //
+  // Check whether we need to respell the verb stem
+  // and then return:
+  //
   const stem = respellVerbStem(remainder);
-  // RETURN:
   return `${result}\u001b[35m${stem}\u001b[0m${tail}`;
 }
+
+
+
 
 ///////////////////////////////
 //
