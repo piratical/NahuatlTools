@@ -282,21 +282,22 @@ const vstem={
      include:keyToStartRegex('kin'),
      exclude:0
    },
-   {
-     key:'ki',
-     include:keyToStartRegex('ki'),
-     exclude:arrayToRegexOptionGroup([
-     'kihki',
-     'kikis',
-     'kikixili',
-     'kimil',
-     'kisa',
-     'kiski',
-     'kixkix',
-     'kixti'
-     ])
-   },
-   // SPECIAL CASE WITH k:
+   //{
+   //  key:'ki',
+   //  include:keyToStartRegex('ki'),
+   //  exclude:arrayToRegexOptionGroup([
+   //  'kihki',
+   //  'kikis',
+   //  'kikixili',
+   //  'kimil',
+   //  'kisa',
+   //  'kiski',
+   //  'kixkix',
+   //  'kixti'
+   //  ])
+   //},
+   // SPECIAL CASE WITH k: This handles both "k" and "ki"
+   // (See code below for details on how this is implemented)
    {
      key:'k',
      include:keyToStartRegex('k'),
@@ -318,8 +319,16 @@ const vstem={
        'koτ',
        'kisa',
        'kixt',
-       'keς'
-     ])
+       'keς',
+       'kihki',
+       'kikis',
+       'kikixili',
+       'kimil',
+       'kisa',
+       'kiski',
+       'kixkix',
+       'kixti'
+    ])
    },
    //{
    //  // NOTE TO SELF: CHECK THIS ONE:
