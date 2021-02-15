@@ -2,7 +2,7 @@
 //
 // verb_parser.js
 //
-// This is a rough first draft implementation
+// This is a work-in-progress implementation
 // for parsing Nahuatl verb forms to get to the
 // verb stem.
 //
