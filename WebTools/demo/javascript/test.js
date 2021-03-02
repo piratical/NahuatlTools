@@ -146,5 +146,7 @@ console.log(`INPUT: ${input}`);
 const result = convertNahuatl(input);
 
 console.log(result);
+console.log('SYLLABIFIED:');
+console.log(nwt.atomicToIPAPhonetic(result.atom));
 return 0;
 

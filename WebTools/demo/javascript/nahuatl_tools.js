@@ -314,9 +314,9 @@ const nwt={
       'k':{hmod:'k',ack:'c',sep:'k',intr:'k',nab:nab.consonantCA,ipa:'k'},
       'κ':{hmod:'ku',ack:'cu',sep:'ku',intr:'ku',nab:nab.consonantCUA,ipa:'kʷ'}, // greek kappa          for [kʷ]
       'ʔ':{hmod:'h',ack:'h',sep:'j',intr:'h',nab:nab.consonantHA,ipa:'ʔ'},      // [ʔ]
-      'τ':{hmod:'tz',ack:'tz',sep:'ts',intr:'tz',nab:nab.consonantTZA,ipa:'ts'}, // greek tau            for [t͡s]
-      'λ':{hmod:'tl',ack:'tl',sep:'tl',intr:'tl',nab:nab.consonantTLA,ipa:'tɬ'}, // greek lambda         for [t͡ɬ]
-      'ς':{hmod:'ch',ack:'ch',sep:'ch',intr:'ch',nab:nab.consonantCHA,ipa:'tʃ'}, // terminal greek sigma for [t͡ʃ]
+      'τ':{hmod:'tz',ack:'tz',sep:'ts',intr:'tz',nab:nab.consonantTZA,ipa:'t͡s'}, // greek tau            for [t͡s]
+      'λ':{hmod:'tl',ack:'tl',sep:'tl',intr:'tl',nab:nab.consonantTLA,ipa:'t͡ɬ'}, // greek lambda         for [t͡ɬ]
+      'ς':{hmod:'ch',ack:'ch',sep:'ch',intr:'ch',nab:nab.consonantCHA,ipa:'t͡ʃ'}, // terminal greek sigma for [t͡ʃ]
       's':{hmod:'s',ack:'z',sep:'s',intr:'s',nab:nab.consonantSA,ipa:'s'},
       'l':{hmod:'l',ack:'l',sep:'l',intr:'l',nab:nab.consonantLA,ipa:'l'},
       'x':{hmod:'x',ack:'x',sep:'x',intr:'sh',nab:nab.consonantXA,ipa:'ʃ'},     // [ʃ]
@@ -548,6 +548,9 @@ const nwt={
   //
   // atomicToIPA:
   //
+  // => This is the first-stage
+  //    /fənimɪk/ version
+  //
   /////////////////////////////////////////
   atomicToIPA:function(atomic){
     let ipa = '';
@@ -560,6 +563,95 @@ const nwt={
       }
     }
     return ipa;
+  },
+  /////////////////////////////////////////
+  //
+  // atomicToDegeminate: Removes geminated
+  // consonants from an atomic word string
+  //
+  /////////////////////////////////////////
+  atomicToDegeminate:function(atomic){
+    let degem = '';
+    for(let i=0;i<atomic.length;i++){
+      const current = atomic[i];
+      // Check for gemination and keep only the first consonant:
+      if(nwt.isAtomicConsonant(current) && i<atomic.length && atomic[i+1]===current){
+        degem += current;
+        // Force skipping of second consonant:
+        ++i;
+      }else{
+        degem += current;
+      }
+    }
+    return degem;
+  },
+  /////////////////////////////////////////
+  //
+  // atomicToSyllabified: Syllabifies
+  // an atomic word string by adding dots
+  // '.' between syllables
+  //
+  //////////////////////////////////////////
+  atomicToSyllabified:function(atomic){
+    let sylab = '';
+    for(let i=0;i<atomic.length;i++){
+      const current = atomic[i];
+      if(nwt.isAtomicVowel(current) 
+        && i<atomic.length-1 
+        && nwt.isAtomicConsonant(atomic[i+1])
+        && nwt.isAtomicVowel(atomic[i+2]) ){
+        // VCV pattern => V.CV
+        sylab += current;
+        sylab += '.';
+      }else if(nwt.isAtomicConsonant(current) 
+        && i<atomic.length 
+        && nwt.isAtomicConsonant(atomic[i+1])){
+        // CC pattern => C.C
+        sylab += current;
+        sylab += '.';
+      }else if(nwt.isAtomicVowel(current)
+        && i< atomic.length
+        && nwt.isAtomicVowel(atomic[i+1])){
+        // VV pattern => V.V
+        sylab += current;
+        sylab += '.';
+      }else{
+        // pass through:
+        sylab += current;
+      }
+    }
+    return sylab;
+  },
+  /////////////////////////////////////////
+  //
+  // markStress: Mark stress on the 
+  // penultimate syllable of a syllabified
+  // atomic word string
+  //
+  /////////////////////////////////////////
+  markStress:function(sylf){
+    regex = /^(.*)\.(.*)\.(.*)$/;
+    return sylf.replace(regex,(match, p1, p2, p3, offset, string)=>{
+      return `${p1}ˈ${p2}.${p3}`;
+    });
+  },
+  /////////////////////////////////////////
+  //
+  // atomicToIPAPhonetic:
+  //
+  // => This is the second stage [fəˈnɛ.tɪk]
+  //    version
+  //
+  /////////////////////////////////////////
+  atomicToIPAPhonetic:function(atomic){
+    // Degeminate the word string:
+    const degem = nwt.atomicToDegeminate(atomic);
+    // syllabify:
+    const sylab = nwt.atomicToSyllabified(degem);
+    // Add stress marker:
+    const stres = nwt.markStress(sylab);
+    // Convert to IPA:
+    return nwt.atomicToIPA(stres);
   },
   /////////////////////////////////////////
   //
