@@ -114,7 +114,7 @@ const nms = require('./names.js').nms;
 ///////////////////////////////////////////////////////////////
 const ato={
   vowels:{
-    native:'aeioāēīō',
+    native:'aeioāēīō', // NB: Vowels with macrons are in Unicode precomposed form NFC
     foreign:'uū'
   },
   consonants:{

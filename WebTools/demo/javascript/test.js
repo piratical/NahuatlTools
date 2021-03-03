@@ -143,7 +143,9 @@ if(process.argv.length!=3){
 
 const input=process.argv[2];
 console.log(`INPUT: ${input}`);
-const result = convertNahuatl(input);
+// Force to Unicode normalized precomposed forms:
+const nfcForm = input.normalize('NFC');
+const result = convertNahuatl(nfcForm);
 
 console.log(result);
 console.log('SYLLABIFIED:');
