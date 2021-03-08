@@ -587,12 +587,17 @@ const nwt={
   },
   /////////////////////////////////////////
   //
-  // atomicToSyllabified: Syllabifies
+  // atomicToPhoneticSyllabified: Syllabifies
   // an atomic word string by adding dots
   // '.' between syllables
+  // 
+  // NOTA BENE: Syllabification here is
+  // for the PHONETIC LEVEL "GREEDY ONSET"
+  // syllabification. The PHONEMIC level
+  // could be different.
   //
   //////////////////////////////////////////
-  atomicToSyllabified:function(atomic){
+  atomicToPhoneticSyllabified:function(atomic){
     let sylab = '';
     for(let i=0;i<atomic.length;i++){
       const current = atomic[i];
@@ -626,14 +631,44 @@ const nwt={
   //
   // markStress: Mark stress on the 
   // penultimate syllable of a syllabified
-  // atomic word string
+  // atomic word string, s
   //
   /////////////////////////////////////////
-  markStress:function(sylf){
-    regex = /^(.*)\.(.*)\.(.*)$/;
-    return sylf.replace(regex,(match, p1, p2, p3, offset, string)=>{
-      return `${p1}ˈ${p2}.${p3}`;
-    });
+  markStress:function(s){
+    // Work from end of string moving
+    // toward the beginning:
+    const marker = 'ˈ';
+    let syllableCount = 0;
+    let letterSeen = false;
+    for(i = s.length-1;i>=0;i--){
+      if(nwt.isAtomicLetter(s[i])){
+        letterSeen=true;
+        if(i===0 && syllableCount===1){
+          s = [marker,s].join('');
+          return s;
+        }
+        // DEBUG:
+        // console.log(`letter "${s[i]}" seen at ${i} with sylCnt=${syllableCount} and letSeen=${letterSeen}`);
+      }else if(letterSeen && ( s[i]==='.')){
+        syllableCount++;
+        if(syllableCount===2){
+          // Mark penultimate syllable 
+          // with stress marker:
+          s = [s.slice(0, i ),marker,s.slice( i+1 )].join('');
+        }
+      }else if(s[i]===' '){
+        if(letterSeen && syllableCount===1){
+          // So we have already seen one syllable marked with '.'
+          // Mark penultimate syllable 
+          // with stress marker:
+          s = [s.slice(0, i+1 ),marker,s.slice( i+1 )].join('');
+        }
+        // White space resets the counter:
+        syllableCount = 0;
+        letterSeen    = false;
+      }
+    }
+    return s;
   },
   /////////////////////////////////////////
   //
@@ -646,8 +681,8 @@ const nwt={
   atomicToIPAPhonetic:function(atomic){
     // Degeminate the word string:
     const degem = nwt.atomicToDegeminate(atomic);
-    // syllabify:
-    const sylab = nwt.atomicToSyllabified(degem);
+    // syllabify at the PHONETIC level:
+    const sylab = nwt.atomicToPhoneticSyllabified(degem);
     // Add stress marker:
     const stres = nwt.markStress(sylab);
     // Convert to IPA:
