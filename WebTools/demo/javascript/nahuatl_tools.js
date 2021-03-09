@@ -516,6 +516,8 @@ const nwt={
   //
   /////////////////////////////////////////
   atomicToSEP:function(atomic){
+    // EXPERIMENTAL: handle allophones:
+    atomic = nwt.atomicAllophoneN2H(atomic);
     let sep = '';
     for(let i=0;i<atomic.length;i++){
       const current = atomic[i];
@@ -533,6 +535,8 @@ const nwt={
   //
   /////////////////////////////////////////
   atomicToHaslerModern:function(atomic){
+    // EXPERIMENTAL: handle allophones:
+    atomic = nwt.atomicAllophoneN2H(atomic);
     let hmod = '';
     for(let i=0;i<atomic.length;i++){
       const current = atomic[i];
@@ -584,6 +588,48 @@ const nwt={
       }
     }
     return degem;
+  },
+  ////////////////////////////////////////////
+  //
+  // atomicAllophoneN2H:
+  // -> Convert things like "tzin" to "tzih"
+  //
+  ////////////////////////////////////////////
+  atomicAllophoneN2H:function(atomic){
+    // In this direction, blanket replacement
+    // is almost but probably not completely 
+    // correct. We'll try it for now:
+    atomic = atomic.replace(/n\b/g,'h');
+    //atomic = atomic.replace(/τin\b/g,'τih');
+    //atomic = atomic.replace(/ςin\b/g,'ςih'); // michin, cuatochin etc.
+    //atomic = atomic.replace(/lin\b/g,'lih');
+    //atomic = atomic.replace(/tin\b/g,'tih');
+    return atomic;
+  },
+  /////////////////////////////////////////////
+  //
+  // atomicAllophoneH2N
+  //
+  /////////////////////////////////////////////
+  atomicAllophoneH2N:function(atomic){
+    // Conversion in this direction will be
+    // much harder to get right:
+    // 1.
+    atomic = atomic.replace(/tzih?\b/g,'tzin');
+    // 2.
+    atomic = atomic.replace(/ςih\b/g,'ςin'); // michin, cuatochin etc.
+    // 2.1. But if "lechih" or "pechih" were accidently converted, back convert them:
+    atomic = atomic.replace(/leςin\b/,'leςih');
+    atomic = atomic.replace(/peςin\b/,'peςih');
+    // 3.
+    atomic = atomic.replace(/lih\b/g,'lin');
+    // 3.1. But if "kikilih" was accidently converted, back convert:
+    atomic = atomic.replace(/kikilin\b/,'kikilih');
+    // 4.
+    atomic = atomic.replace(/tin\b/,'tih');
+    // 4.1 But back convert misconversions:
+    
+    return atomic;
   },
   /////////////////////////////////////////
   //
