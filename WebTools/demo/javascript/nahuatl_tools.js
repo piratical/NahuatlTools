@@ -599,6 +599,9 @@ const nwt={
     // In this direction, blanket replacement
     // is almost (but probably not completely) 
     // correct. We'll try it for now:
+    // OOPS THIS DOESN'T WORK BECAUSE JAVASCRIPT
+    // REGEXP \b DOES NOT WORK FOR UNICODE!!!!
+    // OK WE'LL HAVE TO FIND SOME OTHER SOLUTION...
     atomic = atomic.replace(/n\b/g,'h');
     //atomic = atomic.replace(/τin\b/g,'τih');
     //atomic = atomic.replace(/ςin\b/g,'ςih'); // michin, cuatochin etc.
