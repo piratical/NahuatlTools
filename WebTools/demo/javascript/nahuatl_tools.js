@@ -597,7 +597,7 @@ const nwt={
   ////////////////////////////////////////////
   atomicAllophoneN2H:function(atomic){
     // In this direction, blanket replacement
-    // is almost but probably not completely 
+    // is almost (but probably not completely) 
     // correct. We'll try it for now:
     atomic = atomic.replace(/n\b/g,'h');
     //atomic = atomic.replace(/τin\b/g,'τih');
