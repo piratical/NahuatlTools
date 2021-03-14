@@ -56,6 +56,10 @@ function convertNahuatl(inString){
     // APPLY ALLOPHONE RULES, EXCEPT WHEN EXCLUSIONS APPLY:
     //
     let allophonic = metaWord.atomic;
+    // 
+    // DEGEMINATION:
+    //
+    allophonic = nwt.atomicToDegeminate(allophonic);
     //
     // TERMINAL /n/ TO [h] RULE:
     //
