@@ -1,6 +1,7 @@
 const NWT = require('./nahuatl_tools.js');
 const nab = NWT.nab;
 const nwt = NWT.nwt;
+const alo = NWT.alo;
 
 // Experimental:
 const gmn = require('./geminate.js').gmn;
@@ -46,11 +47,37 @@ function convertNahuatl(inString){
     // EXPERIMENTAL: See if the word should have a geminated consonant:
     metaWord.atomic = gmn.findGeminate(metaWord.atomic);
 
-    let hhmod  = nwt.atomicToHaslerModern( metaWord.atomic );
-    let ssep   = nwt.atomicToSEP( metaWord.atomic );
+    ////////////////////////////////////////
+    //
+    // "F" (PHONETIC) ORTHOGRAPHIES:
+    //
+    ////////////////////////////////////////
+    //
+    // APPLY ALLOPHONE RULES, EXCEPT WHEN EXCLUSIONS APPLY:
+    //
+    let allophonic = metaWord.atomic;
+    //
+    // TERMINAL /n/ TO [h] RULE:
+    //
+    if(!alo.n2h.exclude[allophonic]){
+      allophonic = nwt.atomicAllophoneN2H(allophonic);
+    }
+    let hhmod  = nwt.atomicToHaslerModern( allophonic );
+    let ssep   = nwt.atomicToSEP( allophonic );
+    
+    
+    //////////////////////////////////////////
+    //
+    // "M" (MORPHOPHONEMIC) ORTHOGRAPHIES:
+    //
+    //////////////////////////////////////////
     let aack   = nwt.atomicToACK( metaWord.atomic );
     let ttmod  = nwt.atomicToTragerModern( metaWord.atomic );
+
+    // IPA:
     let iipa   = nwt.atomicToIPA( metaWord.atomic );
+    
+    // ATOMIC (NO CHANGE):
     let aatom  = metaWord.atomic;
 
     if(metaWord.flic){

@@ -29,7 +29,7 @@ const nms = require('./names.js').nms;
 
 ////////////////////////////////////////////////////////////////////
 //
-// INTROUCTION
+// INTRODUCTION
 //
 // Here we introduce an internal code-use-only 
 // "computational orthography" that is
@@ -247,6 +247,35 @@ nab.map={
 // END OF nab definitions section
 //
 /////////////////////////////////////
+
+//////////////////////////////////////
+//
+// ALLOPHONE RULES SECTION: alo
+//
+// NOTA BENE: BE SURE TO USE ATOMIC
+// ORTHOGRAPHY FOR ANY RULES
+//
+//////////////////////////////////////
+const alo={
+  // /n/ to [h]:
+  n2h:{
+    // These are the words that
+    // preserve terminal /n/ as [n]:
+    exclude:{
+      'wan':1,
+      'ken':1,
+      'pan':1,
+      'ipan':1,
+      'λen':1,
+      'λan':1
+    }
+  },
+  w2h:{
+  },
+  kw2k:{
+  }
+};
+
 
 ////////////////////////////////////////////
 //
@@ -516,8 +545,6 @@ const nwt={
   //
   /////////////////////////////////////////
   atomicToSEP:function(atomic){
-    // EXPERIMENTAL: handle allophones:
-    atomic = nwt.atomicAllophoneN2H(atomic);
     let sep = '';
     for(let i=0;i<atomic.length;i++){
       const current = atomic[i];
@@ -535,8 +562,6 @@ const nwt={
   //
   /////////////////////////////////////////
   atomicToHaslerModern:function(atomic){
-    // EXPERIMENTAL: handle allophones:
-    atomic = nwt.atomicAllophoneN2H(atomic);
     let hmod = '';
     for(let i=0;i<atomic.length;i++){
       const current = atomic[i];
@@ -592,21 +617,38 @@ const nwt={
   ////////////////////////////////////////////
   //
   // atomicAllophoneN2H:
+  // 
+  // (1) Used only when converting from an "M"
+  //     to an "F" orthography.
+  //
   // -> Convert things like "tzin" to "tzih"
+  // -> MUST BE USED IN CONJUNCTION WITH 
+  //    APPROPRIATE WORD-LEVEL EXCLUSION LIST
   //
   ////////////////////////////////////////////
   atomicAllophoneN2H:function(atomic){
-    // In this direction, blanket replacement
-    // is almost (but probably not completely) 
-    // correct. We'll try it for now:
-    // OOPS THIS DOESN'T WORK BECAUSE JAVASCRIPT
-    // REGEXP \b DOES NOT WORK FOR UNICODE!!!!
-    // OK WE'LL HAVE TO FIND SOME OTHER SOLUTION...
-    atomic = atomic.replace(/n\b/g,'h');
-    //atomic = atomic.replace(/τin\b/g,'τih');
-    //atomic = atomic.replace(/ςin\b/g,'ςih'); // michin, cuatochin etc.
-    //atomic = atomic.replace(/lin\b/g,'lih');
-    //atomic = atomic.replace(/tin\b/g,'tih');
+    //
+    // This performs an *UNFILTERED*
+    // replacement of terminal /n/ to [h].
+    // 
+    // NOTA BENE 1: THIS CAN ONLY BE USED
+    // IN A USEFUL MANNER WITH A WORD-LEVEL
+    // EXCLUSION LIST. SO ONLY USE THIS IN
+    // A WORD-BASED CONVERSION PIPELINE.
+    // 
+    // NOTA BENE 2: Javascript's RegExp '\b' IS
+    // *BROKEN* FOR UNICODE, SO WE HAVE THE 
+    // FOLLOWING:
+    //
+    // This should handle most of the cases:
+    atomic = atomic.replace(/n([ \t\.!?"᾽»’„”])/,(match,p1)=>{
+      console.log(`MATCH: ${match}`);
+      return `h${p1}`;
+    });
+    // End-of-string case (this is in fact
+    // the case that will always appear when
+    // using a word-based conversion pipeline):
+    atomic = atomic.replace(/n$/,'h');
     return atomic;
   },
   /////////////////////////////////////////////
@@ -973,5 +1015,6 @@ const nwt={
 
 exports.nab = nab;
 exports.nwt = nwt;
+exports.alo = alo;
 // END OF CODE 
 
