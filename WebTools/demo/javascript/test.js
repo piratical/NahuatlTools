@@ -32,14 +32,16 @@ function convertNahuatl(inString){
   let tmod=''; // Trager Modern
   let ipa =''; // New IPA
   let atom=''; // Atomic
+  let allo=''; // Allophonic
 
   // "Check boxes" to determine if capitalized words should be converted or not:
-  let cb_hasler={}, cb_sep={},cb_ack={},cb_trager={},cb_atom={};
-  cb_hasler.checked=false; 
-  cb_sep.checked=false;
-  cb_ack.checked=false;
-  cb_trager.checked=false;
-  cb_atom.checked=false;
+  let cb_hasler={}, cb_sep={},cb_ack={},cb_trager={},cb_atom={},cb_allo={};
+  cb_hasler.checked=true; 
+  cb_sep.checked=true;
+  cb_ack.checked=true;
+  cb_trager.checked=true;
+  cb_atom.checked=true;
+  cb_allo.checked=true;
 
   for(const metaWord of metaWords){
     // CONVERT WORDS TO OUTPUT ORTHOGRAPHIES:
@@ -56,16 +58,21 @@ function convertNahuatl(inString){
     // APPLY ALLOPHONE RULES, EXCEPT WHEN EXCLUSIONS APPLY:
     //
     let allophonic = metaWord.atomic;
-    // 
-    // DEGEMINATION:
-    //
-    allophonic = nwt.atomicToDegeminate(allophonic);
     //
     // TERMINAL /n/ TO [h] RULE:
     //
     if(!alo.n2h.exclude[allophonic]){
       allophonic = nwt.atomicAllophoneN2H(allophonic);
     }
+    //
+    // /w/ AS CODA TO [h] RULE:
+    //
+    allophonic = nwt.atomicAllophoneW2H(allophonic);
+    // 
+    // DEGEMINATION:
+    //
+    allophonic = nwt.atomicToDegeminate(allophonic);
+
     let hhmod  = nwt.atomicToHaslerModern( allophonic );
     let ssep   = nwt.atomicToSEP( allophonic );
     
@@ -97,7 +104,9 @@ function convertNahuatl(inString){
       ipa  += iipa;
       // ATOM: Treat just like the others so that examples with names can be atomized:
       atom += cb_atom.checked   ? nwt.capitalize(aatom) : metaWord.original;
-      
+      // ALLO:
+      allo += cb_allo.checked   ? nwt.capitalize(allophonic) : metaWord.original;
+
       // TRAGER:
       if(cb_trager.checked){
         ///////////////////////////////////////////////////////////////////////////
@@ -129,6 +138,7 @@ function convertNahuatl(inString){
         }
       }
     }else{
+      // NOT CAPITALIZED:
       hmod += hhmod;
       sep  += ssep ;
       ack  += aack ;
@@ -137,6 +147,7 @@ function convertNahuatl(inString){
       ipa  += iipa;
       // ATOM: also ignoring capitalization:
       atom += aatom;
+      allo += allophonic;
     }
     hmod += ' ';
     sep  += ' ';
@@ -144,6 +155,7 @@ function convertNahuatl(inString){
     tmod += ' ';
     ipa  += ' ';
     atom += ' ';
+    allo += ' ';
   }
 
 
@@ -158,7 +170,8 @@ function convertNahuatl(inString){
   tmod = tmod.trim();
   ipa  = ipa.trim();
   atom = atom.trim();
-  return { hasler:hmod,sep:sep,ack:ack,trager:tmod,ipa:ipa,atom:atom }
+  allo = allo.trim();
+  return { hasler:hmod,sep:sep,ack:ack,trager:tmod,ipa:ipa,atom:atom,allo:allo }
 
 }
 
@@ -180,6 +193,6 @@ const result = convertNahuatl(nfcForm);
 
 console.log(result);
 console.log('SYLLABIFIED:');
-console.log(nwt.atomicToIPAPhonetic(result.atom));
+console.log(nwt.atomicToIPAPhonetic(result.allo));
 return 0;
 
