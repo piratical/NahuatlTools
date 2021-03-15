@@ -68,11 +68,17 @@ function convertNahuatl(inString){
     // /w/ AS CODA TO [h] RULE:
     //
     allophonic = nwt.atomicAllophoneW2H(allophonic);
+    //
+    // /kw/ AS CODA TO [k] RULE:
+    //
+    allophonic = nwt.atomicAllophoneKw2K(allophonic);
     // 
-    // DEGEMINATION:
+    // DEGEMINATION: Do this as the last step:
     //
     allophonic = nwt.atomicToDegeminate(allophonic);
-
+    
+    // FINALLY WE CAN CONVERT FROM ALLOPHONIZED
+    // ATOMIC TO DESTINATION "F" ORTHOGRAPHIES:
     let hhmod  = nwt.atomicToHaslerModern( allophonic );
     let ssep   = nwt.atomicToSEP( allophonic );
     

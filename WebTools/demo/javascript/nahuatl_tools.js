@@ -263,6 +263,7 @@ const alo={
     // preserve terminal /n/ as [n]:
     exclude:{
       'wan':1,
+      'iwan':1,
       'ken':1,
       'pan':1,
       'ipan':1,
@@ -655,7 +656,7 @@ const nwt={
   //
   // atomicAllophoneW2H
   //
-  // -> Convert w in coda position to H
+  // -> Convert /w/ in coda position to [h]
   //    for "F" phonetic orthographies.
   //
   ////////////////////////////////////////////
@@ -669,6 +670,27 @@ const nwt={
     // Single word at end of a string:
     atomic = atomic.replace(/([aeio])w$/,(match,p1)=>{
       return `${p1}h`;
+    });
+    return atomic;
+  },
+  ////////////////////////////////////////////
+  //
+  // atomicAllophoneKw2K
+  //
+  // -> Convert /kʷ/ in coda position to [k]
+  //    for "F" phonetic orthographies.
+  //
+  ////////////////////////////////////////////
+  atomicAllophoneKw2K:function(atomic){
+    // Theoretically a foreign consonant could very rarely occur in 
+    // a compound neologism, so we include the foreign consonants.
+    // Also we include a space to mark the end of a word:
+    atomic = atomic.replace(/([aeio])κ([mnptkκτλςsxhlwyñβdgfrρbv ])/g,(match,p1,p2)=>{
+      return `${p1}k${p2}`;
+    });
+    // Single word at end of a string:
+    atomic = atomic.replace(/([aeio])κ$/,(match,p1)=>{
+      return `${p1}k`;
     });
     return atomic;
   },
