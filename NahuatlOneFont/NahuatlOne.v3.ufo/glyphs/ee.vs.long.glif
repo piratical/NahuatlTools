@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ee.vs.long" format="1">
-  <advance width="2048"/>
+  <advance width="0"/>
   <unicode hex="EDF1"/>
   <outline>
     <contour>
-      <point x="-571" y="1020" type="move" name="_vowel_signs"/>
+      <point x="-495" y="1020" type="move" name="_vowel_signs"/>
     </contour>
-    <component base="ee.vs" xOffset="-369"/>
-    <component base="long_vowel_dot" xOffset="17"/>
+    <component base="ee.vs" xOffset="7"/>
+    <component base="long_vowel_dot" xOffset="573"/>
   </outline>
   <lib>
     <dict>
@@ -38,25 +38,25 @@
         <array>
           <dict>
             <key>position</key>
-            <integer>-1135</integer>
+            <integer>-1079</integer>
             <key>width</key>
             <integer>147</integer>
           </dict>
           <dict>
             <key>position</key>
-            <integer>-866</integer>
+            <integer>-810</integer>
             <key>width</key>
             <integer>136</integer>
           </dict>
           <dict>
             <key>position</key>
-            <integer>-523</integer>
+            <integer>-467</integer>
             <key>width</key>
             <integer>138</integer>
           </dict>
           <dict>
             <key>position</key>
-            <integer>-253</integer>
+            <integer>-257</integer>
             <key>width</key>
             <integer>252</integer>
           </dict>

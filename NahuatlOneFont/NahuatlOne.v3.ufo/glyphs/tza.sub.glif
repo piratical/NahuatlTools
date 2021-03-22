@@ -4,28 +4,50 @@
   <unicode hex="EDD6"/>
   <outline>
     <contour>
-      <point x="-540" y="-70" type="move" name="_subjoined_consonants"/>
+      <point x="-706" y="-70" type="move" name="_subjoined_consonants"/>
     </contour>
     <contour>
-      <point x="-866" y="-176" type="line"/>
-      <point x="-156" y="-176" type="line"/>
-      <point x="-605" y="-662" type="line"/>
-      <point x="-581.477" y="-659.449"/>
-      <point x="-557.974" y="-658.204"/>
-      <point x="-534.604" y="-658.204" type="curve" smooth="yes"/>
-      <point x="-393.061" y="-658.204"/>
-      <point x="-256.429" y="-703.896"/>
-      <point x="-150" y="-782" type="curve"/>
-      <point x="-236" y="-901" type="line"/>
-      <point x="-317.371" y="-841.678"/>
-      <point x="-423.547" y="-805.506"/>
-      <point x="-534.126" y="-805.506" type="curve" smooth="yes"/>
-      <point x="-634.183" y="-805.506"/>
-      <point x="-737.846" y="-835.121"/>
-      <point x="-830" y="-904" type="curve"/>
-      <point x="-928" y="-795" type="line"/>
-      <point x="-492" y="-323" type="line"/>
-      <point x="-866" y="-323" type="line"/>
+      <point x="-1032" y="-176" type="line"/>
+      <point x="-322" y="-176" type="line"/>
+      <point x="-771" y="-662" type="line"/>
+      <point x="-747" y="-659"/>
+      <point x="-724" y="-658"/>
+      <point x="-701" y="-658" type="curve" smooth="yes"/>
+      <point x="-559" y="-658"/>
+      <point x="-422" y="-704"/>
+      <point x="-316" y="-782" type="curve"/>
+      <point x="-402" y="-901" type="line"/>
+      <point x="-483" y="-842"/>
+      <point x="-589" y="-806"/>
+      <point x="-700" y="-806" type="curve" smooth="yes"/>
+      <point x="-800" y="-806"/>
+      <point x="-904" y="-835"/>
+      <point x="-996" y="-904" type="curve"/>
+      <point x="-1094" y="-795" type="line"/>
+      <point x="-658" y="-323" type="line"/>
+      <point x="-1032" y="-323" type="line"/>
     </contour>
   </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>-806</integer>
+            <key>width</key>
+            <integer>148</integer>
+          </dict>
+          <dict>
+            <key>position</key>
+            <integer>-323</integer>
+            <key>width</key>
+            <integer>147</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
 </glyph>

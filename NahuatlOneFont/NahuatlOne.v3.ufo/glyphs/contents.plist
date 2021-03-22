@@ -196,5 +196,13 @@
     <string>oo.vs.long.glif</string>
     <key>uu.vs.long</key>
     <string>uu.vs.long.glif</string>
+    <key>io.vs</key>
+    <string>io.vs.glif</string>
+    <key>ao.vs</key>
+    <string>ao.vs.glif</string>
+    <key>medial.L</key>
+    <string>medial.L_.glif</string>
+    <key>medial.R</key>
+    <string>medial.R_.glif</string>
   </dict>
 </plist>

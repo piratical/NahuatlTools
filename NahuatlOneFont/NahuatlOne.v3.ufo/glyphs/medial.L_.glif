@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="medial.L" format="1">
+  <advance width="2048"/>
+  <unicode hex="EDE8"/>
+  <outline>
+    <contour>
+      <point x="-520" y="-70" type="move" name="_subjoined_consonants"/>
+    </contour>
+    <contour>
+      <point x="-519.515" y="138.553" type="curve"/>
+      <point x="-438.917" y="18.2646" type="line"/>
+      <point x="-616.38" y="-95.2207"/>
+      <point x="-694.258" y="-160.236"/>
+      <point x="-769.949" y="-204.89" type="curve" smooth="yes"/>
+      <point x="-845.638" y="-249.543"/>
+      <point x="-919.883" y="-265.945"/>
+      <point x="-1042.71" y="-269.356" type="curve"/>
+      <point x="-1046.88" y="-125.646" type="line"/>
+      <point x="-932.549" y="-122.472"/>
+      <point x="-903.888" y="-115.961"/>
+      <point x="-846.021" y="-81.8213" type="curve" smooth="yes"/>
+      <point x="-788.155" y="-47.6836"/>
+      <point x="-701.825" y="21.9668"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>-269</integer>
+            <key>width</key>
+            <integer>144</integer>
+          </dict>
+        </array>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>-1043</integer>
+            <key>width</key>
+            <integer>604</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

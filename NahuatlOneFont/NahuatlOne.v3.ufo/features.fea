@@ -31,7 +31,6 @@ lookup subjoined_consonants {
     sub \subjoiner_symbol \rra  by \rra.sub;
 } subjoined_consonants;
 
-
 lookup long_vowel_signs {
   lookupflag 0;
     sub \aa.vs \long_vowel_dot  by \aa.vs.long;
@@ -42,36 +41,44 @@ lookup long_vowel_signs {
 } long_vowel_signs;
 
 feature ccmp {
- lookup subjoined_consonants;
- lookup long_vowel_signs;
-} ccmp;
 
+ script DFLT;
+     language dflt ;
+      lookup subjoined_consonants;
+      lookup long_vowel_signs;
+
+ script latn;
+     language dflt ;
+      lookup subjoined_consonants;
+      lookup long_vowel_signs;
+} ccmp;
 
 # GPOS 
 
 
 lookup Vowel_sign_positioning {
   lookupflag 0;
-  markClass [\ee.vs ] <anchor -390 1020> @vowel_signs;
-  markClass [\ii.vs ] <anchor -280 1020> @vowel_signs;
-  markClass [\oo.vs ] <anchor -249 1020> @vowel_signs;
-  markClass [\uu.vs ] <anchor -251 1020> @vowel_signs;
-  markClass [\ia.vs ] <anchor -414 1020> @vowel_signs;
-  markClass [\ai.vs ] <anchor -378 1020> @vowel_signs;
-  markClass [\oa.vs ] <anchor -366 1020> @vowel_signs;
-  markClass [\eo.vs ] <anchor -358 1020> @vowel_signs;
-  markClass [\ei.vs ] <anchor -457 1020> @vowel_signs;
-  markClass [\aa.vs ] <anchor -284 1020> @vowel_signs;
-  markClass [\long_vowel_dot ] <anchor -143 1020> @vowel_signs;
-  markClass [\aa.vs.long ] <anchor -434 1020> @vowel_signs;
-  markClass [\ee.vs.long ] <anchor -571 1020> @vowel_signs;
-  markClass [\ii.vs.long ] <anchor -276 1020> @vowel_signs;
-  markClass [\oo.vs.long \uu.vs.long ] <anchor -444 1020> @vowel_signs;
+  markClass [\ee.vs ] <anchor -710 1020> @vowel_signs;
+  markClass [\ii.vs ] <anchor -690 1020> @vowel_signs;
+  markClass [\oo.vs ] <anchor -707 1020> @vowel_signs;
+  markClass [\uu.vs ] <anchor -714 1020> @vowel_signs;
+  markClass [\ia.vs ] <anchor -735 1020> @vowel_signs;
+  markClass [\ai.vs ] <anchor -728 1020> @vowel_signs;
+  markClass [\oa.vs \io.vs ] <anchor -746 1020> @vowel_signs;
+  markClass [\eo.vs \ao.vs ] <anchor -701 1020> @vowel_signs;
+  markClass [\ei.vs ] <anchor -717 1020> @vowel_signs;
+  markClass [\aa.vs ] <anchor -665 1020> @vowel_signs;
+  markClass [\long_vowel_dot ] <anchor -703 1020> @vowel_signs;
+  markClass [\aa.vs.long ] <anchor -386 1020> @vowel_signs;
+  markClass [\ee.vs.long ] <anchor -495 1020> @vowel_signs;
+  markClass [\ii.vs.long ] <anchor -256 1020> @vowel_signs;
+  markClass [\oo.vs.long ] <anchor -372 1020> @vowel_signs;
+  markClass [\uu.vs.long ] <anchor -373 1020> @vowel_signs;
+  pos base [\uni25CC_DOTTED_CIRCLE ] <anchor 549 1020> mark @vowel_signs;
   pos base [\aa.base ] <anchor 622 1020> mark @vowel_signs;
   pos base [\ee.base ] <anchor 680 1020> mark @vowel_signs;
   pos base [\ii.base ] <anchor 645 1020> mark @vowel_signs;
   pos base [\oo.base ] <anchor 568 1020> mark @vowel_signs;
-  pos base [\uu.base ] <anchor 602 1020> mark @vowel_signs;
   pos base [\subjoiner_symbol ] <anchor 546 1020> mark @vowel_signs;
   pos base [\ma ] <anchor 823 1020> mark @vowel_signs;
   pos base [\na ] <anchor 613 1020> mark @vowel_signs;
@@ -94,32 +101,31 @@ lookup Vowel_sign_positioning {
   pos base [\fa ] <anchor 498 1020> mark @vowel_signs;
   pos base [\ra ] <anchor 478 1020> mark @vowel_signs;
   pos base [\x ] <anchor 458 1020> mark @vowel_signs;
-  pos base [\uni25CC_DOTTED_CIRCLE ] <anchor 549 1020> mark @vowel_signs;
+  pos base [\uu.base ] <anchor 602 1020> mark @vowel_signs;
 } Vowel_sign_positioning;
 
 lookup Subjoined_consonant_positioning {
   lookupflag 0;
-  markClass [\ma.sub \sa.sub ] <anchor -710 -70> @subjoined_consonants;
-  markClass [\na.sub ] <anchor -531 -70> @subjoined_consonants;
-  markClass [\pa.sub ] <anchor -590 -70> @subjoined_consonants;
-  markClass [\ta.sub ] <anchor -480 -70> @subjoined_consonants;
-  markClass [\ca.sub ] <anchor -410 -70> @subjoined_consonants;
-  markClass [\cua.sub ] <anchor -470 -70> @subjoined_consonants;
-  markClass [\tza.sub ] <anchor -540 -70> @subjoined_consonants;
-  markClass [\tla.sub ] <anchor -580 -70> @subjoined_consonants;
-  markClass [\cha.sub ] <anchor -461 -70> @subjoined_consonants;
-  markClass [\xa.sub ] <anchor -636 -70> @subjoined_consonants;
-  markClass [\ha.sub ] <anchor -330 -70> @subjoined_consonants;
-  markClass [\la.sub ] <anchor -400 -70> @subjoined_consonants;
-  markClass [\ya.sub ] <anchor -535 -70> @subjoined_consonants;
-  markClass [\wa.sub ] <anchor -705 -70> @subjoined_consonants;
-  markClass [\nya.sub ] <anchor -493 -70> @subjoined_consonants;
-  markClass [\bva.sub ] <anchor -485 -70> @subjoined_consonants;
-  markClass [\da.sub ] <anchor -525 -70> @subjoined_consonants;
-  markClass [\ga.sub ] <anchor -622 -70> @subjoined_consonants;
-  markClass [\fa.sub ] <anchor -465 -70> @subjoined_consonants;
-  markClass [\ra.sub ] <anchor -455 -70> @subjoined_consonants;
-  markClass [\rra.sub ] <anchor -545 -70> @subjoined_consonants;
+  markClass [\ma.sub ] <anchor -710 -70> @subjoined_consonants;
+  markClass [\na.sub ] <anchor -691 -70> @subjoined_consonants;
+  markClass [\pa.sub ] <anchor -700 -70> @subjoined_consonants;
+  markClass [\ta.sub ] <anchor -670 -70> @subjoined_consonants;
+  markClass [\ca.sub ] <anchor -680 -70> @subjoined_consonants;
+  markClass [\cua.sub ] <anchor -653 -70> @subjoined_consonants;
+  markClass [\tza.sub ] <anchor -706 -70> @subjoined_consonants;
+  markClass [\tla.sub ] <anchor -728 -70> @subjoined_consonants;
+  markClass [\cha.sub \wa.sub \bva.sub ] <anchor -683 -70> @subjoined_consonants;
+  markClass [\sa.sub ] <anchor -750 -70> @subjoined_consonants;
+  markClass [\xa.sub ] <anchor -715 -70> @subjoined_consonants;
+  markClass [\ha.sub ] <anchor -689 -70> @subjoined_consonants;
+  markClass [\la.sub ] <anchor -704 -70> @subjoined_consonants;
+  markClass [\ya.sub ] <anchor -677 -70> @subjoined_consonants;
+  markClass [\nya.sub ] <anchor -650 -70> @subjoined_consonants;
+  markClass [\da.sub \rra.sub ] <anchor -695 -70> @subjoined_consonants;
+  markClass [\ga.sub ] <anchor -722 -70> @subjoined_consonants;
+  markClass [\fa.sub ] <anchor -675 -70> @subjoined_consonants;
+  markClass [\ra.sub ] <anchor -668 -70> @subjoined_consonants;
+  markClass [\medial.L \medial.R ] <anchor -520 -70> @subjoined_consonants;
   pos base [\uni25CC_DOTTED_CIRCLE ] <anchor 549 -70> mark @subjoined_consonants;
   pos base [\aa.base ] <anchor 622 -70> mark @subjoined_consonants;
   pos base [\ee.base \pa ] <anchor 680 -70> mark @subjoined_consonants;
@@ -150,11 +156,16 @@ lookup Subjoined_consonant_positioning {
 
 feature mark {
 
- lookup Vowel_sign_positioning;
- lookup Subjoined_consonant_positioning;
+ script DFLT;
+     language dflt ;
+      lookup Vowel_sign_positioning;
+      lookup Subjoined_consonant_positioning;
 
+ script latn;
+     language dflt ;
+      lookup Vowel_sign_positioning;
+      lookup Subjoined_consonant_positioning;
 } mark;
-
 #Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\zero \one \two \three \uni0000 \uni25CC_DOTTED_CIRCLE \exclam 
@@ -162,13 +173,12 @@ feature mark {
 	\quotedblleft \quotedblright \guillemotleft \guillemotright \plus \hyphen 
 	\multiply \degree \aa.base \ee.base \ii.base \oo.base \subjoiner_symbol 
 	\place.sign \name.sign \diety.sign \ma \na \pa \ta \ca \cua \tza \tla \cha \sa \xa \ha 
-	\la \ya \wa \nya \bva \da \ga \fa \ra \rra \x \period \space \uu.base \uniEDFA ];
+	\la \ya \wa \nya \bva \da \ga \fa \ra \rra \x \period \space \uu.base ];
 @GDEF_Mark = [\ee.vs \ii.vs \oo.vs \uu.vs \ia.vs \ai.vs \oa.vs \eo.vs \ei.vs \ma.sub 
 	\na.sub \pa.sub \ta.sub \ca.sub \cua.sub \tza.sub \tla.sub \cha.sub \sa.sub 
 	\xa.sub \ha.sub \la.sub \ya.sub \wa.sub \nya.sub \bva.sub \da.sub \ga.sub \fa.sub 
 	\ra.sub \rra.sub \aa.vs \long_vowel_dot \aa.vs.long \ee.vs.long \ii.vs.long 
-	\oo.vs.long \uu.vs.long \ia.vs.long \ai.vs.long \oa.vs.long \eo.vs.long 
-	\ei.vs.long ];
+	\oo.vs.long \uu.vs.long \io.vs \ao.vs \medial.L \medial.R ];
 
 table GDEF {
   GlyphClassDef @GDEF_Simple, , @GDEF_Mark, ;

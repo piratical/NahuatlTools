@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1464015724
-ModificationTime: 1561520255
+ModificationTime: 1616374864
 PfmFamily: 16
 TTFWeight: 400
 TTFWidth: 5
@@ -70,7 +70,7 @@ NameList: AGL For New Fonts
 DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 60788 14 5
+WinInfo: 60858 14 5
 BeginPrivate: 5
 BlueValues 18 [-875 0 1433 1569]
 StemSnapH 9 [146 147]
@@ -78,8 +78,13 @@ StemSnapV 5 [147]
 BlueShift 1 0
 BlueScale 1 0
 EndPrivate
+Grid
+-520 2359 m 0
+ -520 -1737 l 1024
+  Named: "MedialsVertical"
+EndSplineSet
 AnchorClass2: "vowel_signs" "Vowel_sign_positioning subtable" "subjoined_consonants" "Subjoined_consonant_positioning subtable" 
-BeginChars: 65537 99
+BeginChars: 65537 101
 
 StartChar: .notdef
 Encoding: 65536 -1 0
@@ -5820,7 +5825,7 @@ EndSplineSet
 Validated: 1
 EndChar
 
-StartChar: uniEDAC
+StartChar: ao.vs
 Encoding: 60844 60844 98
 Width: 0
 VWidth: 0
@@ -5837,6 +5842,47 @@ SplineSet
  -447.314453125 1535.01757812 l 261
  -345.307617188 1429.02441406 l 261
  -698.28515625 1087.00097656 l 261
+EndSplineSet
+EndChar
+
+StartChar: medial.L
+Encoding: 60904 60904 99
+Width: 2048
+VWidth: 0
+GlyphClass: 4
+HStem: -269.356 143.711<-1042.71 -846.039>
+VStem: -1042.71 603.788
+AnchorPoint: "subjoined_consonants" -520 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-519.514648438 138.552734375 m 1
+ -438.916992188 18.2646484375 l 1
+ -616.379882812 -95.220703125 -694.2578125 -160.236328125 -769.94921875 -204.889648438 c 0
+ -845.637695312 -249.54296875 -919.8828125 -265.9453125 -1042.70507812 -269.356445312 c 1
+ -1046.88476562 -125.645507812 l 1
+ -932.548828125 -122.471679688 -903.887695312 -115.9609375 -846.021484375 -81.8212890625 c 0
+ -788.155273438 -47.68359375 -701.825195312 21.966796875 -519.514648438 138.552734375 c 1
+EndSplineSet
+EndChar
+
+StartChar: medial.R
+Encoding: 60905 60905 100
+Width: 2048
+VWidth: 0
+Flags: W
+HStem: -269.356 143.711<-193.961 2.70508>
+AnchorPoint: "subjoined_consonants" -520 -70 mark 0
+LayerCount: 2
+Fore
+SplineSet
+-520.485351562 138.552734375 m 1
+ -601.083007812 18.2646484375 l 1
+ -423.620117188 -95.220703125 -345.7421875 -160.236328125 -270.05078125 -204.889648438 c 0
+ -194.362304688 -249.54296875 -120.1171875 -265.9453125 2.705078125 -269.356445312 c 1
+ 6.884765625 -125.645507812 l 1
+ -107.451171875 -122.471679688 -136.112304688 -115.9609375 -193.978515625 -81.8212890625 c 0
+ -251.844726562 -47.68359375 -338.174804688 21.966796875 -520.485351562 138.552734375 c 1
 EndSplineSet
 EndChar
 EndChars

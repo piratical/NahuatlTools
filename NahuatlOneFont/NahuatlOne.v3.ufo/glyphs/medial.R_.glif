@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="medial.R" format="1">
+  <advance width="2048"/>
+  <unicode hex="EDE9"/>
+  <outline>
+    <contour>
+      <point x="-520" y="-70" type="move" name="_subjoined_consonants"/>
+    </contour>
+    <contour>
+      <point x="-520.485" y="138.553" type="curve"/>
+      <point x="-601.083" y="18.2646" type="line"/>
+      <point x="-423.62" y="-95.2207"/>
+      <point x="-345.742" y="-160.236"/>
+      <point x="-270.051" y="-204.89" type="curve" smooth="yes"/>
+      <point x="-194.362" y="-249.543"/>
+      <point x="-120.117" y="-265.945"/>
+      <point x="2.70508" y="-269.356" type="curve"/>
+      <point x="6.88477" y="-125.646" type="line"/>
+      <point x="-107.451" y="-122.472"/>
+      <point x="-136.112" y="-115.961"/>
+      <point x="-193.979" y="-81.8213" type="curve" smooth="yes"/>
+      <point x="-251.845" y="-47.6836"/>
+      <point x="-338.175" y="21.9668"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>-269</integer>
+            <key>width</key>
+            <integer>144</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

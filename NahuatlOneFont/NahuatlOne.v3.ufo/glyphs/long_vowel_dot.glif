@@ -4,21 +4,21 @@
   <unicode hex="ED95"/>
   <outline>
     <contour>
-      <point x="-143" y="1020" type="move" name="_vowel_signs"/>
+      <point x="-703" y="1020" type="move" name="_vowel_signs"/>
     </contour>
     <contour>
-      <point x="-18" y="1331" type="curve" smooth="yes"/>
-      <point x="-18" y="1261"/>
-      <point x="-74" y="1205"/>
-      <point x="-144" y="1205" type="curve" smooth="yes"/>
-      <point x="-214" y="1205"/>
-      <point x="-270" y="1261"/>
-      <point x="-270" y="1331" type="curve" smooth="yes"/>
-      <point x="-270" y="1401"/>
-      <point x="-214" y="1457"/>
-      <point x="-144" y="1457" type="curve" smooth="yes"/>
-      <point x="-74" y="1457"/>
-      <point x="-18" y="1401"/>
+      <point x="-578" y="1331" type="curve" smooth="yes"/>
+      <point x="-578" y="1261"/>
+      <point x="-634" y="1205"/>
+      <point x="-704" y="1205" type="curve" smooth="yes"/>
+      <point x="-774" y="1205"/>
+      <point x="-830" y="1261"/>
+      <point x="-830" y="1331" type="curve" smooth="yes"/>
+      <point x="-830" y="1401"/>
+      <point x="-774" y="1457"/>
+      <point x="-704" y="1457" type="curve" smooth="yes"/>
+      <point x="-634" y="1457"/>
+      <point x="-578" y="1401"/>
     </contour>
   </outline>
   <lib>
@@ -38,7 +38,7 @@
         <array>
           <dict>
             <key>position</key>
-            <integer>-270</integer>
+            <integer>-830</integer>
             <key>width</key>
             <integer>252</integer>
           </dict>

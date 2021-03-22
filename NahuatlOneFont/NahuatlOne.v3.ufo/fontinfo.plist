@@ -10,10 +10,6 @@
     <string>NahuatlOne</string>
     <key>styleMapStyleName</key>
     <string>regular</string>
-    <key>versionMajor</key>
-    <integer>1</integer>
-    <key>versionMinor</key>
-    <integer>0</integer>
     <key>copyright</key>
     <string>Copyright (c) 2016, Ed Trager</string>
     <key>unitsPerEm</key>
@@ -31,7 +27,7 @@
     <key>note</key>
     <string></string>
     <key>openTypeHeadCreated</key>
-    <string>2016/04/11 02:57:44</string>
+    <string>2016/05/23 15:02:04</string>
     <key>openTypeHheaAscender</key>
     <integer>0</integer>
     <key>openTypeHheaDescender</key>

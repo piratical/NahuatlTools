@@ -4,21 +4,46 @@
   <unicode hex="EDDB"/>
   <outline>
     <contour>
-      <point x="-330" y="-70" type="move" name="_subjoined_consonants"/>
+      <point x="-689" y="-70" type="move" name="_subjoined_consonants"/>
     </contour>
     <contour>
-      <point x="-202" y="-523" type="curve" smooth="yes"/>
-      <point x="-202" y="-593"/>
-      <point x="-258" y="-649"/>
-      <point x="-328" y="-649" type="curve" smooth="yes"/>
-      <point x="-398" y="-649"/>
-      <point x="-454" y="-593"/>
-      <point x="-454" y="-523" type="curve" smooth="yes"/>
-      <point x="-454" y="-453"/>
-      <point x="-398" y="-397"/>
-      <point x="-328" y="-397" type="curve" smooth="yes"/>
-      <point x="-258" y="-397"/>
-      <point x="-202" y="-453"/>
+      <point x="-561" y="-523" type="curve" smooth="yes"/>
+      <point x="-561" y="-593"/>
+      <point x="-617" y="-649"/>
+      <point x="-687" y="-649" type="curve" smooth="yes"/>
+      <point x="-757" y="-649"/>
+      <point x="-813" y="-593"/>
+      <point x="-813" y="-523" type="curve" smooth="yes"/>
+      <point x="-813" y="-453"/>
+      <point x="-757" y="-397"/>
+      <point x="-687" y="-397" type="curve" smooth="yes"/>
+      <point x="-617" y="-397"/>
+      <point x="-561" y="-453"/>
     </contour>
   </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.hintData</key>
+      <dict>
+        <key>hhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>-649</integer>
+            <key>width</key>
+            <integer>252</integer>
+          </dict>
+        </array>
+        <key>vhints</key>
+        <array>
+          <dict>
+            <key>position</key>
+            <integer>-813</integer>
+            <key>width</key>
+            <integer>252</integer>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
 </glyph>

@@ -4,25 +4,25 @@
   <unicode hex="EDA2"/>
   <outline>
     <contour>
-      <point x="-280" y="1020" type="move" name="_vowel_signs"/>
+      <point x="-690" y="1020" type="move" name="_vowel_signs"/>
     </contour>
     <contour>
-      <point x="-8" y="1564" type="curve"/>
-      <point x="-8" y="1417" type="line"/>
-      <point x="-59" y="1417"/>
-      <point x="-114" y="1397"/>
-      <point x="-152" y="1367" type="curve" smooth="yes"/>
-      <point x="-190" y="1337"/>
-      <point x="-211" y="1299"/>
-      <point x="-211" y="1255" type="curve" smooth="yes"/>
-      <point x="-211" y="1083" type="line"/>
-      <point x="-358" y="1083" type="line"/>
-      <point x="-358" y="1255" type="line" smooth="yes"/>
-      <point x="-358" y="1349"/>
-      <point x="-309" y="1429"/>
-      <point x="-243" y="1482" type="curve" smooth="yes"/>
-      <point x="-177" y="1535"/>
-      <point x="-94" y="1564"/>
+      <point x="-418" y="1564" type="curve"/>
+      <point x="-418" y="1417" type="line"/>
+      <point x="-469" y="1417"/>
+      <point x="-524" y="1397"/>
+      <point x="-562" y="1367" type="curve" smooth="yes"/>
+      <point x="-600" y="1337"/>
+      <point x="-621" y="1299"/>
+      <point x="-621" y="1255" type="curve" smooth="yes"/>
+      <point x="-621" y="1083" type="line"/>
+      <point x="-768" y="1083" type="line"/>
+      <point x="-768" y="1255" type="line" smooth="yes"/>
+      <point x="-768" y="1349"/>
+      <point x="-719" y="1429"/>
+      <point x="-653" y="1482" type="curve" smooth="yes"/>
+      <point x="-587" y="1535"/>
+      <point x="-504" y="1564"/>
     </contour>
   </outline>
   <lib>
@@ -42,7 +42,7 @@
         <array>
           <dict>
             <key>position</key>
-            <integer>-358</integer>
+            <integer>-768</integer>
             <key>width</key>
             <integer>147</integer>
           </dict>
