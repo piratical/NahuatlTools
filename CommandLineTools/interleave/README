@@ -1,0 +1,37 @@
+interleave.js
+
+This is a Node.js script
+
+This script reads 2 or more text
+files and interleaves the paragraphs
+of each, assigning a CSS class to
+each paragraph to distinguish which
+file it came from. The CSS classes
+are also passed on the command line,
+each preceding a file name. A colon
+":" is used as a delimiter between
+the class name and file name.
+
+The use case is to interleave
+a source text with translations
+into one or more other languages.
+
+For example, suppose we have a nahuatl 
+text consisting of five paragraphs. We make
+a Spanish translation and an English translation.
+Each translation also has 5 paragraphs.
+
+In the directory where these files and this 
+script are all present, we can then run this 
+script like this:
+
+  node ./interleave.js nwt:original.txt en:english.txt es:spanish.txt > result.html
+
+The resulting file, result.html, consists of HTML paragraphs. All of the
+Nahuatl paragraphs will be marked with a class of 'nwt'. All of the English
+paragraphs will have a class of 'en' and all the spanish a class of 'es'.
+Also, the original.txt paragraphs will all be marked with a class of 'show'
+while the translations will be marked with a class of 'hide'. You can then
+use Javascript in the web page to show or hide what you want by switching 
+between the 'show' and 'hide' classes.
+
