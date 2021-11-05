@@ -156,6 +156,21 @@ lineReader.on('line', function (line) {
     // This is a VERB entry, so should have a PAST TENSE FORM after the
     // 'tlach' part-of-speech:
     entry.preterit = arr[2];
+    // THE FOLLOWING probably does not capture all but hopefully does 
+    // capture many of the cases of a missing preterit form:
+    if(entry.preterit.match(/^raíz/)){
+      // Add a holder for preterit. There won't be any preterit form:
+      arr.splice(2,0,'·'); // Unicode MIDDLE DOT U+00B7
+    }else if(entry.preterit.match(/[A-Za-z] [A-Za-z]/)){
+      // There are around 138 missing preterit entries even after 
+      // removing the 'raíz' entries. We don't want to log this anymore
+      // however. DEBUG: console.log(`BAD PRETERIT FORM: ${count} ${line}`);
+
+      // Add a holder for preterit so the remaining array elements 
+      // are in the right spots. There won't be any actual preterit 
+      // here form:
+      arr.splice(2,0,'·'); // Unicode MIDDLE DOT U+00B7
+    }
     // Single or multiple definitions?
     if(!arr[3]){
       entry.es.push('BAD ENTRY');
