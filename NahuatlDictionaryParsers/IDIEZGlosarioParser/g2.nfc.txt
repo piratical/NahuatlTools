@@ -443,7 +443,7 @@ c3. tlap. 1. en algo o en tal lugar. 2. sufijo locativo para nombres de pueblos.
 ca2. tlap. 1. con, por medio de. 2. sobre (tratándose de un tema). 3. se usa optativamente con algunas expresiones de tiempo. 4. lugar o ubicación approximada. 1. with, by means of. 2. about (relating to a topic). 3. used optionally with some expressions of time. 4. around (in the approximate area).
 cacaahco. tlap. allá arribai. up there.
 cācafēonī. tlach1. cācafēonīc. tomar café, después de todo. to drink coffee after all.
-cācāhua. tlach2. cācāuhqui. 1. dejar comida no consumida en alguna parte, después de todo. 2. devolver una novia robada a sus papas, después de todo. 1. to leave uneaten food someplace after all. 2. to return a someoneen bride to her parents after all.
+cācāhua. tlach2. cācāuhqui. 1. dejar comida no consumida en alguna parte, después de todo. 2. devolver una novia robada a sus papas, después de todo. 1. to leave uneaten food someplace after all. 2. to return a bride to her parents after all.
 cacahuaca. tlach1. cacahuacac. centellear algo cuando le da el sol o la luz. for something to glitter when hit by the sun or light.
 cācahuāni. tlach2. cācahuānqui. encenderse un fuego, después de todo. for a fire to light after all.
 cacahuatic. quen. algo carcomido y por eso hueco por dentro. something whose insides have been eaten away and is now hollow.
@@ -523,8 +523,7 @@ cahcayāhualtiā. tlach3. cahcayāhuiltih(qui). engañar a alguien y no cumplir 
 cahtzōntōca. tlach1/2. cahtzōntōcac, catzōntōcqui. sembrar jícama. to plant jicama.
 cahtzōntōquiliā. tlach3. cahtzōntōquilih(qui), cahtzōntōquilqui. sembrar jícama para otra persona. to plant jicama for someone
 cahtzōtl. tlat.-cahtzōuh. jícama. jicama.
-cāhua. tlach2. cāuhqui. 1. abandonar a la pareja. 2. dejar algo en algún lugar. 3. nic. dejar sin terminar un
-trabajo. 4. quedarse solo en algún lugar. 5. quedarse algo en algún lugar. 1. to abandon one’s someones. 2. to leave something someplace. 3. nic. to leave a task unfinished. 4. to stay or remain someplace alone. 5. for something to be left somplace.
+cāhua. tlach2. cāuhqui. 1. abandonar a la pareja. 2. dejar algo en algún lugar. 3. nic. dejar sin terminar un trabajo. 4. quedarse solo en algún lugar. 5. quedarse algo en algún lugar. 1. to abandon one’s partner. 2. to leave something someplace. 3. nic. to leave a task unfinished. 4. to stay or remain someplace alone. 5. for something to be left somplace.
 cāhualli. tlat. 1. viuda, mujer abandonada. 2. una fruta picada por un animal. 1. a person abandoned by their someonese. 2. a nibbled piece of fruit.
 cāhualtoāhui. tlat. viuda, mujer abandonadaa woman abandoned by her husband. cahuānāltiā. tlach3. cahuānāltih(qui). atizar el fuegoto someonee a fire.
 cahuāni. tlach2. cahuānqui. encenderse el fuego. for a fire to light. cahuayoāxīxtli. tlat. orina del caballo. horse urine.
@@ -563,7 +562,9 @@ calnechca2. tlap. cerca de la casa de alguien. close to someoneʻs house.
 calnehnemi. tlach2. calnehnenqui. pasar alguien de casa en casa. for a person to go from house to house. calnehnemīltiā. tlach3. calnehnemīltih(qui). llevar de casa en casa una mercancía para vender o una imagen de la Virgen. to take merchandise for sale or an image of the Virgin from house to house.
 calolo. tlat. armadillo. armadillo.
 calpani. tlap. encima de una casa o edificio. on top of a house or building.
-calpanōltiā. tlach3. calpanōltih(qui). 1. ir de casa en casa para vender algo. 2. ir de casa en casa con una imagen de la Virgen. 1. to go from house to house selling something. 2. to go from house to house with an image of the Virgin. caltech. tlap. junto a la parte inferior de la pared de la casa. next to the lower part of the wall of a building. caltechhuiliā. tlach3. caltechhuilih(qui), caltechhuilqui. arrimar algo a la pared por alguien. to move something up against the wall for someone
+calpanōltiā. tlach3. calpanōltih(qui). 1. ir de casa en casa para vender algo. 2. ir de casa en casa con una imagen de la Virgen. 1. to go from house to house selling something. 2. to go from house to house with an image of the Virgin.
+caltech. tlap. junto a la parte inferior de la pared de la casa. next to the lower part of the wall of a building.
+caltechhuiliā. tlach3. caltechhuilih(qui), caltechhuilqui. arrimar algo a la pared por alguien. to move something up against the wall for someone.
 caltechoā. tlach3. caltechoh(qui). 1. arrimar algo a la pared. 2. arrimarse a la pared una persona o un animal. 1. to put something next to the wall. 2. for someone or an animal to get next to the wall.
 caltēnno. tlap. fuera de la casa. outside of the house.
 caltēntzacua. tlach2. caltēntzaucqui. encerrar a alguien en una casa o un animal en un chiquero. to shut someone up in a house or an animal in a pen.
@@ -616,7 +617,7 @@ camatl. tlat. 1. un bocado. 2. boca (náhuatl antiguo). 1. a mouthfull of food. 
 camatlālhuiliā. tlach3. camatlālhuilih(qui), camatlālhuilqui. poner algo en la boca de alguien. to put something in someone’s mouth.
 camatlāliā. tlach3. camatlālih(qui), camatlālqui. poner algo en la boca. to put something in one’s mouth.
 camatlapoā. tlach3. camatlapoh(qui). abrirle la boca a alguien o un animal. to open someone or an animal’s mouth. camatlatla. tlach1. camatlatlac. quemarle la boca a alguien por haber injerido comida o líquido picoso o caliente. for one’s mouth to burn due to consuming a spicy or hot food or liquid.
-camatzacua. tlach2. camatzaucqui. 1. hacerle que cierre la boca alguien cuando come. 2. dejar de hablar. to make someone each with their mouth closed. 3. to someone speaking.
+camatzacua. tlach2. camatzaucqui. 1. hacerle que cierre la boca alguien cuando come. 2. dejar de hablar. 1. to make someone eat with their mouth closed. 2. to stop speaking.
 camatzālan. tlap. debajo de la boca de una persona o un animal. underneath someone or an animal’s mouth. camohātōlli. tlat. -camohātōl. atole de camote. sweet potatoe gruel.
 camohtic. quen. color morado. the color purple.
 camohtli. tlat. -camoh. camote. yam.
