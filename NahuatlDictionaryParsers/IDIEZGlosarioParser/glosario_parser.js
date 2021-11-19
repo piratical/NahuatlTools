@@ -129,7 +129,7 @@ var lineReader = require('readline').createInterface({
 let count=0;
 lineReader.on('line', function (line) {
   count++;
-  console.log(`=== ${line} ===`);
+  // DEBUG: console.log(`=== ${line} ===`);
   // 1. replace all "s.o." with "someone"; all "s.t." with "something":
   line = line.replace(/s\.o\./g,'someone');
   line = line.replace(/s\.t\./g,'something');
