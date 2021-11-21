@@ -217,7 +217,7 @@ almoh. tlat. 1. medida de cuatro cuartillos grandes u ocho cuartillos chicos de 
 āmana2. tlach. axahci. encharcarse el agua en alguna parte cuando llueve. for water to pool somewhere when it rains.
 āmāneloā. tlach3. āmāneloh(qui). agregar agua a un liquido que está dulce o caliente. to add water to a liquid that is sweet or hot.
 āmantoc1. Vea ĀMANA1.See ĀMANA1.
-āmati. tlach2. āmatqui. 1. gustarle algo o alguien a otro. 2. gustarle la comida a alguien. 3. gustarle a alguien o a algún animal realizar una actividad. 1. to like someone or something. 2. to like the taste of something 3. to like to do something.
+āmati. tlach2. āmatqui. 1. gustarle algo o alguien a otro. 2. gustarle la comida a alguien. 3. gustarle a alguien o a algún animal realizar una actividad. 1. to like someone or something. 2. to like the taste of something. 3. to like to do something.
 āmatl. tlat. -āmauh. 1. el árbol amate. 2. papel, hoja. 1. amate tree. 2. paper, sheet of paper.
 āmaxalli. tlat. donde se divide el arroyo. fork in the river.
 āmēlātl. tlat. agua de pozo. spring water.
@@ -1049,7 +1049,7 @@ cīlhuiliā. tlach3. cīlhuilih(qui), cīlhuilqui. desgarrar algo de otra person
 cīllō. tlap. las hojas delgadas del cilantro. the fine leaves of the coriander.
 cīlnehnemi. tlach2. cīlnehnenqui. andar con pasos cortos, restregando los pies. to shuffle.
 cīlneuctli. tlat. tipo de abeja pequeña. a kind of small bee.
-cīloā. tlach3. cīloh(qui). 1. caer y dispersarse las semillas de una planta. 2, desgarrar algo un animal. 1. for seeds to fall from a plant and scatter. 2. for an animal to tear something up.
+cīloā. tlach3. cīloh(qui). 1. caer y dispersarse las semillas de una planta. 2. desgarrar algo un animal. 1. for seeds to fall from a plant and scatter. 2. for an animal to tear something up.
 cīltehtequi. tlach2. cīltehtecqui. cortar una comida en pedacitos. to cut up food into little pieces.
 cīltetl. tlat. piedra muy pequeña, grava. pebble, gravel.
 cīltic. quen. semilla muy chiquita. very small seed.
@@ -1764,7 +1764,7 @@ cuitlatzatzayaca. tlach1. cuitlatzatzayacac. reventarse por todas partes un cost
 cuitlatzayāna. tlach2. cuitlatzayānqui. causar alguien o un animal que se rompa algo y que se tire lo que tiene adento. for a person or animal to cause someone to split and its contents to spill out.
 cuitlatzayāni. tlach2. cuitlatzayānqui. romperse una bolsa o un costal lleno de algo. for a full bag to split. cuitlatzayāniliā. tlach3. cuitlatzayānilih(qui), cuitlatzayānilqui. reventar un costal que pertenece a otra persona. to bust a sack that belongs to someone else.
 cuitlatzocoyōlin. tlat. 1. tipo de escarabajo con alas que se arrima a la luz. 2. escarabajo que forma bolas con el excremento. 1. a type of beetle with wings that is drawn to light. 2. a type of beetle that makes little balls of excrement.
-cuītzoā. tlach3. cuītzoh(qui), cuītzqui. 1. hacer que alguien o algún animal se atragante con alguna comida. 2. nimo. atragantarse con alguna comida. 1. to make someone choke by feeding them something. 2. to choke.
+cuītzoā. tlach3. cuītzoh(qui), cuītzqui. 1. hacer que alguien o algún animal se atragante con alguna comida. 2. nimo~: atragantarse con alguna comida. 1. to make someone choke by feeding them something. 2. nimo~: to choke.
 e. piltlahcuiloltzin. letra “e” corta. letter someonet “e”.
 ē. piltlahcuiloltzin. letra “e” larga. letter long “e”.
 ēcahuiā. tlach3. ēcahuih(qui). refugiarse en la sombra. to take refuge in the shade.
@@ -2040,8 +2040,8 @@ huiā1. tlatzompepecholli. sufijo verbalizador. verbalizing suffix.
 huiā2. tlatzompepecholli. sufijo causativo. causative suffix.
 huiā3. tlatzompepecholli. sufijo aplicativo. applicative suffix.
 huīca1. tlach1. huīcac. cantar. to sing.
-huīca2. tlach1. huīcac. 1. llevar algo. 2. un hombre obliga a una mujer a casarse con él. 3. llevarse una persona de tal manera con otra. 4. llevarse dos personas de tal manera. 4. 1. to take something thither. 2. for a man to make a woman marry him. 3. for a person to get along with another in a certain way. 4. for two people to get along in a certain way.
-huīcalli. tlat. -huīcal. 1. no. esposo(a) de alguien. 2. lo mismo, igual. 1. someone’s someonese. 2. the same, equal.
+huīca2. tlach1. huīcac. 1. llevar algo. 2. un hombre obliga a una mujer a casarse con él. 3. llevarse una persona de tal manera con otra. 4. llevarse dos personas de tal manera. 1. to pick up something. 2. for a man to make a woman marry him. 3. for a person to get along with another in a certain way. 4. for two people to get along in a certain way.
+huīcalli. tlat. -huīcal. 1. no~: esposo/a de alguien. 2. lo mismo, igual. 1. someone’s spouse. 2. the same, equal.
 huichīni. tlach2. huichīnqui. estar salido como un hueso roto o palo que sale del suelo. to be sticking out, like a broken bone or a stick sticking out of the ground.
 huichīniā. tlach3. colocar un recipiente donde será notado, para que se le llene de comida o agua. to place a contain where it will be noticed, so that it will be filled with food or water.
 huichīnihtoc. Vea HUICHĪNIĀ. See HUICHĪNIĀ.
@@ -2111,7 +2111,7 @@ huīpāniliā. tlach3. huīpānilih(qui), huīpānilqui. amarrarle algo a alguie
 huipictic. quen. 1. tieso (el cuerpo del muerto). 2. una persona tiesa, sin gracia para moverse. 3. un alambre, una soga o un palo tieso. 1. stiff (the body of a dead person). 2. a person who dances stiffly. 3. a stiff wire, rope or stick.
 huīptla. quen. pasado mañana. tomorrow.
 huīptlaya. quen. antier. the day before yesterday.
-huīquiliā. tlach3. huīquilih(qui), huīquilqui. 1. llevarle algo a alguien. 2. deberle algo a alguien. 3. trabajar una tarea con intensidad. 1. to take something to someone. 2. to owe someone something 3. to work hard at a task.
+huīquiliā. tlach3. huīquilih(qui), huīquilqui. 1. llevarle algo a alguien. 2. deberle algo a alguien. 3. trabajar una tarea con intensidad. 1. to take something to someone. 2. to owe someone something. 3. to work hard at a task.
 huirrīni. tlach2. huirrīnqui. zumbar una piedra o un palo cuando se avienta. for a someonee or stick to make a whirring or buzzing sound when thrown.
 huirrīniā. tlach3. huirrīnih(qui). aventar una piedra o un palo y hacer que zumbe. to throw a someonee or a stick and have it make a whirring or buzzing sound.
 huītacachihui. tlach2. huītacachiuhqui. 1. enchuecarse un palo o algo de metal. 2. enchuecarse una parte del cuerpo de alguien debido a un embololio. 1. for a stick or metal to become crooked. 2. for a part of one’s body to become crooked due to an embolism.
@@ -2194,7 +2194,8 @@ icxiilacatztic. tlat. persona o animal con el pie volteado hacia adentro o hacia
 icxiilpiliā. tlach3. icxiilpilih(qui), icxiilpilqui. amarrarle un hilo o un mecate a la pata de un pollo o un pavo para distinguirlo de los demás. to tie a string or piece of cloth on a chicken or a turkey’s foot to distinguish it from others.
 icxiiztitl. tlat. -icxiizti. uña del pie de alguien. someone’s toenail.
 icxilecuēni. tlach2. icxilecuēnqui. torcer el tobillo. to twist one’s ankle.
-icxilecuēniā. tlach3. icxilecuēnih(qui), icxilecuēnqui. 1. una persona o un zapato de tacón causa que a alguien se le doble el pie. 1. for someone or high-heel someone to cause someone to get a twisted ankle. 2. to get a twisted ankle. icxilichīnaltiā. tlach3. icxilichīnaltih(qui). 1. lastimarle el pie a alguien un zapato o una piedra que cae. 2. lastimarle alguien el pie a otra person. 1. for a someone or a falling rock to hurt someone’s foot. 2. for someone to hurt someone else’s foot.
+icxilecuēniā. tlach3. icxilecuēnih(qui), icxilecuēnqui. 1. una persona o un zapato de tacón causa que a alguien se le doble el pie. 1. for someone or for the high-heel of a shoe to cause someone to get a twisted ankle. 2. to get a twisted ankle.
+icxilichīnaltiā. tlach3. icxilichīnaltih(qui). 1. lastimarle el pie a alguien un zapato o una piedra que cae. 2. lastimarle alguien el pie a otra person. 1. for a someone or a falling rock to hurt someone’s foot. 2. for someone to hurt someone else’s foot.
 icxilichīni. tlach2. icxilichīnqui. rasparse alguien su pie. to scrape one’s foot.
 icxilichīniā. tlach3. icxilichīnih(qui). 1. rasparle el pie de alguien el zapato o una piedra que cae. 2. rasparle alguien el pie de otro con algo. 1. for a someone or a falling rock to scrape someone’s foot. 2. for someone to scrape someone else’s foot with something
 icxililichica. tlach1. icxililichicac. rasparse alguien su pie mucho por un zapato que no le queda bien o por un objeto que le lastima. for one’s foot to abrade due to an ill-fitting someone or an injury.
@@ -2208,7 +2209,7 @@ icxipānhuiā. tlach3. seguir las huellas de un animal. to follow an animal’s 
 icxipani. tlap. encima del pie de alguien. on top of someone’s foot.
 icxipatlactli. tlat. -icxipatlac. la suela del pie. the sole of the foot.
 icxipēloā. tlach3. icxipēloh(qui), icxipēlqui. abrirse las piernas. to separate one’s legs.
-icxipepēcihui. tlach2. icxipepēciuhqui. quedar descubierto del pie cuando el calcetin se rasga o cuando se descalza o quita una venda.
+icxipepēcihui. tlach2. icxipepēciuhqui. quedar descubierto del pie cuando el calcetin se rasga o cuando se descalza o quita una venda. the foot is uncovered when the sock is torn or when removing a bandage or barefoot.
 icxipepēzoā. tlach3. icxipepēzoh(qui). mover la cobija que tapa a alguien y descubrir sus pies. to move the blanket covering someone and uncover their feet.
 icxipepeztic. quen. 2. descalzo. 2. tener los pies descubiertos, destapados. 1. barefoot. 2. to have one’s feet uncovered, bare.
 icxipetziquiuh. Vea ICXIPETZIQUIUHTIC. See ICXIPETZIQUIUHTIC.
@@ -2245,7 +2246,8 @@ ihcihuīltiā. tlach3. ihcihuīltih(qui). 1. hacer que alguien se apure en la re
 ihcopi. tlach2. ihcopqui. cerrar los ojos. to close one’s eyes.
 ihcopiliā. tlach3. ihcopilih(qui), ihcopilqui. cerrar los ojos el niño o la niña cuando está enojado con alguien o no le cae bien. for a child to close their eyes for a moment when they are angry with someone or do not like that person. ihcueniā. tlach3. ihcuenih(qui). mover algo. to move something
 ihcueniliā. tlach3. ihcuenilih(qui), ihcuenilqui. mover algo que pertenece a otra persona o un animal. to move something that belong to someone else or an animal.
-ihcuiloā. tlach3. ihcuiloh(qui)/ihcuilqui. 1. escribir algo. 2. inscribir a alguien. 1. to write something. 2. to sign someone up. ihhuiya. tlach. axahci. pluscuamperfecto de “ir”, había ido. had gone (past perfect tense of “to go”).
+ihcuiloā. tlach3. ihcuiloh(qui)/ihcuilqui. 1. escribir algo. 2. inscribir a alguien. 1. to write something. 2. to sign someone up.
+ihhuiya. tlach. axahci. pluscuamperfecto de “ir”, había ido. had gone (past perfect tense of “to go”).
 ihhuiyō. tlap. 1. vellos del cuerpo de alguien. 2. las plumas de un ave. 1. someone’s body hair. 2. a fowl’s feathers. ihhuiyoh. tlat. Persona o animal con mucho bello. Person or animal with much body hair.
 ihihca. tlach. axahci. estar parados personas o animals en alguna parte. for people or animals to be staying somewhere.
 ihihcatihcaqueh. Vea IHIHCA. See IHIHCA.
@@ -2257,7 +2259,7 @@ ihihyāltic. quen. 1. una persona o un animal enredado en un lazo o en cabello q
 ihilpiā. tlach3. ihilpih(qui). 1. amarrar bien a una persona o un animal. 2. amarrar muchas cosas. 1. to tie up a person, an animal or something tight. 2. to tie up many things.
 ihilpiliā. tlach3. ihilpilih(qui), ihhilpilqui. 1. amarrar bien un rollo de hierbas para alguien, o amarrar muchos rollos de hierbas para alguien. 2. volver a amarrar los pedazos de un lazo, un mecate o un hilo roto. 1. tie up a roll of herbs well for someone, or to tie up many rolls of herbs for someone. 2. to rejoin the pieces of a broken rope, string or thread.
 ihitta. tlach1. ihittac. revisar a una persona, un animal o algo. to check a person, animal or thing; or go over something ihitzoc. Vea IHITZTO. See IHITZTO.
-ihitzquiā. tlach3. ihitzquih(qui). 1. acariciar a alguien o un animal. 2. palpar algo (como fruta). 3. querer alguien tocar todo lo que ve. 1. to caress someone or an animal. 2. to feel something out. (like fruit). 3. for someone to want to touch everything they see.
+ihitzquiā. tlach3. ihitzquih(qui). 1. acariciar a alguien o un animal. 2. palpar algo (como fruta). 3. querer alguien tocar todo lo que ve. 1. to caress someone or an animal. 2. to feel something out (like fruit). 3. for someone to want to touch everything they see.
 ihitzquiliā. tlach3. ihitzquilih(qui), ihitzquilqui. palpar o acariciar algo que pertenece a otra persona o una parte de su cuerpo. to feel or caress something that belongs to someone else or a part of their body.
 ihitzto. tlach. axahci. 1. no hacer nada una persona o un animal. 2. (imperative) ‘¡Estáte quieto!’
 3. no apurarse una persona o un animal para realizar una actividad. 1. for a person or animal to do nothing. 2. (command) ‘Don’t be moving around and bothering people!. 3. for a person or animal to do a talk someonely. ihitztoc. Vea IHITZTO. See IHITZTO.
@@ -2305,7 +2307,7 @@ ihtlacoā. tlach3. ihtlacoh(qui). descomponer algo. to make something break down
 ihtlani. tlach2. ihtlanquipedirle la mano a la novia. to ask for a woman’s hand in marriage.
 ihtlaniliā. tlach3. ihtlanilih(qui), ihtlanilqui. pide el papá la mano de la novia para su hijo. for a father to ask a woman to marry his son.
 ihtoā. tlach3. ihtoh(qui). decir algo. to say something
-ihtoma. tlach2. ihtonqui. 1. soltar a alguien, un animal o una cosa que está amarrado. 2 soltarse algún animal que está amarrado. 1. to release a tied up person, animal or thing. 2. for a tied up animal to free itself.
+ihtoma. tlach2. ihtonqui. 1. soltar a alguien, un animal o una cosa que está amarrado. 2. soltarse algún animal que está amarrado. 1. to release a tied up person, animal or thing. 2. for a tied up animal to free itself.
 ihtomi. tlach2. ihtonqui. desamarrarse lo amarrado. for something tied to become untied.
 ihtōtiā. tlach3. ihtōtih(qui). bailar con alguien o algo, o hacer que algo baile. to dance with someone or something or to make something dance.
 ihtōznequi. tlach2. significar algo. to mean something
