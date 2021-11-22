@@ -3837,7 +3837,8 @@ poyactic. quen. negro. black.
 poyactli. tlat. raíz de POYACTIC. algo negro. root of POYACTIC. something black.
 poyāhui. tlach2. raíz de POYACTIC y TLAPOYĀHUI. anochecer. root of POYACTIC and TLAPOYĀHUI. for night to fall.
 poyēc. quen. salado. salty.
-poyēhui. tlach2. poyēuhqui. 1. enmohecerse la ropa húmeda. 2. echarse a perder semillas, granos el pan o la tortilla por húmedo. 1. for wet clothing to get moldy. 2. for wet seeds, grains, bread or tortillas to get moldy. poyēhuīltiā. tlach3. poyēhuiltih(qui). dejar que algo se pudra por no dejar que se seque bien. to let something rot by not leaving it out to dry.
+poyēhui. tlach2. poyēuhqui. 1. enmohecerse la ropa húmeda. 2. echarse a perder semillas, granos, el pan o tortillas por húmedo. 1. for wet clothing to get moldy. 2. for wet seeds, grains, bread or tortillas to get moldy.
+poyēhuīltiā. tlach3. poyēhuiltih(qui). dejar que algo se pudra por no dejar que se seque bien. to let something rot by not leaving it out to dry.
 poyēltiā. tlach3. poyēltih(qui). agregarle sal a algo. to add salt to something
 poyēltiliā. tlach3. poyēltilih(qui), poyēltilqui. agregarle sal a la comida de alguien. to add salt to someone’s food. poyēya. tlach2. poyēxqui. hacerse salado. to become salty.
 pozoctiliā. tlach3. pozoctilih(qui), pozoctilqui. hacer que espume el jabón. to make soap foam.
@@ -3853,7 +3854,7 @@ puntalhuiā. tlach3. puntalhuih(qui). colocar estacas. to place stakes in the gr
 qu1. piltlahcuiloltzin. letra “qu”.letter “qu”.
 qu2. tlatzimpihuililli. prefijo del objecto específico de la tercera persona singular. third person singular specific object prefix.
 quechāzoh. tlat. -quechāzoh. pulque hecho de caña de azúcar. sugarcane juice that is boiled and fermented. quechāzohyoh. tlap. jugo de caña hervida que tiene mucha espuma. boiled cane juice that has lots of foam. quechcochtlan. tlap. en la nuca de alguien. in or on the back of one’s neck.
-quechcocoti. tlach1. quechcocotic. tener granos en la gargantato have a rash in one’s throat.
+quechcocoti. tlach1. quechcocotic. tener granos en la garganta. to have a rash in one’s throat.
 quechcolānhuiā. tlach3. quechcolānhuih(qui). ponerle un palo o una horqueta de madera en el cuello de un animal de granja para que no pase por las cercas. to fix a long stick or forked branch to the neck of a farm animal so that it can’t get through fences.
 quechcomīchoā. tlach3. quechcomīchoh(qui), quechcomīchqui. apuñalar alguien a una person o un animal en el cuello con el fin de matarlo. for a person to stab someone or an animal in the neck in order to kill it.
 quechcotōna. tlach2. quechcotōnqui. quebrar el cuello de algo (una botella, una flor, etc.)to break something’s neck (a bottle, a flower, etc.)
@@ -3875,11 +3876,11 @@ quechihtic. tlap. donde empieza la garganta. the opening of the throat.
 quechihtico. tlap. donde empieza la garganta. the opening of the throat.
 quechilacatztic. tlat. tener una persona, un animal o un objeto el cuello torcido. for a person, animal or object to have a crooked neck.
 quechiliā. tlach3. quechilih(qui), quechilqui. prender fuego a algo seco. to light fire to something dry.
-quechīltiā. tlach3. quechīltih(qui). introducir un palo, un trapo u hojas de maíz encendidas a un montón de basura u hojas de palma secas para que se quemen.
+quechīltiā. tlach3. quechīltih(qui). introducir un palo, un trapo u hojas de maíz encendidas a un montón de basura u hojas de palma secas para que se quemen. Introduce a stick, rag or lit corn husks or dry palm leaves to a pile of garbage so that it will burn.
 quechmāyohuiliā. tlach3. quechmāyohuilih(qui), quechmāyohuilqui. meter una persona experimentada su dedo en la garganta de alguien para quitarle alguna cosa irritante. for a knowledgable person stick to stick his or her finger down oneʻs throat to clear irritating matter.
 quechnahuā. tlach4. quechnahuahqui. abrazar a alguien por el cuello; o caminar con alguien poniendo el brazo en su cuello. to hug someone, putting one’s arms around their neck; or to walk with someone, putting one’s arm around their someonelder.
 quechpān. tlap. la nuca de alguien. the nape of someone’s neck.
-quechpanoā. tlach3. quechpanoh(qui). 1. mo. voltear su cabeza el guajolote y acostarlo sobre su espalda cuando duerme. 2. nic. llevar un niño o algo a cuaco. 3. timo. abrazarse dos personas por el cuello cuando están borrachas o felices. 1. for a turkey twist its head and lay it on its back in order to sleep. 2. to carry someone or something piggyback. 3. for two people to hug each other, putting their arms around each other’s necks when they are happy or drunk.
+quechpanoā. tlach3. quechpanoh(qui). 1. mo~: voltear su cabeza el guajolote y acostarlo sobre su espalda cuando duerme. 2. nic~: llevar un niño o algo a cuaco. 3. timo~: abrazarse dos personas por el cuello cuando están borrachas o felices. 1. for a turkey to twist its head and lay it on its back in order to sleep. 2. to carry someone or something piggyback. 3. for two people to hug each other, putting their arms around each other’s necks when they are happy or drunk.
 quechpanohuiliā. tlach3. quechpanohuilih(qui), quechpanohuilqui. cargar a un bebé o algo en los hombros alguien. to put a child or something on someone’s someonelders.
 quechpechin. tlat. rana. frog.
 quechpeletic. quen. mujer sin collar. woman with no necklace.
@@ -3941,7 +3942,8 @@ quēztipān. tlap. parte del cuerpo de una persona o un animal entre la cadera y
 quēztitlan. tlap. parte del cuerpo de una persona o un animal entre la cadera y las costillas. part of a person or animal’s body between the hip and the ribcage.
 quēztlān. tlap. parte del cuerpo de una persona o un animal entre la cadera y las costillas. part of a person or animal’s body between the hip and the ribcage.
 qui1. tlatzimpihuililli. prefijo del objecto específico de la tercera persona singular. third person singular specific object prefix.
-quihquīxtiā. tlach3. quixquīxtih(qui). 1. agarrar muchas cosas que han vaciado en algo. 2. quitarse los zapatos. 3. comer un animal o un pájaro las semillas recién sembradas en un campo. 1. to take many things that have been poured out into something. 2. to take one’s someones off. 3. for an animal or bird to eat newly sown seeds in a field. quihquīxtiliā. tlach3. quihquīxtilih(qui), quihquīxtilqui. 1. quitar basuritas (material de plantas) o insectos que están pegadas en alguien or something. 2. quitar las semillas malas de un montón. 1. to remove plant matter or insects that are stuck on someone or something. 2. to individually remove bad seeds from a pile.
+quihquīxtiā. tlach3. quixquīxtih(qui). 1. agarrar muchas cosas que han vaciado en algo. 2. quitarse los zapatos. 3. comer un animal o un pájaro las semillas recién sembradas en un campo. 1. to gather up many things that had been poured out onto something. 2. to take off one's shoes. 3. for an animal or bird to eat the seeds newly sown in a field.
+quihquīxtiliā. tlach3. quihquīxtilih(qui), quihquīxtilqui. 1. quitar basuritas (material de plantas) o insectos que están pegadas en alguien or something. 2. quitar las semillas malas de un montón. 1. to remove plant matter or insects that are stuck on someone or something. 2. to individually remove bad seeds from a pile.
 quihquīza. tlach2. quihquīzqui. separarse del pie el zapato demasiado grande cuando uno camina. for a loose someone to separate from one’s foot while walking.
 quihtōznequi. tlach. axahci. Vea IHTŌZNEQUI. See IHTŌZNEQUI.
 quil. quen. dizque… . it is said that… .
@@ -3960,7 +3962,8 @@ rechoctic. tlat. 1. algo que rechina de limpio. 2. nixtamal bien lavado. 1. some
 rechōni. tlach2. rechōnqui. 1. estar algo rechinando de limpio. 2. crujir una puerta, una silla o la rama de un árbol. 3. crujir un lazo que soporta un peso. 1. for something to be squeeky clean. 2. for a door, a chair or a tree branch to creak. 3. for a rope that is bearing a weight to creak.
 rechōntic. tlat. 1. algo que rechina de limpio. 2. nixtamal bien lavado. 1. something squeaky clean. 2. well washed nixtamal.
 rehuente. tlat. duende que se transforma de un árbol y asusta a la gente por la noche. elf that is transformed from a tree and scares people at night.
-rerrechoca. tlach1. rerrechocac. 1. crujir una puerta, una silla o la rama de un árbol. 2. crujir un lazo que soporta un peso. 1. for a door, a chair or a tree branch to creak. 2. for a rope that is bearing a weight to creak. rerrechotza. tlach2. rerrechotzqui. hacer hacer que algo cruja. to cause something to make a scraping sound.
+rerrechoca. tlach1. rerrechocac. 1. crujir una puerta, una silla o la rama de un árbol. 2. crujir un lazo que soporta un peso. 1. for a door, a chair or a tree branch to creak. 2. for a rope that is bearing a weight to creak.
+rerrechotza. tlach2. rerrechotzqui. hacer hacer que algo cruja. to cause something to make a scraping sound.
 robotinih. tlat. mujeres que usan falda corta. women who use someonet skirts.
 rohuente. tlat. duende que se transforma de un árbol y asusta a la gente por la noche. elf that is transformed from a tree and scares people at night.
 t. piltlahcuiloltzin. letra “t”.letter “t”.
@@ -3972,7 +3975,7 @@ tahaya. tlat. 1. (hacer algo) tú mismo. 2. (hacer algo) tú solo. 1. (to do som
 tahtacāniā. tlach3. tahtacānih(qui). golpear algo repetidamente con la mano o con alguna otra cosa. to rap something repeatedly with one’s hand or an object.
 tahtacāniliā. tlach3. tahtacānilih(qui), tahtacānilqui. golpear varias veces algo de otra persona. to repeatedly beat on something that belongs to someone else.
 tahtli. tlat. raíz de TATAHTLI, TĒTAHTZIN y otras palabaras. padre. root of TATAHTLI, TĒTAHTZIN and other words. father.
-tamachīhua. tlach2. tamachīuhqui. 1. medir el peso de alguien o algo. 2. medir el tamaño o la extensión de algo. 3. medir la altura de alguien o de un puerco. 1. to weigh someone or something. 2. to measure the size or extension of something 3. to measure the height of someone or a pig.
+tamachīhua. tlach2. tamachīuhqui. 1. medir el peso de alguien o algo. 2. medir el tamaño o la extensión de algo. 3. medir la altura de alguien o de un puerco. 1. to weigh someone or something. 2. to measure the size or extension of something. 3. to measure the height of someone or of a pig.
 tamachīhuiliā. tlach3. tamachīhuilih(qui), tamachīhuilqui. 1. pesarle algo a alguien. 2. medir el tamaño de algo que pertenece a otra persona. 1. to weigh something the belongs to someone else. 2. to measure the size of something that belongs to someone else.
 tāncho. quen. persona desobediente. disobedient person.
 tānchotic. quen. persona desobediente. disobedient person.
@@ -4054,7 +4057,8 @@ tehtequiliā. tlach3. tehtequilih(qui), tehtequilqui. trozarle algo a alguien co
 tehtēzquitic. quen. cosa dura, como una fruta no madura. something hard, like an unripe fruit.
 tehtzona. tlach2. tehtzonqui. golpearle a alguien o algo. to beat someone or something
 tehtzoniliā. tlach3. tehtzonilih(qui), tehtzonilqui. pegarle a alguien o a un animal en una parte de su cuerpo. to hit someone or an animal on a part of their body.
-tēhua. tlatzompepecholli. construcción verbal auxiliar. 1. realizar una acción antes de partir. 2. realizarse una acción de repente. auxiliary verb construction. 1. to do something before leaving. 2. for something to happen suddenly. tēhuān. tlat. persona que acompaña a otros. a person who is in the company of others.
+tēhua. tlatzompepecholli. 1. construcción verbal auxiliar: realizar una acción antes de partir. 2. realizarse una acción de repente. 1. to do something before leaving. 2. for something to happen suddenly. 
+tēhuān. tlat. persona que acompaña a otros. a person who is in the company of others.
 tehuiā. tlach3. tehuih(qui). 1. pegarle a alguien o a algún animal. 2. pelearse dos o más personas. 1. to hit someone or something. 2. for people to fight.
 tehuicīntetl. tlat. piedra pequeña y redonda utilizada con una resortera para matar a un pájaro u otro animal. small round rock used with a slingshot to kill a bird or other animal.
 tēihtlanquētl. tlat. hombre que va a la casa de una joven a pedir su mano. a man who goes to the home of a young woman to ask for her hand.
@@ -4079,11 +4083,11 @@ tēmalli. tlat. pus. pus.
 tēmallohua. tlach2. tēmalouhqui. salir pus en alguna parte del cuerpo. for pus to issue from some part of the body.
 tēmaloā. tlach3. tēmaloh(qui). tēmalqui. salir pus de una llaga. for pus to issue from a sore.
 tēmaltic. quen. una herida con pus. a wound with pus.
-tēmi. tlach1. tēmic. 1. llenarse ALGO. 2. henchirse una herida. 3. estar sentadas varias1. to fill up. 2. for a wound to swell. 3. for a group of persons to be seated.
+tēmi. tlach1. tēmic. 1. llenarse algo. 2. henchirse una herida. 3. estar sentadas varias. 1. to fill up. 2. for a wound to swell. 3. for a group of persons to be seated.
 tēmictli. tlat. un sueño. a dream.
 tēmiliā. tlach3. tēmilih(qui), tēmilqui. agregarle algo en otra cosa. to add something to something else.
 tēmimi. tlat. el hermano mayor. the eldest brother.
-tēmiqui1. tlach2. tēmicqui. soñarto dream.
+tēmiqui1. tlach2. tēmicqui. soñar. to dream.
 tēmiqui2. tlach2. tēmicqui. soñar con alguien. to dream about someone
 tēmītiā. tlach3. tēmītih(qui). 1. llenar algo. 2. llenar un formulario, una solicitud. 1. fill something up. 2. fill something out (form, paper)
 tēmītiliā. tlach3. tēmītilih(qui), tēmītilqui. llenar ALGO que pertenece a otro. to fill something that belongs to someone else. temō. tlach1. temōc. bajarse de algo. to come down off something
@@ -4123,7 +4127,8 @@ tēnchico. quen. 1. persona discapacitada o lastimada que tiene los labios chuec
 tēnchicotic. quen. 1. persona discapacitada o lastimada que tiene los labios chuecos. 2. algo que tiene la orilla dispareja. 1. a handicapped or injured person with a crooked mouth. 2. something with crooked edges.
 tēnchihchico. quen. 1. persona discapacitada o lastimada que tiene los labios chuecos. 2. algo que tiene la orilla dispareja. 1. a handicapped or injured person with a crooked mouth. 2. something with crooked edges. tēnchihchicotic. quen. 1. persona discapacitada o lastimada que tiene los labios chuecos. 2. algo que tiene la orilla dispareja. 1. a handicapped or injured person with a crooked mouth. 2. something with crooked edges. tēnchonzohtic. quen. cualquier herramiento que está puntiagudo. any tool thats tip is pointed and sharp. tēnchopichhuēhuēyac. quen. pájaro, pollo y pavo de pico largo. a bird, chicken or turkey with a long beak. tēnchopichtli. tlat. -tēnchopich. pico de ave o gallina. a chicken or bird’s beak.
 tēncocharah. tlat. 1. persona que no puede guardar un secreto. 2. animal con el hocico largo. 1. person who can‘t keep a secret. 2. animal with a long someonet.
-tēncocōc. quen. tēncocoqueh. 1. objeto cuyo borde se ha embarrado de chile. 2. insecto que al picar causa comezón. 1. an object whose edge has become smeared with chille. 2. an insect whose bite causes itching. tēncocotl. tlat. -cocouh. grano en la orilla de la boca de una persona o un animal. sore on the edge of a person or animal’s mouth.
+tēncocōc. quen. tēncocoqueh. 1. objeto cuyo borde se ha embarrado de chile. 2. insecto que al picar causa comezón. 1. an object whose edge has become smeared with chilli. 2. an insect whose bite causes itching.
+tēncocotl. tlat. -cocouh. grano en la orilla de la boca de una persona o un animal. sore on the edge of a person or animal’s mouth.
 tēncomīchhuēhuēyac. quen. pájaro, pollo y pavo de pico largo. a bird, chicken or turkey with a long beak. tēncomīchtli. tlat. -tēncomīch. 1. pico de ave o gallina. 2. aguijón de la abeja o la avispa. 1. a chicken or bird’s beak. 2. a bee or wasp’s stinger.
 tēncoyactic. quen. cosa con la boca muy ancha. something with a wide mouth.
 tēncoyāhua. tlach2. tēncoyāuhqui. abrir mucho la boca de un costal o una bolsa. to open the mouth of a sack or bag wide.
@@ -4199,11 +4204,11 @@ tepalcalli. tlat. pedazo roto de una olla de barro, esquirla. a shard of clay or
 tepalcatl. tlat. pedazo roto de una olla de barro, esquirla. a shard of clay or glass.
 tēpalēhuihquētl. tlat. trabajador asalariado. salaried worker.
 tepāmitl. tlat. -tepāmiuh. lavadero de piedras apiladas. a platform of stacked someonees for washing clothes. tepānoā. tlach3. tepānoh(qui). poner un barda de piedra alrededor de algo. to put a rock wall around something tēpaxālohquētl. tlat. visitante. visitor.
-tēpazhuihquētl. tlat. ser grosero o maldoso una persona o un animal. for a person or animal to be rude or bad- intentioned.
+tēpazhuihquētl. tlat. ser grosero o maldoso una persona o un animal. for a person or animal to be rude or bad-intentioned.
 tepēcōātl. tlat. tipo de víbora de color gris y café. a kind of grey and brown snake.
 tepēhua. tlach2. tepēuhqui. desparramar or tirar muchas cosas pequeñas en el suelo. to pour or spill small things out on the ground.
 tepēhuātl. tlat. hormiga pequeña y negra. a small, black ant.
-tepēhui. tlach2. tepēuhqui. desparramarse o tirarse muchas cosas pequeñas en el suelo..for small things to spill out on the ground.
+tepēhui. tlach2. tepēuhqui. desparramarse o tirarse muchas cosas pequeñas en el suelo. for small things to spill out onto the ground.
 tepēhuiliā. tlach3. tepēhuilih(qui), tepēhuilqui. tirar algo de alguien. to throw something that belongs to someone else. tepētl. tlat. -tepēuh. cerro, montaña. hill, mountain.
 tepetlatl1. tlat. capa subterránea de piedra suave y porosa. subterranean layer of soft, porous rock.
 tepetlatl2. tlat. tepetlauh. pollo pinto. speckled chicken
@@ -4248,7 +4253,8 @@ tequiliā. tlach3tequilih(qui), tequilqui. 1. cortar la fruta de algún árbol. 
 tēquiliā. tlach3. tequilih(qui), tequilqui. servirle una bebida a alguien; vaCIAR UN Líquido en el recipiente de alguien. to pour or serve a drink for someone; to pour liquid into someone’s container.
 tequimaca. tlach1. tequimacac. proporcionarle trabajo a alguien. to give work to someone
 tequimachtiā. tlach3. tequimachtih(qui). enseñarle a alguien cómo hacer un trabajo. to teach someone how to do a task or job.
-tequipachoā. tlach3. tequipachoh(qui), tequipachqui. 1. darle demasiado trabajo a alguien. 2. entristecer a alguien con algún problema. 1. to give too much work to someone. 2. to make someone sad because of a problem. tequipachōlli. tlat. tequipachol. tristeza o preocupación. sadness or worry.
+tequipachoā. tlach3. tequipachoh(qui), tequipachqui. 1. darle demasiado trabajo a alguien. 2. entristecer a alguien con algún problema. 1. to give too much work to someone. 2. to make someone sad because of a problem.
+tequipachōlli. tlat. tequipachol. tristeza o preocupación. sadness or worry.
 tequipanō. tlach1. tequipanōc. trabajar. to work.
 tequipanoā. tlach3. tequipanoh(qui). ni. ayudar en los preparativos de una fiesta, un baile, o algún evento. ni. to help in the preparation of a party, a dance or some other event.
 tequipanohuiliā. tlach3. tequipanohuilih(qui), tequipanohuilqui. ayudar a alguien con los preparativos de un baile. to help someone make preparations for a dance.
@@ -4317,7 +4323,7 @@ ti1. tlatzompepecholli. sufijo verbalizador. verbalizing suffix.
 ti2. tlatzompepecholli. sufijo verbalizador. verbalizing suffix.
 ti4. tlatzimpihuililli. 1. prefijo sujeto de la segunda persona singular. 2. prefijo de la primera persona plural. 1. second person singular subject prefix. 2. first person plural subject prefix.
 tiā1. tlatzompepecholli. sufijo causativo. causative suffix.
-ticah. tlatzompepecholli. construcción verbal auxiliar. 2. estar haciendo algo (tiempo progresivo). 2. estar haciendo algo intensamente. auxiliary verb construction. 1. to be doing something (progressive tense). 2. to be doing something intensely.
+ticah. tlatzompepecholli. construcción verbal auxiliar. 1. estar haciendo algo (tiempo progresivo). 2. estar haciendo algo intensamente. auxiliary verb construction. 1. to be doing something (progressive tense). 2. to be doing something intensely.
 tici1. tlach2. tizqui. moler el nixtamal. to mill nixtamal.
 tici2. tlach2. tizqui. moler el nixtamal, café, ajonjolí, chocolate, chile seco o yerbabuena en el metate. to mill nixtamal, coffee, sesame seeds, chocolate, dried chilli or mint on a grinding someonee.
 ticiempreh. tlat. diciembre. December.
@@ -4325,8 +4331,7 @@ ticuīni. tlach2. ticuīnquidar punzadas una herida o una parte del cuerpo con d
 tiheraz. tlat. -tiheraz. tijeras. scissors.
 tihtici. tlach2. tihtizqui. moler varias veces los condimentos para sazonar la comida. to repeatedly grind condiments for seasoning food.
 tihtilāhuac. quen. cosas planas y delgadas. thin and flat things.
-tihtilāna. tlach2. tihtilānqui1. jalonear algo hacia uno. 2. estirar algo. 3. asir el animal algo con la boca e irlo
-jaloneando. 4. estirarse alguien. 1. to pull repeatedly on something in order to draw it near. 2. to stretch something 3. for an animal to grab something in it’s mouth and pull. 4. to stretch one’s body.
+tihtilāna. tlach2. tihtilānqui1. jalonear algo hacia uno. 2. estirar algo. 3. asir el animal algo con la boca e irlo jaloneando. 4. estirarse alguien. 1. to pull repeatedly on something in order to draw it near. 2. to stretch something 3. for an animal to grab something in it’s mouth and pull. 4. to stretch one’s body.
 tihtilāniliā. tlach3. tihtilānilih(qui), tihtilānilqui. estirar repetidamente la prenda de ropa que alguien tiene puesta. to repeatedly pull on a piece of clothing that someone is wearing.
 tihtixiliā. tlach3. tihtixilih(qui), tihtixilqui. moler algo para agregarlo inmediatamente a la comida que se está preparando. to grind something in order to add it immediately to food that is being prepared.
 tihuāllauh. Vea HUĀLLĀ. See HUĀLLĀ.
@@ -4500,7 +4505,8 @@ tlachcuēniā1. tlach3. tlachcuēnih(qui). lavar ropa. to wash clothing.
 tlachcuēniā2. tlach3. tlachcuēnih(qui). 1. lavar la partera la ropa de la mujer recién aliviada. 2. menstruar. 1. the midwife to wash to clothes of the woman who has just given birth. 2. to menstruate.
 tlachcuēniliā. tlach3. tlachcuenilih(qui), tlachcuenilqui. lavarle la ropa a alguien. to wash something for someone
 tlachē. quen. ¿qué?, (lo) que. what?, that which.
-tlachechecueca. tlach. axahci. 1. haber mucha gente haciendo mucho alboroto en algún lugar. 2. haber muchos animales domésticos haciendo mucho alboroto en algún lugar. 1. for there to people making a big fuss with lots of noise someplace. 2. for there to be domesticated animals making a big fuss with lots of noise someplace. tlachechecuecatoc. Vea TLACHECHECUECA. See TLACHECHECUECA.
+tlachechecueca. tlach. axahci. 1. haber mucha gente haciendo mucho alboroto en algún lugar. 2. haber muchos animales domésticos haciendo mucho alboroto en algún lugar. 1. for a group of people to make a big noisy fuss over something. 2. for a group of domestic animals to make a big noisy fuss. 
+tlachechecuecatoc. Vea TLACHECHECUECA. See TLACHECHECUECA.
 tlachicāhuac. quen. lugar donde la tierra está muy dura. place where the land is very hard.
 tlachicāhuiya. tlach2. tlachicāhuīxqui. 1. empezar a madurarse toda la fruta no madura en alguna parte. 2. endurecerse la tierra en alguna parte debido a la falta de agua o porque se camina mucho sobre ella. 1. for all unripe fruit in a certain place to begin to ripen. 2. for the ground in a certain place to harden due to lack of water or because people are constantly walking on it.
 tlachīchīlihui. tlach2. tlachīchīliuhqui. enrojecer todas las ciruelas en un árbol o árboles cuando maduran. for all the plums on a tree or trees to redden when ripening.
@@ -4524,7 +4530,7 @@ tlachīhuiliā. tlach3. tlachīhuilih(qui), tlachīhuilqui. embrujar a alguien y
 tlachīlhuiliā. tlach3. tlachīlhuilih(qui). prepararle enchiladas a alguien. to prepare enchiladas for someone
 tlachīliā. tlach3. tlachīlih(qui)/tlachīlqui. mirar, observar, examinar, o vigilar algo o a alguien. to watch, observe, examine or watch over someone or something
 tlachīlloh. tlat. lugar donde hay cosas embarradas de chile. place where things are smeared with chile. tlachinoā. tlach3. tlachinoh(qui). quemar el monte. to burn dead plant matter after harvest or after clearing a wooden area for planting.
-tlachipāhua. tlachblanquear la ropa el jabón, la ceniza u otra sustancia. for soap, ash or another substance to bleach clothing.
+tlachipāhua. tlach. blanquear la ropa el jabón, la ceniza u otra sustancia. for soap, ash or another substance to bleach or whiten clothing.
 tlachipāhui. tlach. axahci. amanecerse. to dawn.
 tlachipāhui. tlach2. Ir amaneciendo. for day to be breaking.
 tlachipāhuīxquiya. Vea TLACHIPĀHUIYA. See TLACHIPĀHUIYA.
@@ -4703,7 +4709,7 @@ tlahtlatoctzitzin. quen. constantemente. constantly.
 tlahtlatzquiā. tlach3. tlatzquih(qui). Mucho lodo, muchos mosquitos o muchas plantas con espinas se pegan a la ropa o a otra cosa. Much mud, or many mosquitos o many plants with stickers stick to clothing or other things. tlahtlatzquīltiā. tlach3. tlahtlatzquīltih(qui). pegar papeles o fotografías en la pared. to stick papers or photos on the wall.
 tlahtoā. tlach3. tlahtoh(qui). 1. hablar bien. 2. hablar algún idioma. 3. hablar español. 1. to speak well. 2. to speak a language. 3. to speak Spanish.
 tlahtōlhuiā. tlach3. tlahtōlhuih(qui). meter cizaña con alguien con respecto a otra persona. to make false acusations about someone
-tlahtōlli. tlat. -tlahtōl. 1. frase, oración, palabra, discurso, plática. 2. un problema que causa preocupación1. phrase, sentence, word, speech, conversation. 2. a disturbing problem.
+tlahtōlli. tlat. -tlahtōl. 1. frase, oración, palabra, discurso, plática. 2. un problema que causa preocupación. 1. phrase, sentence, word, speech, or conversation. 2. a problem which preoccupies someone.
 tlahtōlmelāhua. tlach2. tlahtōlmelāuhqui. aclararle algo a alguien. to clear up something for someone
 tlahtzōntli. tlat. encaje. lace.
 tlahuahcapān. tlap. terreno alto al final de una subida. high ground at the end of an incline.
