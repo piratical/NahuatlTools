@@ -1,9 +1,6 @@
-json_intercollater.js
+json_intercollator.js
 
 (c) 2021 by Edward H. Trager All Rights Reserved
-
-This node script is, at this point, mostly just a
-quick hack.
 
 Suppose we have a JSON file containing dictionary
 entries. So the file is basically a big Javascript
@@ -28,5 +25,6 @@ definitions. So we want to intercollate our new
 key-value pairs as "en":"<definition in English"
 
 That is what this script does ... in an admittedly
-very quick and dirty fashion.
+very quick and dirty fashion ... but it does well
+what it does. So there you go!
 
