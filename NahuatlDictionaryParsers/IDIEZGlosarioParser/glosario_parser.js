@@ -165,7 +165,7 @@ lineReader.on('line', function (line) {
       // There are around 138 missing preterit entries even after 
       // removing the 'raíz' entries. We don't want to log this anymore
       // however. DEBUG: console.log(`BAD PRETERIT FORM: ${count} ${line}`);
-
+      
       // Add a holder for preterit so the remaining array elements 
       // are in the right spots. There won't be any actual preterit 
       // here form:
@@ -203,7 +203,30 @@ lineReader.on('line', function (line) {
       console.log(`*** BAD ENTRY: ${count}: ${line}`);
       return;
     }
-    if(arr[3].match(/[0-9]$/)){
+    ///////////////////////////////////////////////////////
+    //
+    // SPECIAL HANDLING FOR "tlat." ENTRIES:
+    //
+    // => Sometimes the entry after the part-of-speech slot
+    //    shows the possessed form, using a '-'
+    //    as a sentinel for the possessing prefix. 
+    //    When this form is present, we store it and then
+    //    remove it from its slot in the array so that
+    //    we can generalize subsequent processing:
+    //
+    ////////////////////////////////////////////////////////
+    if(entry.pos==='tlat'){
+      if(arr[2].match(/^-/)){
+        entry.possessed_form = arr[2];
+        // Remove this entry from array, so remaining process-
+        // ing will be uniform across different cases:
+        arr.splice(2,1);
+        // DEBUG:
+        console.log(`=== ${entry.hw} === ${entry.pos}`);
+        console.log(arr);
+      }
+    }
+    if(arr[3] && arr[3].match(/[0-9]$/)){
       // multiple definitions:
       const defCount = (arr.length - 3)/4;
       // DEBUG ONLY: console.log(`DEF COUNT = ${defCount}`);
