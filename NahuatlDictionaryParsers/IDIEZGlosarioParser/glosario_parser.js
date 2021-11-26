@@ -114,6 +114,8 @@ function formatAsSentence(s) {
 //
 /////////////////////////////////////////
 
+// GLOBAL accumulator:
+const jsonData = [];
 
 const inputFile = process.argv[2];
 var lineReader = require('readline').createInterface({
@@ -241,5 +243,19 @@ lineReader.on('line', function (line) {
       entry.en.push(formatAsSentence(arr[3]));
     }
   }
-  console.log(entry);
+  //
+  // 
+  //
+  jsonData.push(entry);
 });
+
+//
+// ON CLOSE FUNCTION
+//
+lineReader.on('close', function() {
+  const output = JSON.stringify(jsonData,null,2);
+  console.log(output);
+});
+
+// *** END OF SCRIPT ***
+
