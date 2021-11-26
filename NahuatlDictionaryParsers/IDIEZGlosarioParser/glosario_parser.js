@@ -1,17 +1,16 @@
 //////////////////////////////////////////////////////////////////////////////////////
 //
-// idiez_parser
+// glosario_parser.js
 //
-// This parser is designed to parse the IDIEZ monolingual Nahuatl dictionary,
-// Tlahtolxitlauhcayotl by John Sullivan, Eduardo de la Cruz Cruz, 
-// Abelardo de la Cruz de la Cruz, Delfina de la Cruz de la Cruz, 
-// Victoriano de la Cruz Cruz, Sabina Cruz de la Cruz, Ofelia Cruz Morales,
-// Catalina Cruz de la Cruz, and Manuel de la Cruz Cruz
+// This parser (c) 2020, 2021 by Edward H. Trager ALL RIGHTS RESERVED
 //
-// The PDF can be found online at:
-// http://www.revitalization.al.uw.edu.pl/Content/Uploaded/Documents/06072016-578bcfcf-5d70-4db1-a2ac-7c7509d30072.pdf
-//
-// This parser (c) 2021 by Edward H. Trager. ALL RIGHTS RESERVED
+// This parser is designed to parse the IDIEZ 
+// glossary document called "Vocabulario náhuatl-español-inglés"
+// from 2012.10.30. I don't know if there were later versions of this or not, but
+// that version of the PDF actually had a ton of typographical errors and other 
+// omissions and inconsistencies. For this reason, a lot of additional manual cleanup 
+// was needed to get the text version of that document to a consistent state where it 
+// could be parsed by this script.
 //
 //////////////////////////////////////////////////////////////////////////////////////
 const fs       = require('fs');
@@ -143,11 +142,11 @@ lineReader.on('line', function (line) {
   }
   
   // 4. Start parsing entries:
-  const entry={};
-  entry.hw  = arr[0];
-  entry.pos = arr[1];
-  entry.es  = [];
-  entry.en  = [];
+  const entry = {};
+  entry.entry = arr[0];
+  entry.pos   = arr[1];
+  entry.es    = [];
+  entry.en    = [];
   if(entry.pos.match(/^Vea/)){
     entry.vea = entry.pos;
     entry.see = arr[2];
@@ -222,8 +221,8 @@ lineReader.on('line', function (line) {
         // ing will be uniform across different cases:
         arr.splice(2,1);
         // DEBUG:
-        console.log(`=== ${entry.hw} === ${entry.pos}`);
-        console.log(arr);
+        //console.log(`=== ${entry.entry} === ${entry.pos}`);
+        //console.log(arr);
       }
     }
     if(arr[3] && arr[3].match(/[0-9]$/)){
