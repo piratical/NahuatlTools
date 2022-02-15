@@ -1,0 +1,15 @@
+This script provides a "first pass" at converting
+the paleography of the Nahuatl text in Codex Florentine
+to something that is a bit closer to the Andrews-Campbell-
+Kartunnen (ACK) orthography.
+
+After running this script over some text from the codex,
+you will still have to do additional manual "repair" to get
+the text into a completely standardized ACK format. Nevertheless,
+this script can save you time, as it auto-converts many things for
+you.
+
+I developed this script while working on excerpts from Book 3.
+The paleographic text was obtained in digital form by using OCR
+software to read images from Anderson & Dibble's volume.
+
