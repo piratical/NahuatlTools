@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ARGUMENT=$1;
 if [[ -f $ARGUMENT ]]; then
     # GET HERE IF FILE ARGUMENT IS VALID:
@@ -6,7 +6,7 @@ if [[ -f $ARGUMENT ]]; then
     # HERE WE ADD uFEFF BYTE ORDER MARK AS 
     # INDIVIDUAL UTF-8 BYTES:
     #sed -i .bak '1s/^/\xef\xbb\xbf/' $ARGUMENT
-    sed -E -i .bak '1s/^/﻿/' $ARGUMENT
+    sed -E -i.bak '1s/^/﻿/' $ARGUMENT
 else
     echo "ADDBOM is (c) 2019 by Edward H. Trager."
     echo ""

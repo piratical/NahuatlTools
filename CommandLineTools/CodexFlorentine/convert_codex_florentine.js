@@ -116,12 +116,3 @@ lineReader.on('line', function (line) {
   
   count++;
 });
-
-/////////////////////////////////////
-//
-// lineReader ON CLOSE PROCESSING:
-//
-/////////////////////////////////////
-//lineReader.on('close',function(){
-//});
-
