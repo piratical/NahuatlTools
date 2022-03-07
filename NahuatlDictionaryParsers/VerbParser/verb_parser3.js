@@ -8,7 +8,10 @@
 ///////////////////////////////////////////
 
 //import { respellVerbStem } from './respell.js';
-const respellVerbStem = require('./respell.js').respellVerbStem;
+//const respellVerbStem = require('./respell.js').respellVerbStem;
+
+// ES6 imports:
+import { convertNahuatl } from './noce/noce.js';
 
 ///////////////////////////////////////////
 //
@@ -1499,7 +1502,8 @@ function segment(verbForm){
   // Check whether we need to respell the verb stem
   // and then return:
   //
-  const stem = respellVerbStem(remainder);
+  //const stem = respellVerbStem(remainder);
+  const stem = remainder;
   return `${result}\u001b[35m${stem}\u001b[0m${tail}`;
 }
 
@@ -1513,11 +1517,12 @@ function segment(verbForm){
 ///////////////////////////////
 if(process.argv.length!=3){
   console.error('Please specify a verb form to test on the command line');
-  return 1;
+  parser.exit(1);
 }
 
 // The verb form to process:
 const verbForm = process.argv[2];
-const result = segment(verbForm);
+const atomic = convertNahuatl(verbForm);
+const result = segment(atomic['atom']);
 console.log(result);
 
