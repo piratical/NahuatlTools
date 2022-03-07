@@ -1196,6 +1196,11 @@ const vstem={
    ])
   },
   {
+   key:'tok',
+   include:keyToEndRegex('tok'),
+   exclude:0
+  },
+  {
    key:'to', //past propositivo 'to'ward (ir)
    include:keyToEndRegex('to'),
    exclude:0
