@@ -2,16 +2,10 @@
 //
 // verb_parser3.js
 //
-// © 2021 by Edward H. Trager
+// © 2021,2022 by Edward H. Trager
 // ALL RIGHTS RESERVED
 //
 ///////////////////////////////////////////
-
-//import { respellVerbStem } from './respell.js';
-//const respellVerbStem = require('./respell.js').respellVerbStem;
-
-// ES6 imports:
-import { convertNahuatl } from './noce/noce.js';
 
 ///////////////////////////////////////////
 //
@@ -1081,13 +1075,13 @@ const vstem={
    include:keyToEndRegex('kan'),
    exclude:0
   },
-  {
-   key:'kah', //plural imperative ending (NOTE TO SELF: But maybe we just should handle terminal 'n' phonetics ...)
-   include:keyToEndRegex('kah'),
-   exclude:arrayToEndRegexOptionGroup([
-    'onkah'
-   ])
-  },
+  //{
+  // key:'kah', //plural imperative ending (NOTE TO SELF: But maybe we just should handle terminal 'n' phonetics ...)
+  // include:keyToEndRegex('kah'),
+  // exclude:arrayToEndRegexOptionGroup([
+  //  'onkah'
+  // ])
+  //},
   {
    key:'keh', //preterit plural form
    include:keyToEndRegex('keh'),
@@ -1411,16 +1405,21 @@ const vstem={
  ])
 };
 
-/////////////////////////////
+/////////////////////////////////////////////////////
 //
 // SEGMENT:
+// 
+// NB: verb form should be in ATOMIC orthography
 //
-/////////////////////////////
+/////////////////////////////////////////////////////
 function segment(verbForm){
   const marker='•';
   let result='';
   let remainder=verbForm;
   let precededByNiTiXi = false;
+
+  let prefixArray = [];
+  let suffixArray = [];
 
   ////////////////////////
   //
@@ -1438,11 +1437,13 @@ function segment(verbForm){
           // Easy case because we can only have 'k' here:
           // Any vowel following the 'k' is part of the verb:
           result += 'k' + marker;
+          prefixArray.push('k');
         }else{
           // THIRD PERSON FORMS:
           // Difficult because 3rd person sg is 'ki'
           // but verb may start with vowel i too:
           result += 'ki' + marker;
+          prefixArray.push('ki');
           if(matched[2][0]==='i'){
             if(matched[2][1]!='h'){
               // 'h' can only be a terminal consonant, so
@@ -1466,6 +1467,7 @@ function segment(verbForm){
       }else{
         // NOT the 'k' case, so:
         result += matched[1] + marker;
+        prefixArray.push(matched[1]);
       }
       // Store the fact that the verb is not in
       // 3rd person:
@@ -1475,10 +1477,11 @@ function segment(verbForm){
       // 'peel' off the prefix from what is left:
       // and save it:
       remainder = matched[2];
-    // -- ++ --
     }
   });
-  // SUFFIXES (NOT COMPLETE YET)
+  // END OF PREFIX HANDLING
+  
+  // STT OF SUFFIXES (NOT COMPLETE YET)
   let tail = '';
   const savedRemainder = remainder;
   for(let i=0;i<vstem.end.length;i++){
@@ -1495,34 +1498,23 @@ function segment(verbForm){
       }else{
           remainder = matched[1]
           tail = marker + matched[2] + tail;
+          suffixArray.push(matched[2]);
       }
     }
   };
   //
-  // Check whether we need to respell the verb stem
-  // and then return:
-  //
-  //const stem = respellVerbStem(remainder);
+  // The "stem" is the remainder:
+  // The stem itself might consist of a compound,
+  // such as a noun prefix followed by a verb stem ...
+  // ... but we don't segment these yet:
   const stem = remainder;
-  return `${result}\u001b[35m${stem}\u001b[0m${tail}`;
+  // The suffixes were peeled off from the end,
+  // so we can reverse the array to facilitate
+  // display in the normal left-to-right order:
+  suffixArray.reverse();
+  return { prefixes:prefixArray , stem:stem , suffixes:suffixArray };
+  //return `${result}\u001b[35m${stem}\u001b[0m${tail}`;
 }
 
-
-
-
-///////////////////////////////
-//
-// MAIN
-//
-///////////////////////////////
-if(process.argv.length!=3){
-  console.error('Please specify a verb form to test on the command line');
-  parser.exit(1);
-}
-
-// The verb form to process:
-const verbForm = process.argv[2];
-const atomic = convertNahuatl(verbForm);
-const result = segment(atomic['atom']);
-console.log(result);
-
+// ES6 export:
+export { segment }
