@@ -41,6 +41,8 @@
 //
 ///////////////////////////////////////////
 
+import { panoc_map } from './panoc_mapper.js';
+
 /////////////////////////////////////////////////
 //
 // arrayToRegexOptionGroup
@@ -1513,11 +1515,24 @@ function segment(verbForm){
   // such as a noun prefix followed by a verb stem ...
   // ... but we don't segment these yet:
   const stem = remainder;
+
+  // See if the stem is a preterit form:
+  let present;
+  present = panoc_map[stem];
+  // If we can't map directly, try with suffix "ki":
+  if(!present && suffixArray[0] && suffixArray[0].match('ki|keh')){
+    present = panoc_map[ stem + 'ki' ];
+  }
+  
+  if(!present){
+    present='';
+  }
+  
   // The suffixes were peeled off from the end,
   // so we can reverse the array to facilitate
   // display in the normal left-to-right order:
   suffixArray.reverse();
-  return { prefixes:prefixArray , stem:stem , suffixes:suffixArray };
+  return { prefixes:prefixArray , stem:stem , suffixes:suffixArray, present:present };
   //return `${result}\u001b[35m${stem}\u001b[0m${tail}`;
 }
 

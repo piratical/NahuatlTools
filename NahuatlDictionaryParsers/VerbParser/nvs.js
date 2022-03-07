@@ -33,6 +33,10 @@ function formatSegmentation( segmentObject ){
   
   segmentObject.suffixes.forEach( suffix =>{ s += marker + suffix; } );
   
+  // Preterit to present mapping:
+  if(segmentObject.present){
+    s += ` (${segmentObject.present})`;
+  }
   return s;
 }
 
