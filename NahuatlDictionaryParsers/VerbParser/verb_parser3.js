@@ -1200,6 +1200,7 @@ const vstem={
     'nonoti',
     'ohti',
     'oτti',
+    'pahti',
     'tekiti',
     'wati',
     'witi',
