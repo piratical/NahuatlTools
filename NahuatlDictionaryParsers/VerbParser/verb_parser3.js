@@ -1185,8 +1185,28 @@ const vstem={
    key:'ti', //future propositivo 'to'ward (ir)
    include:keyToEndRegex('ti'),
    exclude:arrayToEndRegexOptionGroup([
+    'ihti',
+    'iwinti',
+    'kakisti',
+    'kalanti',
+    'kati',
+    'keti',
+    'kokoti',
+    'leti',
     'mati',
-    'tekiti'
+    'memeτti',
+    'meτti',
+    'monti',
+    'nonoti',
+    'ohti',
+    'oτti',
+    'tekiti',
+    'wati',
+    'witi',
+    'yoti',
+    'κati',
+    'ςiκexti',
+    'τonti'
    ])
   },
   {
