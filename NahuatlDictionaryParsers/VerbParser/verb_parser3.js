@@ -113,7 +113,7 @@ function keyToEndRegex(key){
 //   ve_yy : verb (stem) ending with yy
 //
 // vs_xx tables are used when looking for
-// prefixes. vs_xx tables are used when 
+// prefixes. ve_xx tables are used when 
 // looking for suffixes.
 //
 ///////////////////////////////////////////
@@ -316,14 +316,13 @@ const vstem={
        'kak',
        'koy',
        'koτ',
-       'kisa',
+       'kis',
        'kixt',
        'keς',
        'kihki',
        'kikis',
        'kikixili',
        'kimil',
-       'kisa',
        'kiski',
        'kixkix',
        'kixti'
@@ -1077,13 +1076,6 @@ const vstem={
    include:keyToEndRegex('kan'),
    exclude:0
   },
-  //{
-  // key:'kah', //plural imperative ending (NOTE TO SELF: But maybe we just should handle terminal 'n' phonetics ...)
-  // include:keyToEndRegex('kah'),
-  // exclude:arrayToEndRegexOptionGroup([
-  //  'onkah'
-  // ])
-  //},
   {
    key:'keh', //preterit plural form
    include:keyToEndRegex('keh'),
@@ -1262,7 +1254,9 @@ const vstem={
   {
    key:'s', //future singular form
    include:keyToEndRegex('s'),
-   exclude:0
+   exclude:arrayToEndRegexOptionGroup([
+     'kis' // <= from kisa (salir); seen in forms such as 'quiztiuh' etc.
+   ])
   },
   {
    key:'toya', //
@@ -1498,8 +1492,6 @@ function segment(verbForm){
     if(matched && !excluded){
       if(!matched[1]){
         // Nothing left to do in this case:
-        // Check whether we need to respell the verb stem
-        // and then return:
         // DEBUG: console.log(`No remainder with ${matched[2]}`);
         break;
       }else{
@@ -1533,7 +1525,6 @@ function segment(verbForm){
   // display in the normal left-to-right order:
   suffixArray.reverse();
   return { prefixes:prefixArray , stem:stem , suffixes:suffixArray, present:present };
-  //return `${result}\u001b[35m${stem}\u001b[0m${tail}`;
 }
 
 // ES6 export:
