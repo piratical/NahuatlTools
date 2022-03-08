@@ -12,8 +12,9 @@ import { convertNahuatl } from './noce/noce.js';
 import { segment        } from './verb_parser3.js';
 
 if(process.argv.length!=3){
+  console.error('Nahuatl verb parser (c) 2022 by Edward H. Trager.');
   console.error('Please specify a verb form to test on the command line');
-  parser.exit(1);
+  process.exit(1);
 }
 
 //
