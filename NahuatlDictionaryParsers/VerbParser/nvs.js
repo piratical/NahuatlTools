@@ -43,7 +43,7 @@ function formatSegmentation( segmentObject ){
 
 // The verb form to process:
 const verbForm     = process.argv[2];
-const atomic       = convertNahuatl(verbForm);
+const atomic       = convertNahuatl(verbForm,false);
 const segmentation = segment( atomic['atom'] );
 const display      = formatSegmentation(segmentation);
 console.log(display);
