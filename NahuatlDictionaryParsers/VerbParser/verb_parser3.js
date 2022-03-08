@@ -1064,46 +1064,46 @@ const vstem={
   {
    key:'sseh', //future plural form
    include:keyToEndRegex('sseh'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'seh', //future plural form
    include:keyToEndRegex('seh'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'kan', //plural imperative ending
    include:keyToEndRegex('kan'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'keh', //preterit plural form
    include:keyToEndRegex('keh'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'h', //plural form
    include:keyToEndRegex('h'),
    exclude:arrayToEndRegexOptionGroup([
-    'onkah'
+    'onkah'  // vf. 2022.03.07
    ])
   },
   {
    key:'lo', //passive form
    include:keyToEndRegex('lo'),
    exclude:arrayToRegexOptionGroup([
-    'κalo',
-    'wilo',
-    'tilo',
-    'lilo'
+    'κalo', // verified 2022.03.07
+    'wilo', // verified 2022.03.07
+    'tilo', // <= ?
+    'lilo'  // <= ?
    ])
   },
   {
    key:'yaya', //imperfect singular form
    include:keyToEndRegex('yaya'),
    exclude:arrayToEndRegexOptionGroup([
-    'kahyaya',
-    'ihyaya'
+    'kahyaya',  // vf. 2022.03.07
+    'ihyaya'    // vf. 2022.03.07
    ])
   },
   // NOTE TO SELF: CHECK THIS ONE CAREFULLY AGAIN:
@@ -1120,38 +1120,38 @@ const vstem={
   {
    key:'yahki', //auxiliary verb past tense: -ti-yahqui
    include:keyToEndRegex('yahki'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'wallaw', //auxiliary verb huallah: -ti-huallah
    include:keyToEndRegex('wallaw'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'waltok', //auxiliary past tense of huallah: -ti-hualtoc
    include:keyToEndRegex('waltok'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'wetzi', //auxiliary verb wetzi: -ti-huetzi
    include:keyToEndRegex('wetzi'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'wetzkeh', //auxiliary past tense of huetzki: -ti-huetzqueh
    include:keyToEndRegex('wetzkeh'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'wetzki', //auxiliary past tense of huetzki: -ti-huetzqui
    include:keyToEndRegex('wetzki'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'nemi', //auxiliary verb nemi:    -ti-nemi 
    include:keyToEndRegex('nemi'),
    exclude:arrayToEndRegexOptionGroup([
-    'nehnemi'
+    'nehnemi'  // vf. 2022.03.07
    ])
   },
   // NOTE TO SELF: CHECK AGAIN
@@ -1185,7 +1185,7 @@ const vstem={
    key:'ti', //future propositivo 'to'ward (ir)
    include:keyToEndRegex('ti'),
    exclude:arrayToEndRegexOptionGroup([
-    'ihti',
+    'ihti',  // vf. 2022.03.07 this whole list
     'iwinti',
     'kakisti',
     'kalanti',
@@ -1212,17 +1212,17 @@ const vstem={
   {
    key:'tok',
    include:keyToEndRegex('tok'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'to', //past propositivo 'to'ward (ir)
    include:keyToEndRegex('to'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'tiw', //= -tiuh 'ti'+ 'yauh' (to go)
    include:keyToEndRegex('tiw'),
-   exclude:0
+   exclude:0  // vf. 2022.03.07
   },
   {
    key:'ssa', //future 's' + 'ya' = 'ssa'
@@ -1238,7 +1238,7 @@ const vstem={
    key:'ki', //future propositivo 'c'ome (venir)
    include:keyToEndRegex('ki'),
    exclude:arrayToEndRegexOptionGroup([
-    'ahki',
+    'ahki',  // vf. 2022.03.07
     'aki',
     'iτki',
     'kaki',
