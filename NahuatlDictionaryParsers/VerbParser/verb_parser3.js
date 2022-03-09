@@ -1276,7 +1276,10 @@ const vstem={
   {
    key:'ko', //past propositivo 'c'ome (venir)
    include:keyToEndRegex('ko'),
-   exclude:0
+   exclude:arrayToEndRegexOptionGroup([
+    'atoko',
+    'λehko'
+   ])
   },
   {
    key:'k', //preterit singular form
