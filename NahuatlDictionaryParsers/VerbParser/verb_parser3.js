@@ -132,6 +132,21 @@ const vstem={
      ])
    },
    {
+     key:'ayi',
+     include:keyToStartRegex('ayi'),
+     exclude:0
+   },
+   {
+     key:'ayok',
+     include:keyToStartRegex('ayok'),
+     exclude:arrayToRegexOptionGroup([
+       'ayokisa',
+       'ayokixtia',
+       'ayokiski',
+       'ayokixtihki'
+     ])
+   },
+   {
      key:'o',
      include:keyToStartRegex('o'),
      exclude:arrayToRegexOptionGroup([
