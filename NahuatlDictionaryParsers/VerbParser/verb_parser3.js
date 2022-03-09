@@ -180,7 +180,7 @@ const vstem={
        'xikalti',
        'xikanti',
        'xikiwi',
-       'xiko',
+       'xikoa',
        'xilwi',
        'xima',
        'ximi',
