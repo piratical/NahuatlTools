@@ -21,10 +21,41 @@ so I wrote these.
 Usage and examples are below:
 
 
-UCUT
-====
+UCUT AND EUCUT
+==============
 
 Usage: ucut <column number> file
+       eucut <delimiter_name> <column_number> file
+
+The "ucut" utility assumes that you have a TAB-DELIMITED data file encoded in UTF-8.
+In contrast, the new "extended ucut" utility called "eucut" expects you to specify
+what delimiter you want to use for cutting out the specified column. Valid delimiter
+names at the time of this writing are:
+
+  commas
+  tabs
+  pipes
+
+QUICK EXAMPLES:
+===============
+
+  ###
+  ### Cut the 10th column from the demographic tab-delimited file and put the
+  ### results into a file called annual_income.txt:
+  ###
+  ucut 10 demographic_data.tsv > annual_income.txt  
+
+  ###
+  ### Cut the 7th column from the sales comma-delimited file and put the
+  ### results into a file called annual_sales_volume.txt:
+  ###
+  eucut commas 7 sales.csv > annual_sales_volume.txt  
+
+ORIGINAL README FILE
+====================
+
+The remainder below is the text of the original README file which was written before
+the extended version, "eucut" was written:
 
 The "ucut" utility assumes that you have a TAB-DELIMITED data file encoded in the UTF-8
 format. Each column of data, irregardless of column length, is assumed to be separated
