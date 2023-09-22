@@ -80,6 +80,7 @@ const wpp=[
   'ni'     ,
   'nic'    ,
   'nicon'  ,
+  'nilta'  , // <== This is a mispelling of "nitla": we correct it with extra code below
   'nimo'   ,
   'nionmo' ,
   'niqu'   ,
@@ -93,7 +94,7 @@ const wpp=[
   'tino'   ,
   'tiqu'   ,
   'tla'    ,
-  'to'
+  'to'     
 ];
 
 /////////////////////////////////////////////////
@@ -338,11 +339,10 @@ lineReader.on('close',function(){
       if(wppMatches){
         // Rewrite the entry accordingly, adding the wpp attribute:
         entry.def[i].wpp = wppMatches[1];
+        // ==== STT Correct mis-spelling/typo from the book ===========
+        if(entry.def[i].wpp==='nilta'){ entry.def[i].wpp='nitla'; }
+        // ==== END Correct mis-spelling/typo from the book ===========
         entry.def[i].nah = wppMatches[2];
-        //
-        //console.log('=============================');
-        //console.log(wpp_matches);
-        //console.log('=============================');
       }
 
     };
