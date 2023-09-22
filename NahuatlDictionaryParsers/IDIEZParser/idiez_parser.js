@@ -28,14 +28,18 @@ if(process.argv.length != 3){
 // This includes blank lines as well as the page headwords and page number:
 const discardable = new RegExp('^\u000c* *$|^\u000c*[A-ZĀĒĪŌŪ]+[1-9]?$|^\u000c*[0-9]{1,3}$');
 
+////////////////////////////////////////////////////////////////////
+//
 // Parts of speech abbreviations list from the PDF:
 // These are listed from longest to shortest to insure proper
 // matching behavior:
+//
+////////////////////////////////////////////////////////////////////
 const abbr=[
   'achi',
   'huahca',
-  'miaq',
-  'panoc',
+  'miaq',     // plural
+  'panoc',    // past tense
   'panotoc',
   'pil',
   'piltlah',
@@ -63,6 +67,35 @@ const abbr=[
   'xiquitta'
 ];
 
+/////////////////////////////////////////////////////////////////////////////////////
+//
+// Word prefix patterns (="wpp")
+// These are mainly for verbs, but possessed pronoun forms are also present here
+//
+/////////////////////////////////////////////////////////////////////////////////////
+const wpp=[
+  'i'      ,
+  'mo'     ,
+  'nech'   ,
+  'ni'     ,
+  'nic'    ,
+  'nicon'  ,
+  'nimo'   ,
+  'nionmo' ,
+  'niqu'   ,
+  'niquin' ,
+  'no'     ,
+  'qui'    ,
+  'te'     ,
+  'ti'     ,
+  'tic'    ,
+  'timo'   ,
+  'tino'   ,
+  'tiqu'   ,
+  'tla'    ,
+  'to'
+];
+
 /////////////////////////////////////////////////
 //
 // arrayToRegexOptionGroup
@@ -86,12 +119,19 @@ function arrayToRegexOptionGroup(arr){
   return '('+arr.join('|')+')';
 }
 
-// Turn the array into a regexp fragment with the OR operator '|' between each option:
+// Turn the POS array into a regexp fragment with the OR operator '|' between each option:
 const posAbbr = arrayToRegexOptionGroup(abbr);
 //console.log(posAbbr);
+
+// Turn the WPP (word prefix patterns) array into a regexp fragment with the OR operator '|' between each:
+const wppAbbr = arrayToRegexOptionGroup(wpp);
+//console.log(wppAbbr);
+
 // REGEXPS FOR DATA COLLECTION:
 const startOfEntryPattern  = new RegExp(`^([A-ZĀĒĪŌŪ]+[1-9]?). ${posAbbr}\.? (.+)$`);
 const peelPattern = new RegExp(`(.+) ${posAbbr}\. (.+)$`);
+const wppPattern  = new RegExp(`^${wppAbbr}\. (.+)$`);
+
 
 // Accumulator class to save data in for multiline reads:
 class Accumulator {
@@ -293,6 +333,18 @@ lineReader.on('close',function(){
       }else{
         entry.def[i]= { nah:parts[0] };
       }
+      // Separate the initial wpp, if present:
+      wppMatches = entry.def[i].nah.match(wppPattern);
+      if(wppMatches){
+        // Rewrite the entry accordingly, adding the wpp attribute:
+        entry.def[i].wpp = wppMatches[1];
+        entry.def[i].nah = wppMatches[2];
+        //
+        //console.log('=============================');
+        //console.log(wpp_matches);
+        //console.log('=============================');
+      }
+
     };
     
   });
