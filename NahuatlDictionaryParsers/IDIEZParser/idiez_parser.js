@@ -9,7 +9,7 @@
 // Catalina Cruz de la Cruz, and Manuel de la Cruz Cruz
 //
 // The PDF can be found online at:
-// http://www.revitalization.al.uw.edu.pl/Content/Uploaded/Documents/06072016-578bcfcf-5d70-4db1-a2ac-7c7509d30072.pdf
+// http://www.revitalization.al.uw.edu.pl/eng/Nahuatl/6/145/tlahtolxitlauhcayotl
 //
 // This parser (c) 2021 by Edward H. Trager. ALL RIGHTS RESERVED
 //
@@ -81,6 +81,7 @@ const wpp=[
   'nic'    ,
   'nicon'  ,
   'nilta'  , // <== This is a mispelling of "nitla": we correct it with extra code below
+  'nimitz' ,
   'nimo'   ,
   'nionmo' ,
   'niqu'   ,
@@ -94,7 +95,10 @@ const wpp=[
   'tino'   ,
   'tiqu'   ,
   'tla'    ,
-  'to'     
+  'to'     ,
+  'mo\.\/i',
+  'nic\. ?\/ ?(?:mo|nimo|nite|nitla|timo|tla)', // <== with non-capturing group for options set
+  'qui\.?\/mo'
 ];
 
 /////////////////////////////////////////////////
@@ -325,8 +329,10 @@ lineReader.on('close',function(){
     // Start processing each split definition:
     for(let i=0;i<entry.def.length;i++){
       const parts = entry.def[i].split(' "');
+      //console.log('=== STT parts ===');
       //console.log(`DEF_EJ: ${parts.length}`);
       //console.log(parts);
+      //console.log('=== END parts ===');
       if(parts.length===2){
         // Note how we remove a trailing '"' which
         // may be present at the end of the example:
@@ -337,6 +343,9 @@ lineReader.on('close',function(){
       // Separate the initial wpp, if present:
       wppMatches = entry.def[i].nah.match(wppPattern);
       if(wppMatches){
+        //console.log('=== STT wppMatches ===');
+        //console.log(wppMatches);
+        //console.log('=== END wppMatches ===');
         // Rewrite the entry accordingly, adding the wpp attribute:
         entry.def[i].wpp = wppMatches[1];
         // ==== STT Correct mis-spelling/typo from the book ===========
