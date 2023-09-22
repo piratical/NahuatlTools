@@ -336,9 +336,9 @@ lineReader.on('close',function(){
       if(parts.length===2){
         // Note how we remove a trailing '"' which
         // may be present at the end of the example:
-        entry.def[i]= { nah:parts[0] , ej:parts[1].replace('"','') };
+        entry.def[i]= { ord:i+1 , nah:parts[0] , ej:parts[1].replace('"','') };
       }else{
-        entry.def[i]= { nah:parts[0] };
+        entry.def[i]= { ord:i+1 , nah:parts[0] };
       }
       // Separate the initial wpp, if present:
       wppMatches = entry.def[i].nah.match(wppPattern);
@@ -346,12 +346,13 @@ lineReader.on('close',function(){
         //console.log('=== STT wppMatches ===');
         //console.log(wppMatches);
         //console.log('=== END wppMatches ===');
-        // Rewrite the entry accordingly, adding the wpp attribute:
+        // Rewrite the entry accordingly, adding the wpp attribute
+        // separately and keeping the remainder in the `nah` definition:
         entry.def[i].wpp = wppMatches[1];
+        entry.def[i].nah = wppMatches[2];
         // ==== STT Correct mis-spelling/typo from the book ===========
         if(entry.def[i].wpp==='nilta'){ entry.def[i].wpp='nitla'; }
         // ==== END Correct mis-spelling/typo from the book ===========
-        entry.def[i].nah = wppMatches[2];
       }
 
     };
